@@ -1,0 +1,27 @@
+#!/bin/tcsh
+set user1 = "root"
+#echo $user1
+#echo $PATH
+#echo $shell
+set RESEARCH = /home/frederickerdraon/Documents/researchwork/
+set dropfile = ~/Documents/researchwork/Sql/Mysql-drop.sql
+#now=$(date +"%Y-%m-%d")
+#echo "Current directory :" $RESEARCH
+set SQLDIR = $RESEARCH/Sql/
+#echo "Sql directory :" $SQLDIR
+echo "STEP - Database construction..."
+#pwd
+echo "STEP - We drop everything"
+mysql -u root -pfred1301 -D managementoverview < $RESEARCH/Sql/Mysql-drop.sql
+echo "STEP - We rebuild it"
+mysql -u root -pfred1301 -D managementoverview < $RESEARCH/Sql/Mysql-create.sql
+echo "STEP - We build also the tasks"
+#mysql -u root -pfred1301 -D managementoverview < $RESEARCH/Sql/createTasks.sql
+echo "STEP - We build also the burndown"
+#mysql -u root -pfred1301 -D managementoverview < $RESEARCH/Sql/createBurndown.sql
+echo "STEP - We build also the kapital"
+mysql -u root -pfred1301 -D managementoverview < $RESEARCH/Sql/createKapital.sql
+mysql -u root -pfred1301 << EOF
+use managementoverview;
+show tables;
+EOF

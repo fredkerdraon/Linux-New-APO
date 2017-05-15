@@ -1,0 +1,25 @@
+\contentsline {section}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {2}Communication and administration}{2}
+\contentsline {subsection}{\numberline {2.1}Karima weekly call}{2}
+\contentsline {section}{\numberline {3}Calendars}{2}
+\contentsline {subsection}{\numberline {3.1}Yearly calendar}{2}
+\contentsline {subsection}{\numberline {3.2}Weekly calendar}{3}
+\contentsline {section}{\numberline {4}Checklists}{3}
+\contentsline {subsection}{\numberline {4.1}Daily Morning}{3}
+\contentsline {section}{\numberline {5}Finance}{3}
+\contentsline {subsection}{\numberline {5.1}Value At Risk}{3}
+\contentsline {subsection}{\numberline {5.2}Sensitivities}{3}
+\contentsline {section}{\numberline {6}Projects}{3}
+\contentsline {subsection}{\numberline {6.1}Deliverables}{3}
+\contentsline {subsection}{\numberline {6.2}Document templates}{3}
+\contentsline {subsection}{\numberline {6.3}Steps}{3}
+\contentsline {subsection}{\numberline {6.4}ROI}{4}
+\contentsline {subsection}{\numberline {6.5}Budget}{4}
+\contentsline {subsection}{\numberline {6.6}Gantt}{4}
+\contentsline {subsection}{\numberline {6.7}Resources}{4}
+\contentsline {subsection}{\numberline {6.8}Burn down}{4}
+\contentsline {subsection}{\numberline {6.9}Tasks}{4}
+\contentsline {subsection}{\numberline {6.10}Risks}{5}
+\contentsline {subsection}{\numberline {6.11}Meetings}{5}
+\contentsline {subsection}{\numberline {6.12}Sponsors}{5}
+\contentsline {subsection}{\numberline {6.13}Stakeholders}{5}

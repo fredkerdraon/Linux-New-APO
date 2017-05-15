@@ -1,0 +1,60 @@
+####################################################################################################
+#
+#                      Reads the test table and generate a Latex table 
+#
+###################################################################################################
+#! /usr/bin/perl
+use strict;use warnings;
+use DBI;
+
+my $dbh = DBI->connect("dbi:mysql:dbname=managementoverview:host=127.0.0.1","root","fred1301",{ RaiseError => 1 },) or die $DBI::errstr;
+
+my $size = 10;
+my $Unit = 100;
+
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+my $sth = $dbh->prepare("select t.Project Project, sum(t.Weight)/$Unit Weight, sum(t.Complexity) Complexity from tasks as t where Status not like '%on%' group by Project order by sum(t.Weight) desc limit $size");
+
+$sth->execute();
+
+print "===>>> Creation du fichier d'output .tex\n";
+open(OUT,"> ../Latex/tasksAggreg.tex");
+open(OUT2,"> ../Latex/tasksAggregGraph.tex");
+
+my $max = 350;
+my $Step = $max/5;
+
+printf OUT2 "\\begin{bchart}[min=0,max=350,step=%u,unit=k\\texteuro]\n",$Step;
+
+print OUT "\\begin{longtable}{|c|c|c|}\n";
+print OUT "\\hline\n";
+print OUT "\\multicolumn{3}{|c|}{Tasks} \\\\\n";
+print OUT "\\hline\n";
+
+print OUT "Project & ROI & Complexity \\\\\n";
+print OUT "\\hline\n";
+
+while (my $row = $sth->fetchrow_hashref()) 
+{
+	my $Weight = $row->{Weight};
+	my $Complexity = $row->{Complexity};
+	my $Project = $row->{Project};
+	$Project =~ s/"//g;
+	my $rc = $Weight/$Complexity;
+	my $NumDays = 10;
+	my $rm = $Weight;
+	printf OUT "$Project & %u & $Complexity\\\\\n",$Weight*$Unit;
+	print OUT "\\hline\n";
+	printf OUT2 "\\bcbar[label=$Project]{%u}\\\\\n",$rm;
+	print OUT2 "\\smallskip\n";
+}
+
+print OUT2 "\\end{bchart}\n";
+close(OUT2);
+
+print OUT "\\end{longtable}\n";
+close(OUT);
+
+$sth->finish();
+$dbh->disconnect();
+

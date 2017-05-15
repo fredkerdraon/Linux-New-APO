@@ -1,0 +1,5 @@
+/Soft/cdbmurex/mxg_2000_mx1_x86/Alibi
+/Soft/cdbmurex/Alibi/ConfigFiles/m1_x86/
+mx.sh???
+
+/Soft/cdbmurex/mug2000_int9/AlibiconfigFiles/

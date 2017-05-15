@@ -1,0 +1,102 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{Rapport d'étonnement}
+\author{Frederic Kerdraon}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+Avant tout je tiens à mentionner que j’ai été très bien accueilli chez Apologic, et que c’est un plaisir de travailler pour cette compagnie. L’environnement de travail est agréable et tout est mis à disposition des salariés afin de faciliter leur intégration et de permettre de s’épanouir dans son travail.
+
+Dans ce rapport d’étonnement, je me contente de décrire les différences avec les environnements de travail dans lesquels j’ai pu évoluer par le passé, en particulier chez HSBC, puisque j’y ai travaillé environ 10 ans en cumulé, et sur différents sites.
+
+Pour cela j’ai utilisé la structure proposée par le cabinet Mc Kinsey, à savoir aborder les différences via les 7s, stratégie, structure, systèmes, style, staff, skills, shared values (Désolé pour l’utilisation d’Anglicisme).
+
+Je ne veux pas me facher avec qui que ce soit.
+
+\subsection{Structure}
+
+Pour ce qui est de la structure, l’environnement est évidement bien meilleur sans tous les inconvénients liés aux grandes villes et au grand groupe. Pas d’embouteillages, pas de pollution, des collègues bien plus agréables que des stars de la finance en costume gris. La possibilité de faire du sport, et le nombre de salariés pratiquant est aussi très plaisant, et contribue à la bonne ambiance au niveau des équipes, et de la mienne en particulier. 
+L’accès à l’information est facile, et les gens se rendent toujours disponible en cas de besoin, ce qui n’est pas du tout le cas dans les structures dans lesquelles j’ai évolué, et en particulier pendant les courtes périodes ou j’étais prestataire de service.
+
+Je sais, c'est pas le meme monde.
+
+\subsection{Systèmes}
+Les systèmes informatiques et l’environnement de travail sont de qualité et tous les outils nécessaires pour le développement logiciel sont présents. Gestion de configuration, système d’intégration, outils de développement, et système de gestion des bugs. 
+Quelques améliorations sont évidements toujours possibles, par exemple l’utilisation d’outils de tests automatiques afin de faciliter les campagnes de non régression, mais cela nécessiterait de faire le choix d’un investissement dont je peux difficilement juger de la rentabilité.
+En terme de gestion de projet, par contre je pense qu’il manque un outil de centralisation des informations provenant de plusieurs systèmes, gestion des temps, des tests, des bugs, reporting à la hiérarchie. Avec le passage en mode Agile, un outil comme Version one par exemple, ou Jira.
+Pour ce qui est de la gestion des documentations, il y a un wiki en place pour ce qui est de l’architecture technique, il est relativement bien maintenu, et très utile pour un développeur arrivant sur le projet.
+Toutefois pour ce qui est des documentations fonctionnelles, il n’y pas à ma connaissance d’équivalent.
+
+\subsection{Structure}
+Pour ce qui est de la stratégie, ou de l’organisation les différences sont plus marquées…
+
+La gestion des projets est dans tous les groupes ou j’ai travaillé, organisée autour d’une réunion d’équipe hebdomadaire, d’un comité de pilotage mensuel et d’une communication stratégique annuelle. Pour l’instant chez Apologic je n’ai été invité qu’à une seule réunion… Une des conséquences de cette absence de réunion est que le processus de décision est relativement flou, et la circulation de l’information est aléatoire au sein des équipes. Le leadership des chefs de projets se trouve donc dilué, et le qui fait quoi n’est pas très clair.
+Il est vrai aussi que ma position n’est pas la même que celle que j’avais par le passé, lorsque j’étais Global Business Analyst et que je gérais des projets stratégiques pour plusieurs continents.
+La communication et la discipline pour la gestion des campagnes de régression est un peu légère, certaines livraisons sont effectuées la dernière journée avant la création de la version. Comment assurer la qualité du livrable dans ce cas, sachant que les tests ne pourront bien sur pas être réalisés comme il se doit!
+La pression et le niveau d’exigence des clients (traders ou gestionnaires de risques) sont bien plus importants, et un bloquant prod sera analysé et aura conséquences immédiates au niveau de l’organisation, et de la méthodologie utilisée.
+Il serait par exemple dramatique qu’une mesure de risque ne soit pas réalisée pendant plus de 2 jours. Cela invaliderait les modèles mathématiques, et la banque ne pourrait plus traiter, tel ou tel produit.
+
+\subsection{Style}
+\subsection{Staff}
+\subsection{Skills}
+\subsection{Shared values}
+
+\end{document}

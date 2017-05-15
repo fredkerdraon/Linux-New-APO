@@ -1,0 +1,40 @@
+#!/bin/tcsh
+setenv HOME $RES_HOME 
+echo "######################################## FINANCE ######################################"
+$HOME/manageDatabase
+echo "######################################## FINANCE ######################################"
+$HOME/runscript-finance
+echo "######################################## PROJECTS ######################################"
+#$HOME/runscript-projects
+echo "######################################## PERSO ######################################"
+#$HOME/runscript-perso
+echo "######################################## EXPORT TASKS ######################################"
+#$HOME/runscript-export-tasks
+echo "######################################## CHECKS ######################################"
+#$HOME/runscript-checks
+echo "######################################## BACKUPS ######################################"
+#runscript-backup
+#runscript-extract
+#$HOME/runscript-export-tables
+echo "######################################## LETTER ######################################"
+#$HOME/runscript-letter
+echo "######################################## CHECKDATA ######################################"
+#$HOME/runscript-checkdata
+cd $HOME/Latex/
+echo "######################################## LETTER ######################################"
+#pdflatex  -interaction batchmode Letter.tex
+echo "######################################## ARTICLE ######################################"
+#pdflatex  -interaction batchmode Article.tex
+echo "######################################## PRESENTATION ######################################"
+#pdflatex  -interaction batchmode presentation.tex
+#pdflatex -interaction batchmode $HOME/Latex/letter-2.tex
+#pdflatex -interaction batchmode $HOME/Latex/letter-3.tex
+#pdflatex -interaction batchmode $HOME/Latex/article-2.tex
+#pdflatex -interaction batchmode $HOME/Latex/thesis.tex
+#pdflatex -interaction batchmode $HOME/Latex/calendar_2.tex
+#pdflatex -interaction batchmode $HOME/Latex/calendar_1.tex
+#pdflatex -interaction batchmode $HOME/Latex/calendar_3.tex
+echo "######################################## LETTER CREDIT AGRICOLE ######################################"
+#pdflatex  -interaction batchmode Letter-CA.tex
+#pdflatex $HOME/Latex/Weekly.tex
+#pdflatex -interaction batchmode ManagementSumarry.tex

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns4="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="irs" xml:lang="en">
+  <refnamediv>
+    <refname>irs</refname>
+    <refpurpose>For a fix-for-floating Interest Rate Swap compute both the spread and the value of the legs.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>SYNOPSIS</title>
+    <synopsis>[spread,leg]=irs(time,months,r,setting);</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Description</title>
+    <para>The function computes both the spread (i.e. the fixed payment) and the value of the legs for an Interest Rate Swap. The function can take into account both &quot;in advance&quot; and &quot;in arrears&quot; IRS.</para>
+  </refsection>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>time</term>
+        <listitem>the subscribing date of the IRS; it must be in the form [year month day]</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>months</term>
+        <listitem>number of months between each payment (more common are 3 or 6)</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>r</term>
+        <listitem>column vector containing the relevant spot rates</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>setting</term>
+        <listitem>this variable must be zero (0) for &quot;in advance&quot; IRS and one (1) for &quot;in arrears&quot; IRS</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Output</title>
+    <variablelist>
+      <varlistentry>
+        <term>spread</term>
+        <listitem>fix payment of the IRS</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>leg</term>
+        <listitem>value of both legs of the IRS</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Example</title>
+    <para>Let as assume that 12th May 2010 an annual swap is subscribed (with 3-month payments).We first set the relevant interest rates (for one year swap with 3-month payments the interest rates must be four):</para>
+    <para>--&gt;r=[0.00652 0.00956 0.01091 0.01216]&apos;;</para>
+    <para>Now we can use the function. For an &quot;in advance&quot; IRS we have</para>
+    <para>--&gt;[spread,leg]=irs([2010 5 12],3,r,0)</para>
+    <para>leg = 0.0121787</para>
+    <para>spread = 0.0120930 </para>
+    <para>Thus we have to pay 1.2% in exchange of the floating interest rate.</para>
+    <para>In the case of an &quot;in arrears&quot; IRS the last</para>
+    <para>--&gt;[spread,leg]=irs([2010 5 12],3,r,1)</para>
+    <para>leg = 0.0106842</para>
+    <para>spread = 0.0140050</para>
+    <para>The spread is higher since we eliminate the first interest rate with an increasing curve. </para>
+  </refsection>
+  <refsection>
+    <title>Authors</title>
+    <para>Francesco Menoncin - Brescia University - 2010</para>
+  </refsection>
+  <refsection>
+    <title>See Also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="datenum">datenum</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

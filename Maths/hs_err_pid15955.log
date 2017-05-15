@@ -1,0 +1,85 @@
+# C  [libmysqlclient.so.18+0x22034]  mysql_num_rows+0x4
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please include
+# instructions on how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x09d69c00):  JavaThread "main" [_thread_in_native, id=15955, stack(0xbfcd6000,0xbfd26000)]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x00000004
+
+Registers:
+EAX=0x00000000, EBX=0x0a48a2f0, ECX=0x00000000, EDX=0x00000001
+ESP=0xbfd256bc, EBP=0xbfd25748, ESI=0x08049f1d, EDI=0x00000000
+EIP=0xb5b60034, EFLAGS=0x00010246, CR2=0x00000004
+
+Top of Stack: (sp=0xbfd256bc)
+0xbfd256bc:   080496ce 00000000 09f04554 09f04554
+0xbfd256cc:   00000000 bfd25730 b583e508 bfd256d0
+0xbfd256dc:   0a48a2f0 00000002 00000001 00000004
+0xbfd256ec:   b586877d b59e03c4 b77814b0 00000000
+0xbfd256fc:   b5868760 00000135 09f04554 0804c000
+0xbfd2570c:   080499c4 080492b0 0804c195 0804c0b8
+0xbfd2571c:   08049181 b733b100 00000002 0804c000
+0xbfd2572c:   75600400 00000004 bfd257f4 bfd25760 
+
+Instructions: (pc=0xb5b60034)
+0xb5b60014:   6a 30 6a 0c e8 a3 de 01 00 83 c4 10 89 86 7c 03
+0xb5b60024:   00 00 e9 2b fe ff ff 90 8d 74 26 00 8b 44 24 04
+0xb5b60034:   8b 50 04 8b 00 c3 8d b6 00 00 00 00 8b 44 24 04
+0xb5b60044:   8b 40 48 c3 90 8d b4 26 00 00 00 00 8b 44 24 04 
+
+Register to memory mapping:
+
+EAX=0x00000000 is an unknown value
+EBX=0x0a48a2f0 is an unknown value
+ECX=0x00000000 is an unknown value
+EDX=0x00000001 is an unknown value
+ESP=0xbfd256bc is pointing into the stack for thread: 0x09d69c00
+EBP=0xbfd25748 is pointing into the stack for thread: 0x09d69c00
+ESI=0x08049f1d: <offset 0x1f1d> in ./run-stocks at 0x08048000
+EDI=0x00000000 is an unknown value
+
+
+Stack: [0xbfcd6000,0xbfd26000],  sp=0xbfd256bc,  free space=317k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libmysqlclient.so.18+0x22034]  mysql_num_rows+0x4
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0a156400 JavaThread "main-SharedResourceRunner" daemon [_thread_blocked, id=15967, stack(0xaf2e6000,0xaf337000)]
+  0x09fa9400 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=15964, stack(0xaf59d000,0xaf5ee000)]
+  0x09f9b000 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=15963, stack(0xaf600000,0xaf651000)]
+  0x09dcd800 JavaThread "Service Thread" daemon [_thread_blocked, id=15961, stack(0xaffaf000,0xb0000000)]
+  0x09db8c00 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=15960, stack(0xb012e000,0xb01af000)]
+  0x09db7000 JavaThread "Attach Listener" daemon [_thread_blocked, id=15959, stack(0xb01af000,0xb0200000)]
+  0x09db1000 JavaThread "Finalizer" daemon [_thread_blocked, id=15958, stack(0xb053a000,0xb058b000)]
+  0x09daf800 JavaThread "Reference Handler" daemon [_thread_blocked, id=15957, stack(0xb058b000,0xb05dc000)]
+=>0x09d69c00 JavaThread "main" [_thread_in_native, id=15955, stack(0xbfcd6000,0xbfd26000)]
+
+Other Threads:
+  0x09dae000 VMThread [stack: 0xb05dc000,0xb065d000] [id=15956]
+  0x09dd0000 WatcherThread [stack: 0xaff2e000,0xaffaf000] [id=15962]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 4928K, used 3203K [0x7e800000, 0x7ed50000, 0x83d50000)
+  eden space 4416K,  60% used [0x7e800000, 0x7eaa0ed8, 0x7ec50000)
+  from space 512K, 100% used [0x7ecd0000, 0x7ed50000, 0x7ed50000)
+  to   space 512K,   0% used [0x7ec50000, 0x7ec50000, 0x7ecd0000)
+ tenured generation   total 10944K, used 4355K [0x83d50000, 0x84800000, 0x8e800000)
+   the space 10944K,  39% used [0x83d50000, 0x84190e00, 0x84190e00, 0x84800000)
+ compacting perm gen  total 12288K, used 5967K [0x8e800000, 0x8f400000, 0x92800000)
+   the space 12288K,  48% used [0x8e800000, 0x8edd3c40, 0x8edd

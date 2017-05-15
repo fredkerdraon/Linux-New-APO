@@ -1,0 +1,1086 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Debian) (preloaded format=pdflatex 2015.3.29)  27 DEC 2015 13:17
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Gantt2.tex
+(./Gantt2.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 2 languages loaded.
+
+! LaTeX Error: Environment  ganttchart  undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 }
+     [
+? q
+OK, entering \batchmode...
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 }[
+      
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+! Undefined control sequence.
+l.14 \color
+           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \normalsize
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.24 \color
+           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.32 \gantttitlecalendar
+                        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \ganttbar 
+                          
+l.34 \ganttbar
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.38 \small
+           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.39 \color
+           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 \normalsize
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.44 \color
+           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \ganttset 
+                          
+l.48 \ganttset
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.50 \ganttgroup
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \ganttbar 
+                          
+l.52 \ganttbar
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \ganttlinkedbar 
+                                
+l.54 \ganttlinkedbar
+                    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \ganttgroup 
+                            
+l.56 \ganttgroup
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \ganttbar 
+                          
+l.58 \ganttbar
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \ganttlinkedbar 
+                                
+l.60 \ganttlinkedbar
+                    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \ganttgroup 
+                            
+l.62 \ganttgroup
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \ganttbar 
+                          
+l.64 \ganttbar
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.66 \ganttset
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.68 \ganttlink
+               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.70 \ganttlink
+               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{document} ended by \end{ ganttchart }.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.75 }
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 4--76
+[]
+ []
+
+
+Overfull \hbox (27.81955pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 white,
+ []
+
+
+Overfull \hbox (10.26393pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 ti-
+ []
+
+
+Overfull \hbox (11.70837pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 tle
+ []
+
+
+Overfull \hbox (11.47227pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 la-
+ []
+
+
+Overfull \hbox (13.58337pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 bel
+ []
+
+
+Overfull \hbox (63.80582pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 node/.append
+ []
+
+
+Overfull \hbox (67.61974pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 style=below=-
+ []
+
+
+Overfull \hbox (27.22235pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 1.6ex,
+ []
+
+
+Overfull \hbox (10.26393pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 ti-
+ []
+
+
+Overfull \hbox (11.70837pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 tle
+ []
+
+
+Overfull \hbox (15.0695pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 left
+ []
+
+
+Overfull \hbox (45.453pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 shift=.05,
+ []
+
+
+Overfull \hbox (10.26393pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 ti-
+ []
+
+
+Overfull \hbox (11.70837pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 tle
+ []
+
+
+Overfull \hbox (21.43065pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 right
+ []
+
+
+Overfull \hbox (32.00848pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 shift=-
+ []
+
+
+Overfull \hbox (17.1112pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 .05,
+ []
+
+
+Overfull \hbox (10.26393pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 ti-
+ []
+
+
+Overfull \hbox (11.70837pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 tle
+ []
+
+
+Overfull \hbox (45.54187pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 height=1,
+ []
+
+
+Overfull \hbox (55.94469pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 bar/.append
+ []
+
+
+Overfull \hbox (84.34204pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 style=draw=none,
+ []
+
+
+Overfull \hbox (87.30594pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 fill=OliveGreen!75,
+ []
+
+
+Overfull \hbox (14.27785pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 bar
+ []
+
+
+Overfull \hbox (48.59744pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 height=.6,
+ []
+
+
+Overfull \hbox (14.27785pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 bar
+ []
+
+
+Overfull \hbox (11.47227pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 la-
+ []
+
+
+Overfull \hbox (13.58337pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 bel
+ []
+
+
+Overfull \hbox (27.06958pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 font=
+ []
+
+
+Overfull \hbox (41.33353pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 black!50,
+ []
+
+
+Overfull \hbox (25.94456pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 group
+ []
+
+
+Overfull \hbox (21.43065pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 right
+ []
+
+
+Overfull \hbox (36.8974pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 shift=0,
+ []
+
+
+Overfull \hbox (25.94456pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 group
+ []
+
+
+Overfull \hbox (15.15285pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 top
+ []
+
+
+Overfull \hbox (39.95297pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 shift=.6,
+ []
+
+
+Overfull \hbox (25.94456pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 group
+ []
+
+
+Overfull \hbox (48.59744pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 height=.3,
+ []
+
+
+Overfull \hbox (25.94456pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 group
+ []
+
+
+Overfull \hbox (25.80011pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 peaks
+ []
+
+
+Overfull \hbox (48.59744pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 height=.2,
+ []
+
+
+Overfull \hbox (14.27785pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 bar
+ []
+
+
+Overfull \hbox (11.83337pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 in-
+ []
+
+
+Overfull \hbox (22.72234pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 com-
+ []
+
+
+Overfull \hbox (64.09747pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 plete/.append
+ []
+
+
+Overfull \hbox (84.06429pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 style=fill=Maroon
+ []
+
+
+Overfull \hbox (29.09738pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 ]2010-
+ []
+
+
+Overfull \hbox (36.66687pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 092011-
+ []
+
+
+Overfull \hbox (11.00006pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 12
+ []
+
+
+Overfull \hbox (18.4723pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 year 
+ []
+
+
+Overfull \hbox (3.43057pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 [
+ []
+
+
+Overfull \hbox (65.4059pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 progress=100,
+ []
+
+
+Overfull \hbox (14.27785pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 bar
+ []
+
+
+Overfull \hbox (37.29463pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 progress
+ []
+
+
+Overfull \hbox (11.47227pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 la-
+ []
+
+
+Overfull \hbox (13.58337pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 bel
+ []
+
+
+Overfull \hbox (27.06958pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 font=
+ []
+
+
+Overfull \hbox (26.83344pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 Olive-
+ []
+
+
+Overfull \hbox (11.00006pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 G-
+ []
+
+
+Overfull \hbox (37.27795pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 reen!75,
+ []
+
+
+Overfull \hbox (14.27785pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 bar
+ []
+
+
+Overfull \hbox (37.29463pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 progress
+ []
+
+
+Overfull \hbox (11.47227pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 la-
+ []
+
+
+Overfull \hbox (13.58337pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 bel
+ []
+
+
+Overfull \hbox (63.80582pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 node/.append
+ []
+
+
+Overfull \hbox (77.3698pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 style=right=4pt,
+ []
+
+
+Overfull \hbox (14.27785pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 bar
+ []
+
+
+Overfull \hbox (11.47227pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 la-
+ []
+
+
+Overfull \hbox (13.58337pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 bel
+ []
+
+
+Overfull \hbox (27.06958pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 font=
+ []
+
+
+Overfull \hbox (26.83344pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 Olive-
+ []
+
+
+Overfull \hbox (11.00006pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 G-
+ []
+
+
+Overfull \hbox (22.6112pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 reen,
+ []
+
+
+Overfull \hbox (44.41685pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 name=pp
+ []
+
+
+Overfull \hbox (22.95845pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 ]Pre-
+ []
+
+
+Overfull \hbox (17.4445pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 lim-
+ []
+
+
+Overfull \hbox (6.22224pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 i-
+ []
+
+
+Overfull \hbox (19.27786pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 nary
+ []
+
+
+Overfull \hbox (58.81975pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 Project2010-
+ []
+
+
+Overfull \hbox (36.66687pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 092010-
+ []
+
+
+Overfull \hbox (11.00006pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 12 
+ []
+
+
+Overfull \hbox (37.29463pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 progress
+ []
+
+
+Overfull \hbox (11.47227pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 la-
+ []
+
+
+Overfull \hbox (13.58337pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 bel
+ []
+
+
+Overfull \hbox (29.8057pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 text=,
+ []
+
+
+Overfull \hbox (80.42532pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 link/.style=black,
+ []
+
+
+Overfull \hbox (3.66669pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 -
+ []
+
+
+Overfull \hbox (9.54172pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 to
+ []
+
+
+Overfull \hbox (17.2223pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 Ob-
+ []
+
+
+Overfull \hbox (16.52785pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 jec-
+ []
+
+
+Overfull \hbox (16.70839pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 tive
+ []
+
+
+Overfull \hbox (31.16684pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 12011-
+ []
+
+
+Overfull \hbox (36.66687pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 012011-
+ []
+
+
+Overfull \hbox (11.00006pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 12 
+ []
+
+
+Overfull \hbox (57.83641pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 [progress=4,
+ []
+
+
+Overfull \hbox (77.98094pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 name=T1A]Task
+ []
+
+
+Overfull \hbox (33.00018pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 A2011-
+ []
+
+
+Overfull \hbox (36.66687pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 012011-
+ []
+
+
+Overfull \hbox (11.00006pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 06 
+ []
+
+
+Overfull \hbox (79.4004pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 [progress=0]Task
+ []
+
+
+Overfull \hbox (33.00018pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 B2011-
+ []
+
+
+Overfull \hbox (36.66687pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 072011-
+ []
+
+
+Overfull \hbox (11.00006pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 12 
+ []
+
+
+Overfull \hbox (43.12517pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 Objective
+ []
+
+
+Overfull \hbox (31.16684pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 22011-
+ []
+
+
+Overfull \hbox (36.66687pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 012011-
+ []
+
+
+Overfull \hbox (11.00006pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 12 
+ []
+
+
+Overfull \hbox (63.33644pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 [progress=15,
+ []
+
+
+Overfull \hbox (77.98094pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 name=T2A]Task
+ []
+
+
+Overfull \hbox (33.00018pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 A2011-
+ []
+
+
+Overfull \hbox (36.66687pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 012011-
+ []
+
+
+Overfull \hbox (11.00006pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 09 
+ []
+
+
+Overfull \hbox (79.4004pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 [progress=0]Task
+ []
+
+
+Overfull \hbox (33.00018pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 B2011-
+ []
+
+
+Overfull \hbox (36.66687pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 102011-
+ []
+
+
+Overfull \hbox (11.00006pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 12 
+ []
+
+
+Overfull \hbox (43.12517pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 Objective
+ []
+
+
+Overfull \hbox (31.16684pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 32011-
+ []
+
+
+Overfull \hbox (36.66687pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 052011-
+ []
+
+
+Overfull \hbox (11.00006pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 08 
+ []
+
+
+Overfull \hbox (79.4004pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 [progress=0]Task
+ []
+
+
+Overfull \hbox (33.00018pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 A2011-
+ []
+
+
+Overfull \hbox (36.66687pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 052011-
+ []
+
+
+Overfull \hbox (11.00006pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 08
+ []
+
+
+Overfull \hbox (103.8143pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 link/.style=OliveGreen
+ []
+
+
+Overfull \hbox (19.45839pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 [link
+ []
+
+
+Overfull \hbox (68.7642pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 mid=.4]ppT1A
+ []
+
+
+Overfull \hbox (19.45839pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 [link
+ []
+
+
+Overfull \hbox (79.76427pt too wide) in paragraph at lines 4--76
+\OT1/cmss/bx/n/10 mid=.159]ppT2A
+ []
+
+)
+! Emergency stop.
+<*> Gantt2.tex
+              
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 16 strings out of 495021
+ 246 string characters out of 6181344
+ 48963 words of memory out of 5000000
+ 3328 multiletter control sequences out of 15000+600000
+ 4239 words of font info for 16 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 12i,1n,9p,70b,81s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

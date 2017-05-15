@@ -1,0 +1,11 @@
+#!/bin/tcsh
+echo "Chargement de CA20150719"
+cd /home/frederickerdraon/Documents/researchwork/Perl/
+perl -w /home/frederickerdraon/Documents/researchwork/Perl/extractCashflows /home/frederickerdraon/Documents/researchwork/Data/CA20150719_1114.txt 2015
+mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by=";" managementoverview /home/frederickerdraon/Documents/researchwork/Datavalidated/cashflows.csv
+#echo "Chargement de CA20121108"
+#perl -w /home/frederickerdraon/Documents/researchwork/Perl/extractCashflows /home/frederickerdraon/Documents/researchwork/Data/CA20121108_2009.txt 2012
+#mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by=";" managementoverview /home/frederickerdraon/Documents/researchwork/Datavalidated/cashflows.csv
+#echo "Chargement de CA20131029"
+#perl -w /home/frederickerdraon/Documents/researchwork/Perl/extractCashflows /home/frederickerdraon/Documents/researchwork/Data/CA20131029_1236.txt 2013
+#mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by=";" managementoverview /home/frederickerdraon/Documents/researchwork/Datavalidated/cashflows.csv

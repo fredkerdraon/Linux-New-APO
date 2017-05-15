@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns4="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="hurst" xml:lang="en">
+  <refnamediv>
+    <refname>hurst</refname>
+    <refpurpose>Compute the Hurst index on historical prices</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>SYNOPSIS</title>
+    <synopsis>H=hurst(price [,period [,step]]);</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Description</title>
+    <para>Given the historical prices of an asset the function computes the so-called Hurst index (or Hurst exponent) for fractional Brownian motion on the asset returns.</para>
+    <para>If the Hurst index H is 0.5, then the price process is a &quot;regular&quot; Brownian motion; if H&gt;0.5, then the increments of the process are positively correlated; finally, if H&lt;0.5, the increments of the process are negatively correlated. </para>
+    <para>The function also shows a scatter plot of the log of the sample length against the log of the variation coefficient of asset returns.</para>
+  </refsection>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>price</term>
+        <listitem>column vector containing the historical prices of an asset (in general they are daily prices)</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>period</term>
+        <listitem>optional parameter: first set of prices used for estimating the Hurst index (by default it is 250 - i.e. the working days in a year)</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>step</term>
+        <listitem>optional parameter: increment in the set of prices used for estimating the Hurst index (by default it is 10). This is the increasing step in the rolling estimation.</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Output</title>
+    <variablelist>
+      <varlistentry>
+        <term>H</term>
+        <listitem>estimated Hurst index on the asset (log-) returns</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Example</title>
+    <para>First we generate 1000 log-normally distributed daily prices for an asset whose initial values is 25 euros. First step is the creation of 1000 normal random variables (with mean 0.1/250 and standard deviation 0.2/sqrt(250))</para>
+    <para>--&gt;M=grand(1000,1,&apos;nor&apos;,0.1/250,0.2/sqrt(250));</para>
+    <para>Then we create the prices</para>
+    <para>--&gt;S=exp(cumsum(M,1))*25;</para>
+    <para>Now we are ready to use the function. We use it on the first 100 prices and with a step of 10 days</para>
+    <para>--&gt;H=hurst(S,100,10)</para>
+    <para>H = 0.5588872 </para>
+    <para>We have a value close to 0.5 which means that the data should be more or less follow a Brownian motion.</para>
+  </refsection>
+  <refsection>
+    <title>Authors</title>
+    <para>Francesco Menoncin - Brescia University - 2010</para>
+  </refsection>
+</refentry>

@@ -1,0 +1,2 @@
+set RESEARCH = /home/frederickerdraon/Documents/researchwork/
+mysql -u root -pfred1301 managementoverview < /home/frederickerdraon/Documents/researchwork/Sql/checkData.sql

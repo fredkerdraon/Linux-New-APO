@@ -1,0 +1,25 @@
+\begin{tikzpicture}[scale=3]
+\foreach \p/\t in {
+12 / Wing-1000K\texteuro ,
+10 / Zazzy-900K\texteuro ,
+10 / Flozio-850K\texteuro ,
+9 / Fanch-800K\texteuro ,
+9 / Mummy-800K\texteuro ,
+7 / Sonia-600K\texteuro ,
+6 / Rico-550K\texteuro ,
+6 / Maeva-500K\texteuro ,
+6 / Jessie-500K\texteuro ,
+6 / Jessica-500K\texteuro ,
+4 / Etienne-400K\texteuro ,
+4 / Armelle-400K\texteuro ,
+3 / Tiprig-250K\texteuro ,
+3 / Elise-250K\texteuro ,
+}
+  {
+\setcounter{a}{\value{b}}
+\addtocounter{b}{\p}
+\slice{\thea/100*360}
+          {\theb/100*360}
+          {\p\%}{\t}
+  }
+\end{tikzpicture}

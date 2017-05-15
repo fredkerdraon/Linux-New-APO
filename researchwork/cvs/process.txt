@@ -1,0 +1,19 @@
+//Check if the source file exists
+//Load the source file into mysql
+
+//Scilab reads the source data in mysql
+//Process data and calculate
+//Generate processed data in a file
+//Load calculated results into mysql
+
+//clips reads the source data in mysql
+//Process data and make decisions
+//Generate processed data in a file
+//Load calculated results into mysql
+
+//latex reads the source data in mysql
+//Process data and generate reports
+//Generate processed data in a pdf file
+//Send the result to my website
+
+

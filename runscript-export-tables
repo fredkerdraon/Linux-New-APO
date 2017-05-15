@@ -1,0 +1,26 @@
+#!/bin/tcsh
+set user1 = "root"
+#echo $user1
+#echo $PATH
+#echo $shell
+set RESEARCH = `pwd`
+set dropfile = ~/Documents/researchwork/Sql/Mysql-drop.sql
+#echo "Current directory :" $RESEARCH
+set SQLDIR = $RESEARCH/Sql/
+
+echo "STEP - Exporting Assets..........."
+#mysqexport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="\t" managementoverview $RESEARCH/Data/events.csv
+mysql -u root -pfred1301 managementoverview -e "SELECT * FROM assets" > $RESEARCH/Data/assets.csv 
+
+echo "STEP - Exporting Cashflows..........."
+#mysqexport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="\t" managementoverview $RESEARCH/Data/events.csv
+#mysql -u root -pfred1301 managementoverview -e "SELECT * FROM assets" > $RESEARCH/Data/cashflows.csv 
+
+mysql -u root -pfred1301 << EOF
+use managementoverview;
+SELECT * 
+FROM cashflows 
+INTO OUTFILE '/home/frederickerdraon/Documents/researchwork/Backup/cashflows.csv'
+FIELDS TERMINATED BY ';'
+LINES TERMINATED BY '\r\n';
+EOF

@@ -1,0 +1,212 @@
+  mysql_num_rows+0x4
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please include
+# instructions on how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0955c800):  JavaThread "main" [_thread_in_native, id=15979, stack(0xbfc6d000,0xbfcbd000)]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x00000004
+
+Registers:
+EAX=0x00000000, EBX=0x09c89dc0, ECX=0x00000000, EDX=0x00000001
+ESP=0xbfcbc88c, EBP=0xbfcbc918, ESI=0x08049e72, EDI=0x00000000
+EIP=0xb5b8a034, EFLAGS=0x00010246, CR2=0x00000004
+
+Top of Stack: (sp=0xbfcbc88c)
+0xbfcbc88c:   080496ce 00000000 09c77464 09c77464
+0xbfcbc89c:   00000000 bfcbc900 b5868508 bfcbc8a0
+0xbfcbc8ac:   09c89dc0 00000002 00000001 00000004
+0xbfcbc8bc:   b589277d b5a0a3c4 b77ab4b0 00000000
+0xbfcbc8cc:   b5892760 00000135 09c77464 0804c000
+0xbfcbc8dc:   080498e4 080492b0 0804c195 0804c0b8
+0xbfcbc8ec:   08049181 b7365100 00000002 0804c000
+0xbfcbc8fc:   d5e7b300 00000004 bfcbc9c4 bfcbc930 
+
+Instructions: (pc=0xb5b8a034)
+0xb5b8a014:   6a 30 6a 0c e8 a3 de 01 00 83 c4 10 89 86 7c 03
+0xb5b8a024:   00 00 e9 2b fe ff ff 90 8d 74 26 00 8b 44 24 04
+0xb5b8a034:   8b 50 04 8b 00 c3 8d b6 00 00 00 00 8b 44 24 04
+0xb5b8a044:   8b 40 48 c3 90 8d b4 26 00 00 00 00 8b 44 24 04 
+
+Register to memory mapping:
+
+EAX=0x00000000 is an unknown value
+EBX=0x09c89dc0 is an unknown value
+ECX=0x00000000 is an unknown value
+EDX=0x00000001 is an unknown value
+ESP=0xbfcbc88c is pointing into the stack for thread: 0x0955c800
+EBP=0xbfcbc918 is pointing into the stack for thread: 0x0955c800
+ESI=0x08049e72: <offset 0x1e72> in ./run-cashBalance at 0x08048000
+EDI=0x00000000 is an unknown value
+
+
+Stack: [0xbfc6d000,0xbfcbd000],  sp=0xbfcbc88c,  free space=318k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libmysqlclient.so.18+0x22034]  mysql_num_rows+0x4
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0993f000 JavaThread "main-SharedResourceRunner" daemon [_thread_blocked, id=15991, stack(0xaf30f000,0xaf360000)]
+  0x09792000 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=15988, stack(0xaf5c6000,0xaf617000)]
+  0x09783c00 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=15987, stack(0xaf629000,0xaf67a000)]
+  0x095b6800 JavaThread "Service Thread" daemon [_thread_blocked, id=15985, stack(0xb002e000,0xb007f000)]
+  0x095a3400 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=15984, stack(0xb007f000,0xb0100000)]
+  0x095a1800 JavaThread "Attach Listener" daemon [_thread_blocked, id=15983, stack(0xb040d000,0xb045e000)]
+  0x0959b800 JavaThread "Finalizer" daemon [_thread_blocked, id=15982, stack(0xb045e000,0xb04af000)]
+  0x09599c00 JavaThread "Reference Handler" daemon [_thread_blocked, id=15981, stack(0xb04af000,0xb0500000)]
+=>0x0955c800 JavaThread "main" [_thread_in_native, id=15979, stack(0xbfc6d000,0xbfcbd000)]
+
+Other Threads:
+  0x09598400 VMThread [stack: 0xb0606000,0xb0687000] [id=15980]
+  0x095b9000 WatcherThread [stack: 0xafe7f000,0xaff00000] [id=15986]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 4928K, used 3199K [0x7e800000, 0x7ed50000, 0x83d50000)
+  eden space 4416K,  60% used [0x7e800000, 0x7ea9fd18, 0x7ec50000)
+  from space 512K, 100% used [0x7ecd0000, 0x7ed50000, 0x7ed50000)
+  to   space 512K,   0% used [0x7ec50000, 0x7ec50000, 0x7ecd0000)
+ tenured generation   total 10944K, used 4355K [0x83d50000, 0x84800000, 0x8e800000)
+   the space 10944K,  39% used [0x83d50000, 0x84190e80, 0x84191000, 0x84800000)
+ compacting perm gen  total 12288K, used 5967K [0x8e800000, 0x8f400000, 0x92800000)
+   the space 12288K,  48% used [0x8e800000, 0x8edd3c40, 0x8edd3e00, 0x8f400000)
+    ro space 10240K,  58% used [0x92800000, 0x92de1558, 0x92de1600, 0x93200000)
+    rw space 12288K,  59% used [0x93200000, 0x939164e8, 0x93916600, 0x93e00000)
+
+Card table byte_map: [0xb08f8000,0xb09a4000] byte_map_base: 0xb0504000
+
+Polling page: 0xb778c000
+
+Code Cache  [0xb0a24000, 0xb0b3c000, 0xb2a24000)
+ total_blobs=691 nmethods=266 adapters=362 free_code_cache=31670Kb largest_free_block=32430592
+
+Compilation events (10 events):
+Event: 0.553 Thread 0x095a3400  261             java.util.Vector::elementData (7 bytes)
+Event: 0.553 Thread 0x095a3400 nmethod 261 0xb0b34a48 code [0xb0b34b40, 0xb0b34be0]
+Event: 0.554 Thread 0x095a3400  262             java.util.BitSet::wordIndex (5 bytes)
+Event: 0.554 Thread 0x095a3400 nmethod 262 0xb0b34c88 code [0xb0b34d80, 0xb0b34df0]
+Event: 0.554 Thread 0x095a3400  263             java.util.BitSet::checkInvariants (111 bytes)
+Event: 0.554 Thread 0x095a3400 nmethod 263 0xb0b34e48 code [0xb0b34f40, 0xb0b34fc0]
+Event: 0.556 Thread 0x095a3400  264             java.util.BitSet::get (69 bytes)
+Event: 0.557 Thread 0x095a3400 nmethod 264 0xb0b35008 code [0xb0b35170, 0xb0b354ac]
+Event: 0.563 Thread 0x095a3400  265             java.util.HashMap$HashIterator::<init> (63 bytes)
+Event: 0.563 Thread 0x095a3400 nmethod 265 0xb0b35748 code [0xb0b35840, 0xb0b35930]
+
+GC Heap History (10 events):
+Event: 0.153 GC heap before
+{Heap before GC invocations=0 (full 0):
+ def new generation   total 4928K, used 4416K [0x7e800000, 0x7ed50000, 0x83d50000)
+  eden space 4416K, 100% used [0x7e800000, 0x7ec50000, 0x7ec50000)
+  from space 512K,   0% used [0x7ec50000, 0x7ec50000, 0x7ecd0000)
+  to   space 512K,   0% used [0x7ecd0000, 0x7ecd0000, 0x7ed50000)
+ tenured generation   total 10944K, used 0K [0x83d50000, 0x84800000, 0x8e800000)
+   the space 10944K,   0% used [0x83d50000, 0x83d50000, 0x83d50200, 0x84800000)
+ compacting perm gen  total 12288K, used 1526K [0x8e800000, 0x8f400000, 0x92800000)
+   the space 12288K,  12% used [0x8e800000, 0x8e97d8e8, 0x8e97da00, 0x8f400000)
+    ro space 10240K,  58% used [0x92800000, 0x92de1558, 0x92de1600, 0x93200000)
+    rw space 12288K,  59% used [0x93200000, 0x939164e8, 0x93916600, 0x93e00000)
+Event: 0.156 GC heap after
+Heap after GC invocations=1 (full 0):
+ def new generation   total 4928K, used 512K [0x7e800000, 0x7ed50000, 0x83d50000)
+  eden space 4416K,   0% used [0x7e800000, 0x7e800000, 0x7ec50000)
+  from space 512K, 100% used [0x7ecd0000, 0x7ed50000, 0x7ed50000)
+  to   space 512K,   0% used [0x7ec50000, 0x7ec50000, 0x7ecd0000)
+ tenured generation   total 10944K, used 665K [0x83d50000, 0x84800000, 0x8e800000)
+   the space 10944K,   6% used [0x83d50000, 0x83df6510, 0x83df6600, 0x84800000)
+ compacting perm gen  total 12288K, used 1526K [0x8e800000, 0x8f400000, 0x92800000)
+   the space 12288K,  12% used [0x8e800000, 0x8e97d8e8, 0x8e97da00, 0x8f400000)
+    ro space 10240K,  58% used [0x92800000, 0x92de1558, 0x92de1600, 0x93200000)
+    rw space 12288K,  59% used [0x93200000, 0x939164e8, 0x93916600, 0x93e00000)
+}
+Event: 0.223 GC heap before
+{Heap before GC invocations=1 (full 0):
+ def new generation   total 4928K, used 4928K [0x7e800000, 0x7ed50000, 0x83d50000)
+  eden space 4416K, 100% used [0x7e800000, 0x7ec50000, 0x7ec50000)
+  from space 512K, 100% used [0x7ecd0000, 0x7ed50000, 0x7ed50000)
+  to   space 512K,   0% used [0x7ec50000, 0x7ec50000, 0x7ecd0000)
+ tenured generation   total 10944K, used 665K [0x83d50000, 0x84800000, 0x8e800000)
+   the space 10944K,   6% used [0x83d50000, 0x83df6510, 0x83df6600, 0x84800000)
+ compacting perm gen  total 12288K, used 2399K [0x8e800000, 0x8f400000, 0x92800000)
+   the space 12288K,  19% used [0x8e800000, 0x8ea57e58, 0x8ea58000, 0x8f400000)
+    ro space 10240K,  58% used [0x92800000, 0x92de1558, 0x92de1600, 0x93200000)
+    rw space 12288K,  59% used [0x93200000, 0x939164e8, 0x93916600, 0x93e00000)
+Event: 0.226 GC heap after
+Heap after GC invocations=2 (full 0):
+ def new generation   total 4928K, used 512K [0x7e800000, 0x7ed50000, 0x83d50000)
+  eden space 4416K,   0% used [0x7e800000, 0x7e800000, 0x7ec50000)
+  from space 512K, 100% used [0x7ec50000, 0x7ecd0000, 0x7ecd0000)
+  to   space 512K,   0% used [0x7ecd0000, 0x7ecd0000, 0x7ed50000)
+ tenured generation   total 10944K, used 1645K [0x83d50000, 0x84800000, 0x8e800000)
+   the space 10944K,  15% used [0x83d50000, 0x83eeb6e0, 0x83eeb800, 0x84800000)
+ compacting perm gen  total 12288K, used 2399K [0x8e800000, 0x8f400000, 0x92800000)
+   the space 12288K,  19% used [0x8e800000, 0x8ea57e58, 0x8ea58000, 0x8f400000)
+    ro space 10240K,  58% used [0x92800000, 0x92de1558, 0x92de1600, 0x93200000)
+    rw space 12288K,  59% used [0x93200000, 0x939164e8, 0x93916600, 0x93e00000)
+}
+Event: 0.393 GC heap before
+{Heap before GC invocations=2 (full 0):
+ def new generation   total 4928K, used 4928K [0x7e800000, 0x7ed50000, 0x83d50000)
+  eden space 4416K, 100% used [0x7e800000, 0x7ec50000, 0x7ec50000)
+  from space 512K, 100% used [0x7ec50000, 0x7ecd0000, 0x7ecd0000)
+  to   space 512K,   0% used [0x7ecd0000, 0x7ecd0000, 0x7ed50000)
+ tenured generation   total 10944K, used 1645K [0x83d50000, 0x84800000, 0x8e800000)
+   the space 10944K,  15% used [0x83d50000, 0x83eeb6e0, 0x83eeb800, 0x84800000)
+ compacting perm gen  total 12288K, used 4775K [0x8e800000, 0x8f400000, 0x92800000)
+   the space 12288K,  38% used [0x8e800000, 0x8eca9e08, 0x8ecaa000, 0x8f400000)
+    ro space 10240K,  58% used [0x92800000, 0x92de1558, 0x92de1600, 0x93200000)
+    rw space 12288K,  59% used [0x93200000, 0x939164e8, 0x93916600, 0x93e00000)
+Event: 0.395 GC heap after
+Heap after GC invocations=3 (full 0):
+ def new generation   total 4928K, used 458K [0x7e800000, 0x7ed50000, 0x83d50000)
+  eden space 4416K,   0% used [0x7e800000, 0x7e800000, 0x7ec50000)
+  from space 512K,  89% used [0x7ecd0000, 0x7ed42978, 0x7ed50000)
+  to   space 512K,   0% used [0x7ec50000, 0x7ec50000, 0x7ecd0000)
+ tenured generation   total 10944K, used 1856K [0x83d50000, 0x84800000, 0x8e800000)
+   the space 10944K,  16% used [0x83d50000, 0x83f20350, 0x83f20400, 0x84800000)
+ compacting perm gen  total 12288K, used 4775K [0x8e800000, 0x8f400000, 0x92800000)
+   the space 12288K,  38% used [0x8e800000, 0x8eca9e08, 0x8ecaa000, 0x8f400000)
+    ro space 10240K,  58% used [0x92800000, 0x92de1558, 0x92de1600, 0x93200000)
+    rw space 12288K,  59% used [0x93200000, 0x939164e8, 0x93916600, 0x93e00000)
+}
+Event: 0.484 GC heap before
+{Heap before GC invocations=3 (full 0):
+ def new generation   total 4928K, used 4874K [0x7e800000, 0x7ed50000, 0x83d50000)
+  eden space 4416K, 100% used [0x7e800000, 0x7ec50000, 0x7ec50000)
+  from space 512K,  89% used [0x7ecd0000, 0x7ed42978, 0x7ed50000)
+  to   space 512K,   0% used [0x7ec50000, 0x7ec50000, 0x7ecd0000)
+ tenured generation   total 10944K, used 1856K [0x83d50000, 0x84800000, 0x8e800000)
+   the space 10944K,  16% used [0x83d50000, 0x83f20350, 0x83f20400, 0x84800000)
+ compacting perm gen  total 12288K, used 5253K [0x8e800000, 0x8f400000, 0x92800000)
+   the space 12288K,  42% used [0x8e800000, 0x8ed21608, 0x8ed21800, 0x8f400000)
+    ro space 10240K,  58% used [0x92800000, 0x92de1558, 0x92de1600, 0x93200000)
+    rw space 12288K,  59% used [0x93200000, 0x939164e8, 0x93916600, 0x93e00000)
+Event: 0.489 GC heap after
+Heap after GC invocations=4 (full 0):
+ def new generation   total 4928K, used 512K [0x7e800000, 0x7ed50000, 0x83d50000)
+  eden space 4416K,   0% used [0x7e800000, 0x7e800000, 0x7ec50000)
+  from space 512K, 100% used [0x7ec50000, 0x7ecd0000, 0x7ecd0000)
+  to   space 512K,   0% used [0x7ecd0000, 0x7ecd0000, 0x7ed50000)
+ tenured generation   total 10944K, used 3184K [0x83d50000, 0x84800000, 0x8e800000)
+   the space 10944K,  29% used [0x83d50000, 0x8406c1f8, 0x8406c200, 0x84800000)
+ compacting perm gen  total 12288K, used 5253K [0x8e800000, 0x8f400000, 0x92800000)
+   the space 12288K,  42% used [0x8e800000, 0x8ed21608, 0x8ed21800, 0x8f400000)
+    ro space 10240K,  58% used [0x92800000, 0x92de1558, 0x92de1600, 0x93200000)
+    rw space 12288K,  59% used [0x93200000, 0x939164e8, 0x93916600, 0x93e00000)
+}
+Event: 0.529 GC heap before
+{Heap before GC invocations=4 (full 0):
+ def new generation   total 4928K, used 4928K [0x7e800000, 0x7ed50000, 0x83d50000)
+  eden space 4416K, 100% used

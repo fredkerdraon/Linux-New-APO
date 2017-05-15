@@ -1,0 +1,40 @@
+
+print ""
+print "Multivariate normal distribution"
+print ""
+print "The surface plot shows a two variable multivariate probability"
+print "density function.  On the x-y plane are some samples of the random"
+print "vector and a contour plot illustrating the correlation, which in"
+print "this case is zero, i.e. a circle.  (Easier to view in map mode.)"
+print ""
+nsamp = 50
+# Generate N random data points.
+set print $random
+do for [i=1:nsamp] {
+    print sprintf("%8.5g %8.5g", invnorm(rand(0)), invnorm(rand(0)))
+}
+unset print
+#
+unset xlabel
+unset ylabel
+unset zlabel
+set parametric
+tstring(n) = sprintf("%d random samples from a 2D Gaussian PDF with\nunit variance, zero mean and no dependence", n)
+set title tstring(nsamp)
+unset key
+set hidden3d
+set contour
+set view 68, 28, 1, 1
+set cntrparam levels discrete 0.1
+unset clabel
+set xrange [-3:3]
+set yrange [-3:3]
+set zrange [-0.2:0.2]
+set ztics 0,0.05
+set urange [-3:3]
+set vrange [-3:3]
+set ticslevel 0
+set isosamples 30
+splot u,v,( 1/(2*pi) * exp(-0.5 * (u**2 + v**2)) ) with line lc rgb "black", \
+   $random using 1:2:(-0.2) with points pointtype 7 lc rgb "black"
+pause -1

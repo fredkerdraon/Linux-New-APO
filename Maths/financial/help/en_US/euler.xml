@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns4="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="euler" xml:lang="en">
+  <refnamediv>
+    <refname>euler</refname>
+    <refpurpose>Numerically solves a system of stochastic differential equation (by using the Euler discretization)</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>SYNOPSIS</title>
+    <synopsis>x=euler(drift,diffusion,dt,T,x0,t0);</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Description</title>
+    <para>The function numerically solves a system of stochastic differential equations in the following form:</para>
+    <para>dx(1) = drift_1(x(1),x(2),..,x(n),t) dt + diffusion_1(x(1),x(2),..,x(n),t) dW</para>
+    <para>dx(2) = drift_2(x(1),x(2),..,x(n),t) dt + diffusion_2(x(1),x(2),..,x(n),t) dW</para>
+    <para>...</para>
+    <para>dx(n) = drift_n(x(1),x(2),..,x(n),t) dt + diffusion_n(x(1),x(2),..,x(n),t) dW</para>
+    <para>Please note that dW (the differential form of a Wiener process) could be a vector and, accordingly, each &quot;diffusion&quot; term could be a vector itself. All the elements of dW are assumed to be independent.</para>
+  </refsection>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>drift</term>
+        <listitem>this is a string containing a column vector of the functional forms of drift_1, drift_2 and so on. The variables &quot;x&quot; and &quot;t&quot; must be named exactly &quot;x&quot; and &quot;t&quot; and if there are more than one &quot;x&quot; the values must be named &quot;x(1)&quot;, &quot;x(2)&quot;, and so on.</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>diffusion</term>
+        <listitem>This is a string containing a matrix which have as many raws as x&apos;s and as many columns as the elements of vector dW (containing the so-called risk sources). Thus, if there are three stochastic variables (i.e. x(1), x(2), and x(3)) driven by two risk sources (i.e. dW(1) and dW(2)) the &quot;diffusion&quot; is a 3x2 matrix </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>dt</term>
+        <listitem>time unit of measure: if data are in annual form (like returns, for instance) but have daily frequency, then dt=1/250 (since there are 250 working day in one year)</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>T</term>
+        <listitem>number of periods during which the stochastic differential equations must be solved (if T=2 years, and dt=1/250, then the function computes 500 values)</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>x0, t0</term>
+        <listitem>initial values for the variables &quot;x&quot; and for time &quot;t&quot;. These are the values the Euler algorithm must start from. x0 must be a column vector, while t is a scalar</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Output</title>
+    <variablelist>
+      <varlistentry>
+        <term>x</term>
+        <listitem>matrix whose columns contain the series of simulated variable &quot;x&quot;</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Example</title>
+    <para>
+      <para>Let us assume a stochastic mean reverting process for the interest rate &quot;r&quot;:</para>
+      <para>dr = 0.1 (b - r) dt + 0.056 sqrt(r) dWr</para>
+      <para>where the parameter &quot;b&quot; is another mean reverting process</para>
+      <para>db = 0.2 (0.05 - b) dt + 0.01 sqrt(b) dWb</para>
+    </para>
+    <para>In order to simulate two years of daily data starting from 0.04 for both &quot;r&quot; and &quot;b&quot; at time t=0, we must give the following command (we assume x(1)=r and x(2)=b)</para>
+    <para>--&gt;drift=&apos;[0.1*(x(2)-x(1)); 0.2*(0.05-x(2))]&apos;;</para>
+    <para>--&gt;diffusion=&apos;[0.056*sqrt(x(1)),0;0,0.01*sqrt(x(2))]&apos;;</para>
+    <para>--&gt;x=euler(drift,diffusion,1/250,2,[0.04;0.04],0)</para>
+    <para>With command &quot;plot(x)&quot; one can see both stochastic processes</para>
+  </refsection>
+  <refsection>
+    <title>Authors</title>
+    <para>Francesco Menoncin - Brescia University - 2010</para>
+  </refsection>
+  <refsection>
+    <title>See Also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="gbm">gbm</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

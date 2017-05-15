@@ -1,0 +1,17 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} 
+\usepackage[usenames,dvipsnames,pdftex]{xcolor}
+\usepackage{tkz-berge,fullpage}
+\thispagestyle{empty}
+\begin{document}
+\begin{center}
+\begin{tikzpicture}
+  \renewcommand*{\VertexBallColor}{green!50!black}
+  \GraphInit[vstyle=Art]
+  \grComplete[RA=6]{16}
+\end{tikzpicture}
+\end{center}
+\end{document}
+% Author : Alain Matthes
+% Encoding : UTF8
+% Engine : PDFLaTeX

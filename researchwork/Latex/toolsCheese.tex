@@ -1,0 +1,25 @@
+\begin{tikzpicture}[scale=3]
+\foreach \p/\t in {
+13 / Apache-14K\texteuro ,
+12 / Php-13K\texteuro ,
+11 / Perl-12K\texteuro ,
+10 / Java-11K\texteuro ,
+9 / Vi-10K\texteuro ,
+8 / Jira-9K\texteuro ,
+7 / Latex-8K\texteuro ,
+6 / MySql-7K\texteuro ,
+5 / Linux-6K\texteuro ,
+4 / Scilab-5K\texteuro ,
+3 / Clips-4K\texteuro ,
+2 / SVN-3K\texteuro ,
+1 / Hudson-2K\texteuro ,
+0 / Gimp-1K\texteuro ,
+}
+  {
+\setcounter{a}{\value{b}}
+\addtocounter{b}{\p}
+\slice{\thea/100*360}
+          {\theb/100*360}
+          {\p\%}{\t}
+  }
+\end{tikzpicture}

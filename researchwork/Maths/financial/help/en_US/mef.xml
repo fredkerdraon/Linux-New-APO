@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns4="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="mef" xml:lang="en">
+  <refnamediv>
+    <refname>mef</refname>
+    <refpurpose>Compute and draw the Mean Excess Function</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>SYNOPSIS</title>
+    <synopsis>E=mef(x)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Description</title>
+    <para>On the data &quot;x&quot; (for instance asset returns), the function computes and draw the Mean Excess Function. It is the mean of the data exceeding a given threshold. Each value of ordered &quot;x&quot; is taken as a threshold.</para>
+  </refsection>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>x</term>
+        <listitem>data the Mean Excess Function must be computed on</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Output</title>
+    <variablelist>
+      <varlistentry>
+        <term>E</term>
+        <listitem>vector of the values of the Mean Excess Function</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Example</title>
+    <para>
+      <para>First we generate 1000 normally daily returns on an asset with 0.1/250 mean and 0.2/sqrt(250) variance:</para>
+      <para>--&gt;returns=grand(1000,1,&apos;nor&apos;,0.1/250,0.2/sqrt(250));</para>
+    </para>
+    <para>Now we can use the function on these returns.</para>
+    <para>--&gt;E=mef(returns); </para>
+    <para>The graph shows the values of the Mean Excess Function. For a normal random variable it is decreasing and convex.</para>
+  </refsection>
+  <refsection>
+    <title>Authors</title>
+    <para>Francesco Menoncin - Brescia University - 2010</para>
+  </refsection>
+</refentry>

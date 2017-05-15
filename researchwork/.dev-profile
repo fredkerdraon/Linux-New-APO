@@ -1,0 +1,2 @@
+alias fvim='vim ./Sql/Mysql.sql'
+

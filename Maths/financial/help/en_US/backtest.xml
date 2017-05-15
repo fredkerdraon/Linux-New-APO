@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns4="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="backtest" xml:lang="en">
+  <refnamediv>
+    <refname>backtest</refname>
+    <refpurpose>Apply the backtest to three different risk measures (as percentage of lost): Expected Shortfall, Value at Risk, and a Spectral Measure with linear spectrum. Show the graph of historical returns and the risk measures. The thresholds of the backtest are also computed.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>SYNOPSIS</title>
+    <synopsis>backtest (prices, alpha [, N])</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Description</title>
+    <para>Thia function checks the ability of three different risk measures (VaR, ES, and linear spectral) to suitably measure the shortfalls in asset returns.</para>
+  </refsection>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>prices</term>
+        <listitem>
+          <para>matrix whose columns contain the historical prices of each asset</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>alpha</term>
+        <listitem>
+          <para>confidence level of risk measures; it goes from 0 to 1 (both 0 and 1 excluded)</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>N</term>
+        <listitem>the number of observations which the backtest is computed on (default value 250 if there are more than 500 historical prices, else N is half the number of rows of the matrix &quot;prices&quot;)</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Example</title>
+    <para>First we generate 10000 log-normally distributed prices for three different assets whose initial values are 25 euros, 50 euros, and 110 euros. First step is the creation of a 10000x3 matrix of normal random variables (with mean 0.1/250 and standard deviation 0.2/sqrt(250))</para>
+    <para>--&gt;M=grand(10000,3,&apos;nor&apos;,0.1/250,0.2/sqrt(250));</para>
+    <para>Then we create the prices</para>
+    <para>--&gt;prices=exp(cumsum(M,1))*diag([25 50 110])</para>
+    <para>and apply the function with an alpha, for instance, equal to 0.01:</para>
+    <para>--&gt;backtest(prices,0.01);</para>
+    <para>The result is:</para>
+    <para>!Green zone: 0-5 ! </para>
+    <para>!Yellow zone: 5-10 ! </para>
+    <para>!Red zone: 10- !</para>
+    <para>!ES: 1 exeptions !</para>
+    <para>!VaR: 4 exeptions !</para>
+    <para>!Linear Spectrum: 1 exeptions !</para>
+    <para>Which shows that the ES and the Linear Spectral measure are very reliable (since they present only 1 exeption), while the VaR is the less reliable. The figure which is created shows the same result is graphical form.</para>
+  </refsection>
+  <refsection>
+    <title>Authors</title>
+    <para>Francesco Menoncin - Brescia University - 2010</para>
+  </refsection>
+  <refsection>
+    <title>See Also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="esvarlin">esvarlin</link>
+      </member>
+      <member>
+        <link linkend="esvaroptim">esvaroptim</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

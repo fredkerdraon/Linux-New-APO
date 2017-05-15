@@ -1,0 +1,485 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Debian) (preloaded format=pdflatex 2015.3.29)  6 DEC 2015 22:54
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**/home/frederickerdraon/Documents/researchwork//Latex/Weekly.tex
+(/home/frederickerdraon/Documents/researchwork//Latex/Weekly.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 2 languages loaded.
+
+! LaTeX Error: Environment calendar undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \begin{calendar}
+                     {\hsize}
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.12 \begin{calendar}{\hsize}
+                             
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.12 \begin{calendar}{\hsize}
+                             
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.24 \day{
+          }{
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 0
+      9:15-10:15 \daysep \textbf{Messe}\\[3pt]
+? 
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+! Undefined control sequence.
+l.26 09:15-10:15 \daysep
+                         \textbf{Messe}\\[3pt]
+? 
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 26--27
+[]
+ []
+
+
+Overfull \hbox (30.53038pt too wide) in paragraph at lines 26--27
+\OT1/cmr/bx/n/10 Messe 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 \textbf{10am-12am}
+                        \daysep Marche\\[3pt]
+? 
+! Undefined control sequence.
+l.28 \textbf{10am-12am} \daysep
+                                Marche\\[3pt]
+? 
+Missing character: There is no M in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+
+Overfull \hbox (50.50676pt too wide) in paragraph at lines 28--29
+[]\OT1/cmr/bx/n/10 10am-
+ []
+
+
+Overfull \hbox (26.67345pt too wide) in paragraph at lines 28--29
+\OT1/cmr/bx/n/10 12am 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 \textbf{12am-2pm}
+                       \daysep Dejeuner maison\\[3pt]
+? 
+! Undefined control sequence.
+l.30 \textbf{12am-2pm} \daysep
+                               Dejeuner maison\\[3pt]
+? 
+Missing character: There is no D in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+
+Overfull \hbox (50.50676pt too wide) in paragraph at lines 30--31
+[]\OT1/cmr/bx/n/10 12am-
+ []
+
+
+Overfull \hbox (21.7221pt too wide) in paragraph at lines 30--31
+\OT1/cmr/bx/n/10 2pm
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 \textbf{7pm-9pm}
+                      \daysep Canal football club\\[3pt]
+? 
+! Undefined control sequence.
+l.32 \textbf{7pm-9pm} \daysep
+                              Canal football club\\[3pt]
+? 
+Missing character: There is no C in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no b in font nullfont!
+
+Overfull \hbox (45.55542pt too wide) in paragraph at lines 32--33
+[]\OT1/cmr/bx/n/10 7pm-
+ []
+
+
+Overfull \hbox (21.7221pt too wide) in paragraph at lines 32--33
+\OT1/cmr/bx/n/10 9pm
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34 \textbf{9pm-11pm}
+                       \daysep Guitar\\[3pt]
+? 
+! Undefined control sequence.
+l.34 \textbf{9pm-11pm} \daysep
+                               Guitar\\[3pt]
+? 
+Missing character: There is no G in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+
+Overfull \hbox (45.55542pt too wide) in paragraph at lines 34--35
+[]\OT1/cmr/bx/n/10 9pm-
+ []
+
+
+Overfull \hbox (27.47208pt too wide) in paragraph at lines 34--35
+\OT1/cmr/bx/n/10 11pm 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 \textbf{12am-2pm}
+                       \daysep Muscu\\[3pt]
+? 
+! Undefined control sequence.
+l.36 \textbf{12am-2pm} \daysep
+                               Muscu\\[3pt]
+? 
+Missing character: There is no M in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+
+Overfull \hbox (50.50676pt too wide) in paragraph at lines 36--37
+[]\OT1/cmr/bx/n/10 12am-
+ []
+
+
+Overfull \hbox (21.7221pt too wide) in paragraph at lines 36--37
+\OT1/cmr/bx/n/10 2pm 
+ []
+
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.52 \day{
+          }{
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 \textbf{9am-10am}
+                       \daysep Preparation cours de math \\[3pt]
+? 
+! Undefined control sequence.
+l.54 \textbf{9am-10am} \daysep
+                               Preparation cours de math \\[3pt]
+? 
+Missing character: There is no P in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+
+Overfull \hbox (44.75679pt too wide) in paragraph at lines 54--55
+[]\OT1/cmr/bx/n/10 9am-
+ []
+
+
+Overfull \hbox (26.67345pt too wide) in paragraph at lines 54--55
+\OT1/cmr/bx/n/10 10am
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56 \textbf{10am-12am}
+                        \daysep Preparation presentation finance \\[3pt]
+? 
+! Undefined control sequence.
+l.56 \textbf{10am-12am} \daysep
+                                Preparation presentation finance \\[3pt]
+? 
+Missing character: There is no P in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+
+Overfull \hbox (50.50676pt too wide) in paragraph at lines 56--57
+[]\OT1/cmr/bx/n/10 10am-
+ []
+
+
+Overfull \hbox (26.67345pt too wide) in paragraph at lines 56--57
+\OT1/cmr/bx/n/10 12am
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 \textbf{1pm-2pm}
+                      \daysep Manage my weekly \\[3pt]
+? 
+! Undefined control sequence.
+l.58 \textbf{1pm-2pm} \daysep
+                              Manage my weekly \\[3pt]
+? 
+Missing character: There is no M in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no y in font nullfont!
+
+Overfull \hbox (45.55542pt too wide) in paragraph at lines 58--59
+[]\OT1/cmr/bx/n/10 1pm-
+ []
+
+
+Overfull \hbox (21.7221pt too wide) in paragraph at lines 58--59
+\OT1/cmr/bx/n/10 2pm
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 \textbf{2pm-4pm}
+                      \daysep Administration \\[3pt]
+? 
+! Undefined control sequence.
+l.60 \textbf{2pm-4pm} \daysep
+                              Administration \\[3pt]
+? 
+Missing character: There is no A in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+
+Overfull \hbox (45.55542pt too wide) in paragraph at lines 60--61
+[]\OT1/cmr/bx/n/10 2pm-
+ []
+
+
+Overfull \hbox (21.7221pt too wide) in paragraph at lines 60--61
+\OT1/cmr/bx/n/10 4pm
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 \textbf{4pm-5pm}
+                      \daysep Lessive \\[3pt]
+? 
+! Undefined control sequence.
+l.62 \textbf{4pm-5pm} \daysep
+                              Lessive \\[3pt]
+? 
+Missing character: There is no L in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+
+Overfull \hbox (45.55542pt too wide) in paragraph at lines 62--63
+[]\OT1/cmr/bx/n/10 4pm-
+ []
+
+
+Overfull \hbox (21.7221pt too wide) in paragraph at lines 62--63
+\OT1/cmr/bx/n/10 5pm
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.64 \textbf{7pm-10pm}
+                       \daysep Cinema \\[3pt]
+? 
+! Interruption.
+\GenericError  ...                                
+                                                  \endgroup 
+l.64 \textbf{7pm-10pm}
+                       \daysep Cinema \\[3pt]
+? 
+! Emergency stop.
+\GenericError  ...                                
+                                                  \endgroup 
+l.64 \textbf{7pm-10pm}
+                       \daysep Cinema \\[3pt]
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 10 strings out of 495021
+ 320 string characters out of 6181344
+ 46963 words of memory out of 5000000
+ 3322 multiletter control sequences out of 15000+600000
+ 3948 words of font info for 15 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 13i,1n,10p,216b,80s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

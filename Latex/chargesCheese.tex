@@ -1,0 +1,26 @@
+\begin{tikzpicture}[scale=2]
+\foreach \p/\t in {
+10 / Bank-8.111k\texteuro ,
+0 / Boat-0.28k\texteuro ,
+1 / Car-0.918k\texteuro ,
+9 / Cash-7.231k\texteuro ,
+8 / Cmb-6.866k\texteuro ,
+27 / Debt-21.209k\texteuro ,
+0 / Energy-0.489k\texteuro ,
+10 / Food-7.962k\texteuro ,
+0 / Health-0.517k\texteuro ,
+0 / Home-0.451k\texteuro 
+17 / Other-13.551k\texteuro 
+3 / Rent-2.582k\texteuro 
+1 / Telephone-1.073k\texteuro 
+7 / Toxics-5.635k\texteuro 
+0 / Transport-0.717k\texteuro 
+}
+  {
+\setcounter{a}{\value{b}}
+\addtocounter{b}{\p}
+\slice{\thea/100*360}
+          {\theb/100*360}
+          {\p\%}{\t}
+  }
+\end{tikzpicture}

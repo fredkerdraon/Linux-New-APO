@@ -1,0 +1,15 @@
+#!/usr/bin/perl -w
+    use strict;
+    use Net::POP3;
+
+	my $try = 4;
+	
+	while ($try != 0) {
+        my $pop = Net::POP3->new('pop.mail.yahoo.com')
+    
+        my $num = $pop->login( 'fredlebreizh@yahoo.fr' , 'fred1301' );
+        #print "$num nouveau(x) message(s) pour fredkerdraon sur le serveur hotmail\n";
+    	
+		$try = $try - 1;
+        $pop->quit();
+    }

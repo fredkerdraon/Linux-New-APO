@@ -1,0 +1,106 @@
+#!/bin/tcsh
+setenv HOME /home/frederickerdraon/Documents/researchwork/
+echo "######################################## CLEANUP ######################################"
+rm $HOME/table*
+echo "######################################## FINANCE ######################################"
+$HOME/manageDatabase
+echo "######################################## FINANCE ######################################"
+$HOME/runscript-finance
+echo "######################################## PROJECTS ######################################"
+$HOME/runscript-projects
+echo "######################################## PERSO ######################################"
+$HOME/runscript-perso
+echo "######################################## INSERT BURNDOWN ######################################"
+$HOME/runscript-insert-burndown
+echo "######################################## SCILAB CALCULATIONS ######################################"
+cd /home/frederickerdraon/Documents/researchwork/Maths/
+#/usr/bin/scilab -f Project.sce
+#/usr/bin/scilab -f Plot3Func.sce
+#/usr/bin/scilab -f new.sce
+#/usr/bin/scilab -f TossACoin.sce
+#/usr/bin/scilab -f Bootstrap-Interest.sce
+#/usr/bin/scilab -f BlackScholes.sce
+#/usr/bin/scilab -f loader.sce
+#/usr/bin/scilab -f Matrices.sce
+#/usr/bin/scilab -f DifferentialEquations.sce
+#/usr/bin/scilab -f Finance.sce
+#/usr/bin/scilab -f Laws.sce
+#/usr/bin/scilab -f Stats.sce
+#/usr/bin/scilab -f Functions.sce
+#/usr/bin/scilab -f sce
+/usr/bin/gnuplot GnuImmigration 
+./fredmain cashflows $START_DATE $END_DATE 
+./run-stocks stocks $START_DATE $END_DATE 
+./run-cashBalance cashBalance $START_DATE $END_DATE 
+./run-currencies currencies $START_DATE $END_DATE 
+./run-burndown burndown 
+cp -p *.png ../Latex/
+cp -p *.png ../../
+#mv ../Latex/*.pdf ./
+echo "######################################## EXPORT TASKS ######################################"
+$HOME/runscript-export-tasks
+echo "######################################## CHECKS ######################################"
+$HOME/runscript-checks
+echo "######################################## BACKUPS ######################################"
+$HOME/runscript-backup
+$HOME/runscript-extract
+$HOME/runscript-export-tables
+echo "######################################## LETTER ######################################"
+$HOME/runscript-letter
+echo "######################################## CHECKDATA ######################################"
+$HOME/runscript-checkdata
+echo "######################################## CSV EXPORTS ######################################"
+cd /home/frederickerdraon/Documents/researchwork/
+$HOME/runscript-export-tasks
+echo "######################################## PRESENTATION ######################################"
+cd $HOME/Latex/
+echo "######################################## LETTER ######################################"
+echo "######################################## ARTICLE ######################################"
+pdflatex  -interaction batchmode Article.tex
+pdflatex  -interaction batchmode Letter.tex
+pdflatex  -interaction batchmode presentation.tex
+pdflatex -interaction batchmode $HOME/Latex/letter-2.tex
+pdflatex -interaction batchmode $HOME/Latex/ColorPie
+pdflatex -interaction batchmode $HOME/Latex/letter-3.tex
+pdflatex -interaction batchmode $HOME/Latex/article-2.tex
+pdflatex -interaction batchmode $HOME/Latex/thesis.tex
+pdflatex -interaction batchmode $HOME/Latex/calendar_2.tex
+pdflatex -interaction batchmode $HOME/Latex/calendar_1.tex
+pdflatex -interaction batchmode $HOME/Latex/calendar_3.tex
+pdflatex -interaction batchmode $HOME/Latex/MapOfTheCharges.tex
+echo "######################################## LATEX-FINANCE ######################################"
+pdflatex -interaction batchmode $HOME/Latex/Finance-Stocks.tex
+pdflatex -interaction batchmode $HOME/Latex/Finance-Currencies.tex
+pdflatex -interaction batchmode $HOME/Latex/Finance-Cashflows.tex
+pdflatex -interaction batchmode $HOME/Latex/Finance-Assets-Liabilities.tex
+pdflatex -interaction batchmode $HOME/Latex/Finance-Cash-Balance.tex
+pdflatex -interaction batchmode $HOME/Latex/Finance-Management-Summary.tex
+pdflatex -interaction batchmode $HOME/Latex/TasksList.tex
+echo "######################################## LETTER CREDIT AGRICOLE ######################################"
+pdflatex  -interaction batchmode Letter-CA.tex
+#pdflatex $HOME/Latex/Weekly.tex
+pdflatex -interaction batchmode ManagementSumarry.tex
+cd $HOME/Latex
+cp -p *.pdf ../
+rm -rf *.out
+rm -rf *.aux
+rm -rf *.nav
+rm -rf *.log
+rm -rf *.tns
+rm -rf *.out
+rm -rf *.snm
+rm -rf *.toc
+rm -rf *.gnuplot
+cd ../
+rm -rf *.out
+rm -rf *.aux
+rm -rf *.nav
+rm -rf *.log
+rm -rf *.tns
+rm -rf *.out
+rm -rf *.snm
+rm -rf *.toc
+cp -p $HOME/*.pdf $HOME/Latex/ 
+echo "######################################## IMAGE MAGIK ######################################"
+convert -density 150 $HOME/Latex/Calendar.pdf -quality 150 Calendar.png
+convert $HOME/Latex/Calendar.pdf Calendar.png

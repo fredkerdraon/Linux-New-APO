@@ -1,0 +1,129 @@
+####################################################################################################
+#
+#                      Reads the test table and generate a Latex table 
+#
+###################################################################################################
+#! /usr/bin/perl
+use strict;use warnings;
+use DBI;
+
+my $dbh = DBI->connect("dbi:mysql:dbname=managementoverview:host=127.0.0.1","root","",{ RaiseError => 1 },) or die $DBI::errstr;
+
+########################################################################################################
+
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+#my $sth4 = $dbh->prepare("select sum(t.Value) from assets as t");
+
+#$sth4->execute();
+
+#my $number = $sth4->fetchrow();
+#$sth4->finish();
+
+########################################################################################################
+
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+my $sth3 = $dbh->prepare("select sum(t.Value) from assets as t where ALFlag like '%Asset%'");
+
+$sth3->execute();
+
+my $total = $sth3->fetchrow();
+$sth3->finish();
+
+########################################################################################################
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+my $sth2 = $dbh->prepare("select max(t.Value)/100 from assets as t where ALFlag like '%Asset%'");
+
+$sth2->execute();
+
+my $max = $sth2->fetchrow();
+#print "Max value : $max";
+$sth2->finish();
+my $step = $max/5;
+
+my $TotalValue = 4000;
+my $size = 5;
+
+########################################################################################################
+#
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+my $sth = $dbh->prepare("select t.ID ID, t.Name Name, t.Value/100 Value, t.AType AType, t.ROI ROI, t.InitPrice InitPrice, t.MCost MCost, t.Maturity Maturity from assets as t where Value <> 0 and ALFlag like '%Asset%' order by Value desc limit $size");
+
+$sth->execute();
+
+print "===>>> Creation du fichier d'output .tex\n";
+open(OUT,"> ../Latex/assets.tex");
+open(OUT2,"> ../Latex/assetsGraph.tex");
+open(OUT3,"> ../Latex/assetsCheese.tex");
+
+print OUT3 "\\begin{tikzpicture}[scale=3]\n";
+
+#print OUT3 "\\newcounter{a}\n";
+#print OUT3 "\\newcounter{b}\n";
+print OUT3 "\\foreach \\p\/\\t in {\n";
+
+print OUT2 "\\begin{bchart}[min=0,max=$max,step=$step,unit=\\texteuro]\n";
+
+print OUT "\\begin{longtable}{|c|c|c|c|c|c|c|c|}\n";
+print OUT "\\hline\n";
+print OUT "\\multicolumn{8}{|c|}{Assets} \\\\\n";
+print OUT "\\hline\n";
+
+print OUT "ID & Type & Name & Value & ROI & InitPrice & MCost & Maturity\\\\\n";
+print OUT "\\hline\n";
+
+my $count = 0; 
+while (my $row = $sth->fetchrow_hashref()) 
+{
+	$count = $count+1;
+	my $ID = $row->{ID};
+	my $Name = $row->{Name};
+	$Name =~ s/"//g;
+	my $Value = $row->{Value};
+	my $ROI = $row->{ROI};
+	my $InitPrice = $row->{InitPrice};
+	my $MCost = $row->{MCost};
+	my $AType = $row->{AType};
+	my $Maturity = $row->{Maturity};
+	$AType =~ s/"//g;
+	my $Ratio = $Value/$total*10000;
+	#my $RoundedRatio = printf "%u , \n", $Ratio;
+	#printf "%u , \n", $Ratio;
+	#print "Rounded: $RoundedRatio\n";
+	print OUT "$ID & $Name & $AType & $Value & $ROI & $InitPrice & $MCost & $Maturity\\\\\n";
+	print OUT "\\hline\n";
+	print OUT2 "\\bcbar[label=$Name]{$Value}\\\\\n";
+	print OUT2 "\\smallskip\n";
+	#print OUT3 printf "%u , \n", $Ratio . "/ $Name ,\n";
+	if($count < $size){
+	printf OUT3 "%u / $Name ,\n", $Ratio;
+	}
+	else{
+	printf OUT3 "%u / $Name \n", $Ratio;
+	}
+}
+	print OUT " ... & ... & ... & ... & ... & ... & ... & ...\\\\\n";
+	print OUT "\\hline\n";
+	print OUT " & & Total & $TotalValue & & & & \\\\\n";
+	print OUT "\\hline\n";
+
+print OUT "\\end{longtable}\n";
+close(OUT);
+print OUT2 "\\end{bchart}\n";
+close(OUT2);
+
+print OUT3 "}\n";
+print OUT3 "  {\n";
+print OUT3 "\\setcounter{a}{\\value{b}}\n";
+print OUT3 "\\addtocounter{b}{\\p}\n";
+print OUT3 "\\slice{\\thea/100*360}\n";
+print OUT3 "          {\\theb/100*360}\n";
+print OUT3 "          {\\p\\%}{\\t}\n";
+print OUT3 "  }\n";
+
+print OUT3 "\\end{tikzpicture}\n";
+close(OUT3);
+
+$sth->finish();
+
+$dbh->disconnect();
+

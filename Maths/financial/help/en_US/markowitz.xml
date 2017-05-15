@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns4="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="markowitz" xml:lang="en">
+  <refnamediv>
+    <refname>markowitz</refname>
+    <refpurpose>Compute the optimal portfolio minimizing the variance (this is a quadratic programming problem). The optimal variance is also computed.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>SYNOPSIS</title>
+    <synopsis>[portf,varoptim]=markowitz(price,ER,r,dt);</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Description</title>
+    <para>Give the historical prices of a set of assets, compute the optimal portfolios solving four different problems. All of them minimize the Variance of the portfolio subject to the constraint of having given expected return. The four problems are different for the following characteristics</para>
+    <para>1) optimal portfolio allowing short selling and investing in the riskless asset;</para>
+    <para>2) optimal portfolio allowing short selling but without investing in the riskless asset;</para>
+    <para>3) optimal portfolio not allowing short selling and investing in the riskless asset;</para>
+    <para>4) optimal portfolio not allowing short selling and without investing in the riskless asset.</para>
+    <para>Finally the Variance of the optimal portfolio is computed. The procedure uses &quot;qld&quot; function.</para>
+  </refsection>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>price</term>
+        <listitem>matrix whose columns contains the historical prices of the assets in the portfolio</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>ER</term>
+        <listitem>expected return that the investor wants to obtain on his portfolio</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>r</term>
+        <listitem>riskless interest rate</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>dt</term>
+        <listitem>time frequency of the prices with respect to the time unit of measure of both &quot;ER&quot; and &quot;r&quot;; if the matrix of prices contains daily data and both &quot;ER&quot; and &quot;r&quot; are annual return, then dt=1/250 since there are 250 working day in one year</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Output</title>
+    <variablelist>
+      <varlistentry>
+        <term>portf</term>
+        <listitem>matrix containing the optimal portfolios; in particular:</listitem>
+        <listitem>first raw: with short selling and with r</listitem>
+        <listitem>second raw: with short selling and without r</listitem>
+        <listitem>third raw: without short selling and with r</listitem>
+        <listitem>fourth raw: without short selling and without r</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>varoptim</term>
+        <listitem>Variance of the optimal portfolio</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Example</title>
+    <para>
+      <para>First we generate 100x3 log-normally distributed daily asset prices with 0.1/250 mean and 0.2/sqrt(250) variance. The first prices of the three assets are 25 euros, 50 euros, and 110 euros respectively.</para>
+      <para>--&gt;M=grand(100,3,&apos;nor&apos;,0.1/250,0.2/sqrt(250));</para>
+      <para>--&gt;price=exp(cumsum(M,1))*diag([25 50 110]);</para>
+    </para>
+    <para>Now we can use the function on these prices.</para>
+    <para>--&gt;[portf,varoptim]=markowitz(price,0.05,0.01,1/250) </para>
+    <para>Draw frontiers? (y/n) y </para>
+    <para>! with short selling without short selling !</para>
+    <para>! with r without r with r without r !</para>
+    <para>varoptim =</para>
+    <para>0.0001508 0.0232294 0.0001508 0.0249650</para>
+    <para>portf = </para>
+    <para>- 0.0009446 0.6612090 - 1.444D-34 0.7614173 </para>
+    <para>0.0599034 - 0.0729724 0.0599186 0. </para>
+    <para>0.0157164 0.4117634 0.0157684 0.2385827 </para>
+    <para>We see that the third or the second asset are sold (negative portfolio component) when it is possible. If short selling is not allowed, then its weight is either positive or zero.</para>
+    <para>The function also asks if one wants to see the optimal frontiers (this is optional since the procedure takes some time). The figure which is created shows four frontiers corresponding to the four different problems (the legend explains the meanings).</para>
+  </refsection>
+  <refsection>
+    <title>Authors</title>
+    <para>Francesco Menoncin - Brescia University - 2010</para>
+  </refsection>
+  <refsection>
+    <title>See Also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="qld">qld</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

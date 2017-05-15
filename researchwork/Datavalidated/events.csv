@@ -1,0 +1,32 @@
+ID,Date,Type,Name,Task,Template
+1,2013-01-07,Deliverable,Inception,1,
+2,2013-01-07,Deliverable,Specification,1,
+3,2013-01-07,Deliverable,Clearchoice,1,
+4,2013-01-07,Deliverable,External design,1,
+5,2013-01-07,Deliverable,Internal design,1,
+6,2013-01-07,Deliverable,Test documentation,1,
+7,2013-01-07,Deliverable,Release notes,1,
+8,2013-01-07,Deliverable,Post implementation review,1,
+9,2013-01-07,Deliverable,Support documentation,1,
+10,2013-01-07,Deliverable,Inception,2,
+11,2013-01-07,Deliverable,Specification,2,
+12,2013-01-07,Deliverable,Clearchoice,2,
+13,2013-01-07,Deliverable,External design,2,
+14,2013-01-07,Deliverable,Internal design,2,
+15,2013-01-07,Deliverable,Test documentation,2,
+16,2013-01-07,Deliverable,Release notes,2,
+17,2013-01-07,Deliverable,Post implementation review,2,
+18,2013-11-02,Deliverable,Support documentation,2,
+19,2013-11-01,Birthday,Annif Antoine,1,
+20,2013-10-31,Meeting,Council,1,Council.tex
+21,2014-06-25,Meeting,Council,1,Council.tex
+22,2015-12-07,Daily,Daily setup,1,ManagementSummary.pdf
+23,2015-12-07,Daily,Daily setup,1,ManagementSummary.pdf
+24,2015-12-07,Event,Renouvellement Assu Auto,2,Letter.pdf
+25,2015-12-06,Event,Renouvellement Assu Bateau,2,Letter.pdf
+26,2015-12-06,Event,Renouvellement Assu Maison,2,Letter.pdf
+27,2015-12-05,Event,Revision auto,2,Letter.pdf
+28,2015-12-05,Event,Renouvellement carte paiement,2,Letter.pdf
+29,2015-12-04,Event,Declaration impots,1,Letter.pdf
+30,2015-12-04,Event,Paiement des impots,1,Letter.pdf
+31,2015-12-03,Event,Arbre de noel,1,Letter.pdf

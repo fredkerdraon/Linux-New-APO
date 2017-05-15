@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns4="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="interest" xml:lang="en">
+  <refnamediv>
+    <refname>interest</refname>
+    <refpurpose>Estimate the parameters of three spot interest rate models and draw some simulations</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>SYNOPSIS</title>
+    <synopsis>rf=interest(r,dt,T,model,n,r0);</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Description</title>
+    <para>The function can be used for estimating the parameters of three different models for spot interest rates, and performs some simulations of the resulting stochastic process.</para>
+    <para>The interest rate models taken into account are:</para>
+    <para>1) Merton&apos;s: the instantaneously riskless interest rate follows the stochastic differential equation</para>
+    <para>dr = mu dt + sigma dW</para>
+    <para>where dW is a Wiener process and both &quot;mu&quot; and &quot;sigma&quot; are constant;</para>
+    <para>2) Vasicek&apos;s: the instantaneously riskless interest rate follows the stochastic differential equation</para>
+    <para>
+      <para>dr = a (b - r) dt + sigma dW</para>
+      <para>where &quot;a&quot;, &quot;b&quot;, and &quot;sigma&quot; are all constant;</para>
+      <para>3) Cox, Ingersoll, and Ross&apos;: the instantaneously riskless interest rate follows the stochastic differential equaiton</para>
+      <para>dr = a (b - r) dt + sigma sqrt(r) dW.</para>
+    </para>
+  </refsection>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>r</term>
+        <listitem>column vector containing the historical riskless interest rate</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>dt</term>
+        <listitem>time unit of measure; if the (annual) interest rate is collected on a daily base, then dt=1/250 since there are 250 working days in a year</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>T</term>
+        <listitem>period during which the stochastic process must be simulated (if T=2 years, and dt=1/250, then 500 values are generated)</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>model</term>
+        <listitem>this is a string whose value must be either &apos;merton&apos;, or &apos;vasicek&apos;, or &apos;cir&apos;, for any of the three models presented above</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>n</term>
+        <listitem>the number of simulations that must be performed</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>r0</term>
+        <listitem>interest rate the simulations must start from (in order to check the goodness of the model r0 should be r(1), instead for foreseeing the future interest rates, r0 should be r($)</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Output</title>
+    <variablelist>
+      <varlistentry>
+        <term>rf</term>
+        <listitem>matrix whose columns contain the simulation of the interest rate (it has as many columns as &quot;n&quot;) and as many rows as T/dt</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Example</title>
+    <para>First we generate 1000 uniformly distributed daily interest rate, between 4% and 6% (of course interest rates are not uniform, but this is useful just as an example).</para>
+    <para>--&gt;r=grand(1000,1,&apos;unf&apos;,0.04,0.06);</para>
+    <para>Then we are able to use the function. Let us see the results for all the three models. We create 10 simulations starting from the first interest rate and each simulation will be done for 1 year:</para>
+    <para>--&gt;rf=interest(r,1/250,1,&apos;merton&apos;,10,r(1));</para>
+    <para>!Coefficient Value !</para>
+    <para>!Drift 0.0016879 !</para>
+    <para>!Diffusion 0.1296796 !</para>
+    <para>We see that the drift &quot;mu&quot; is almost zero (in fact the interest rates oscillate on a sdtraight line with zero slope), while the diffusion &quot;sigma&quot; is quite high. The figure shows 10 possible trajectories which also have negative values with high probability. Let us see the Vasicek case:</para>
+    <para>--&gt;rf=interest(r,1/250,1,&apos;vasicek&apos;,10,r(1));</para>
+    <para>!Coefficient Value !</para>
+    <para>!Mean reversion 248.13562 !</para>
+    <para>!Mean 0.0498669 !</para>
+    <para>!Diffusion 0.1296796 !</para>
+    <para>The diffusion is the same as Merton&apos;s (as we expected). The mean reversion parameter &quot;a&quot; is very high (in fact the sample we used reverts to its mean with a remarkable strength). The mean &quot;b&quot; of the process is more or less 0.05 as we expected (in fact, we created interest rates uniformly distributed between 0.04 and 0.06). The figure shows ten trajectories with good oscillations. Finally, the CIR model:</para>
+    <para>--&gt; rf=interest(r,1/250,1,&apos;cir&apos;,10,r(1));</para>
+    <para>!Coefficient Value !</para>
+    <para>!Mean reversion 246.72311 !</para>
+    <para>!Mean 0.0498670 !</para>
+    <para>!Diffusion coeff. 0.5819574 !</para>
+    <para>Where we see values of mean reversion and mean very close to the previous one. The last term is different since the diffusion coefficient &quot;sigma&quot; in the CIR model must be multiplied by the square root of the interest rate. The graph should show trajectories similar to the previous ones.</para>
+  </refsection>
+  <refsection>
+    <title>Bibliography</title>
+    <para>&quot;A Theory of the Term Structure of Interest Rates&quot;, Cox J.C., Ingersoll J.E. Jr., and Ross S.A., Econometrica, 53, 385-407, 1985 </para>
+    <para>&quot;On the pricing of corporate debt: The risk structure of interest rates&quot;, Merton R.C., Journal of Finance, 29, 449-470, 1971</para>
+    <para>&quot;An Equilibrium Characterization of the Term Structure&quot;, Vasiček O., Journal of Financial Economics, 5, 177-188 (1977)</para>
+  </refsection>
+  <refsection>
+    <title>Authors</title>
+    <para>Francesco Menoncin - Brescia University - 2010</para>
+  </refsection>
+  <refsection>
+    <title>See Also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="gbm">gbm</link>
+      </member>
+      <member>
+        <link linkend="euler">euler</link>
+      </member>
+     
+    </simplelist>
+  </refsection>
+</refentry>

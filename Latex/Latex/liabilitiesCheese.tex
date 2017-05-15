@@ -1,0 +1,15 @@
+\begin{tikzpicture}[scale=3]
+\foreach \p/\t in {
+55 / Boat-mortgage- 13 k\texteuro ,
+9 / Car-mortgage- 2 k\texteuro ,
+20 / Dad-mortgage- 5 k\texteuro ,
+14 / Mum-mortgage- 3 k\texteuro ,
+}
+  {
+\setcounter{a}{\value{b}}
+\addtocounter{b}{\p}
+\slice{\thea/100*360}
+          {\theb/100*360}
+          {\p\%}{\t}
+  }
+\end{tikzpicture}

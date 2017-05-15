@@ -1,0 +1,44 @@
+ID,Date,Type,Name,Task,Template,Periodicity
+1,07/01/2013,Deliverable,Inception,1,Inception.tex,None
+2,07/01/2013,Deliverable,Specification,1,Specification.tex,None
+3,07/01/2013,Deliverable,Clearchoice,1,Clearchoice.tex,None
+4,07/01/2013,Deliverable,External design,1,External design.tex,None
+5,07/01/2013,Deliverable,Internal design,1,Internal design.tex,None
+6,07/01/2013,Deliverable,Test documentation,1,Test documentation.tex,None
+7,07/01/2013,Deliverable,Release notes,1,Release notes.tex,None
+8,07/01/2013,Deliverable,Post implementation review,1,Post implementation review.tex,None
+9,07/01/2013,Deliverable,Support documentation,1,Support documentation.tex,None
+10,07/01/2013,Deliverable,Inception,2,Inception.tex,None
+11,07/01/2013,Deliverable,Specification,2,Specification.tex,None
+12,07/01/2013,Deliverable,Clearchoice,2,Clearchoice.tex,None
+13,07/01/2013,Deliverable,External design,2,External design.tex,None
+14,07/01/2013,Deliverable,Internal design,2,Internal design.tex,None
+15,07/01/2013,Deliverable,Test documentation,2,Test documentation.tex,None
+16,07/01/2013,Deliverable,Release notes,2,Release notes.tex,None
+17,07/01/2013,Deliverable,Post implementation review,2,Post implementation review.tex,None
+18,02/11/2013,Deliverable,Support documentation,2,Support documentation.tex,None
+19,01/11/2013,Birthday,Annif Antoine,1,Annif Antoine.tex,Yearly
+20,31/10/2013,Meeting,Council,1,Council.tex,Monthly
+21,25/06/2014,Meeting,Council,1,Council.tex,Monthly
+22,07/12/2015,Daily,Daily setup,1,ManagementSummary.pdf,Daily
+23,07/12/2015,Daily,Daily setup,1,ManagementSummary.pdf,Daily
+24,07/12/2015,Event,Renewal Ins Auto,2,Letter.pdf,Yearly
+25,06/12/2015,Event,Renewal Ins Bateau,2,Letter.pdf,Yearly
+26,06/12/2015,Event,Renewal Ins Maison,2,Letter.pdf,Yearly
+27,05/12/2015,Event,Car servicing,2,Letter.pdf,Yearly
+28,05/12/2015,Event,Renewal paiment card,2,Letter.pdf,5 Years
+29,04/12/2015,Event,Taxes declaration,1,Letter.pdf,Yearly
+30,04/12/2015,Event,Taxes paiement,1,Letter.pdf,Yearly
+31,03/12/2015,Event,Christmas tree Apologic,1,Letter.pdf,Yearly
+32,04/12/2015,Event,Birthday me,1,Birthday me.tex,Yearly
+33,05/12/2015,Event,Birthday Juliette,1,Birthday Juliette.tex,Yearly
+34,06/12/2015,Event,Birthday Thibault,1,Birthday Thibault.tex,Yearly
+35,07/12/2015,Event,Birthday Emilie,1,Birthday Emilie.tex,Yearly
+36,08/12/2015,Event,Birthday Antoine,1,Birthday Antoine.tex,Yearly
+37,09/12/2015,Event,Poker tour St Meen,1,Poker tour St Meen.tex,Yearly
+38,03/04/2016,Event,Clean the deck,1,Clean the deck.tex,Yearly
+39,10/10/2016,Event,Clean the deck,2,Clean the deck.tex,Yearly
+40,10/10/2016,Event,Clean the deck,3,Clean the deck.tex,Yearly
+41,10/10/2016,Event,Clean the deck,4,Clean the deck.tex,Yearly
+42,11/10/2016,Event,Clean the deck,5,Clean the deck.tex,Yearly
+43,12/10/2016,Event,Clean the deck,6,Clean the deck.tex,Yearly

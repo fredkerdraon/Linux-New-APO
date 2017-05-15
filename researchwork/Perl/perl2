@@ -1,0 +1,65 @@
+####################################################################################################
+#
+#                      PARSE CREDIT AGRICOLE 
+#
+###################################################################################################
+print "===>>> Process du fichier tout kaka de cacib\n";
+open(OUT,"> ../Latex/Transactions_20130110.tex");
+open(IN,"< ../Data/CA20130110_2134.txt");
+$Check=0;
+$Total=6;
+print OUT "\\begin{longtable}{|c|c|c|}\n";
+print OUT "\\hline\n";
+print OUT "\\multicolumn{3}{|c|}{Liabilities} \\\\\n";
+print OUT "\\hline\n";
+
+while(!eof(IN))
+{
+        my $TheLine=<IN>;
+        chop($TheLine);
+	print "My line : $TheLine, My check $Check\n";
+        my @Line=split(/:/,$TheLine);
+	if(index($Line[0],"Date")>=0)
+	{
+		#my $Pillar=substr($Line[0],28,5);
+		#my $Curve=$Line[0];
+        	#my $Curency=$Line[1];
+		$Date=$Line[1];
+		$Date =~ s/^\s+//;
+		print "Date $Line[1]\n";
+		$Check=$Check+1;
+	}
+	if (index($Line[0],"Libellé")>=0)
+	{
+		$Libelle=$Line[1];
+		$Libelle =~ s/^\s+//;
+		print "Libelle $Line[1]\n";
+		$Check=$Check+2;
+	}
+	if (index($Line[0],"Débit")>=0)
+	{
+		$Debit=$Line[1];
+		$Debit =~ s/^\s+//;
+		print "Debit $Line[1]\n";
+		$Check=$Check+3;
+		print "Check : $Check\n";
+	}
+	if($Check == $Total)
+	{
+		print "Je suis content\n";
+		#print OUT $Date.";".$Libelle.";".$Debit."\n";
+		print OUT $Date." & ".$Libelle." & ".$Debit." \\\\"."\n";
+		print OUT "\\hline\n";
+		$Check=0;
+	}
+  	
+#Translate + 100 bp and -100 bp
+#       print OUT "|"."6"."|".$Curve."|".$Curency."||".$Pillar."|"."Std"."|"."1.0"."|\n";
+#       print OUT "|"."7"."|".$Curve."|".$Curency."||".$Pillar."|"."Std"."|"."-1.0"."|\n";
+#Split of combined stress
+#       CRISIS(8,$Curve,$Curency,$Pillar);
+#       REVIVAL(9,$Curve,$Curency,$Pillar);
+}
+close(IN);
+print OUT "\\end{longtable}\n";
+close(OUT);

@@ -1,0 +1,16 @@
+\begin{tikzpicture}[scale=2]
+\foreach \p/\t in {
+72 / Boat-17k\texteuro -0\ ,
+2 / CEL-0.483k\texteuro -0\ ,
+0 / LDD-0.042k\texteuro -0\ ,
+0 / TITR-0.047k\texteuro -0\ ,
+0 / PRED-0.14k\texteuro -0\i ,
+}
+  {
+\setcounter{a}{\value{b}}
+\addtocounter{b}{\p}
+\slice{\thea/100*360}
+          {\theb/100*360}
+          {\p\%}{\t}
+  }
+\end{tikzpicture}

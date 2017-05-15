@@ -1,0 +1,16 @@
+function y = rosenbrock (x)
+  y = 100*(x(2)-x(1)^2)^2+(1-x(1))^2;
+endfunction
+function [ y , mystuff ] = mycostf ( x , mystuff )
+  y = rosenbrock(x);
+  mystuff.nb = mystuff.nb + 1
+endfunction
+
+mystuff = tlist(["T_MYSTUFF","nb"]);
+mystuff.nb = 0;
+s1 = optimsimplex_new ();
+[ s1 , mystuff ] = optimsimplex_randbounds ( s1 , x0 = [-1.2 1.0], fun = mycostf, ...
+  boundsmin = [-5.0 -5.0] , boundsmax = [5.0 5.0], nbve=5 , data = mystuff );
+mprintf("Function evaluations: %d\n",mystuff.nb)
+s1 = optimsimplex_destroy ( s1 );
+

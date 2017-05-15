@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns4="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="nelson_siegel" xml:lang="en">
+  <refnamediv>
+    <refname>nelson_siegel</refname>
+    <refpurpose>Estimate the parameters for the Nelson Siegel model of spot interest rates (least square method). Finally draw the actual spot rate curve and the interporalted curve</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>SYNOPSIS</title>
+    <synopsis>[uopt [,rf]]=nelson_siegel(t,r,u0 [,tf]);</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Description</title>
+    <para>The Nelson Siegel model assumes that the spot interest rate follows the function (of time)</para>
+    <para>f(t)=u1+(u2+u3)*u4/t*(1-e^(-t/u4))-u4*e^(-t/u4)</para>
+    <para>The function estimates the parameters u1, u2, u3, and u4 with the least square method. It is also possible to foresee some rates for given dates.</para>
+  </refsection>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>t</term>
+        <listitem>dates corresponding to the spot interest rates</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>r</term>
+        <listitem>spot interest rate curve</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>u0</term>
+        <listitem>initial values for the parameters (it must be a vector of four elements)</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>tf</term>
+        <listitem>optional parameter: (column vector) the dates for which we want to use the model in order to foresee the interest rates</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Output</title>
+    <variablelist>
+      <varlistentry>
+        <term>uopt</term>
+        <listitem>vector containing the estimated values of the parameters</listitem>
+      </varlistentry>
+    </variablelist>
+    <variablelist>
+      <varlistentry>
+        <term>rf</term>
+        <listitem>optional output: the foreseen interest rates (for the dates in vector &quot;tf&quot;)</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Example</title>
+    <para>
+      <para>First we define the dates and the interest rates (taken from the Euribor curve)</para>
+      <para>--&gt;t=[ 0.0192308 0.0384615 0.0576923 0.0833333 0.1666667 0.25 0.3333333 0.4166667 0.5 0.5833333 0.6666667 0.75 0.8333333 0.9166667 1];</para>
+      <para>--&gt;r=[0.00944 0.00949 0.0097 0.01009 0.01213 0.01405 0.01486 0.01534 0.016 0.01636 0.01662 0.01687 0.01716 0.01742 0.01766 ];</para>
+      <para> Now we can use the function and also foreseen the interest rates for 2 years, 3 years, and 4 years</para>
+      <para>--&gt;[uopt,rf]=nelson_siegel(t,r,ones(4,1),[2 3 4]&apos;)</para>
+      <para>Gradient </para>
+      <para>1.0D-11 * </para>
+      <para>- 1.2365855 </para>
+      <para>0.0194767 </para>
+      <para>- 0.8091640 </para>
+      <para>0.0844415 </para>
+      <para>Objective function </para>
+      <para>0.0000010 </para>
+      <para>rf = </para>
+      <para>0.0178524 </para>
+      <para>0.0178558 </para>
+      <para>0.0178501 </para>
+      <para>uopt = </para>
+      <para>0.0178308 </para>
+      <para>- 0.0094562 </para>
+      <para>0.0097015 </para>
+      <para>0.3151036</para>
+    </para>
+    <para>The figure shows the actual interest rates, the estimated ones and the foreseen ones.</para>
+  </refsection>
+  <refsection>
+    <title>Authors</title>
+    <para>Francesco Menoncin - Brescia University - 2010</para>
+  </refsection>
+  <refsection>
+    <title>See Also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="leastsq">leastsq</link>
+      </member>
+      <member>
+        <link linkend="svennson">svennson</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

@@ -1,0 +1,34 @@
+\documentclass[a4paper]{scrartcl}
+\usepackage[utf8]
+{inputenc} 
+\usepackage[upright]{fourier} 
+\usepackage[usenames,dvipsnames,svgnames]{xcolor}
+\usepackage{tkz-euclide,fullpage}
+\usetkzobj{all}
+\usepackage[frenchb]{babel}
+\definecolor{fondpaille}{cmyk}{0,0,0.1,0}
+\pagecolor{fondpaille}
+\color{Maroon} 
+
+\begin{document}
+   
+   \begin{tikzpicture}
+    \tkzPoint(0,0){A} 
+    \tkzPoint(5,0){C}
+    \tkzPoint[pos=above](0,5){B} 
+    \tkzDrawLine[](A,C)
+    \tkzDrawArc(A,C)(B)
+    \tkzDefMidPoint(A,C)\tkzGetPoint{I}
+    \tkzDrawSegment[color=gray,style=dashed](I,B)
+    \tkzDuplicateLen(I,B)(I,A)\tkzGetPoint{D} 
+    \tkzDrawArc[color=gray,style=dashed](I,B)(D)
+    \tkzDuplicateLen(A,D)(A,B)\tkzGetPoint{E}
+    \tkzDuplicateLen(A,D)(B,A)\tkzGetPoint{G} 
+    \tkzDrawArc[color=gray,style=dashed](A,D)(B)
+    \tkzInterCC(A,C)(B,G)\tkzGetPoints{K}{F}
+    \tkzDrawArc[color=gray,style=dashed](B,G)(F)
+    \tkzDrawPoint(F)
+    \tkzCompass(B,F)
+    \tkzDrawPolygon[color=red](A,B,F) 
+\end{tikzpicture}
+\end{document}

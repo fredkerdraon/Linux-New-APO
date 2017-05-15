@@ -1,0 +1,38 @@
+\documentclass[a4paper]{scrartcl}
+ \usepackage[utf8]{inputenc} 
+ \usepackage[upright]{fourier} 
+ \usepackage[usenames,dvipsnames,svgnames]{xcolor}
+ \usepackage{tkz-euclide,fullpage}
+ \usetkzobj{all}
+ \usepackage[frenchb]{babel}
+ \definecolor{fondpaille}{cmyk}{0,0,0.1,0}
+ \pagecolor{fondpaille}
+ \color{Maroon} 
+
+ \begin{document}
+    
+    \begin{tikzpicture}
+      \tkzInit[xmin=-6,xmax=6,ymin=-6,ymax=6] 
+      \tkzClip
+      \tkzDefPoint(0,0){O} 
+      \tkzDefPoint(5,0){A}
+      \tkzDefPoint(0,5){B}
+      \tkzDefPoint(-5,0){C} 
+      \tkzDefPoint(0,-5){D}
+
+      \tkzDefMidPoint(A,O)     \tkzGetPoint{I}
+
+      \tkzInterLC(I,B)(I,A)    \tkzGetPoints{F}{E}
+      \tkzDrawArc[angles,color=gray,style=dashed](B,E)(180,360)
+      \tkzDrawArc[angles,color=gray,style=dashed](B,F)(220,340)
+      \tkzInterCC(O,C)(B,E)    \tkzGetPoints{D3}{D2}
+      \tkzInterCC(O,C)(B,F)    \tkzGetPoints{D4}{D1}
+
+      \tkzDrawLine[color=gray,add=.5 and .5](B,I)
+      \tkzDrawCircle(O,A)
+      \tkzDrawCircle[diameter](O,A)  
+      \tkzDrawSegments[color=gray](B,D C,A) 
+      \tkzDrawPolygon[color=red](D,D1,D2,D3,D4)
+      \tkzDrawPoints(E,F,I,D1,D2,D4,D3)
+      \tkzLabelPoints(A,B,C,D,O,I,E,F,D1,D2,D4,D3)  
+    \end{tikzpicture}\end{document}

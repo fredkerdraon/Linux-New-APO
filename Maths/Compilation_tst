@@ -1,0 +1,8 @@
+export PATH=$PATH:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/i386/client/
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/scilab/
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/i386/
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/i386/client/
+export LD_LIBRARY_PATH
+
+g++ -v -ggdb -Wall -Wl,--no-as-needed -m32 -o fredmain $(pkg-config --libs --cflags scilab) $(ls /usr/lib/scilab/ | sed 's/^lib/-l/g' | sed "s/\.so.*$//g" | sort | uniq | grep -v disable) -lz -I/usr/include/mysql /usr/lib/i386-linux-gnu/libmysqlclient.so -I/usr/include/ fredmain.cpp
+

@@ -1,0 +1,143 @@
+####################################################################################################
+#
+#                      Reads the test table and generate a Latex table 
+#
+###################################################################################################
+#! /usr/bin/perl
+use strict;use warnings;
+use DBI;
+#my $variable = cashBalance;
+my $dbh = DBI->connect("dbi:mysql:dbname=managementoverview","root","fred1301",{ RaiseError => 1 },) or die $DBI::errstr;
+
+my $size = 250;
+my $selectCount = 0;
+# Pour la date YYYY/MM/DD
+#my $MaxDate = '2015-08-05';
+my $MaxDate = $ENV{'END_DATE'};
+my $Unit = 1000;
+
+print "Unit: $Unit\n"; 
+print "################################## READ KAPITAL #################################\n";
+
+########################################################################################################
+
+# query to grab the max between debit and credit to set the scale of the graph
+my $sth2 = $dbh->prepare("select count(1) from kapital order by Date");
+$sth2->execute();
+my $max = $sth2->fetchrow();
+$sth2->finish();
+$size = $max;
+
+# query to grab the size of the dataset 
+my $sth5 = $dbh->prepare("select distinct(Date) from kapital order by Date");
+$sth5->execute();
+
+print "Number of points: $max\n";
+# query to grab the max between debit and credit to set the scale of the graph
+my $sth3 = $dbh->prepare("select min(cashBalance) from kapital order by Date");
+$sth3->execute();
+my $yMin = $sth3->fetchrow();
+$sth3->finish();
+$yMin=$yMin/$Unit;
+print "Min cash balance : $yMin\n";
+
+#x query to grab the max between debit and credit to set the scale of the graph
+my $sth4 = $dbh->prepare("select max(cashBalance) from kapital order by Date");
+$sth4->execute();
+my $yMax = $sth4->fetchrow();
+$sth4->finish();
+$yMax=$yMax/$Unit;
+print "Max cash balance : $yMax\n";
+
+# Consolidated variables
+$max = $max;
+my $Step = $max/3;
+
+########################################################################################################
+
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+my $sth = $dbh->prepare("select Date Date, Assets Assets, Liabilities Liabilities, Charges Charges, Income Income, CashBalance CashBalance, Kapital Kapital from kapital order by Date");
+$sth->execute();
+
+#print "===>>> Creation du fichier d'output .tex\n";
+open(OUT4,"> ../Latex/cashCurve.tex");
+
+print OUT4 "\\begin{tikzpicture}[thick,scale=1.2]\n";
+print OUT4 "\\begin{axis}[\n";
+print OUT4 "title={Cash over time},\n";
+print OUT4 "xlabel={Time [Days]},\n";
+print OUT4 "ylabel={Cash [euro]},\n";
+print OUT4 "xmin=0,xmax=$max,\n";
+print OUT4 "ymin=$yMin,ymax=$yMax,\n";
+
+#print OUT4 "xtick={";
+
+#$max = $max - 1;
+#my $count = 0;
+#while (my $row = $sth5->fetchrow_hashref())
+#{
+#	if ($row == $max)
+#	{
+#		print OUT4 "$count";
+#	}
+#	else {
+#		print OUT4 "$count,";
+#	}
+#	$count = $count + 1;
+#}
+#print OUT4 "},\n";
+
+my $xtick1 = $max/4;
+my $xtick2 = $max/2;
+my $xtick3 = $max/3*2;
+
+print OUT4 "xtick={0,$xtick1,$xtick2,$xtick3,$max},\n";
+
+my $tick1 = $yMin/2;
+my $tick2 = $yMax/2;
+
+print OUT4 "ytick={$yMin,$tick1,0,$tick2,$yMax},\n";
+
+print OUT4 "legend pos=north west,\n";
+print OUT4 "ymajorgrids=true,\n";
+print OUT4 "grid style=dashed,\n";
+print OUT4 "]\n";
+print OUT4 "\\addplot[\n";
+print OUT4 "color=blue,\n";
+print OUT4 "mark=*,\n";
+print OUT4 "]\n";
+print OUT4 "coordinates {\n";
+
+while (my $row = $sth->fetchrow_hashref()) 
+{
+	my $Date = $row->{Date};
+	my $Income = $row->{Income};
+	my $Charges = $row->{Charges};
+	my $Kapital = $row->{Kapital};
+	my $CashBalance = $row->{CashBalance};
+	my $Liabilities = $row->{Liabilities};
+	my $Assets = $row->{Assets};
+	my $tick = $selectCount*10;
+	my $kapital = $Kapital/$Unit;
+	$CashBalance = $CashBalance/$Unit;
+	#my $vp = $Debit/$sumDebit*100;
+	#print "Debit: $Debit , sumDebit: $sumDebit , vp: $vp\n";
+	print OUT4 "($selectCount,$CashBalance)";
+	$selectCount = $selectCount + 1;
+}
+
+
+print OUT4 "\n";
+	
+print OUT4 "};\n";
+print OUT4 "\\legend{Cash}\n";
+print OUT4 "\\end{axis}\n";
+print OUT4 "\\end{tikzpicture}\n";
+ 
+close(OUT4);
+
+$sth->finish();
+$sth5->finish();
+
+$dbh->disconnect();
+

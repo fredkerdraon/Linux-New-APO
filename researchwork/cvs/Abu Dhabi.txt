@@ -1,0 +1,93 @@
+Hi Frederic,
+
+ 
+
+Thank you for your time this afternoon.
+
+ 
+
+Please see below the specification with my client NBAD in Abu Dhabi, the salary is approx. 38k per month plus bens and bonus and I can assure you is a very interesting client and a great place to work.
+
+ 
+
+* Range of years of experience    :
+	
+
+5-7 years of experience in Structured Products and at least 2 years of Murex experience on Treasury side
+
+Nature of role and responsibilities    :
+	
+
+• Work with Market Risk users to implement Structured Products and Exotic Derivatives valuations in Murex and in particular  focusing to testing and validating the models;
+• Analyses and resolves issues related to pricing, P&L, sensitivities, market data, etc
+• Executes implementation with the project team under Market Risk team supervision;
+• Understanding and documenting the business requirements. Ensures documentation and deliverables are consistent with defined standards;
+• Writes Securities and Derivatives evaluation policies and understands the regulatory and audit requirements behind;
+• Liaises with the technical support team, with other business support teams, and with the Murex vendor where and when required;
+• Escalates identified issues / risks in a timely manner to IT and Market Risk team;
+• Prepares and sends effective periodic / timely status reports to Project Managers/ Business managers;
+
+Mandatory skills / desired experience     :
+	
+
+Mandatory Skills:
+• Will need to have a excellent working knowledge of full spectrum of FX, IR and Fixed Income products, from vanilla to exotic/structured;
+• Experience of providing detailed high level analysis to senior managers and front office.
+• Understanding of securities and derivatives risk and excellent technical product knowledge including IPV methods and sources.
+• Has strong analytical and problem solving skills, and excellent communication and interpersonal skills for interacting with business users and the vendor;
+• Strong knowledge of Murex modules/models;
+• knowledge of Murex Pricing screens, Simulation Views and Scenario reports
+• Has the ability to work under pressure to resolve critical issues and meet time bound project deliverables;
+• Be able to target and meet deadlines on each different phase of the project deliveries;
+Desired Skills:
+• Working level knowledge around Unix & Sybase
+• Familiarity with market data providers such as Reuters and Bloomberg
+• Familiarity with Murex application directory and data model
+• Good knowledge of Database, SQL, VBA and excel
+
+Domain knowledge   :
+	
+
+Understanding of financial markets as a whole
+Strong knowledge of financial instruments in all asset classes
+Knowledge of derivative pricing and the market data required to price a deal
+Knowledge of the P&L components of a trade and sensitivities of a trade
+Excellent understanding of Market Risk
+
+Nice to have skills     :
+	
+
+Sound knowledge of market risk measures essentially VaR, Greeks, valuation models, limit definition, etc.
+Should have the ability to work independently and within a team managing time deadlines.
+Knowledge of Arabic is desirable, but not essential.
+
+Minimum academic requirements    :
+	
+
+Masters Degree in Finance /Quantitative discipline/Economics from a reputed university.
+
+ 
+
+I look forward to your response, can you send me your updated resume as well please?
+
+ 
+
+Kind regards
+
+ 
+
+Karim Yahia
+
+Director
+
+Cityfront Group
+
+Frazer House, 32 Leman Street
+
+London E1 8EW
+
+Tel: +44 (0)20 7173 6195
+
+Mobile: +44 (0) 7960 196 055
+
+Website: www.cityfrontgroup.com

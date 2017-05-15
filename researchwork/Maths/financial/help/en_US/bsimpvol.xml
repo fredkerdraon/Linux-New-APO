@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns4="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="bsimpvol" xml:lang="en">
+  <refnamediv>
+    <refname>bsimpvol</refname>
+    <refpurpose>Compute the implied volatility in a Black and Scholes framework. The function computes the volatility by equating the theoretical value of an option (with both constant riskless interest rate and volatility) to its market value.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>SYNOPSIS</title>
+    <synopsis>[sigmaC,sigmaP]=bsimpvol(option,S,K,r,T,sigma0);</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Description</title>
+    <para>Compute the Black and Scholes implied volatility </para>
+  </refsection>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>option</term>
+        <listitem>
+          <para>the market price of an option (either put or call)</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>S</term>
+        <listitem>
+          <para>current price of the underlying asset</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>K</term>
+        <listitem>
+          <para>strike price of the option</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>r</term>
+        <listitem>riskless interest rate (assumed to be constant until the maturity)</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>T</term>
+        <listitem>time to maturity; it must be in the same time unit of measure as the riskless interest rate (if the riskless interest rate is annual, then an option with maturity of 3 months must have T=3/12)</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>sigma0</term>
+        <listitem>the value of the volatility the solver must start from (it is a guess value)</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Output</title>
+    <variablelist>
+      <varlistentry>
+        <term>sigmaC</term>
+        <listitem>
+          <para>implicit volatility of a call option; the function writes &quot;Call: good convergence&quot; if the solver finds a good value for the implicit volatility, instead it writes &quot;Call: bad convergence&quot;</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>sigmaP</term>
+        <listitem>implicit volatility of a put option; the function writes &quot;Put: good convergence&quot; if the solver finds a good value for the implicit volatility, instead it writes &quot;Put: bad convergence&quot;</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Example</title>
+    <para>We assume that an option (eithe call or put) is worth 1.09 euros on the market. It is written on an asset whose value is 25 euros, with a strike price of 25 euros. If the (annual) riskless interest rate is 0.001 and the time to maturity is 3 months, then the implicit volatility is computed with the following command.</para>
+    <para>--&gt;[sigmaC,sigmaP]=bsimpvol(1.09,25,25,0.001,3/12,0.1) </para>
+    <para>Call: good convergence </para>
+    <para>Put: good convergence</para>
+    <para> sigmaP = 0.2193413</para>
+    <para> sigmaC = 0.2180861 </para>
+  </refsection>
+  <refsection>
+    <title>Authors</title>
+    <para>Francesco Menoncin - Brescia University - 2010</para>
+  </refsection>
+  <refsection>
+    <title>See Also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="bsoption">bsoption</link>
+      </member>
+      <member>
+        <link linkend="bsimpvol">bsimpvol</link>
+      </member>
+      <member>
+        <link linkend="fsolve">fsolve</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

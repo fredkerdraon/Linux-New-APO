@@ -1,0 +1,476 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[8pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{bchart}
+\usepackage{longtable}
+\usepackage{pgfgantt}
+\usepackage{calendar} % Use the calendar.sty style
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{tkz-base}
+\usepackage{hyperref}
+
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+\usepackage{textcomp}
+%\usepackage{hyperref}
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{Project management}
+\author{\copyright Frederic Kerdraon}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Introduction}
+
+This document summurizes all the important informations necessary to facilitate things and remove a lot of stress. It's been put together thanks to \LaTeX. This is designed to help make optimal decisions for a not so short lifetime.
+
+%{\footnote
+%Ce n'est pas parceque les choses sont difficiles que nous n'osons pas, c'est parceque nous n'osons pas qu'elles sont difficiles
+%}
+%{\footnote
+%For once you have tasted flight you will walk the earth with your eyes turned skywards, 
+%for there you have been and there you will long to return.
+%Leonardo da Vinci
+%
+%}
+%\makebox[2\width]{hello}
+
+\newcounter{a}
+\newcounter{b}
+
+%----------------------------------------------------------
+\newcommand{\slice}[4]{
+  \pgfmathparse{0.5*#1+0.5*#2}
+  \let\midangle\pgfmathresult
+
+   slice
+  \draw[thick,fill=black!10] (0,0) -- (#1:1) arc (#1:#2:1) -- cycle;
+
+   outer label
+  \node[label=\midangle:#4] at (\midangle:1) {};
+
+   inner label
+  \pgfmathparse{min((#2-#1-10)/110*(-0.3),0)}
+  \let\temp\pgfmathresult
+  \pgfmathparse{max(\temp,-0.5) + 0.8}
+  \let\innerpos\pgfmathresult
+  \node at (\midangle:\innerpos) {#3};
+}
+
+\section{Management summary}
+
+Ne pas oublier: Letters as templates see events as well (btw remove tasks from events), Data for the CA downloads, Cvs a backuper, Ekland pour la finance, Finance 
+pour les propositions (Tout regrouper sous Documents/Photos/Music/Tools meme sur le site web) 
+Voir les resultats des tests autmatique de la nuit
+Voir les logs
+Voir les appels
+Voir les messages
+Voir les publications facebooks
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{Kapital2.png}
+\caption{A simple caption \label{overflow}}
+\end{figure}
+
+%{\footnote
+%En gros tous les dossiers que j'ai au bureau....;-)
+%}
+
+
+\subsection{Summary}
+
+Highest investment or Budget (time and monney)\\
+Tasks that we couldnt complete in time\\
+Resources that deserve hols\\
+Tasks that we dont want to fuck up (critical path of the highest investment)\\
+
+\subsection{Events}
+From events (Meetings, Deliverables)
+
+\subsubsection{Tasks aggregated}
+Ajouter time to expiry, Feasible time, Feasible Budget, Feasible Complexity/Risks
+{\footnotesize
+RAF, Done, Completion perc, Maturity\\
+\input{tasksAggreg}
+\input{tasksAggregGraph}
+}
+
+\subsubsection{Tasks detailed}
+{\footnotesize
+\input{tasks}
+\input{tasksGraph}
+}
+
+%\subsubsection{ROI}
+\subsubsection{Sponsors}
+From contacts.csv
+\includegraphics[width=90mm]{Contacts.png}
+\includegraphics[width=90mm]{Projects.png}
+\includegraphics[width=90mm]{EventsPro.png}
+\includegraphics[width=90mm]{Resources.png}
+\includegraphics[width=90mm]{Resources.png}
+
+%\subsubsection{Budget}
+%From Tasks.csv
+\subsubsection{Risks}
+Not enough budget, Not enough resources (including me)
+\subsubsection{Targets}
+From Gantt
+\subsubsection{Propositions from Artificial Intelligence}
+From Gantt
+%\subsubsection{Table}
+
+
+\section{Associated Project Management}
+
+From now on we focus on one single project, else it's gonna be messie 
+\subsection{Deliverables}
+From events.csv
+\subsection{Gantt}
+Pour que le Gantt soit a sa place!!!!!
+\begin{figure}[ftbp]
+\begin{center}
+
+\begin{ganttchart}[y unit title=0.4cm,
+y unit chart=0.5cm,
+vgrid,hgrid, 
+title label anchor/.style={below=-1.6ex},
+title left shift=.05,
+title right shift=-.05,
+title height=1,
+bar/.style={fill=gray!50},
+incomplete/.style={fill=white},
+progress label text={},
+bar height=0.7,
+group right shift=0.1,
+group top shift=.6,
+group height=.3,
+group peaks={}{}{0.2}]{24}
+%labels
+\gantttitle{Yearly calendar}{24} \\
+\gantttitle{January}{4} 
+\gantttitle{February}{4} 
+\gantttitle{March}{4} 
+\gantttitle{April}{4} 
+\gantttitle{May}{4} 
+\gantttitle{June}{4} \\
+%tasks
+\ganttbar{Elise holidays}{1}{2} \\
+\ganttbar{Get back to Brest}{3}{8} \\
+\ganttbar{Plan for sailing}{6}{10} \\
+\ganttbar{Check boat}{11}{15} \\
+\ganttbar[progress=33]{Sailing}{20}{22} \\
+\ganttbar{Parties with friends}{18}{19} \\
+\ganttbar{Girlfriend}{16}{18} \\
+\ganttbar[progress=0]{Krav maga}{21}{24} \\
+\ganttbar[progress=0]{Maths classes}{21}{24}\\
+
+%relations 
+\ganttlink{elem0}{elem1} 
+\ganttlink{elem0}{elem3} 
+\ganttlink{elem1}{elem2} 
+\ganttlink{elem3}{elem4} 
+\ganttlink{elem1}{elem5} 
+\ganttlink{elem3}{elem5} 
+\ganttlink{elem2}{elem6} 
+\ganttlink{elem3}{elem6} 
+\ganttlink{elem5}{elem7} 
+\end{ganttchart}
+\end{center}
+\caption{Semester 1}
+\end{figure}
+
+\begin{figure}[ftbp]
+\begin{center}
+
+\begin{ganttchart}[y unit title=0.4cm,
+y unit chart=0.5cm,
+vgrid,hgrid, 
+title label anchor/.style={below=-1.6},
+title left shift=.05,
+title right shift=-.05,
+title height=1,
+bar/.style={fill=gray!50},
+incomplete/.style={fill=white},
+progress label text={},
+bar height=0.7,
+group right shift=0,
+group top shift=.6,
+group height=.3,
+group peaks={}{}{.2}]{24}
+%%labels
+\gantttitle{Yearly calendar}{24} \\
+\gantttitle{July}{4} 
+\gantttitle{August}{4} 
+\gantttitle{September}{4} 
+\gantttitle{October}{4} 
+\gantttitle{November}{4} 
+\gantttitle{December}{4} \\
+%tasks
+\ganttbar{Elise holidays}{1}{2} \\
+\ganttbar{Get back to Brest}{3}{8} \\
+\ganttbar{Plan for sailing}{6}{10} \\
+\ganttbar{Check boat}{11}{15} \\
+\ganttbar[progress=33]{Sailing}{20}{22} \\
+\ganttbar{Parties with friends}{18}{19} \\
+\ganttbar{Girlfriend}{16}{18} \\
+\ganttbar[progress=0]{Krav maga}{21}{24}\\
+\ganttbar[progress=0]{Maths classes}{21}{24}\\
+
+%relations 
+\ganttlink{elem0}{elem1} 
+\ganttlink{elem0}{elem3} 
+\ganttlink{elem1}{elem2} 
+\ganttlink{elem3}{elem4} 
+\ganttlink{elem1}{elem5} 
+\ganttlink{elem3}{elem5} 
+\ganttlink{elem2}{elem6} 
+\ganttlink{elem3}{elem6} 
+\ganttlink{elem5}{elem7} 
+\end{ganttchart}
+\end{center}
+\caption{Semester 2}
+\end{figure}
+%#####################################################################################
+
+\subsection{Burn down}
+From tasks.csv + Dispo weekly of each resource
+%Graphique\\
+\\
+Calcul de vitesse\\
+s=speed\\
+p=position\\
+n=number of units\\
+t=time\\
+s=n/t\\
+\\
+Projection lineaire\\
+y=s*x+p\\
+Theoretical end\\
+
+
+%\includegraphics[width=20pts]{Geometric.jpg}
+
+
+
+\subsection{Resources}
+
+Top 10 resources to take care of\\
+Workload (days, percentage time, stress, fatigue sum of days without break, ambition)
+Diagramme en etoile per deliverable\\
+Rates for all the resources
+
+{\footnotesize
+\subsubsection{Data}
+\input{contacts}
+%\subsubsection{Graph}
+%\input{contactsGraph}
+\subsubsection{Cheese}
+\input{contactsCheese}
+}
+
+\subsubsection{Star diagram}
+%\setlength{\unitlength}{0.75mm}
+%\begin{picture}(80,60)
+%\put(30,20){\vector(1,0){30}}
+%\put(30,20){\vector(4,1){20}}
+%\put(30,20){\vector(3,1){25}}
+%\put(30,20){\vector(2,1){30}}
+%\put(30,20){\vector(1,2){10}}
+%\put(0,3.35){\makebox(0,0){$y$}
+%\thicklines
+%\put(20,15){\vector(-4,1){35}}
+%\put(20,15){\vector(-1,4){10}}
+%\thinlines
+%\put(30,20){\vector(-1,-1){5}}
+%\put(30,20){\vector(-1,-4){5}}
+%\end{picture}
+
+\subsection{Tasks}
+
+%{\footnotesize
+%\input{tasks}
+%}
+
+\section{Annexes}
+
+%\subsection{Rate}
+
+%\begin{bchart}[min=0,max=10000,step=5000,unit=\texteuro]
+%  \bcbar[label=Daily]{400}
+%  \smallskip
+%  \bcbar[label=Weekly]{1900}
+%  \smallskip
+%  \bcbar[label=Monthly]{7600}
+%  \smallskip
+%  \bcbar[label=3 Months]{10000}
+%  \smallskip
+  %\medskip
+  %\bigskip
+%\end{bchart}
+
+\subsection{Tools}
+
+{\footnotesize
+\subsubsection{Data}
+\input{tools}
+%\subsubsection{Graph}
+%\input{toolsGraph}
+\subsubsection{Cheese}
+\input{toolsCheese}
+\subsubsection{Architecture}
+}
+
+\subsection{Documentations and links}
+See References-ok.csv
+%\section{Calendars}
+
+%\subsection{Monthly calendar}
+
+%{\footnotesize
+%Will contain deliverables, meetings and holidays, republic off\\
+%}
+
+%\begin{calendar}{\hsize}
+ 
+%----------------------------------------------------------------------------------------
+%	BLANK DAYS BEFORE THE BEGINNING OF THE CALENDAR
+%----------------------------------------------------------------------------------------
+
+% This part is very finicky. It defines the number of blank days at the beginning of the calendar before the first of the month starts. If you need this to be more than 4 (i.e. the first starts on a Friday or Saturday in a 31 day month), then you have two options: 
+% 1) You can uncomment another one or two \BlankDay's below which will make a new week (6 total) which makes the calendar too big for one page, remedy this by decreasing the size of each day by replacing 2.5cm below with a smaller number. 
+% 2) Make the spill-over days start at the top left of the calendar (i.e. the calendar starts with 31 then a few days blank then 1, 2, 3, etc). The second option can be configured by uncommenting the below:
+
+%\setcounter{calendardate}{31} % Begin the count with 31 so the top left day is 31; this can be changed to 29 or 30 as required
+%\day{}{\vspace{2.5cm}} % 31 - add another line identical to this if starting at 30 or earlier
+
+% You will need to comment out the 31 in the NUMBERED DAYS AND CALENDAR CONTENT section below for this as well as commenting out one of the \BlankDay's below. Play around with it and you will get it.
+
+%\BlankDay
+%\BlankDay
+%\BlankDay
+%\BlankDay
+%\BlankDay
+%\BlankDay
+
+%----------------------------------------------------------------------------------------
+%	NUMBERED DAYS AND CALENDAR CONTENT
+%----------------------------------------------------------------------------------------
+
+% These are the numbered days in the template - if there are less than 31 days simply comment out the bottom lines.
+
+% \vspace{2.5cm} is only there to provide an even look to the calendar where each day is 2.5cm tall, it can be changed or removed to automatically adjust to the day in the week with the most content
+
+%\setcounter{calendardate}{1} % Start the date counter at 1
+
+%\day{Work}{10am Meeting with Boss \\[6pt] 12pm Meeting with Group} % 1 - Example of content
+%\day{}{\vspace{2.5cm}} % 2 
+%\day{}{\vspace{2.5cm}} % 3
+%\day{}{\vspace{2.5cm}} % 4
+%\day{}{\vspace{2.5cm}} % 5
+%\day{}{\vspace{2.5cm}} % 6
+%\day{}{\vspace{2.5cm}} % 7
+%\day{}{\vspace{2.5cm}} % 8
+%\day{Work}{Start giving classes \\[6pt] Pythagore} % 1 - Example of content
+%\day{}{\vspace{2.5cm}} % 9
+%\day{Work}{Delivery one \\[6pt] 12pm Meeting with Group} % 1 - Example of content
+%\day{}{\vspace{2.5cm}} % 10
+%\day{}{\vspace{2.5cm}} % 11
+%\day{}{\vspace{2.5cm}} % 12
+%\day{Work}{Delivery two \\[6pt] 12pm Meeting with Group} % 1 - Example of content
+%\day{}{\vspace{2.5cm}} % 13
+%\day{}{\vspace{2.5cm}} % 14
+%\day{Perso}{Annif \\[6pt] Cado} % 1 - Example of content
+%\day{}{\vspace{2.5cm}} % 15
+%\day{}{\vspace{2.5cm}} % 16
+%\day{}{\vspace{2.5cm}} % 17
+%\day{}{\vspace{2.5cm}} % 18
+%\day{}{\vspace{2.5cm}} % 19
+%\day{}{\vspace{2.5cm}} % 20 
+%\day{}{\vspace{2.5cm}} % 21
+%\day{Perso}{Annif \\[6pt] Cado} % 1 - Example of content
+%\day{}{\vspace{2.5cm}} % 22
+%\day{}{\vspace{2.5cm}} % 23
+%\day{}{\vspace{2.5cm}} % 24
+%\day{}{\vspace{2.5cm}} % 25
+%\day{}{\vspace{2.5cm}} % 26
+%\day{}{\vspace{2.5cm}} % 27
+%\day{}{\vspace{2.5cm}} % 28
+%\day{}{\vspace{2.5cm}} % 29 
+%\day{}{\vspace{2.5cm}} % 30 
+%\day{}{\vspace{2.5cm}} % 31
+
+% Un-comment the \BlankDay below if the bottom line of the calendar is missing
+%\BlankDay
+
+% Un-comment to start counting again after 31
+%\setcounter{calendardate}{1}
+%\day{}{\vspace{2.5cm}} % 1
+%\day{}{\vspace{2.5cm}} % 2
+%\day{}{\vspace{2.5cm}} % 3
+
+%----------------------------------------------------------------------------------------
+
+%\finishCalendar
+%\end{calendar}
+
+%\subsection{Yearly calendar}
+
+%Mon calendrier annuel\\
+
+\end{document}

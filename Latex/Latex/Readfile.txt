@@ -1,0 +1,587 @@
+\newwrite\file
+\immediate\openout\file=myfilename.txt
+\immediate\write\file{A line of text to write to the file}
+\immediate\write\file{Another line of text to write to the file}
+\closeout\file
+
+\newread\file
+\openin\file=myfilename.txt
+\loop\unless\ifeof\file
+    \read\file to\fileline % Reads a line of the file into \fileline
+    % Do something with \fileline
+\repeat
+\closein\file
+
+%% Define a new command for activity key-dates
+ %% this can be saved for shipout later
+ \newcommand{\keydate}[2]{#1  #2 \\}
+ \newcommand{\out}[2]{\immediate\write\tempfile{\noexpand\keydate{ #1}{#2}}}
+
+ %% We open the file to  to write the key-dates
+ %% we will use it later to import
+\newwrite\tempfile
+\immediate\openout\tempfile=keydates.tex
+
+
+ %% Example
+ %% 
+
+\out{Activity 1}{10 Sep 2010}
+\out{Activity 2}{12 Sep 2010}
+\out{Activity 3}{13 Sep 2010}
+
+ %% finally we close the file
+ %%
+ \immediate\closeout\tempfile
+
+ %% we now read the file and dostuff with it
+ %% 
+ \section{Summary of  Key Dates}
+ \input{keydates}  
+
+
+
+
+
+\begin{tikzpicture}
+  \begin{axis}[
+    x tick label style={
+      /pgf/number format/1000 sep=},
+      ylabel=Population,
+      enlargelimits=0.05,
+      legend style={at={(0.5,-0.15)},
+      anchor=north,legend columns=-1},
+    ybar interval=0.7,
+  ]
+  \addplot
+    coordinates {(1930,50e6) (1940,33e6)
+    (1950,40e6) (1960,50e6) (1970,70e6)};
+
+  \addplot
+    coordinates {(1930,38e6) (1940,42e6)
+    (1950,43e6) (1960,45e6) (1970,65e6)};
+
+  \addplot
+    coordinates {(1930,15e6) (1940,12e6)
+    (1950,13e6) (1960,25e6) (1970,35e6)};
+
+  \legend{Far,Near,Here}
+  \end{axis}
+\end{tikzpicture}
+
+
+
+
+
+
+
+
+\documentclass[svgnames]{article} % the option is required for xcolor already called by tikz
+
+\usepackage{xstring}
+% Retreive an element from a list - Jake's code from
+% http://tex.stackexchange.com/a/21560/13304
+\newcommand*{\GetListMember}[2]{%
+    \edef\dotheloop{%
+    \noexpand\foreach \noexpand\a [count=\noexpand\i] in {#1} {%
+        \noexpand\IfEq{\noexpand\i}{#2}{\noexpand\a\noexpand\breakforeach}{}%
+    }}%
+    \dotheloop
+    \par%
+}%
+
+\usepackage{tikz}  
+\usetikzlibrary{calc,backgrounds}
+\pgfdeclarelayer{gridlayer}
+\pgfdeclarelayer{barlayer}
+\pgfsetlayers{background,gridlayer,barlayer,main}
+
+% Declarations
+\pgfmathtruncatemacro\scaley{1}
+\pgfmathtruncatemacro\scalex{1}
+\pgfmathtruncatemacro\minycoord{-5}
+\pgfmathtruncatemacro\step{1}
+\pgfmathtruncatemacro\maxycoord{5}
+\pgfmathtruncatemacro\minxcoord{-5}
+\pgfmathtruncatemacro\maxxcoord{5}
+\pgfmathsetmacro\barwidth{0.3}
+
+\usepackage{xparse}
+
+% Settings
+\newcommand{\setyscale}[1]{\pgfmathtruncatemacro\scaley{#1}}
+\newcommand{\setxscale}[1]{\pgfmathtruncatemacro\scalex{#1}}
+\newcommand{\setminycoord}[1]{\pgfmathtruncatemacro\minycoord{#1/\scaley}}
+\newcommand{\setmaxycoord}[1]{\pgfmathtruncatemacro\maxycoord{#1/\scaley}}
+\newcommand{\setmaxxcoord}[1]{\pgfmathtruncatemacro\maxxcoord{#1/\scalex}}
+\newcommand{\setminxcoord}[1]{\pgfmathtruncatemacro\minxcoord{#1/\scalex}}
+\NewDocumentCommand{\setbarwidth}{m}{\pgfmathsetmacro\barwidth{#1}}
+
+% Specific commands
+\NewDocumentCommand{\drawbar}{o m m m o}{
+\begin{pgfonlayer}{barlayer}
+\draw[#1] ($(#2/\scalex,#3/\scaley)+(-\barwidth,0)$)rectangle($(#2/\scalex,#4/\scaley)+(\barwidth,0)$);
+\end{pgfonlayer}
+\IfNoValueTF{#5}{}{
+\node[below, text width=\step cm,font=\footnotesize,align=flush center] at (#2/\scalex,#3/\scaley) {#5};
+}
+}
+
+\NewDocumentCommand{\drawaxes}{O{stealth} m m}{
+\pgfmathparse{add(\maxycoord,\step)}\pgfmathresult
+\pgfmathtruncatemacro\finaly\pgfmathresult
+\ifnum\minycoord=0
+\draw[-#1,very thick](0,\minycoord)--(0,\finaly) node[left]{#3};
+\else
+\pgfmathparse{subtract(\minycoord,\step)}\pgfmathresult
+\pgfmathtruncatemacro\startingy\pgfmathresult
+\draw[#1-#1,very thick](0,\startingy)--(0,\finaly) node[left]{#3};
+\fi
+\pgfmathparse{add(\maxxcoord,\step)}\pgfmathresult
+\pgfmathtruncatemacro\finalx\pgfmathresult
+\ifnum\minxcoord=0
+\draw[-#1,very thick](\minxcoord,0)--(\finalx,0)  node[below right]{#2};
+\else
+\pgfmathparse{subtract(\minxcoord,\step)}\pgfmathresult
+\pgfmathtruncatemacro\startingx\pgfmathresult
+\draw[#1-#1,very thick](\startingx,0)--(\finalx,0)  node[below right]{#2};
+\fi
+}
+
+\NewDocumentCommand{\setlabelyaxes}{o O{0.1}}{
+\pgfmathtruncatemacro\startingy\minycoord
+\pgfmathparse{add(\startingy,\step)}\pgfmathresult
+\pgfmathtruncatemacro\secondy\pgfmathresult
+\pgfmathtruncatemacro\lasty\maxycoord
+\IfNoValueTF{#1}{% true
+\foreach \y [evaluate=\y as \scaledy using \y*\scaley] in {\startingy,\secondy,...,\lasty}
+\pgfmathtruncatemacro\labely\scaledy
+\draw[very thick] (#2,\y)--(-#2,\y) node[left] {\labely};
+}{% false
+\pgfmathparse{abs(subtract(\startingy,\lasty))}\pgfmathresult
+\pgfmathsetmacro\dimyaxes\pgfmathresult
+\foreach \axisitems [count=\axisitem] in {#1}  {\global\let\totaxisitems\axisitem}
+\pgfmathparse{subtract(\totaxisitems,1)}\pgfmathresult
+\pgfmathtruncatemacro\numstep\pgfmathresult
+\pgfmathparse{divide(\dimyaxes,\numstep)}\pgfmathresult
+\pgfmathsetmacro\incrstep\pgfmathresult
+\pgfmathparse{add(\startingy,\incrstep)}\pgfmathresult
+\pgfmathsetmacro\seconditemy\pgfmathresult
+
+\foreach \y [count=\yi] in {\startingy,\seconditemy,...,\lasty}
+\draw[very thick] (#2,\y)--(-#2,\y) node[left]{\GetListMember{#1}{\yi}};
+}
+}
+
+\NewDocumentCommand{\setlabelxaxes}{O{0.1}}{
+% X-axis
+\pgfmathtruncatemacro\startingx\minxcoord
+\pgfmathparse{add(\startingx,\step)}\pgfmathresult
+\pgfmathtruncatemacro\secondx\pgfmathresult
+\pgfmathtruncatemacro\lastx\maxxcoord
+\foreach \x [evaluate=\x as \scaledx using \x*\scalex] in {\startingx,\secondx,...,\lastx}{
+  \pgfmathtruncatemacro\labelx\scaledx
+  \pgfmathparse{notequal(\labelx,0)}\pgfmathresult
+  \ifnum\pgfmathresult=1
+  \draw[very thick] (\x,#1)--(\x,-#1) node[below] {\labelx};
+  \fi
+}
+}
+
+\NewDocumentCommand{\setytickaxes}{O{0.1}}{
+% Y-axis
+\pgfmathtruncatemacro\startingy\minycoord
+\pgfmathparse{add(\startingy,\step)}\pgfmathresult
+\pgfmathtruncatemacro\secondy\pgfmathresult
+\pgfmathtruncatemacro\lasty\maxycoord
+\foreach \y[evaluate=\y as \scaledy using \y*\scaley]  in {\startingy,\secondy,...,\lasty}{
+ \pgfmathtruncatemacro\labely\scaledy
+  \pgfmathparse{notequal(\labely,0)}\pgfmathresult
+  \ifnum\pgfmathresult=1
+  \draw[very thick] (#1,\y)--(-#1,\y);
+  \fi
+}
+}
+
+\NewDocumentCommand{\setxtickaxes}{O{0.1}}{
+% X-axis
+\pgfmathtruncatemacro\startingx\minxcoord
+\pgfmathparse{add(\startingx,\step)}\pgfmathresult
+\pgfmathtruncatemacro\secondx\pgfmathresult
+\pgfmathtruncatemacro\lastx\maxxcoord
+\foreach \x [evaluate=\x as \scaledx using \x*\scalex] in {\startingx,\secondx,...,\lastx}{
+  \pgfmathtruncatemacro\labelx\scaledx
+  \pgfmathparse{notequal(\labelx,0)}\pgfmathresult
+  \ifnum\pgfmathresult=1
+  \draw[very thick] (\x,#1)--(\x,-#1);
+  \fi
+}
+}
+
+\NewDocumentCommand{\drawgrid}{o}{
+\pgfmathparse{add(\maxxcoord,\step)}\pgfmathresult
+\pgfmathtruncatemacro\finalx\pgfmathresult
+\IfNoValueTF{#1}{
+\begin{pgfonlayer}{gridlayer}
+\draw[help lines] (\minxcoord,\minycoord)grid(\finalx,\maxycoord);
+\end{pgfonlayer}
+}{
+\begin{pgfonlayer}{gridlayer}
+\draw[help lines,#1] (\minxcoord,\minycoord)grid(\finalx,\maxycoord);
+\end{pgfonlayer}
+}
+}
+
+\begin{document}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[scale=0.8,transform shape]
+% Customization of elements
+\setyscale{200}
+\setxscale{200}
+\setminycoord{-1000}
+\setmaxycoord{1000}
+\setminxcoord{0}
+\setmaxxcoord{1400}
+\setbarwidth{0.4}
+% Axes
+\drawaxes{$x$}{$y$}
+\setlabelyaxes[label one, label two,label three,label four,label five]
+% Bars
+\drawbar[top color=gray!10, bottom color=gray!70,thick]{200}{-250}{832}[label a]
+\drawbar[top color=orange!10, bottom color=orange!70,thick]{400}{-300}{250}[label b]
+\drawbar[fill=AliceBlue!40,thick]{600}{-600}{423}[label c]
+\drawbar[top color=BlueViolet!5, bottom color=BlueViolet!70,thick]{800}{-450}{1000}
+\drawbar[top color=white, bottom color=FireBrick!80,thick]{1000}{-71}{150}[label d]
+\drawbar[top color=GreenYellow!10, bottom color=GreenYellow!70,thick]{1200}{-500}{733}[label e]
+\drawbar[top color=Aqua!10, bottom color=Aqua!70,thick]{1400}{-361}{124}[label f]
+\end{tikzpicture}
+\caption{This a very long caption that incidentally could overwrite the y axis, but actually it doesn't}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[scale=0.8,transform shape]
+% Customization of elements
+\setyscale{200}
+\setxscale{100}
+\setminycoord{-1000}
+\setmaxycoord{1000}
+\setminxcoord{0}
+\setmaxxcoord{700}
+\setbarwidth{0.45}
+% Axes
+\drawgrid[dashed]
+\drawaxes[latex]{my x axis}{my y axis}
+\setlabelyaxes
+\setxtickaxes
+% Bars
+\drawbar[top color=gray!10, bottom color=gray!70,thick]{100}{-250}{832}[label a]
+\drawbar[top color=orange!10, bottom color=orange!70,thick]{200}{-300}{250}[label b]
+\drawbar[fill=AliceBlue!40,thick]{300}{-600}{423}[label c]
+\drawbar[top color=BlueViolet!5, bottom color=BlueViolet!70,thick]{400}{-450}{1000}
+\drawbar[top color=white, bottom color=FireBrick!80,thick]{500}{-71}{150}[label d]
+\drawbar[top color=GreenYellow!10, bottom color=GreenYellow!70,thick]{600}{-500}{733}[label e]
+\drawbar[top color=Aqua!10, bottom color=Aqua!70,thick]{700}{-361}{124}[label f]
+\end{tikzpicture}
+\caption{The caption}
+\end{figure}
+
+\end{document}
+
+
+
+
+
+\documentclass[border=5mm]{standalone}
+
+\usepackage{pgfplots}
+
+\pgfplotstableread{
+Year    FarMin  FarMax  NearMin NearMax HereMin HereMax
+1930    -20     50      -10     30      -15     40
+1940    -10     60      -15     60      -20     70
+1950    -15     78      -20     20      -32     42
+1960    -20     30      -15     40      -20     10
+1970    -5      30      -30     40      -15     20
+}\datatable
+
+
+\begin{document}%
+\begin{tikzpicture}
+  \begin{axis}[
+    x tick label style={
+      /pgf/number format/1000 sep=},
+      ylabel=Population,
+      ybar,
+      enlarge x limits=0.15,
+      bar width=0.8em,
+    after end axis/.append code={
+        \draw ({rel axis cs:0,0}|-{axis cs:0,0}) -- ({rel axis cs:1,0}|-{axis cs:0,0});
+    }
+  ]
+  \addplot +[forget plot] table {\datatable};
+  \addplot table [y index=2] {\datatable};
+
+  \addplot +[forget plot] table [y index=3] {\datatable};
+  \addplot table [y index=4] {\datatable};
+
+  \addplot +[forget plot] table [y index=5] {\datatable};
+  \addplot table [y index=6] {\datatable};
+  \legend{Far,Near,Here}
+  \end{axis}
+\end{tikzpicture}
+
+\end{document}
+
+
+
+\documentclass[parskip]{scrartcl}
+\usepackage[margin=15mm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\pgfdeclarelayer{background}
+\pgfsetlayers{background,main}
+
+\newcommand{\drawstacks}[3]% low/high value, baroptions, gridoptions
+{   \xdef\minvalue{0}
+    \xdef\maxvalue{0}
+    \foreach \low/\high [count=\c] in {#1}
+  { \fill[#2] (\c-0.8,\low) rectangle (\c-0.2,\high);
+    \xdef\stacknumber{\c}
+    \pgfmathsetmacro{\lower}{min(\minvalue,\low)}
+        \xdef\minvalue{\lower}
+        \pgfmathsetmacro{\higher}{max(\maxvalue,\high)}
+        \xdef\maxvalue{\higher}
+  }
+  \pgfmathtruncatemacro{\lowbound}{\minvalue}
+    \pgfmathtruncatemacro{\highbound}{\maxvalue}
+  \begin{pgfonlayer}{background}
+        \draw[#3] (0,\lowbound-1) grid (\stacknumber,\highbound+1);
+    \end{pgfonlayer}
+    \draw[thick,-latex] (0,0) -- (\c+0.5,0);
+    \draw[thick,-latex] (0,\lowbound-1) -- (0,\highbound+1.5);
+    \pgfmathtruncatemacro{\a}{\lowbound-1}
+    \pgfmathtruncatemacro{\b}{\highbound+1}
+    \foreach \x in {\a,...,\b}
+    {   \pgfmathtruncatemacro{\label}{\x}
+        \draw (0.07,\x) -- (-0.07,\x) node[left] {\label};
+    }
+}
+
+\newcommand{\drawcolorstacks}[2]% low/high/color, gridoptions
+{   \xdef\minvalue{0}
+    \xdef\maxvalue{0}
+    \foreach \low/\high/\fillcolor [count=\c] in {#1}
+  { \fill[\fillcolor,draw=\fillcolor!50!black] (\c-0.8,\low) rectangle (\c-0.2,\high);
+    \xdef\stacknumber{\c}
+    \pgfmathsetmacro{\lower}{min(\minvalue,\low)}
+        \xdef\minvalue{\lower}
+        \pgfmathsetmacro{\higher}{max(\maxvalue,\high)}
+        \xdef\maxvalue{\higher}
+  }
+  \pgfmathtruncatemacro{\lowbound}{\minvalue}
+    \pgfmathtruncatemacro{\highbound}{\maxvalue}
+  \begin{pgfonlayer}{background}
+        \draw[#2] (0,\lowbound-1) grid (\stacknumber,\highbound+1);
+    \end{pgfonlayer}
+    \draw[thick,-latex] (0,0) -- (\c+0.5,0);
+    \draw[thick,-latex] (0,\lowbound-1) -- (0,\highbound+1.5);
+    \pgfmathtruncatemacro{\a}{\lowbound-1}
+    \pgfmathtruncatemacro{\b}{\highbound+1}
+    \foreach \x in {\a,...,\b}
+    {   \pgfmathtruncatemacro{\label}{\x}
+        \draw (0.07,\x) -- (-0.07,\x) node[left] {\label};
+    }
+}
+
+\colorlet{cola}{red!50!gray}
+\colorlet{colb}{orange!50!gray}
+\colorlet{colc}{yellow!50!gray}
+\colorlet{cold}{green!50!gray}
+\colorlet{cole}{blue!50!gray}
+\colorlet{colf}{violet!50!gray}
+\colorlet{colg}{gray}
+
+\begin{document}
+
+\begin{tikzpicture}
+    \drawstacks{-2.1/4.3,-1.8/7.1,-5.6/3.7,-4.5/3.5,-3.9/2.0,-6.3/1.7,-1.8/2.4}{red!50,draw=red!50!black}{gray}
+\end{tikzpicture}
+\begin{tikzpicture}
+    \drawcolorstacks{-2.1/4.3/cola,-1.8/7.1/colb,-5.6/3.7/colc,-4.5/3.5/cold,-3.9/2.0/cole,-6.3/1.7/colf,-1.8/2.4/colg}{gray, thick, densely dotted}
+\end{tikzpicture}
+
+\end{document}
+
+
+
+
+\newcommand{\drawhighstacks}[3][500]% low/high/color, gridoptions
+{   \xdef\minvalue{0}
+    \xdef\maxvalue{0}
+    \foreach \low/\high/\fillcolor [count=\c] in {#2}
+  { \fill[\fillcolor,draw=\fillcolor!50!black] (\c-0.8,\low/#1) rectangle (\c-0.2,\high/#1);
+    \xdef\stacknumber{\c}
+    \pgfmathsetmacro{\lower}{min(\minvalue,\low)}
+        \xdef\minvalue{\lower}
+        \pgfmathsetmacro{\higher}{max(\maxvalue,\high)}
+        \xdef\maxvalue{\higher}
+  }
+  \pgfmathtruncatemacro{\lowbound}{\minvalue/#1}
+    \pgfmathtruncatemacro{\highbound}{\maxvalue/#1}
+  \begin{pgfonlayer}{background}
+        \draw[#3] (0,\lowbound-1) grid (\stacknumber,\highbound+1);
+    \end{pgfonlayer}
+    \draw[thick,-latex] (0,0) -- (\c+0.5,0);
+    \draw[thick,-latex] (0,\lowbound-1) -- (0,\highbound+1.5);
+    \pgfmathtruncatemacro{\a}{\lowbound-1}
+    \pgfmathtruncatemacro{\b}{\highbound+1}
+    \foreach \x in {\a,...,\b}
+    {   \pgfmathtruncatemacro{\label}{\x*#1}
+        \draw (0.07,\x) -- (-0.07,\x) node[left] {\label};
+    }
+}
+
+
+\begin{tikzpicture}
+    \drawhighstacks{-1632/927/cola, -412/1250/colb, -777/1965/colc, -1234/1984/cold, -981/1984/cole, -1004/590/colf, -766/1318/colg}{gray, thick, dashed}
+\end{tikzpicture}
+\begin{tikzpicture}
+    \drawhighstacks[300]{-1632/927/cola, -412/1250/colb, -777/1965/colc, -1234/1984/cold, -981/1984/cole, -1004/590/colf, -766/1318/colg}{gray, thick, dashed}
+\end{tikzpicture}
+
+
+\begin{bchart}[min=-100, max=100, step=25, unit=\%, width=\linewidth]
+ 
+\bcbar[text=should be 100,color=green!40]{123 - 23}
+\bclabel{bars group  1}
+ 
+\pgfmathparse{123 - 23}
+\bcbar[text=should be 100 again,color=red]{\pgfmathresult}
+\smallskip
+ 
+ 
+\pgfmathparse{123 - 23}
+\bcbar[text=should be 100,color=yellow]{\pgfmathresult}
+\bclabel{bars group 2}
+\pgfmathparse{123 - 23}
+\bcbar[text=should be 100,color=red!40]{\pgfmathresult}
+ 
+\bcxlabel{this does not work properly}
+\end{bchart}
+
+
+\begin{bchart}[min=-100, max=100, step=25, unit=\%, width=\linewidth]
+\pgfmathsetmacro{\makroName}{123 - 23}
+\bcbar[text=should be 100,color=green!40]{\makroName}
+\bclabel{bars group  1}
+\bcbar[text=should be 100 again,color=red]{\makroName}
+\smallskip
+ 
+\pgfmathsetmacro{\anotherMakro}{23*100 / 123}
+\bcbar[text=calculating 23*100 / 123,color=yellow]{\anotherMakro}
+\bclabel{bars group 2}
+\bcbar[text=as above,color=red!40]{\anotherMakro}
+ 
+\bcxlabel{this does}
+\end{bchart}
+
+
+\begin{tikzpicture}
+    \begin{semilogyaxis}[
+    xtick={1,...,5},
+    grid=major,
+    xmin=0,
+ xlabel=\textsc{},
+ ylabel=\textsc{Average computation time[msec]},
+ scale only axis,
+ width=5in,
+ height=3in]
+    \addplot[
+  ybar,
+  bar width=0.102874in,
+  bar shift=0in,
+  fill=yellow,
+  draw=black]
+    plot coordinates {
+        (1, 810)
+        (2, 53405.5)
+        (3, 64655)
+        (4, 721.25)
+        (5, 738.5)
+    };
+    \node [above] at (axis cs:  1,  810) {$Q1$};
+    \node [above] at (axis cs:  2,  53405.5) {$Q2$};
+    \node [above] at (axis cs:  3,  64655) {$Q3$};
+    \node [above] at (axis cs:  4,  721.25) {$Q4$};
+    \node [above] at (axis cs:  5,  738.5) {$Q5$};
+ \end{semilogyaxis}
+\end{tikzpicture}
+
+
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.4} 
+
+\begin{document}
+
+\begin{tikzpicture}
+
+\begin{axis}[%
+scale only axis,
+width=5in,
+height=4in,
+xmin=-3, xmax=3,
+ymin=0, ymax=1,
+axis on top]
+\addplot[
+  ybar,
+  bar width=0.102874in, 
+  bar shift=0in,
+  fill=red,
+  draw=black] 
+  plot coordinates{ 
+    (-2.9,0.00022263) (-2.7,0.000682328) (-2.5,0.00193045) (-2.3,0.00504176)
+    (-2.1,0.0121552) (-1.9,0.0270518) (-1.7,0.0555762) (-1.5,0.105399)
+    (-1.3,0.18452) (-1.1,0.298197) (-0.9,0.444858) (-0.7,0.612626)
+    (-0.5,0.778801) (-0.3,0.913931) (-0.1,0.99005) (0.1,0.99005)
+    (0.3,0.913931) (0.5,0.778801) (0.7,0.612626) (0.9,0.444858) 
+    (1.1,0.298197) (1.3,0.18452) (1.5,0.105399) (1.7,0.0555762)
+    (1.9,0.0270518) (2.1,0.0121552) (2.3,0.00504176) (2.5,0.00193045)
+    (2.7,0.000682328) (2.9,0.00022263)
+  };
+
+\end{axis}
+\end{tikzpicture}
+
+\end{document}
+
+
+\documentclass[12pt]{article}
+\usepackage{pstricks}
+\usepackage{pst-bar}
+\usepackage{pstricks-add}
+\usepackage{filecontents}
+
+\begin{document}
+
+\begin{filecontents*}{example1.csv}
+Sun, Mon, Tue, Wed, Thu, Fri, Sat
+1700, 1690, 1600, 1800, 1750, 1210, 1200
+\end{filecontents*}
+
+\psset{xunit=0.5in,yunit=0.0015in}
+\begin{pspicture}(0,0)(8,2000)
+\psframe[fillstyle=solid,fillcolor=black!10,linestyle=solid](0,0)
+(8,2000)
+\psaxes[yticksize=0 8,ticks=y,labels=y,Dx=1,Dy=500](0,0)
+(0,0)(8,2000)
+\readpsbardata[header=true]{\data}{example1.csv}
+\psbarchart[barstyle=blue]{\data}
+\end{pspicture}
+
+\end{document}

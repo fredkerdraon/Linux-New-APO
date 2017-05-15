@@ -1,0 +1,93 @@
+####################################################################################################
+#
+#                      PARSE CREDIT AGRICOLE 
+#
+###################################################################################################
+print "===>>> Process du fichier tout kaka de cacib\n";
+open(OUT,"> ../Datavalidated/cashflows.csv");
+open(IN,"< ../Data/CA20121108_2009.txt");
+$Check=0;
+$Total=6;
+
+print OUT "Date;Category;Label;Debit;Credit\n";
+
+while(!eof(IN))
+{
+        my $TheLine=<IN>;
+        chop($TheLine);
+	#print "My check: $Check\n";
+        my @Line=split(/:/,$TheLine);
+	my @LineMerde=split(/-/,$TheLine);
+	if(index($LineMerde[0],"+")>0)
+	{
+		#print "Ligne de merde\n";
+		#print "$TheLine\n";
+	}
+	if(index($Line[0],"Libellé")>=0)
+	{
+		#my $Pillar=substr($Line[0],28,5);
+		#my $Curve=$Line[0];
+        	#my $Curency=$Line[1];
+		#print "Date $Line[1]\n";
+		$Libelle1=$Line[1];
+		$Libelle1 =~ s/^\s+//;
+		$Check=$Check+2;
+	}
+	if(index($Line[0],"Date")>=0)
+	{
+		#my $Pillar=substr($Line[0],28,5);
+		#my $Curve=$Line[0];
+        	#my $Curency=$Line[1];
+		$Date=$Line[1];
+		$Date =~ s/^\s+//;
+		my @DateSplit=split(/\//,$Date);
+		$Date = "2013-".$DateSplit[1]."-".$DateSplit[0];
+		#print "Date $Line[1]\n";
+		$Check=$Check+1;
+	}
+	if (index($Line[0],"Débit")>=0)
+	{
+		$Debit=$Line[1];
+		$Debit =~ s/^\s+//;
+		$Debit =~ s/ //;
+		#print "Debit $Line[1]\n";
+		$Check=$Check+3;
+		$Credit="0";
+		#print "Check : $Check\n";
+	}
+	if (index($Line[0],"Crédit")>=0)
+	{
+		$Credit=$Line[1];
+		$Credit =~ s/^\s+//;
+		$Credit =~ s/ //;
+		#print "Debit $Line[1]\n";
+		$Check=$Check+3;
+		$Debit="0";
+		#print "Check : $Check\n";
+	}
+	if (index($Line[0],"Libellé")<=0 && index($Line[0],"Débit")<=0 && index($Line[0],"Date")<=0 && $Check==3)
+	{
+		#print "$TheLine\n";
+		$Libelle=$TheLine;
+		$Libelle =~ s/^\s+//;
+		#print "Libelle: $Libelle\n";
+	}
+
+	if($Check == $Total)
+	{
+		#print "Je suis content\n";
+		#print OUT $Date.";".$Libelle.";".$Debit."\n";
+		#print $Date." , ".$Libelle." , ".$Debit." \\\\"."\n";
+		print OUT $Date.";".$Libelle.";".$Libelle1.";".$Debit.";".$Credit.";\n";
+		$Check=0;
+	}
+  	
+#Translate + 100 bp and -100 bp
+#       print OUT "|"."6"."|".$Curve."|".$Curency."||".$Pillar."|"."Std"."|"."1.0"."|\n";
+#       print OUT "|"."7"."|".$Curve."|".$Curency."||".$Pillar."|"."Std"."|"."-1.0"."|\n";
+#Split of combined stress
+#       CRISIS(8,$Curve,$Curency,$Pillar);
+#       REVIVAL(9,$Curve,$Curency,$Pillar);
+}
+close(IN);
+close(OUT);

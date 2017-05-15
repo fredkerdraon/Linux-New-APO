@@ -1,0 +1,37 @@
+####################################################################################################
+#
+#                      Reads the test table and generate a Latex table 
+#
+###################################################################################################
+#! /usr/bin/perl
+use strict;use warnings;
+use DBI;
+
+my $dbh = DBI->connect("dbi:mysql:dbname=managementoverview","root","fred1301",{ RaiseError => 1 },) or die $DBI::errstr;
+#my $Name
+#my $ID
+#my $Checklist
+########################################################################################################
+
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+my $sth = $dbh->prepare("select MyDate MyDate, Type Type, Name Name, Template Template from events where (TO_DAYS(MyDate) - TO_DAYS(NOW()) <= 7) and (TO_DAYS(MyDate) - TO_DAYS(NOW()) > 0)");
+$sth->execute();
+
+#print "===>>> Creation du fichier d'output .tex\n";
+open(OUT,"> ../Latex/calendar.tex");
+
+print OUT "\\day{}{\n";
+while (my $row = $sth->fetchrow_hashref()) 
+{
+	my $MyDate = $row->{MyDate};
+	my $Type = $row->{Type};
+	my $Name = $row->{Name};
+	my $Template = $row->{Template};
+	print OUT "$Name\n";
+}
+print OUT "}\n";
+close(OUT);
+
+$sth->finish();
+
+$dbh->disconnect();

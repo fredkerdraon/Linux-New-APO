@@ -1,0 +1,85 @@
+ID,Name,Value,Type,ROI,InitPrice,Mcost,Maturity,ALFlag
+1,Boat ,17000,Acquisition,50,30000,400,2013-01-07,Asset
+1,CEL ,483,Acquisition,50,30000,400,2013-01-07,Asset
+1,LDD ,42,Acquisition,50,30000,400,2013-01-07,Asset
+1,LIVA ,0,Acquisition,50,30000,400,2013-01-07,Asset
+1,TITR ,47,Acquisition,50,30000,400,2013-01-07,Asset
+1,PRED ,140,Acquisition,50,30000,400,2013-01-07,Asset
+1,SUPPLETIS ,711,Acquisition,50,30000,400,2013-01-07,Asset
+2,Motor ,500,Acquisition,49,600,20,2013-01-07,Asset
+3,Fields ,0,Acquisition,1500,0,48,2013-01-07,Asset
+4,Guitars ,350,Acquisition,0,700,47,2013-01-07,Asset
+6,Lamp ,350,Acquisition,0,350,45,2013-01-07,Asset
+7,Guitar folk beige ,0,Acquisition,0,350,44,2013-01-07,Asset
+8,Mac ,40,Acquisition,0,350,43,2013-01-07,Asset
+9,Nintendo ,70,Acquisition,0,350,42,2013-01-07,Asset
+10,Tv samsung ,490,Acquisition,0,600,41,2013-01-07,Asset
+11,Dvd player ,15,Acquisition,0,350,40,2013-01-07,Asset
+12,toilettes seche,0,Future investments,0,1,39,2013-01-07,Asset
+13,tent,0,Future investments,0,1,38,2013-01-07,Asset
+14,eolienne,0,Future investments,0,2,37,2013-01-07,Asset
+15,solar panel,0,Future investments,0,3,36,2013-01-07,Asset
+16,battery,0,Future investments,0,4,35,2013-01-07,Asset
+17,metal malle,0,Future investments,0,5,34,2013-01-07,Asset
+18,chauffe eau solaire,0,Future investments,0,6,33,2013-01-07,Asset
+19,poele,0,Future investments,0,7,32,2013-01-07,Asset
+20,composteur,0,Future investments,0,8,31,2013-01-07,Asset
+21,abri de jardin,0,Future investments,0,9,30,2013-01-07,Asset
+22,Sac,0,Future investments,0,1,29,2013-01-07,Asset
+23,Scotch,0,Future investments,0,1,28,2013-01-07,Asset
+24,Testeur batterie,0,Future investments,0,2,27,2013-01-07,Asset
+25,w30,0,Future investments,0,3,26,2013-01-07,Asset
+26,caisse a outils,0,Future investments,0,4,25,2013-01-07,Asset
+27,lingettes,0,Future investments,0,5,24,2013-01-07,Asset
+28,brosse,0,Future investments,0,6,23,2013-01-07,Asset
+29,eponge,0,Future investments,0,7,22,2013-01-07,Asset
+30,essuie tout,0,Future investments,0,8,21,2013-01-07,Asset
+31,scratch,0,Future investments,0,9,20,2013-01-07,Asset
+32,lampes,0,Future investments,0,10,19,2013-01-07,Asset
+33,brosse metallique,0,Future investments,0,11,18,2013-01-07,Asset
+34,barbecue,0,Future investments,0,12,17,2013-01-07,Asset
+35,tuyau,0,Future investments,0,13,16,2013-01-07,Asset
+36,vernis a bois,0,Future investments,0,14,15,2013-01-07,Asset
+37,karcher,0,Future investments,0,15,14,2013-01-07,Asset
+38,Brevet des colleges,0,Knowledge,13,16,13,2013-01-07,Asset
+39,Baccalaureat,0,Knowledge,12,17,12,2013-01-07,Asset
+40,Ingenieur,0,Knowledge,11,50000,11,2013-01-07,Asset
+41,Permis nav,0,Knowledge,10,19,10,2013-01-07,Asset
+42,Brevet ulm,0,Knowledge,9,20,9,2013-01-07,Asset
+43,Brevet pilote,0,Knowledge,8,21,8,2013-01-07,Asset
+44,Guitar,0,Knowledge,7,22,7,2013-01-07,Asset
+45,Arts,0,Knowledge,6,23,6,2013-01-07,Asset
+46,Bamboos - Papyrus,0,Future investments,5,24,5,2013-01-07,Asset
+47,Cannabis,0,Future investments,4,25,4,2013-01-07,Asset
+48,Strawberries,0,Future investments,3,26,3,2013-01-07,Asset
+49,Salads,0,Future investments,2,27,2,2013-01-07,Asset
+50,Avoine,0,Future investments,1,28,1,2013-01-07,Asset
+51,Tomatoes,0,Future investments,0,29,1,2013-01-07,Asset
+52,Thym,0,Future investments,0,30,1,2013-01-07,Asset
+53,Plasil,0,Future investments,0,31,1,2013-01-07,Asset
+54,Laurier,0,Future investments,0,32,1,2013-01-07,Asset
+55,Rosier,0,Future investments,0,33,1,2013-01-07,Asset
+56,Kalankoe,0,Future investments,0,34,1,2013-01-07,Asset
+57,Ficus,0,Future investments,0,35,1,2013-01-07,Asset
+58,Bananier,0,Future investments,0,36,1,2013-01-07,Asset
+59,Citrons,0,Future investments,0,37,1,2013-01-07,Asset
+60,Pommes de terre,0,Future investments,0,38,1,2013-01-07,Asset
+61,Kiwis,0,Future investments,0,39,1,2013-01-07,Asset
+62,Bouquin 1,0,Acquisition,0,40,1,2013-01-07,Asset
+63,Bouquin 2,0,Acquisition,0,41,1,2013-01-07,Asset
+64,Printer,0,Acquisition,0,42,1,2013-01-07,Asset
+65,Julbo ,0, Etienne,0,80,1,2013-01-07,Other
+66,Parre batte ,0, Fred,0,40,1,2013-01-07,Other
+67,Lampe torche ,0, Christophe,0,50,1,2013-01-07,Other
+68,Traine ,0, Ronan,0,25,1,2013-01-07,Other
+69,Sac spi ,0, Zaz,0,30,1,2013-01-07,Other
+70,Interface Elec ,0, Etienne,0,17,1,2013-01-07,Other
+71,Lampe rose,150,Acquisition,1,350,1,2013-01-07,Asset
+72,Partition pink floyd,10,Acquisition,0,1,1,2013-01-07,Asset
+73,Partition red hot,10,Acquisition,0,1,1,2013-01-07,Asset
+75,Car-mortgage ,2287,mortgage,0,7000,1,2013-01-07,Liab
+76,Boat-mortgage ,13440,mortgage,0,30000,1,2013-01-07,Liab
+77,Dad-mortgage ,5000,mortgage,0,5000,1,2013-01-07,Liab
+78,Mum-mortgage ,3500,mortgage,0,3500,1,2013-01-07,Liab
+79,Alfa,3000,Acquisition,0,7900,300,2013-01-07,Asset
+79,Zaz,0,Friend,6000,0,6000,2013-01-07,Asset

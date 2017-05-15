@@ -1,0 +1,10 @@
+set xrange [1:8]
+#set xdtic
+set title "Evolution of the Charges vs Income and then PnL  November 1-7 1989"
+set key below
+set label "(Weekend)" at 5,25 center
+plot 'using.dat' using 3:4 title "Charges" with impulses,\
+     'using.dat' using 3:5 t "Income" with points,\
+     'using.dat' using 3:6 t "PnL" with lines
+unset label
+pause -1

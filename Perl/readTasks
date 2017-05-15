@@ -1,0 +1,68 @@
+####################################################################################################
+#
+#                      Reads the test table and generate a Latex table 
+#
+###################################################################################################
+#! /usr/bin/perl
+use strict;use warnings;
+use DBI;
+
+my $dbh = DBI->connect("dbi:mysql:dbname=managementoverview","root","fred1301",{ RaiseError => 1 },) or die $DBI::errstr;
+
+my $size = 500;
+
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+my $sth = $dbh->prepare("select t.ID ID, t.Project Project, t.Task Task, t.Weight Weight, t.Complexity Complexity, t.TheoEnd TheoEnd, t.EndDate EndDate , t.Status Status from tasks as t where Project <> '' and Status not like '%on%' order by Weight/Complexity desc limit $size");
+
+$sth->execute();
+
+print "===>>> Creation du fichier d'output .tex\n";
+open(OUT,"> ../Latex/tasks.tex");
+open(OUT2,"> ../Latex/tasksGraph.tex");
+
+my $max = 50;
+my $Step = 50/5;
+
+printf OUT2 "\\begin{bchart}[min=0,max=50,step=%u,unit=k\\texteuro]\n",$Step;
+
+print OUT "\\begin{longtable}{|c|c|c|c|c|c|}\n";
+print OUT "\\hline\n";
+print OUT "\\multicolumn{6}{|c|}{Tasks} \\\\\n";
+print OUT "\\hline\n";
+
+print OUT "Project & Task & Return & Cost & R/C & NumDays \\\\\n";
+print OUT "\\hline\n";
+
+while (my $row = $sth->fetchrow_hashref()) 
+{
+	my $ID = $row->{ID};
+	my $Task = $row->{Task};
+	$Task =~ s/"//g;
+	my $Weight = $row->{Weight};
+	my $Complexity = $row->{Complexity};
+	my $Project = $row->{Project};
+	$Project =~ s/"//g;
+	my $TheoEnd = $row->{TheoEnd};
+	$TheoEnd =~ s/'//g;
+	my @TheoEndSplit=split(/ /,$TheoEnd);
+	my $EndDate = $row->{EndDate};
+	my @EndDateSplit=split(/ /,$EndDate);
+	$EndDate =~ s/'//g;
+	my $rc = $Weight/$Complexity;
+	my $NumDays = 10;
+	my $rm = $Weight/1000;
+	print OUT "$Project & $Task & $Weight & $Complexity & $rc & $NumDays\\\\\n";
+	print OUT "\\hline\n";
+	printf OUT2 "\\bcbar[label=$Task]{%u}\\\\\n",$rm;
+	print OUT2 "\\smallskip\n";
+}
+
+print OUT2 "\\end{bchart}\n";
+close(OUT2);
+
+print OUT "\\end{longtable}\n";
+close(OUT);
+
+$sth->finish();
+$dbh->disconnect();
+

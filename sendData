@@ -1,0 +1,18 @@
+#!/bin/bash
+
+name=$1
+subject=$2
+
+email="fredkerdraon@hotmail.com"
+rootDir=/home/frederickerdraon/Documents/researchwork/Datavalidated/
+file="$rootDir$1"
+
+echo "Sending file: $file"
+echo "To: $email"
+echo "Topics: $subject"
+
+
+
+#df -h | mail -s “DiskSpaceReport” fredkerdraon@hotmail.com
+
+mpack -s $subject $file $email

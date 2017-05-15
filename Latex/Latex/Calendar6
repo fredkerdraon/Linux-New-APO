@@ -1,0 +1,62 @@
+    %------------------------------------------------------------------------------
+    %       DOCUMENT BASE CONFIGURATIONS
+    %------------------------------------------------------------------------------
+    \documentclass[landscape,a4paper]{article}
+     
+    %------------------------------------------------------------------------------
+    %       PACKAGES
+    %------------------------------------------------------------------------------
+        \usepackage{calendar}
+        \usepackage[landscape,margin=0.5in]{geometry}
+     
+            %\usepackage[french]{babel}      % pour dire que le texte est en français
+            %\usepackage{a4}                 % pour indiquer le format du document
+            %\usepackage[T1]{fontenc}        % pour les font postscript
+            %\usepackage[cyr]{aeguill}       % police vectorielle TrueType, guillemets français
+            %\usepackage{float}              % pour le placement des figures
+     
+    %------------------------------------------------------------------------------
+    %       INTRO
+    %------------------------------------------------------------------------------
+        \begin{document}
+         
+            \pagestyle{empty} % Removes the page number from the bottom of the page
+            \noindent
+            \StartingDayNumber=2 % Calendar starting day, default of 1 means Sunday, 2 for Monday, etc
+
+    %------------------------------------------------------------------------------
+    %       MONTH AND YEAR SECTION
+    %------------------------------------------------------------------------------
+            %\begin{center}
+            %\textsc{\LARGE Month}\\ % Month
+            %\textsc{\large Year} % Year
+            %\end{center}
+
+    %------------------------------------------------------------------------------
+    %       TABLES
+    %------------------------------------------------------------------------------
+            \begin{tabular}{|p{0.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{0.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+              \hline
+                    IX & Monday & Tuesday & Wednesday & & Thursday & Friday & Saturday & Sunday \\
+              \hline\hline
+                    40 & 30     & 1       & 2         & & 3        & 4      & 5        & 6      \\[2cm]
+              \hline
+                    41 & 7      & 8       & 9         & & 10       & 11     & 12       & 13     \\[2cm]
+              \hline
+                    42 & 14     & 15      & 16        & & 17       & 18     & 19       & 20     \\[2cm]
+              \hline
+                    43 & 21     & 22      & 23        & & 24       & 25     & 26       & 27     \\[2cm]
+              \hline
+                    44 & 28     & 29      & 30        & & 1        &        &          &        \\[2cm]
+              \hline
+                       &        &         &           & &          &        &          &        \\[2cm]
+              \hline
+            \end{tabular}
+
+
+    %----------------------------------------------------------------------------------------
+    %       OUTRO
+    %----------------------------------------------------------------------------------------
+            %\finishCalendar
+            %\end{calendar}
+        \end{document}

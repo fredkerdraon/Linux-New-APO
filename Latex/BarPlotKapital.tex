@@ -1,0 +1,41 @@
+\begin{tikzpicture}[thick, scale=1]
+\begin{axis}[
+title={Kapital over time},
+ybar, axis on top,
+title={PnL over the months},
+height=8cm, width=15.5cm,
+bar width=0.4cm,
+ymajorgrids, tick align=inside,
+major grid style={draw=white},
+enlarge y limits={value=.1,upper},
+axis x line*=bottom,
+axis y line*=right,
+y axis line style={opacity=0},
+tickwidth=0pt,
+enlarge x limits=true,
+legend style={
+at={(0.5,-0.2)},
+anchor=north,
+legend columns=-1,
+/tikz/every even column/.append style={column sep=0.5cm}
+},
+ylabel={Percentage (\%)},
+symbolic x coords={
+xlabel={Time [Days]},
+ylabel={Kapital [euro]},
+ymin=0,ymax=0,
+xtick=data,
+nodes near coords={
+\pgfmathprintnumber[precision=0]{\pgfplotspointmeta}
+}
+]
+\addplot [draw=none, fill=red!100] coordinates {
+};
+\addplot [draw=none, fill=black!100] coordinates {
+};
+\addplot [draw=none, fill=black!50] coordinates {
+};
+
+\legend{Assets,Liabilities,Kapital}
+\end{axis}
+\end{tikzpicture}

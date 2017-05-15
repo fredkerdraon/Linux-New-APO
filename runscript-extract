@@ -1,0 +1,9 @@
+#!/bin/tcsh
+set user1 = "root"
+set RESEARCH = /home/frederickerdraon/Documents/researchwork/
+set dropfile = ~/Documents/researchwork/Sql/Mysql-drop.sql
+set SQLDIR = $RESEARCH/Sql/
+
+echo "STEP - Process du fichier du mois et generation du fichier cashflows.csv..."
+#rm -rf $RESEARCH/Datavalidated/cashflows.csv
+perl -w $RESEARCH/Perl/extractCashflows

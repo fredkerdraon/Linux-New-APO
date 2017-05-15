@@ -1,0 +1,49 @@
+#!/bin/tcsh
+echo "I need to INSERT an INITIAL BALANCE"
+mysql -u root -pfred1301 -h 127.0.0.1  << EOF
+use managementoverview;
+truncate cashflows;
+commit;
+EOF
+echo "Chargement de CA20150719"
+cd $RES_HOME/Perl/
+perl -w $RES_HOME/Perl/extractCashflows $RES_HOME/Data/CA20150719_1114.txt 2015
+mysqlimport -u root -pfred1301 -h 127.0.0.1  -l -r --ignore-lines=1 --local --fields-terminated-by=";" managementoverview $RES_HOME/Datavalidated/cashflows.csv
+echo "Chargement de CA20121108"
+#perl -w $RES_HOME/Perl/extractCashflows $RES_HOME/Data/CA20121108_2009.txt 2012
+#mysqlimport -u root -pfred1301 -h 127.0.0.1  -l -r --ignore-lines=1 --local --fields-terminated-by=";" managementoverview $RES_HOME/Datavalidated/cashflows.csv
+echo "Chargement de CA20131029"
+#perl -w $RES_HOME/Perl/extractCashflows $RES_HOME/Data/CA20131029_1236.txt 2013
+#mysqlimport -u root -pfred1301 -h 127.0.0.1  -l -r --ignore-lines=1 --local --fields-terminated-by=";" managementoverview $RES_HOME/Datavalidated/cashflows.csv
+echo "Chargement de CA20150724_1659.txt"
+perl -w $RES_HOME/Perl/extractCashflows $RES_HOME/Data/CA20150724_1659.txt 2015
+mysqlimport -u root -pfred1301 -h 127.0.0.1  -l -r --ignore-lines=1 --local --fields-terminated-by=";" managementoverview $RES_HOME/Datavalidated/cashflows.csv
+cp -p $RES_HOME/Datavalidated/cashflows-cmb.csv $RES_HOME/Datavalidated/cashflows.csv
+mysqlimport -u root -pfred1301 -h 127.0.0.1  -l -r --ignore-lines=1 --local --fields-terminated-by=";" managementoverview $RES_HOME/Datavalidated/cashflows.csv
+mysql -u root -pfred1301 -h 127.0.0.1  -D managementoverview < $RES_HOME/Sql/MysqlUpdateCategories.sql
+echo "Chargement de CA20150801_0844.txt"
+#sed "s/\$//g" $RES_HOME/Data/CA20150801_0844.txt 
+#sed "s/ //g" $RES_HOME/Data/CA20150801_0844.txt 
+#sed "s/é/e/g" $RES_HOME/Data/CA20150801_0844.txt 
+perl -w $RES_HOME/Perl/extractCashflows $RES_HOME/Data/CA20150801_0844.txt 2015
+mysqlimport -u root -pfred1301 -h 127.0.0.1  -l -r --ignore-lines=1 --local --fields-terminated-by=";" managementoverview $RES_HOME/Datavalidated/cashflows.csv
+
+echo "Chargement de CA20150823_0102.txt"
+perl -w $RES_HOME/Perl/extractCashflows $RES_HOME/Data/CA20150823_0102.txt 2015
+mysqlimport -u root -pfred1301 -h 127.0.0.1  -l -r --ignore-lines=1 --local --fields-terminated-by=";" managementoverview $RES_HOME/Datavalidated/cashflows.csv
+
+echo "Chargement de CA20151029_0102.txt"
+perl -w $RES_HOME/Perl/extractCashflows $RES_HOME/Data/CA20151027_1739.txt 2015
+mysqlimport -u root -pfred1301 -h 127.0.0.1  -l -r --ignore-lines=1 --local --fields-terminated-by=";" managementoverview $RES_HOME/Datavalidated/cashflows.csv
+
+echo "Chargement de CA20151027_1739.txt"
+perl -w $RES_HOME/Perl/extractCashflows $RES_HOME/Data/CA20151027_1739.txt 2015
+mysqlimport -u root -pfred1301 -h 127.0.0.1  -l -r --ignore-lines=1 --local --fields-terminated-by=";" managementoverview $RES_HOME/Datavalidated/cashflows.csv
+
+echo "Chargement de CA20151128_2133.txt"
+perl -w $RES_HOME/Perl/extractCashflows $RES_HOME/Data/CA20151128_2133.txt 2015
+mysqlimport -u root -pfred1301 -h 127.0.0.1  -l -r --ignore-lines=1 --local --fields-terminated-by=";" managementoverview $RES_HOME/Datavalidated/cashflows.csv
+
+echo "Chargement de CA20151222_1615.txt"
+perl -w $RES_HOME/Perl/extractCashflows $RES_HOME/Data/CA20151222_1615.txt 2015
+mysqlimport -u root -pfred1301 -h 127.0.0.1  -l -r --ignore-lines=1 --local --fields-terminated-by=";" managementoverview $RES_HOME/Datavalidated/cashflows.csv

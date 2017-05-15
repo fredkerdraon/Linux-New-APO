@@ -1,0 +1,85 @@
+logo africain
+resume
+projects
+	risks
+	tasks
+	resources
+	budget
+	gantt
+	management
+	meetings
+		copil
+		daily team meeting
+		comitee
+	sponsor
+finance
+	asset
+	liabilities
+	kapital
+	VaR
+	Sensitivity
+	Stress
+IT
+	linux
+	mysql
+	scilab
+	clips
+	hudson
+	svn
+	latex
+	vim
+	
+art a few creations
+sports 
+	football,badminton,football,sailing,wakeboard,piloting,char a voile
+travels
+languages
+	english
+	spanish
+degrees
+daily links
+	twitter
+	facebook
+		contacts
+	hotmail
+	windguru
+	hotmail
+		calendar
+		mails
+references
+	moitessier
+	nietzsche
+	dali
+	music
+	bible
+	coran
+	sidarta
+Maps
+checklists
+	2 weeks trip
+	week-end trip
+	sailing
+	complete relocation
+	boats yearly maintenance
+Furnitures
+	guitar1
+	guitar2
+cultures
+	kalankoe1
+	kalankoe2
+research documents
+	fx vanilla 
+	ir exotics
+	fixed income
+	fxo
+	equity 
+	siv
+	cvar
+	sensitivities
+	var
+	stress
+	monte carlo
+	hedge accounting
+	alm
+
+create table 

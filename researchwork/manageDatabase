@@ -1,0 +1,20 @@
+#!/bin/tcsh
+set user1 = "root"
+#echo $user1
+#echo $PATH
+#echo $shell
+set RESEARCH = $RES_HOME 
+set dropfile = ~/Documents/researchwork/Sql/Mysql-drop.sql
+#now=$(date +"%Y-%m-%d")
+#echo "Current directory :" $RESEARCH
+set SQLDIR = $RESEARCH/Sql/
+#echo "Sql directory :" $SQLDIR
+echo "STEP - Database construction..."
+#pwd
+echo "STEP - We drop everything"
+mysql -u root -pfred1301 -h 127.0.0.1 -D managementoverview < $RESEARCH/Sql/Mysql-drop.sql
+echo "STEP - We rebuild it"
+mysql -u root -pfred1301 -h 127.0.0.1 -D managementoverview < $RESEARCH/Sql/Mysql-create.sql
+mysql -u root -pfred1301 -h 127.0.0.1 -D managementoverview << EOF
+show tables;
+EOF

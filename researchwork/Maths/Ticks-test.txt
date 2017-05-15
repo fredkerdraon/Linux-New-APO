@@ -1,0 +1,5 @@
+mat=['01-04-2005','4';'02-04-2005','12';'03-04-2005','8';'04-04-2005','2'];
+plot(eval(mat(:,2)))
+a=gca();
+TL = tlist(["ticks" "locations"],[1:size(mat,1)],mat(:,1))
+a.x_ticks=TL;

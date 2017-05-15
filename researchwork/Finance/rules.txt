@@ -1,0 +1,32 @@
+si jamais le premier apparait dans l'ordre, alors associer catégorie à droite
+
+
+for each member in list1, check in list2
+if yes then 
+
+List1
+findinstring(a
+carte Supperette,picole
+Dab,cash
+Decathlon,sport
+Ech Pret, mortgage
+Electricite,energy
+Tour Du Monde,picole
+cotisations,frais bancaire
+Monfort,rent
+Capgemini,income
+Ass Pcifica,insurance
+Fender Tex,food
+Ikea,furnitures
+Penalty,picole
+L'arena,picole
+La Poste,communication
+Total,energy
+Predica,insurance
+Scubaland,sport
+Laclerc,food
+Aeroport Parkin,transport
+Tabac,picole
+Casino,food
+Longchamp,food
+

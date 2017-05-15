@@ -1,0 +1,55 @@
+#!/bin/tcsh
+set user1 = "root"
+#echo $user1
+#echo $PATH
+#echo $shell
+set RESEARCH = /home/frederickerdraon/Documents/researchwork/
+set dropfile = ~/Documents/researchwork/Sql/Mysql-drop.sql
+#now=$(date +"%Y-%m-%d")
+#echo "Current directory :" $RESEARCH
+set SQLDIR = $RESEARCH/Sql/
+#echo "Sql directory :" $SQLDIR
+#echo "STEP - Database construction..."
+#pwd
+#echo "STEP - We drop everything"
+#mysql -u root -pfred1301 -D managementoverview < $RESEARCH/Sql/Mysql-drop.sql
+#echo "STEP - We rebuild it"
+#mysql -u root -pfred1301 -D managementoverview < $RESEARCH/Sql/Mysql-create.sql
+#mysql -u root -pfred1301 << EOF
+#use managementoverview;
+#show tables;
+#EOF
+echo "STEP - Download HSBC..........."
+#/usr/bin/wget 'http://real-chart.finance.yahoo.com/table.csv?s=HSBC&d=2&e=31&f=2016&g=d&a=6&b=16&c=1999&ignore=.csv'
+echo "STEP - Import Assets..........."
+mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="," managementoverview $RESEARCH/Datavalidated/assets.csv
+echo "STEP - Import the CASH .........."
+$RESEARCH/loadAllCash
+echo "STEP - Import Stocks..........."
+mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="," managementoverview $RESEARCH/Datavalidated/stocks.csv
+echo "STEP - Import Currencies..........."
+mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="," managementoverview $RESEARCH/Datavalidated/currencies.csv
+echo "STEP - Mise a jour des categories"
+mysql -u root -pfred1301 -D managementoverview < $RESEARCH/Sql/MysqlUpdateCategories.sql
+
+echo  "STEP - Generation des tableaux, graphs et camembers"
+cd $RESEARCH/Perl
+perl -w $RESEARCH/Perl/readAssets
+perl -w $RESEARCH/Perl/readLiabilities
+perl $RESEARCH/Perl/readIncomes
+perl $RESEARCH/Perl/loadBalance
+perl $RESEARCH/Perl/readCharges 2021-01-13 
+perl $RESEARCH/Perl/readCashflows
+perl $RESEARCH/Perl/readDrift
+perl $RESEARCH/Perl/readPnL
+perl $RESEARCH/Perl/readKapital
+perl $RESEARCH/Perl/readCash
+perl $RESEARCH/Perl/readIncome2
+perl $RESEARCH/Perl/readCharges2
+perl $RESEARCH/Perl/readBarPlotKapital
+perl $RESEARCH/Perl/readBarPlotPnl
+#perl $RESEARCH/Perl/readCharges2
+echo "STEP - Compilation du fichier latex"
+cd $RESEARCH/Latex
+pdflatex  -interaction batchmode /home/frederickerdraon/Documents/researchwork/Latex/Finance.tex
+#cp -p $RESEARCH/Latex/Finance.pdf $RESEARCH/Finance.pdf

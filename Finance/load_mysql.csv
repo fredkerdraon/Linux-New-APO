@@ -1,0 +1,363 @@
+"Date";"Solde au 12/10/12";"Débit Euros";"Crédit Euros";"Solde";"Categorie"
+"11-Oct";"Ret Dab Lcl Marseille  10 10 12    
+.                                  ";"40,00";;-40;"cash"
+"10-Oct";"Ret Dab Marseille Cast 09 10 12    
+.                                  ";"40,00";;-80;"cash"
+"10-Oct";"Carte Linsolite        09/10/12    
+.                                  ";"27,50";;"-107,5";
+"10-Oct";"Prlv Ech Pret A Consommer          
+273002084773023644389         S    ";"383,59";;"-491,09";"mortgage boat"
+"10-Oct";"Prlv Ech Pret A Consommer          
+273018128673056379735         S    ";"146,90";;"-637,99";"mortgage car"
+"09-Oct";"Carte Sfr Espace       08/10/12    
+.                                  ";"64,80";;"-702,79";
+"09-Oct";"Ret Dab Marignane Cede 06 10 12    
+.                                  ";"40,00";;"-742,79";
+"09-Oct";"Ret Dab Brest          06 10 12    
+.                                  ";"40,00";;"-782,79";
+"09-Oct";"Ret Dab Marseille      08 10 12    
+.                                  ";"40,00";;"-822,79";
+"09-Oct";"Prlv 001007   Electricite De Fra   
+*111540180216 14616 7   Edf Pra    ";"65,00";;"-887,79";
+"09-Oct";"Prlv   Predica Garantie Deces      
+*82900255460787*001tema3           ";"4,87";;"-892,66";
+"08-Oct";"Carte Sarl Nissana     07/10/12    
+.                                  ";"29,40";;"-922,06";
+"08-Oct";"Carte Marche Plus      06/10/12    
+.                                  ";"14,93";;"-936,99";
+"08-Oct";"Carte Superette Recouv 05/10/12    
+.                                  ";"14,60";;"-951,59";"picole"
+"08-Oct";"Carte Casino 24 Porte  06/10/12    
+.                                  ";"12,00";;"-963,59";"food"
+"08-Oct";"Carte Vol24.Fr         05/10/12    
+.                                  ";"10,78";;"-974,37";"picole"
+"08-Oct";"**cotisation Cs Option 2           
+.                                  ";"6,00";;"-980,37";"frais bancaires"
+"05-Oct";"Carte Ryanair          03/10/12    
+.                                  ";"88,40";;"-1068,77";"picole"
+"05-Oct";"Carte Vol24.Fr         03/10/12    
+.                                  ";"19,73";;"-1088,5";"picole"
+"05-Oct";"Carte Superette Recouv 04/10/12    
+.                                  ";"12,70";;"-1101,2";"picole"
+"04-Oct";"Carte Superette Recouv 03/10/12    
+.                                  ";"9,10";;"-1110,3";"picole"
+"03-Oct";"Ret Dab 06321 Le Relec 02 10 12    
+.                                  ";"80,00";;"-1190,3";"picole"
+"03-Oct";"Carte Superette Recouv 02/10/12    
+.                                  ";"15,20";;"-1205,5";"picole"
+"03-Oct";"Carte Mc Donald's      02/10/12    
+.                                  ";"11,30";;"-1216,8";"picole"
+"03-Oct";"Carte Super U          02/10/12    
+.                                  ";"51,90";;"-1268,7";"picole"
+"02-Oct";"Carte Sncf             01/10/12    
+.                                  ";"79,60";;"-1348,3";"picole"
+"02-Oct";"Ret Dab Paris          01 10 12    
+.                                  ";"40,00";;"-1388,3";"picole"
+"02-Oct";"Carte Sushi Folies     01/10/12    
+.                                  ";"13,50";;"-1401,8";"picole"
+"02-Oct";"Carte Effia Csions     01/10/12    
+.                                  ";"7,30";;"-1409,1";"picole"
+"02-Oct";"** Cotis.Service Gael              
+.                                  ";"1,13";;"-1410,23";"frais bancaires"
+"01-Oct";"Carte Sncf Internet    30/09/12    
+.                                  ";"91,00";;"-1501,23";"frais bancaires"
+"01-Oct";"Carte Superette Recouv 28/09/12    
+.                                  ";"35,20";;"-1536,43";"frais bancaires"
+"01-Oct";"Carte Superette Recouv 30/09/12    
+.                                  ";"19,90";;"-1556,33";"frais bancaires"
+"01-Oct";"Vir.Monfort Nicole                 
+.                                  ";"486,00";;"-2042,33";"frais bancaires"
+"28-Sep";"Prlv   Ass Pacifica  05973356907   
+5217186181551907021ass Pacifica    ";"13,13";;"-2055,46";"frais bancaires"
+"27-Sep";"Carte Superette Recouv 26/09/12    
+.                                  ";"43,90";;"-2099,36";"frais bancaires"
+"27-Sep";"Vir    Capgemini Technology Ser    
+Virement Salaire      S0000        ";;"2 314,76";"215,4";"frais bancaires"
+"26-Sep";"Ret Dab Sncf Montparna 25 09 12    
+.                                  ";"60,00";;"155,4";"frais bancaires"
+"26-Sep";"Carte Effia Csions     25/09/12    
+.                                  ";"7,30";;"148,1";"frais bancaires"
+"25-Sep";"Carte Sncf Internet    24/09/12    
+.                                  ";"144,00";;"4,1";"frais bancaires"
+"24-Sep";"Carte Bar Tab Le Pacha 21/09/12    
+.                                  ";"62,00";;"-57,9";"picole"
+"24-Sep";"Ret Dab St Marc Brest  22 09 12    
+.                                  ";"60,00";;"-117,9";"frais bancaires"
+"24-Sep";"Carte Superette Recouv 21/09/12    
+.                                  ";"14,60";;"-132,5";"frais bancaires"
+"24-Sep";"Carte Coup'hom         22/09/12    
+.                                  ";"12,00";;"-144,5";"sante"
+"24-Sep";"Prlv 332801   Sfr Mobile           
+8820014396epre120910ao             ";"55,22";;"-199,72";"frais bancaires"
+"21-Sep";"Carte Superette Recouv 20/09/12    
+.                                  ";"14,60";;"-214,32";"frais bancaires"
+"19-Sep";"Ret Dab Brest          18 09 12    
+.                                  ";"60,00";;"-274,32";"frais bancaires"
+"19-Sep";"Prlv   Suppletis                   
+254002728070058216686         Ys   ";"20,00";;"-294,32";"frais bancaires"
+"18-Sep";"Carte Superette Recouv 17/09/12    
+.                                  ";"14,60";;"-308,92";"frais bancaires"
+"17-Sep";"Carte Cupid.Com 448005 13/09/12    
+.                                  ";"45,99";;"-354,91";"porno"
+"17-Sep";"Carte Superette Recouv 14/09/12    
+.                                  ";"14,60";;"-369,51";"frais bancaires"
+"17-Sep";"Carte Superette Recouv 16/09/12    
+.                                  ";"14,60";;"-384,11";"frais bancaires"
+"17-Sep";"Carte Casino 24 Porte  14/09/12    
+.                                  ";"6,60";;"-390,71";"food"
+"17-Sep";"Prlv   Ass Pacifica  06019130907   
+6563186710982907021ass Pacifica    ";"68,68";;"-459,39";"frais bancaires"
+"14-Sep";"Carte Superette Recouv 13/09/12    
+.                                  ";"14,60";;"-473,99";"frais bancaires"
+"13-Sep";"Ret Dab Brest          12 09 12    
+.                                  ";"50,00";;"-523,99";"frais bancaires"
+"13-Sep";"Carte Superette Recouv 12/09/12    
+.                                  ";"23,30";;"-547,29";"frais bancaires"
+"13-Sep";"Vir Sepa Gras Savoye               
+0000000039854527                   ";;"9,90";"-537,39";"frais bancaires"
+"12-Sep";"Carte Tabac Pr Didou   11/09/12    
+.                                  ";"62,00";;"-599,39";"frais bancaires"
+"12-Sep";"Carte Casino 24 Porte  11/09/12    
+.                                  ";"2,80";;"-602,19";"food"
+"12-Sep";"** Frais Atd                       
+.                                  ";"6,44";;"-608,63";"frais bancaires"
+"12-Sep";"Tva /frais                         
+.                                  ";"1,26";;"-609,89";"frais bancaires"
+"11-Sep";"Atd N 71775                        
+.                                  ";"77,00";;"-686,89";"taxes"
+"11-Sep";"Vir    C.P.A.M. Finistere          
+122510004163                       ";;"20,10";"-666,79";"frais bancaires"
+"10-Sep";"Carte Centre Leclerc   08/09/12    
+.                                  ";"121,13";;"-787,92";"food"
+"10-Sep";"Carte Superette Recouv 07/09/12    
+.                                  ";"11,10";;"-799,02";"frais bancaires"
+"10-Sep";"Carte Superette Recouv 07/09/12    
+.                                  ";"9,10";;"-808,12";"frais bancaires"
+"10-Sep";"Prlv Ech Pret A Consommer          
+243002220273023644389         S    ";"383,59";;"-1191,71";"frais bancaires"
+"10-Sep";"Prlv Ech Pret A Consommer          
+243018600873056379735         S    ";"146,90";;"-1338,61";"frais bancaires"
+"10-Sep";"001007 Electricite De France       
+*111540180216 14616 7   Edf Pr9    ";"65,00";;"-1403,61";"electricite"
+"10-Sep";"**cotisation Cs Option 2           
+.                                  ";"6,00";;"-1409,61";"frais bancaires"
+"07-Sep";"Prlv   Predica Garantie Deces      
+*82900255460787*001tema3           ";"4,87";;"-1414,48";"frais bancaires"
+"04-Sep";"** Cotis.Service Gael              
+.                                  ";"1,13";;"-1415,61";"frais bancaires"
+"03-Sep";"Ret Dab 06309 Brest St 01 09 12    
+.                                  ";"60,00";;"-1475,61";"frais bancaires"
+"03-Sep";"Carte Sm Les Jacobins  01/09/12    
+.                                  ";"39,98";;"-1515,59";"frais bancaires"
+"03-Sep";"Carte Superette Recouv 31/08/12    
+.                                  ";"12,80";;"-1528,39";"frais bancaires"
+"01-Sep";"Vir.Monfort Nicole                 
+.                                  ";"486,00";;"-2014,39";"frais bancaires"
+"30-Aoû";"Carte Superette Recouv 29/08/12    
+.                                  ";"11,00";;"-2025,39";"frais bancaires"
+"30-Aoû";"Vir    Capgemini Technology Ser    
+Virement Salaire      S0000        ";;"2 302,35";"276,96";"frais bancaires"
+"29-Aoû";"Carte Snc  La Presqu'  28/08/12    
+.                                  ";"62,00";;"214,96";"frais bancaires"
+"29-Aoû";"Carte Superette Recouv 28/08/12    
+.                                  ";"11,90";;"203,06";"frais bancaires"
+"28-Aoû";"Carte Rel.Total 59934  27/08/12    
+.                                  ";"84,79";;"118,27";"frais bancaires"
+"28-Aoû";"Ret Dab Brest          25 08 12    
+.                                  ";"60,00";;"58,27";"frais bancaires"
+"28-Aoû";"Carte Superette Recouv 27/08/12    
+.                                  ";"14,60";;"43,67";"frais bancaires"
+"28-Aoû";"Prlv   Ass Pacifica  05973356907   
+3316184929766907021ass Pacifica    ";"12,37";;"31,3";"frais bancaires"
+"28-Aoû";"**cotis Carte Double Actio         
+.                                  ";"77,65";;"-46,35";"frais bancaires"
+"27-Aoû";"Ret Dab Brest La Frega 24 08 12    
+.                                  ";"60,00";;"-106,35";"frais bancaires"
+"27-Aoû";"Carte L Amiral Ne      25/08/12    
+.                                  ";"36,00";;"-142,35";"frais bancaires"
+"24-Aoû";"332801 Sfr Mobile                  
+8544463875epre120812an             ";"55,20";;"-197,55";"telephone"
+"23-Aoû";"Carte Lavage Auto      22/08/12    
+.                                  ";"10,00";;"-207,55";"frais bancaires"
+"23-Aoû";"Carte Superette Recouv 22/08/12    
+.                                  ";"13,10";;"-220,65";"frais bancaires"
+"21-Aoû";"Carte Superette Recouv 20/08/12    
+.                                  ";"42,50";;"-263,15";"frais bancaires"
+"20-Aoû";"Carte Fender Tex Mex   19/08/12    
+.                                  ";"28,15";;"-291,3";"food"
+"17-Aoû";"Carte Carrefour Brest  16/08/12    
+.                                  ";"107,30";;"-398,6";"food"
+"16-Aoû";"Carte Cupid.Com 448005 14/08/12    
+.                                  ";"45,99";;"-444,59";"porno"
+"16-Aoû";"Ret Dab Brest La Frega 15 08 12    
+.                                  ";"40,00";;"-484,59";"frais bancaires"
+"16-Aoû";"Carte Ikea             15/08/12    
+.                                  ";"70,00";;"-554,59";"furnitures"
+"16-Aoû";"Carte Le Penalty       14/08/12    
+.                                  ";"62,00";;"-616,59";"frais bancaires"
+"16-Aoû";"Carte L'arena          14/08/12    
+.                                  ";"4,60";;"-621,19";"frais bancaires"
+"16-Aoû";"Prlv   Ass Pacifica  06019130907   
+0753184258269907021ass Pacifica    ";"68,68";;"-689,87";"frais bancaires"
+"14-Aoû";"Ret Dab Spar Ouessant  12 08 12    
+.                                  ";"50,00";;"-739,87";"frais bancaires"
+"14-Aoû";"Carte L'arena          13/08/12    
+.                                  ";"10,60";;"-750,47";"frais bancaires"
+"13-Aoû";"Ret Dab Brest          10 08 12    
+.                                  ";"50,00";;"-800,47";"frais bancaires"
+"13-Aoû";"Carte La Poste 290190  10/08/12    
+.                                  ";"23,00";;"-823,47";"frais bancaires"
+"13-Aoû";"Carte Decathlon 0032   10/08/12    
+.                                  ";"117,90";;"-941,37";"sport"
+"13-Aoû";"Ret Dab Brest          10 08 12    
+.                                  ";"40,00";;"-981,37";"frais bancaires"
+"13-Aoû";"Carte Superette Recouv 10/08/12    
+.                                  ";"7,20";;"-988,57";"frais bancaires"
+"10-Aoû";"Prlv Ech Pret A Consommer          
+214002338773023644389         S    ";"383,59";;"-1372,16";"frais bancaires"
+"10-Aoû";"Prlv Ech Pret A Consommer          
+214019255473056379735         S    ";"146,90";;"-1519,06";"frais bancaires"
+"09-Aoû";"001007 Electricite De France       
+*111540180216 14616 7   Edf Pr8    ";"65,00";;"-1584,06";"electricite"
+"08-Aoû";"Carte Tour Du Monde    07/08/12    
+.                                  ";"36,00";;"-1620,06";"frais bancaires"
+"07-Aoû";"Carte Rel.Total 59934  06/08/12    
+.                                  ";"78,60";;"-1698,66";"frais bancaires"
+"07-Aoû";"Ret Dab Brest          06 08 12    
+.                                  ";"40,00";;"-1738,66";"frais bancaires"
+"07-Aoû";"Carte Sarl Le Bars     06/08/12    
+.                                  ";"16,60";;"-1755,26";"frais bancaires"
+"07-Aoû";"Prlv   Predica Garantie Deces      
+*82900255460787*001tema3           ";"4,87";;"-1760,13";"frais bancaires"
+"07-Aoû";"**cotisation Cs Option 2           
+.                                  ";"6,00";;"-1766,13";"frais bancaires"
+"06-Aoû";"Carte Scubaland        03/08/12    
+.                                  ";"115,00";;"-1881,13";"frais bancaires"
+"06-Aoû";"Carte Leclerc Db Dis   04/08/12    
+.                                  ";"29,47";;"-1910,6";"frais bancaires"
+"06-Aoû";"Carte Decathlon 0032   03/08/12    
+.                                  ";"22,95";;"-1933,55";"sport"
+"06-Aoû";"Carte Fender Tex Mex   04/08/12    
+.                                  ";"15,90";;"-1949,45";"food"
+"06-Aoû";"Carte Aeroport Parkin  03/08/12    
+.                                  ";"2,40";;"-1951,85";"transport"
+"06-Aoû";"332801 Sfr                         
+8716558945erep120721ad             ";"50,55";;"-2002,4";"telephone"
+"04-Aoû";"Ret Dab Festival Du Bout Du        
+.                                  ";"60,00";;"-2062,4";"frais bancaires"
+"02-Aoû";"Carte Tabac Pr Didou   01/08/12    
+.                                  ";"62,00";;"-2124,4";"frais bancaires"
+"02-Aoû";"Ret Dab Brest La Frega 01 08 12    
+.                                  ";"60,00";;"-2184,4";"frais bancaires"
+"02-Aoû";"Carte Casino 24 Porte  01/08/12    
+.                                  ";"8,00";;"-2192,4";"food"
+"02-Aoû";"Carte Le Longchamp     01/08/12    
+.                                  ";"7,70";;"-2200,1";"food"
+"02-Aoû";"** Cotis.Service Gael              
+.                                  ";"1,13";;"-2201,23";"frais bancaires"
+"01-Aoû";"Vir.Monfort Nicole                 
+.                                  ";"486,00";;"-2687,23";"picole"
+"31-Jul";"Ret Dab Brest          28 07 12    
+.                                  ";"80,00";;"-2767,23";"picole"
+"30-Jul";"Carte Decathlon 0032   28/07/12    
+.                                  ";"59,95";;"-2827,18";"sport"
+"30-Jul";"Vir    Capgemini Technology Ser    
+Virement Salaire      S0000        ";;"2 306,13";"-521,05";"salary"
+"30-Jul";"Prlv   Ass Pacifica  05973356907   
+6919182394113907021ass Pacifica    ";"12,37";;"-533,42";"picole"
+"27-Jul";"Carte Sodexho Siege    26/07/12    
+.                                  ";"14,48";;"-547,9";"picole"
+"27-Jul";"Carte Creperie Ble Noi 25/07/12    
+.                                  ";"19,00";;"-566,9";"food"
+"26-Jul";"Carte Ticketnet Billet 25/07/12    
+.                                  ";"108,60";;"-675,5";"picole"
+"25-Jul";"Carte Superette Recouv 24/07/12    
+.                                  ";"14,60";;"-690,1";"picole"
+"24-Jul";"Ret Dab Brest          21 07 12    
+.                                  ";"60,00";;"-750,1";"picole"
+"24-Jul";"Carte Sa Steren        23/07/12    
+.                                  ";"59,71";;"-809,81";"picole"
+"24-Jul";"Ret Dab Guipavas Aeroport          
+.                                  ";"40,00";;"-849,81";"picole"
+"24-Jul";"332801 Sfr Mobile                  
+8268797789epre120712al             ";"61,01";;"-910,82";"telephone"
+"20-Jul";"Carte Uship            19/07/12    
+.                                  ";"17,60";;"-928,42";"picole"
+"19-Jul";"Carte Subway           18/07/12    
+.                                  ";"12,80";;"-941,22";"picole"
+"18-Jul";"Carte Superette Recouv 17/07/12    
+.                                  ";"14,60";;"-955,82";"picole"
+"17-Jul";"Ret Dab Brest          16 07 12    
+.                                  ";"20,00";;"-975,82";"picole"
+"17-Jul";"Ret Dab Brest Centre 1 15 07 12    
+.                                  ";"60,00";;"-1035,82";"picole"
+"17-Jul";"Carte Superette Recouv 16/07/12    
+.                                  ";"23,60";;"-1059,42";"picole"
+"16-Jul";"Carte Gts*livecpdfee.C 15/07/12    
+.                                  ";"45,99";;"-1105,41";"picole"
+"16-Jul";"Carte Le Longchamp     13/07/12    
+.                                  ";"62,00";;"-1167,41";"food"
+"16-Jul";"Carte L'arena          13/07/12    
+.                                  ";"26,70";;"-1194,11";"picole"
+"16-Jul";"Carte Casino 24 Porte  12/07/12    
+.                                  ";"7,60";;"-1201,71";"food"
+"16-Jul";"Prlv   Ass Pacifica  06019130907   
+4650181827083907021ass Pacifica    ";"68,68";;"-1270,39";"picole"
+"13-Jul";"Carte Carrefour Brest  12/07/12    
+.                                  ";"108,60";;"-1378,99";"food"
+"13-Jul";"Ret Dab Lcl Brest Iroi 12 07 12    
+.                                  ";"40,00";;"-1418,99";"picole"
+"12-Jul";"Carte Sarl Pasnat      12/07/12    
+.                                  ";"40,50";;"-1459,49";"picole"
+"12-Jul";"Carte Le Tara Inn      11/07/12    
+.                                  ";"20,00";;"-1479,49";"picole"
+"11-Jul";"Carte Centre E.Leclerc 10/07/12    
+.                                  ";"76,61";;"-1556,1";"transport"
+"11-Jul";"Carte Mc Donald's      10/07/12    
+.                                  ";"11,30";;"-1567,4";"picole"
+"10-Jul";"Prlv Ech Pret A Consommer          
+181002590173023644389         S    ";"383,59";;"-1950,99";"picole"
+"10-Jul";"Prlv Ech Pret A Consommer          
+181019850873056379735         S    ";"146,90";;"-2097,89";"picole"
+"10-Jul";"**interets Debiteurs Taeg:16.53    
+.                                  ";"24,88";;"-2122,77";"frais bancaires"
+"09-Jul";"Ret Dab Brest La Frega 08 07 12    
+.                                  ";"60,00";;"-2182,77";"picole"
+"09-Jul";"Carte Le Longchamp     06/07/12    
+.                                  ";"10,80";;"-2193,57";"picole"
+"09-Jul";"Carte Superette Recouv 06/07/12    
+.                                  ";"9,80";;"-2203,37";"picole"
+"09-Jul";"001007 Electricite De France       
+*111540180216 14616 7   Edf Pr7    ";"65,00";;"-2268,37";"electricite"
+"09-Jul";"Prlv   Predica Garantie Deces      
+*82900255460787*001tema3           ";"4,87";;"-2273,24";
+"09-Jul";"**cotisation Cs Option 2           
+.                                  ";"6,00";;"-2279,24";"frais bancaires"
+"06-Jul";"Carte Sodexho Siege    05/07/12    
+.                                  ";"10,02";;"-2289,26";
+"05-Jul";"Ret Dab Gmf Kerhuon Si 04 07 12    
+.                                  ";"60,00";;"-2349,26";
+"04-Jul";"Carte Le Longchamp     03/07/12    
+.                                  ";"10,80";;"-2360,06";"food"
+"04-Jul";"Initialisation";;"1723,55";"-636,51";
+;;"Filtre";;;
+;;;;;
+;;"Somme - Débit Euros";"Solde";;
+;;"Categorie";-80;-40;"-1035,82"
+;;"(vide)";;;
+;;"cash";;;
+;;"electricite";;;
+;;"food";;;
+;;"frais bancaires";;;
+;;"furnitures";;;
+;;"mortgage boat";;;
+;;"mortgage car";;;
+;;"picole";;;
+;;"porno";;;
+;;"salary";;;
+;;"sante";;;
+;;"sport";;;
+;;"taxes";;;
+;;"telephone";;;
+;;"transport";;;
+;;"Total Résultat";;;

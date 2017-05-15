@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns4="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="gbm" xml:lang="en">
+  <refnamediv>
+    <refname>gbm</refname>
+    <refpurpose>Estimate the parameters of a Geometric Brownian Motion (through the method of moments) on the data and graphically show the mean and two confidence intervals</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>SYNOPSIS</title>
+    <synopsis>[mu,sigma]=gbm(data,dt)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Description</title>
+    <para>If the variable x follows a Geometric Brownian Motion then it solves the stochastic differential equaiton</para>
+    <para>dx/x = mu dt + sigma dW</para>
+    <para>where dW is the differential form of a Wiener process and both &quot;mu&quot; and &quot;sigma&quot; are constant parameters. On historical data, the function estimates both mu and sigma and show a graph with the mean of the process, the mean+/- the standard deviation, and the mean +/-2 times the standard deviation</para>
+  </refsection>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>data</term>
+        <listitem>column vector containing the historical data on which both the drift and the diffusion must be estimated</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>dt</term>
+        <listitem>time unit of measure: if data are in annual form (like returns, for instance) but have daily frequency, then dt=1/250 (since there are 250 working day in one year)</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Output</title>
+    <variablelist>
+      <varlistentry>
+        <term>mu, sigma</term>
+        <listitem>respectively the drift and diffusion terms of the Geometric Brownian Motion</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Example</title>
+    <para>First we generate 1000 log-normally distributed daily prices for an asset whose initial values is 25 euros. First step is the creation of 1000 normal random variables (with mean 0.1/250 and standard deviation 0.2/sqrt(250))</para>
+    <para>--&gt;M=grand(1000,1,&apos;nor&apos;,0.1/250,0.2/sqrt(250));</para>
+    <para>Then we create the prices</para>
+    <para>--&gt;prices=exp(cumsum(M,1))*25;</para>
+    <para>and apply the function with</para>
+    <para>--&gt;[mu,sigma]=gbm(prices,1/250);</para>
+    <para>sigma = 0.2039105</para>
+    <para>mu = 0.1443338 </para>
+    <para>We see the mean and the standard deviation are close to that we started from. The figure shows the original data, the mean and the confidence intervals.</para>
+  </refsection>
+  <refsection>
+    <title>Authors</title>
+    <para>Francesco Menoncin - Brescia University - 2010</para>
+  </refsection>
+  <refsection>
+    <title>See Also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="euler">euler</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

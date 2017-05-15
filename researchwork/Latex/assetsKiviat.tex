@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+\tkzKiviatDiagramFromFile[
+        scale=.5,
+        label distance=.5cm,
+        gap     = 1,
+        label space=3,  
+        lattice = 10]{assets.dat}
+\tkzKiviatLineFromFile[thick,
+                       color      = blue,
+                       mark       = ball,
+                       ball color = blue,
+                       mark size  = 4pt,
+                       fill       = blue!20]{assets.dat}{2}
+\tkzKiviatLineFromFile[thick,
+                       color      = red,
+                       mark       = ball,
+                       ball color = red,
+                       mark size  = 4pt,
+                       fill       = red!20]{assets.dat}{1}     
+\end{tikzpicture}

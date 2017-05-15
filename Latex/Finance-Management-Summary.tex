@@ -1,0 +1,271 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[8pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{bchart}
+\usepackage{longtable}
+\usepackage{pgfgantt}
+\usepackage{calendar} % Use the calendar.sty style
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{tkz-base}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{pgfplots}
+\usepackage{tkz-kiviat,numprint,fullpage} 
+\usepackage{pgfplotstable} 
+\usetikzlibrary{arrows}
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{dcolumn}
+\usepackage{booktabs}
+\usepackage{lscape}
+\usepackage{pgf-pie}
+\usepackage{verbatim}
+\usepackage{animate}
+\usepackage{sfmath}
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+\usepackage{textcomp}
+%\usepackage{hyperref}
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+%\includegraphics[width=.2\textwidth]{Logo.png}
+
+\title{Finance}
+\author{\copyright Frederic Kerdraon}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+%\addtobeamertemplate{frametitle}{}{%
+%\begin{tikzpicture}[remember picture,overlay]
+%\node[anchor=north west,yshift=2pt] at (current page.north west) {\includegraphics[height=0.8cm]{Logo1}};
+%\end{tikzpicture}}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\newcounter{a}
+\newcounter{b}
+%----------------------------------------------------------
+\newcommand{\slice}[4]{
+  \pgfmathparse{0.5*#1+0.5*#2}
+  \let\midangle\pgfmathresult
+
+   slice
+  \draw[thick,fill=black!10] (0,0) -- (#1:1) arc (#1:#2:1) -- cycle;
+
+   outer label
+  \node[label=\midangle:#4] at (\midangle:1) {};
+
+   inner label
+  \pgfmathparse{min((#2-#1-10)/110*(-0.3),0)}
+  \let\temp\pgfmathresult
+  \pgfmathparse{max(\temp,-0.5) + 0.9}
+  \let\innerpos\pgfmathresult
+  \node at (\midangle:\innerpos) {#3};
+}
+
+\section{Management summary}
+
+
+\subsection{PnL Projections}
+
+%Le nombre de simulations est egal au nombre d'arrangements des targets\\
+%Pour 8 target, il devrait y avoir un 8! scenarios\\
+%Les scenarios sont ordonnes par facilite de mise en oeuvre min(complexity, cost,etc)\\
+
+\subsubsection{Latex Graph of the scenarios}
+
+Initial parameters for the simulations.\\
+
+%\begin{itemize}
+%	\item {\$TotalDrift}
+%	\item {\$TotalScenTox}
+%	\item {\$TotalScenDebt}
+%	\item {\$TotalScenCash}
+%	\item {\$TotalScenToxDebt}
+%	\item {\$TotalScen = 0}
+ù\end{itemize}
+
+We apply the scenarios below to see what we get after a few iterations\\
+
+\subsubsection{Table}
+\input{PnL}
+All the figures need to be checked carefully by someone who knows what it's doing.
+}
+
+%\begin{itemize}
+%	\item {\$Scen}
+%	\item {\$Scenario reduction of Toxics by 231}
+%	\item {\$Scenario reduction of the Debt by 529*0.4}
+%	\item {\$Scenario reduction of the Cash by 755*.5}
+%	\item {\$Scenario reduction of the Toxics and Debt by 231+529*.4}
+%\end{itemize}
+
+my @Scen = (231,529*.4,755*.5,231+529*.4,1000,700,800,950,750);\\
+
+%\begin{itemize}
+%	\item{The first simulation apply a reduction of the Toxics by 231 euros each month}
+%	\item{The second scenario apply a reduction of the debt by 40 percent of the 529}
+%	\item{The third one divide the amount of cash spent by 50 percent}
+%	\item{The fourth one cumulate the reduction of the toxics by 231 euros with the amount of cash spent reduced by 50 percent}
+%	\item{The fifth one is a reduction of 1000 euros each month}
+%	\item{The fifth one is a reduction of 700 euros each month}
+%	\item{The fifth one is a reduction of 800 euros each month}
+%	\item{The fifth one is a reduction of 950 euros each month}
+%	\item{The fifth one is a reduction of 750 euros each month}
+%\end{itemize}
+
+On the graph we can notice that all the scenarios are positive, as they were built to show how to maximize profit
+just by managing the charge, and especially useless charges.\\
+
+%my $Drift = $row->{Drift};
+%$NewDrift = $Drift + $NewDrift;
+%my $KDrift = $Drift/$Unit;
+%$TotalDrift = $TotalDrift + $Drift;
+%$TotalScenTox = $TotalDrift + $ScenToxics*$Count;
+%$TotalScenDebt = $TotalDrift + $ScenDebt*$Count;
+%$TotalScenCash = $TotalDrift + $ScenCash*$Count;
+%$TotalScenToxDebt = $TotalDrift + $ScenToxDebt*$Count;
+
+%\input{PnLGraph}
+%\input{BarPlotPnl}
+%{\footnotesize
+%BarPlotPnl
+%}
+\subsubsection{PnL}
+%\input{BarPlotPnL}
+\input{BarPlotPnl}
+\subsubsection{Kapital}
+%\input{BarPlotPnL}
+\input{BarPlotKapital}
+%\subsubsection{Plot of an example}
+%\includegraphics[scale=0.3]{Finance.png}}
+
+%tableae.dat\\
+%file.dat\\
+%immigration.dat\\
+%finance.dat\\
+%charges.dat\\
+%article_contourtmp0.dat\\
+%Surface4_contourtmp0.dat\\
+%pgfplots_scatterdata4.dat\\
+%assets.dat\\
+%chargesKiviat.dat\\
+%resourcesKiviat.dat\\
+
+%\subsubsection{Latex example}
+%\input{parabola-plot}
+
+%\subsubsection{Latex example}
+%\input{tikzdevice-demo}
+
+%\subsubsection{Latex example}
+%\input{TimeTable}
+
+%\subsubsection{Latex example}
+%\input{Torn Paper}
+
+%\subsubsection{Latex example}
+%\input{Weather Table}
+
+%\subsubsection{Latex example}
+%\input{Transparent}
+
+%\includepdf[pages={1}]{stockchart.pdf}
+%\includepdf[pages={1}]{friedberg.pdf}
+%\subsubsection{Surface}
+%\input{PnLSurface}
+
+%\subsubsection{Gaussian Curve}
+%\includepdf[pages={1}]{GaussianCurve.pdf}
+%\input{GaussianCurve}
+%Was removed because very uncomplete...
+
+%\subsubsection{Parabola}
+%This I beleive should be the logo for the finance document, so that every doc has it's logo now :-)\\
+%\includepdf[pages={1}]{parabola-plotpdf}
+%\input{parabola-plot}
+
+%\subsubsection{Weather}
+%\includepdf[pages={1}]{WeatherTable.pdf}
+%\input{WeatherTable2}
+
+%\subsubsection{Map Of The Charges}
+%\includepdf[pages={1}]{MapOfTheCharges.pdf}
+%\input{MapOfTheCharges}
+
+\subsubsection{Table}
+\input{PnL}
+All the figures need to be checked carefully by someone who knows what it's doing.
+}
+
+\subsection{History and extrapolations}
+
+\subsubsection{Kapital curve}
+Kapital trend,Assets trend,Liabilities trend,Leverage trend\\
+\input{kapitalCurve}
+
+\subsubsection{PnL curve}
+%\input{pnlCurve}
+\input{kapitalCurve}
+
+%\subsubsection{Cash curve}
+%Funny cashflow/kapital superior to percent\\
+%\input{cashCurve}
+%Checklists.tex:%\includegraphics[scale=0.5]{stockchart.pdf}}
+
+%\subsubsection{Cash curve from Scilab man!}
+%\includegraphics[scale=0.6]{Scilab-cashBalance.png}
+
+\end{document}
+

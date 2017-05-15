@@ -1,0 +1,42 @@
+%
+% Examples for pgf-pie, by Yuan Xu
+%
+% Based on the manual from:
+% http://code.google.com/p/pgf-pie/
+%
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{pgf-pie}
+
+\title{Drawing Pie Charts with \texttt{pgf-pie}}
+\author{Yuan Xu}
+\date{February 9, 2012 (v0.2)}
+
+\begin{document}
+\maketitle
+
+\centering
+
+\begin{tikzpicture}
+\pie{10/A, 20/B, 30/C, 40/D}
+\end{tikzpicture}
+%
+\hspace{1cm}
+%
+\begin{tikzpicture}
+  \pie[polar]{10/A, 20/B, 30/C, 40/D}
+\end{tikzpicture}
+
+\vspace{2cm}
+
+\begin{tikzpicture}
+  \pie[square]{40/A, 30/B, 20/C, 10/D}
+\end{tikzpicture}
+%
+\hspace{1cm}
+%
+\begin{tikzpicture}
+  \pie[cloud, text=inside, scale font]{10/A, 20/B, 30/C, 40/D}
+\end{tikzpicture}
+
+\end{document}

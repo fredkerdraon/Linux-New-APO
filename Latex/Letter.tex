@@ -1,0 +1,63 @@
+\documentclass[12pt]{lettre}
+
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{eurosym}
+%\usepackage[frenchb]{babel}
+\usepackage{numprint}
+\usepackage{ucs}
+%\usepackage{figure}
+\usepackage[utf8x]{inputenc}
+\usepackage[export]{adjustbox}
+%\graphicspath{ {/home/user/images/}
+\usepackage{wrapfig}
+\begin{document}
+
+
+\begin{letter}{Service des réclamations}
+\name{Frédéric Kerdraon}
+\address{Frederic Kerdraon\\6, rue Ghandi\\29260 Lesneven}
+\lieu{Lesneven}
+\telephone{06.24.16.97.04}
+\nofax
+
+%\includegraphics[width=88pts]{Logo.png}
+%\begin{figure}
+ %   \includegraphics[width=.6\textwidth,center]{example-image}
+  %  \caption{centered image}
+%\end{figure}
+
+%\begin{figure}
+    \includegraphics[width=.2\textwidth,left]{Logo.png}
+%    \caption{left aligned image}
+%\end{figure}
+
+%\begin{figure}
+%    \includegraphics[width=.6\textwidth,right]{example-image}
+%    \caption{right aligned image}
+%\end{figure}
+
+%\begin{wrapfigure}{r}{0.25\textwidth} %this figure will be at the right
+%    \centering
+%    \includegraphics[width=0.25\textwidth]{Logo.png}
+%\end{wrapfigure}
+
+\def\concname{Objet :~} % On définit ici la commande 'objet'
+\conc{Probleme d'utilisation du périphérique}
+\opening{Madame, Monsieur,}
+
+Vous m'avez démarché la semaine dernière
+pour me proposer l'édition de luxe de l'encyclopédie Wikipédia,
+pour la somme de \numprint{5000}~\euro.
+Conformément à la loi m'accordant un délai de rétractation de 7~jours,
+je renonce à mon achat et demande le remboursement de la somme versée.
+
+
+\closing{Je vous prie d'agréer,
+Madame, Monsieur,
+mes salutations distinguées.}
+
+\end{letter}
+
+\end{document}

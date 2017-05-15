@@ -1,0 +1,165 @@
+####################################################################################################
+#
+#                      Reads the test table and generate a Latex table 
+#
+###################################################################################################
+#! /usr/bin/perl
+use strict;use warnings;
+use DBI;
+
+########################################################################################################
+# Database connexion... Doesnt hurt
+
+my $dbh = DBI->connect("dbi:mysql:dbname=managementoverview:host=127.0.0.1","root","fred1301",{ RaiseError => 1 },) or die $DBI::errstr;
+
+########################################################################################################
+
+my $Type = "Asset";
+my $Unit = 1000;
+my $TotalValue = 100000;
+my $size = 5;
+my $selectCount = 0;
+
+########################################################################################################
+
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+#my $sth4 = $dbh->prepare("select sum(t.Value) from assets as t");
+
+#$sth4->execute();
+
+#my $number = $sth4->fetchrow();
+#$sth4->finish();
+
+########################################################################################################
+#
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+my $sth0 = $dbh->prepare("select count(*) from assets as t where Value <> 0 and ALFlag like '%$Type%' order by Value desc limit $size");
+$sth0->execute();
+my $count = $sth0->fetchrow();
+$sth0->finish();
+
+########################################################################################################
+
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+#my $sth3 = $dbh->prepare("select sum(t.Value) from assets as t where ALFlag like '%$Type%'");
+my $sth3 = $dbh->prepare("select sum(t.Value) totalValue, sum(t.ROI) totalROI, sum(InitPrice) totalInitPrice, sum(MCost) totalMCost, sum(t.ROI-t.MCost) totalGain from assets as t where ALFlag like '%$Type%'");
+$sth3->execute();
+my $row2 = $sth3->fetchrow_hashref();
+
+my $totalValue = $row2->{totalValue};
+my $totalROI = $row2->{totalROI};
+my $totalInitPrice = $row2->{totalInitPrice};
+my $totalMCost = $row2->{totalMCost};
+my $totalGain = $row2->{totalGain};
+
+$sth3->finish();
+
+########################################################################################################
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+my $sth2 = $dbh->prepare("select max(t.Value)/$Unit from assets as t where Value <> 0 and ALFlag like '%$Type%' order by Initprice limit $size");
+$sth2->execute();
+my $max = $sth2->fetchrow();
+$sth2->finish();
+my $step = $max/5;
+
+print "max: $max \n";
+print "step: $step \n";
+
+########################################################################################################
+#
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+my $sth = $dbh->prepare("select t.ID ID, t.Name Name, t.Value Value, t.AType AType, t.ROI ROI, t.InitPrice InitPrice, t.MCost MCost, t.Maturity Maturity from assets as t where Value <> 0 and ALFlag like '%$Type%' order by InitPrice desc limit $size");
+$sth->execute();
+
+print "===>>> Creation du fichier d'output .tex\n";
+open(OUT,"> ../Latex/assets.tex");
+open(OUT10,"> ../Latex/assets.dat");
+open(OUT2,"> ../Latex/assetsGraph.tex");
+open(OUT3,"> ../Latex/assetsCheese.tex");
+
+print OUT3 "\\begin{tikzpicture}[scale=3]\n";
+
+#print OUT3 "\\newcounter{a}\n";
+#print OUT3 "\\newcounter{b}\n";
+print OUT3 "\\foreach \\p\/\\t in {\n";
+
+printf "%u, %u\n",$max, $step;
+printf OUT2 "\\begin{bchart}[min=0,max=%u,step=%u,unit=k\\texteuro]\n",$max, $step;
+
+print OUT10 "%tableae.dat\n";
+print OUT10 "column1\tcolumn2\tcolumn3\n";
+
+print OUT "\\begin{longtable}{|c|c|c|c|c|c|c|c|c|c|c|c|}\n";
+print OUT "\\hline\n";
+print OUT "\\multicolumn{12}{|c|}{Assets} \\\\\n";
+print OUT "\\hline\n";
+
+print OUT "Type & Name & Maturity & Value & Return & Cost & InitPrice & vp & rp & mp & dv & PnL(R/V)\\\\\n";
+print OUT "\\hline\n";
+
+while (my $row = $sth->fetchrow_hashref()) 
+{
+	$selectCount = $selectCount + 1;
+	my $ID = $row->{ID};
+	my $Name = $row->{Name};
+	$Name =~ s/"//g;
+	$Name =~ s/ //g;
+	my $Value = $row->{Value};
+	my $ROI = $row->{ROI};
+	my $InitPrice = $row->{InitPrice};
+	my $MCost = $row->{MCost};
+	my $AType = $row->{AType};
+	my $Maturity = $row->{Maturity};
+	my @MaturitySplit=split(/ /,$Maturity);
+	$AType =~ s/"//g;
+	my $vp = $Value/$totalValue*100;
+	my $rp = $ROI/$totalROI*100;
+	my $mp = $MCost/$totalMCost*100;
+	my $dv = $Value/$InitPrice*100;
+	my $rm = $ROI/$Value/100;
+	$Value = $Value/$Unit/3;
+	#my $RoundedRatio = printf "%u , \n", $Ratio;
+	#printf "%u , \n", $Ratio;
+	#print "Rounded: $RoundedRatio\n";
+	my $KEuro = $Value/$Unit;
+	my $vp2 = $vp/10;
+	printf OUT "$Name & $AType & $MaturitySplit[0] & $Value & $ROI & $MCost & $InitPrice & %u & %u & %u & %u & %u\\\\\n", $vp, $rp, $mp, $dv, $rm;
+	print OUT10 "{$Name}\t$vp2\t$vp2\n";
+	print OUT "\\hline\n";
+	printf OUT2 "\\bcbar[label=$Name]{$KEuro}\\\\\n", $rm;
+	print OUT2 "\\smallskip\n";
+	#print OUT3 printf "%u , \n", $Ratio . "/ $Name ,\n";
+	if( $selectCount < $size ) 
+	{
+		printf OUT3 "%u / $Name-${KEuro}k\\texteuro -%u\\ ,\n", $vp, $rm;
+	}
+	else
+	{
+		printf OUT3 "%u / $Name-${KEuro}k\\texteuro -%u\\i ,\n", $vp, $rm;
+	}
+}
+	print OUT " ... & ... & ... & ... & ... & ... & ... & ... & ... & ... & ... & ...\\\\\n";
+	print OUT "\\hline\n";
+	print OUT "& Total assets & $totalInitPrice & $totalValue & $totalROI & $totalMCost & & & & & & $totalGain\\\\\n";
+	print OUT "\\hline\n";
+
+print OUT "\\end{longtable}\n";
+close(OUT);
+print OUT2 "\\end{bchart}\n";
+close(OUT2);
+
+print OUT3 "}\n";
+print OUT3 "  {\n";
+print OUT3 "\\setcounter{a}{\\value{b}}\n";
+print OUT3 "\\addtocounter{b}{\\p}\n";
+print OUT3 "\\slice{\\thea/100*360}\n";
+print OUT3 "          {\\theb/100*360}\n";
+print OUT3 "          {\\p\\%}{\\t}\n";
+print OUT3 "  }\n";
+
+print OUT3 "\\end{tikzpicture}\n";
+close(OUT3);
+
+$sth->finish();
+
+$dbh->disconnect();

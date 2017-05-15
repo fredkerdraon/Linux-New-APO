@@ -1,0 +1,2194 @@
+
+
+Téléchargement du 08/08/2016
+
+
+M.       KERDRAON FREDERIC         
+CCHQ       65070038001
+Solde au 07/08/2016 +2 079,44 Euros (EUR)
+
+Date          : 05/08
+Libellé       : RELAIS DU COLOMBIER LANVAL 04/08
+                PAIEMENT PAR CARTE
+Débit    (EUR): 24,50
++--------------------------------------------------------------------+
+Date          : 05/08
+Libellé       : INTERMARCHE LANVALL        04/08
+                PAIEMENT PAR CARTE
+Débit    (EUR): 36,72
++--------------------------------------------------------------------+
+Date          : 04/08
+Libellé       : INTERMARCHE NFC TADEN      03/08
+                PAIEMENT PAR CARTE
+Débit    (EUR): 6,27
++--------------------------------------------------------------------+
+Date          : 04/08
+Libellé       : INTERMARCHE TADEN          03/08
+                PAIEMENT PAR CARTE
+Débit    (EUR): 10,30
++--------------------------------------------------------------------+
+Date          : 04/08
+Libellé       : SARL JMVI PINAULT TADEN    03/08
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,80
++--------------------------------------------------------------------+
+Date          : 03/08
+Libellé       : CAFE DU CHATEAU DINAN      02/08
+                PAIEMENT PAR CARTE
+Débit    (EUR): 15,40
++--------------------------------------------------------------------+
+Date          : 03/08
+Libellé       : INTERMARCHE NFC TADEN      02/08
+                PAIEMENT PAR CARTE
+Débit    (EUR): 9,36
++--------------------------------------------------------------------+
+Date          : 03/08
+Libellé       : INTERMARCHE NFC TADEN      02/08
+                PAIEMENT PAR CARTE
+Débit    (EUR): 5,89
++--------------------------------------------------------------------+
+Date          : 03/08
+Libellé       : SARL JMVI PINAULT TADEN    02/08
+                PAIEMENT PAR CARTE
+Débit    (EUR): 1,30
++--------------------------------------------------------------------+
+Date          : 03/08
+Libellé       : GOURMET WOK TADEN          02/08
+                PAIEMENT PAR CARTE
+Débit    (EUR): 17,90
++--------------------------------------------------------------------+
+Date          : 03/08
+Libellé       : COMPTE SERVICE OPTION 2
+                COTISATION
+Débit    (EUR): 6,40
++--------------------------------------------------------------------+
+Date          : 02/08
+Libellé       : INTERMARCHE NFC TADEN      01/08
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,99
++--------------------------------------------------------------------+
+Date          : 02/08
+Libellé       : INTERMARCHE NFC TADEN      01/08
+                PAIEMENT PAR CARTE
+Débit    (EUR): 6,87
++--------------------------------------------------------------------+
+Date          : 01/08
+Libellé       : BAR DES VEDETTE DINAN      31/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 24,70
++--------------------------------------------------------------------+
+Date          : 01/08
+Libellé       : INTERMARCHE LANVALL        30/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,20
++--------------------------------------------------------------------+
+Date          : 01/08
+Libellé       : INTERMARCHE NFC TADEN      29/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 4,37
++--------------------------------------------------------------------+
+Date          : 01/08
+Libellé       : SARL JMVI PINAULT TADEN    29/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 2,90
++--------------------------------------------------------------------+
+Date          : 01/08
+Libellé       : INTERMARCHE LANVAL         29/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 10,26
++--------------------------------------------------------------------+
+Date          : 01/08
+Libellé       : BAR DES VEDETTE DINAN      30/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 23,40
++--------------------------------------------------------------------+
+Date          : 01/08
+Libellé       : BAR DES VEDETTE DINAN      29/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 38,40
++--------------------------------------------------------------------+
+Date          : 29/07
+Libellé       : BAR DES VEDETTE DINAN      28/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 7,90
++--------------------------------------------------------------------+
+Date          : 29/07
+Libellé       : MAG PRESSE TADEN           28/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 12,90
++--------------------------------------------------------------------+
+Date          : 29/07
+Libellé       : INTERMARCHE NFC TADEN      28/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,99
++--------------------------------------------------------------------+
+Date          : 29/07
+Libellé       : Frais Irreg.Et Incidents
+                PRELEVEMENT
+Débit    (EUR): 90,45
++--------------------------------------------------------------------+
+Date          : 28/07
+Libellé       : C.P.A.M. FINISTERE 162090003022
+                VIREMENT EN VOTRE FAVEUR
+                162090003022162090003022
+                162090003022
+Crédit   (EUR): 15,10
++--------------------------------------------------------------------+
+Date          : 28/07
+Libellé       : LE HAVANE DINAN            27/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,00
++--------------------------------------------------------------------+
+Date          : 28/07
+Libellé       : SARL JMVI PINAULT TADEN    27/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 9,85
++--------------------------------------------------------------------+
+Date          : 27/07
+Libellé       : APOLOGIC APOLOGIC 62071052120001
+                VIREMENT EN VOTRE FAVEUR
+                APOLOGIC           6207105212000127
+Crédit   (EUR): 1 919,41
++--------------------------------------------------------------------+
+Date          : 27/07
+Libellé       : INTERMARCHE TADEN          26/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 7,01
++--------------------------------------------------------------------+
+Date          : 26/07
+Libellé       : BAR DES VEDETTE DINAN      25/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 74,20
++--------------------------------------------------------------------+
+Date          : 26/07
+Libellé       : LE ZAG DINAN               25/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,90
++--------------------------------------------------------------------+
+Date          : 25/07
+Libellé       : INTERMARCHE NFC TADEN      23/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 13,73
++--------------------------------------------------------------------+
+Date          : 25/07
+Libellé       : MCLG DINAN                 24/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,50
++--------------------------------------------------------------------+
+Date          : 25/07
+Libellé       : INTERMARCHE TADEN          22/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 19,32
++--------------------------------------------------------------------+
+Date          : 22/07
+Libellé       : INTERMARCHE LANVAL         21/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 19,68
++--------------------------------------------------------------------+
+Date          : 22/07
+Libellé       : MERCURE DINAN PORT LANVALL 20/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,50
++--------------------------------------------------------------------+
+Date          : 22/07
+Libellé       : DINAN GARE       20/07 20H48
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 60,00
++--------------------------------------------------------------------+
+Date          : 21/07
+Libellé       : CARREFOUR CITY DINAN       20/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 8,98
++--------------------------------------------------------------------+
+Date          : 21/07
+Libellé       : LE ZAG DINAN               20/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 26,20
++--------------------------------------------------------------------+
+Date          : 21/07
+Libellé       : TABACO'S DINAN             20/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 21,00
++--------------------------------------------------------------------+
+Date          : 20/07
+Libellé       : LESNEVEN 2       19/07 08H12
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 60,00
++--------------------------------------------------------------------+
+Date          : 19/07
+Libellé       : MCLG DINAN                 18/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 8,00
++--------------------------------------------------------------------+
+Date          : 18/07
+Libellé       : SOMOBA DAC TADEN           15/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 64,14
++--------------------------------------------------------------------+
+Date          : 18/07
+Libellé       : CAFE TERRASSES DINAN       17/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 5,40
++--------------------------------------------------------------------+
+Date          : 18/07
+Libellé       : CARREFOUR CITY DINAN       16/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 11,89
++--------------------------------------------------------------------+
+Date          : 18/07
+Libellé       : AU VIEUX ST SAUVEUR DINAN  18/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 11,80
++--------------------------------------------------------------------+
+Date          : 18/07
+Libellé       : INTERMARCHE TADEN          14/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 85,39
++--------------------------------------------------------------------+
+Date          : 18/07
+Libellé       : BAR DU MANOIR TADEN        15/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 2,20
++--------------------------------------------------------------------+
+Date          : 18/07
+Libellé       : BAR DES VEDETTE DINAN      15/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 17,90
++--------------------------------------------------------------------+
+Date          : 18/07
+Libellé       : BAR DES VEDETTE DINAN      16/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 17,80
++--------------------------------------------------------------------+
+Date          : 18/07
+Libellé       : BAR DES VEDETTE DINAN      16/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 10,20
++--------------------------------------------------------------------+
+Date          : 18/07
+Libellé       : DINAN CENTRE 2   15/07 22H24
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 60,00
++--------------------------------------------------------------------+
+Date          : 15/07
+Libellé       : INTERMARCHE TADEN          13/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 10,50
++--------------------------------------------------------------------+
+Date          : 15/07
+Libellé       : DEMENAGEMENTS GUIOMARD
+                PRELEVMNT
+                Prel mensuel
+                FR28ZZZ523597
+                KERDRAON
+Débit    (EUR): 49,82
++--------------------------------------------------------------------+
+Date          : 12/07
+Libellé       : CARREFOUR CITY DINAN       11/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 24,97
++--------------------------------------------------------------------+
+Date          : 12/07
+Libellé       : COIFF & CO TADEN           11/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 16,00
++--------------------------------------------------------------------+
+Date          : 12/07
+Libellé       : BAR DES VEDETTE DINAN      11/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 15,50
++--------------------------------------------------------------------+
+Date          : 12/07
+Libellé       : INTERMARCHE NFC TADEN      11/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,36
++--------------------------------------------------------------------+
+Date          : 12/07
+Libellé       : GOURMET WOK TADEN          11/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 17,90
++--------------------------------------------------------------------+
+Date          : 11/07
+Libellé       : BAR DES VEDETTE DINAN      10/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 23,50
++--------------------------------------------------------------------+
+Date          : 11/07
+Libellé       : VIVECO DINAN               10/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 17,40
++--------------------------------------------------------------------+
+Date          : 11/07
+Libellé       : CAFE DU CHATEAU DINAN      08/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 16,80
++--------------------------------------------------------------------+
+Date          : 11/07
+Libellé       : LE ZAG DINAN               08/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 18,00
++--------------------------------------------------------------------+
+Date          : 11/07
+Libellé       : INTERMARCHE NFC TADEN      08/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 2,26
++--------------------------------------------------------------------+
+Date          : 11/07
+Libellé       : INTERMARCHE LANVALL        08/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 15,53
++--------------------------------------------------------------------+
+Date          : 11/07
+Libellé       : BOULANGERIE ARMORIQ DINAN  08/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 1,80
++--------------------------------------------------------------------+
+Date          : 11/07
+Libellé       : BAR DES VEDETTE DINAN      09/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 18,00
++--------------------------------------------------------------------+
+Date          : 11/07
+Libellé       : DINAN CENTRE 2   10/07 07H04
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 60,00
++--------------------------------------------------------------------+
+Date          : 08/07
+Libellé       : CARREFOUR CITY DINAN       07/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 33,55
++--------------------------------------------------------------------+
+Date          : 08/07
+Libellé       : CAFE DU CHATEAU DINAN      07/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 16,80
++--------------------------------------------------------------------+
+Date          : 08/07
+Libellé       : SARL JMVI PINAULT TADEN    07/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 7,10
++--------------------------------------------------------------------+
+Date          : 08/07
+Libellé       : AU VIEUX ST SAUVEUR DINAN  07/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 9,10
++--------------------------------------------------------------------+
+Date          : 08/07
+Libellé       : PRET PERSONNEL           018506
+                PRELEVEMENT
+Débit    (EUR): 509,98
++--------------------------------------------------------------------+
+Date          : 07/07
+Libellé       : INTERMARCHE NFC TADEN      06/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 8,23
++--------------------------------------------------------------------+
+Date          : 06/07
+Libellé       : CAFE DU CHATEAU DINAN      05/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 16,80
++--------------------------------------------------------------------+
+Date          : 06/07
+Libellé       : INTERMARCHE LANVAL         05/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 7,26
++--------------------------------------------------------------------+
+Date          : 06/07
+Libellé       : INTERMARCHE LANVAL         04/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 9,20
++--------------------------------------------------------------------+
+Date          : 05/07
+Libellé       : SFRONESHOTMOBSVI PUTEAUX   03/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 41,00
++--------------------------------------------------------------------+
+Date          : 05/07
+Libellé       : INTERMARCHE NFC TADEN      04/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 7,39
++--------------------------------------------------------------------+
+Date          : 04/07
+Libellé       : BAR DES VEDETTE DINAN      03/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 16,70
++--------------------------------------------------------------------+
+Date          : 04/07
+Libellé       : INTERMARCHE TADEN          02/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 69,30
++--------------------------------------------------------------------+
+Date          : 04/07
+Libellé       : INTERMARCHE LANVAL         01/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 8,75
++--------------------------------------------------------------------+
+Date          : 04/07
+Libellé       : INTERMARCHE NFC TADEN      01/07
+                PAIEMENT PAR CARTE
+Débit    (EUR): 7,97
++--------------------------------------------------------------------+
+Date          : 04/07
+Libellé       : COMPTE SERVICE OPTION 2
+                COTISATION
+Débit    (EUR): 6,40
++--------------------------------------------------------------------+
+Date          : 01/07
+Libellé       : INTERMARCHE NFC TADEN      30/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 5,72
++--------------------------------------------------------------------+
+Date          : 01/07
+Libellé       : INTERMARCHE NFC TADEN      30/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 12,96
++--------------------------------------------------------------------+
+Date          : 30/06
+Libellé       : BAR DES VEDETTE DINAN      29/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,00
++--------------------------------------------------------------------+
+Date          : 30/06
+Libellé       : INTERMARCHE NFC TADEN      29/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 5,72
++--------------------------------------------------------------------+
+Date          : 30/06
+Libellé       : INTERMARCHE TADEN          29/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 6,43
++--------------------------------------------------------------------+
+Date          : 29/06
+Libellé       : INTERMARCHE NFC TADEN      28/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 5,35
++--------------------------------------------------------------------+
+Date          : 29/06
+Libellé       : SARL JMVI PINAULT TADEN    28/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 1,80
++--------------------------------------------------------------------+
+Date          : 29/06
+Libellé       : INTERMARCHE LANVAL         28/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 6,90
++--------------------------------------------------------------------+
+Date          : 28/06
+Libellé       : BAR DES VEDETTE DINAN      27/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 10,70
++--------------------------------------------------------------------+
+Date          : 28/06
+Libellé       : INTERMARCHE NFC TADEN      27/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,99
++--------------------------------------------------------------------+
+Date          : 28/06
+Libellé       : LE 1 DE LA PLACE DINAN     27/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 25,50
++--------------------------------------------------------------------+
+Date          : 28/06
+Libellé       : INTERMARCHE LANVAL         27/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 7,30
++--------------------------------------------------------------------+
+Date          : 28/06
+Libellé       : CAFE DU CHATEAU DINAN      27/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 15,40
++--------------------------------------------------------------------+
+Date          : 28/06
+Libellé       : DINAN CENTRE 2   27/06 10H14
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 60,00
++--------------------------------------------------------------------+
+Date          : 28/06
+Libellé       : CARTE GOLD DI PROMO
+                COTISATION
+Débit    (EUR): 6,25
++--------------------------------------------------------------------+
+Date          : 27/06
+Libellé       : APOLOGIC APOLOGIC 61751702240001
+                VIREMENT EN VOTRE FAVEUR
+                APOLOGIC           6175170224000129
+Crédit   (EUR): 2 127,48
++--------------------------------------------------------------------+
+Date          : 27/06
+Libellé       : BAR DES VEDETTE DINAN      24/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 17,40
++--------------------------------------------------------------------+
+Date          : 27/06
+Libellé       : BAR DES VEDETTE DINAN      25/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 19,70
++--------------------------------------------------------------------+
+Date          : 27/06
+Libellé       : INTERMARCHE LANVAL         25/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 12,71
++--------------------------------------------------------------------+
+Date          : 27/06
+Libellé       : VIVECO DINAN               26/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 9,75
++--------------------------------------------------------------------+
+Date          : 27/06
+Libellé       : INTERMARCHE NFC TADEN      24/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 5,60
++--------------------------------------------------------------------+
+Date          : 27/06
+Libellé       : INTERMARCHE LANVALL        24/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 7,10
++--------------------------------------------------------------------+
+Date          : 27/06
+Libellé       : SARL JMVI PINAULT TADEN    24/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,80
++--------------------------------------------------------------------+
+Date          : 24/06
+Libellé       : 5216298
+                CHEQUE EMIS
+Débit    (EUR): 23,00
++--------------------------------------------------------------------+
+Date          : 24/06
+Libellé       : C.P.A.M. FINISTERE 161750003646
+                VIREMENT EN VOTRE FAVEUR
+                161750003646161750003646
+                161750003646
+Crédit   (EUR): 12,60
++--------------------------------------------------------------------+
+Date          : 24/06
+Libellé       : BAR DES VEDETTE DINAN      23/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 15,50
++--------------------------------------------------------------------+
+Date          : 24/06
+Libellé       : INTERMARCHE NFC TADEN      23/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 5,06
++--------------------------------------------------------------------+
+Date          : 24/06
+Libellé       : SARL JMVI PINAULT TADEN    23/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,80
++--------------------------------------------------------------------+
+Date          : 24/06
+Libellé       : INTERMARCHE LANVAL         23/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 10,06
++--------------------------------------------------------------------+
+Date          : 23/06
+Libellé       : INTERMARCHE NFC TADEN      22/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 9,43
++--------------------------------------------------------------------+
+Date          : 23/06
+Libellé       : SARL JMVI PINAULT TADEN    22/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 1,80
++--------------------------------------------------------------------+
+Date          : 22/06
+Libellé       : BLOCAGE AVIS A TIERS DETENTEUR
+                VIREMENT EMIS
+Débit    (EUR): 1 670,83
++--------------------------------------------------------------------+
+Date          : 22/06
+Libellé       : INTERMARCHE NFC TADEN      21/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 6,60
++--------------------------------------------------------------------+
+Date          : 22/06
+Libellé       : INTERMARCHE NFC TADEN      21/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 5,72
++--------------------------------------------------------------------+
+Date          : 22/06
+Libellé       : SARL JMVI PINAULT TADEN    21/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 1,80
++--------------------------------------------------------------------+
+Date          : 21/06
+Libellé       : INTERMARCHE TADEN          20/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 8,69
++--------------------------------------------------------------------+
+Date          : 21/06
+Libellé       : SARL JMVI PINAULT TADEN    20/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,90
++--------------------------------------------------------------------+
+Date          : 21/06
+Libellé       : INTERMARCHE LANVAL         20/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 15,76
++--------------------------------------------------------------------+
+Date          : 21/06
+Libellé       : CAFE DU CHATEAU DINAN      20/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,00
++--------------------------------------------------------------------+
+Date          : 20/06
+Libellé       : BAR DES VEDETTE DINAN      17/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 15,50
++--------------------------------------------------------------------+
+Date          : 20/06
+Libellé       : BAR DES VEDETTE DINAN      19/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 22,80
++--------------------------------------------------------------------+
+Date          : 20/06
+Libellé       : INTERMARCHE NFC TADEN      17/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 9,75
++--------------------------------------------------------------------+
+Date          : 20/06
+Libellé       : GOURMET WOK TADEN          17/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 17,90
++--------------------------------------------------------------------+
+Date          : 20/06
+Libellé       : INTERMARCHE TADEN          18/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 23,09
++--------------------------------------------------------------------+
+Date          : 20/06
+Libellé       : LE PAPILLON DINAN          19/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 50,00
++--------------------------------------------------------------------+
+Date          : 20/06
+Libellé       : VIVECO DINAN               19/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 11,80
++--------------------------------------------------------------------+
+Date          : 20/06
+Libellé       : BAR DES VEDETTE DINAN      18/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,40
++--------------------------------------------------------------------+
+Date          : 17/06
+Libellé       : INTERMARCHE NFC TADEN      16/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 11,52
++--------------------------------------------------------------------+
+Date          : 17/06
+Libellé       : INTERMARCHE TADEN          16/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 4,22
++--------------------------------------------------------------------+
+Date          : 17/06
+Libellé       : CAFE DU CHATEAU DINAN      16/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,00
++--------------------------------------------------------------------+
+Date          : 16/06
+Libellé       : SHELL 3000 GOUVETS         15/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 59,32
++--------------------------------------------------------------------+
+Date          : 16/06
+Libellé       : INTERMARCHE LANVAL         15/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 8,14
++--------------------------------------------------------------------+
+Date          : 16/06
+Libellé       : MUSEE STE MARIE            15/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 16,00
++--------------------------------------------------------------------+
+Date          : 16/06
+Libellé       : DEMENAGEMENTS GUIOMARD
+                PRELEVMNT
+                Prel mensuel
+                FR28ZZZ523597
+                KERDRAON
+Débit    (EUR): 80,37
++--------------------------------------------------------------------+
+Date          : 15/06
+Libellé       : CITEDIA DE GAULLE RENNES   14/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 2,50
++--------------------------------------------------------------------+
+Date          : 15/06
+Libellé       : TERRES NEUVAS DINAN        14/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,75
++--------------------------------------------------------------------+
+Date          : 15/06
+Libellé       : LE DUCLOS DINAN            14/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 11,20
++--------------------------------------------------------------------+
+Date          : 14/06
+Libellé       : LES VOYAGEURS DINAN        13/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 25,00
++--------------------------------------------------------------------+
+Date          : 14/06
+Libellé       : LANDI DISTRIBUT            13/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 8,95
++--------------------------------------------------------------------+
+Date          : 14/06
+Libellé       : DINAN            12/06 08H30
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 80,00
++--------------------------------------------------------------------+
+Date          : 13/06
+Libellé       : GARAGE L EUROPE DINAN      10/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 664,12
++--------------------------------------------------------------------+
+Date          : 13/06
+Libellé       : SOMOBA DAC TADEN           12/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 51,16
++--------------------------------------------------------------------+
+Date          : 13/06
+Libellé       : MCLG DINAN                 11/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 5,80
++--------------------------------------------------------------------+
+Date          : 13/06
+Libellé       : INTERMARCHE NFC TADEN      10/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 13,60
++--------------------------------------------------------------------+
+Date          : 13/06
+Libellé       : BOULANGERIE ARMORIQ DINAN  10/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 5,20
++--------------------------------------------------------------------+
+Date          : 13/06
+Libellé       : CAFE TERRASSES DINAN       12/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 5,40
++--------------------------------------------------------------------+
+Date          : 13/06
+Libellé       : BAR DES VEDETTE DINAN      11/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 11,20
++--------------------------------------------------------------------+
+Date          : 13/06
+Libellé       : BAR DES VEDETTE DINAN      11/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,10
++--------------------------------------------------------------------+
+Date          : 13/06
+Libellé       : HOTEL DE LA GARE BREST     12/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 53,94
++--------------------------------------------------------------------+
+Date          : 10/06
+Libellé       : BAR DES VEDETTE DINAN      09/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 17,80
++--------------------------------------------------------------------+
+Date          : 10/06
+Libellé       : INTERMARCHE NFC TADEN      09/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 12,39
++--------------------------------------------------------------------+
+Date          : 10/06
+Libellé       : CAFE DU CHATEAU DINAN      09/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,00
++--------------------------------------------------------------------+
+Date          : 09/06
+Libellé       : INTERMARCHE NFC TADEN      08/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 8,22
++--------------------------------------------------------------------+
+Date          : 09/06
+Libellé       : INTERMARCHE NFC TADEN      08/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 6,78
++--------------------------------------------------------------------+
+Date          : 09/06
+Libellé       : SARL JMVI PINAULT TADEN    08/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 1,80
++--------------------------------------------------------------------+
+Date          : 09/06
+Libellé       : PRET PERSONNEL           018506
+                PRELEVEMENT
+Débit    (EUR): 509,98
++--------------------------------------------------------------------+
+Date          : 08/06
+Libellé       : CARREFOUR CITY DINAN       07/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 10,65
++--------------------------------------------------------------------+
+Date          : 08/06
+Libellé       : CAFE DU CHATEAU DINAN      07/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,00
++--------------------------------------------------------------------+
+Date          : 07/06
+Libellé       : INTERMARCHE NFC TADEN      06/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 6,06
++--------------------------------------------------------------------+
+Date          : 07/06
+Libellé       : INTERMARCHE LANVALL        06/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 29,59
++--------------------------------------------------------------------+
+Date          : 07/06
+Libellé       : GOURMET WOK TADEN          06/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 17,90
++--------------------------------------------------------------------+
+Date          : 06/06
+Libellé       : BAR DES VEDETTE DINAN      04/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 23,20
++--------------------------------------------------------------------+
+Date          : 06/06
+Libellé       : BAR DES VEDETTE DINAN      05/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 12,40
++--------------------------------------------------------------------+
+Date          : 06/06
+Libellé       : INTERMARCHE TADEN          03/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 12,12
++--------------------------------------------------------------------+
+Date          : 06/06
+Libellé       : SARL JMVI PINAULT TADEN    03/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 1,80
++--------------------------------------------------------------------+
+Date          : 06/06
+Libellé       : SARL JMVI PINAULT TADEN    03/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 6,90
++--------------------------------------------------------------------+
+Date          : 06/06
+Libellé       : LE ZAG DINAN               04/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 11,70
++--------------------------------------------------------------------+
+Date          : 03/06
+Libellé       : BAR DES VEDETTE DINAN      02/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,00
++--------------------------------------------------------------------+
+Date          : 03/06
+Libellé       : INTERMARCHE NFC TADEN      02/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 4,26
++--------------------------------------------------------------------+
+Date          : 03/06
+Libellé       : INTERMARCHE NFC TADEN      02/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 7,30
++--------------------------------------------------------------------+
+Date          : 03/06
+Libellé       : SARL JMVI PINAULT TADEN    02/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,30
++--------------------------------------------------------------------+
+Date          : 03/06
+Libellé       : COMPTE SERVICE OPTION 2
+                COTISATION
+Débit    (EUR): 6,40
++--------------------------------------------------------------------+
+Date          : 02/06
+Libellé       : INTERMARCHE TADEN          01/06
+                PAIEMENT PAR CARTE
+Débit    (EUR): 4,82
++--------------------------------------------------------------------+
+Date          : 01/06
+Libellé       : PARTS SOC LANDERNEAU
+                INTERETS CREDITEURS
+Crédit   (EUR): 0,33
++--------------------------------------------------------------------+
+Date          : 01/06
+Libellé       : INTERMARCHE NFC TADEN      31/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 9,75
++--------------------------------------------------------------------+
+Date          : 01/06
+Libellé       : SARL JMVI PINAULT TADEN    31/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 5,75
++--------------------------------------------------------------------+
+Date          : 01/06
+Libellé       : DAB 2 DINAN MERC 31/05 20H30
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 100,00
++--------------------------------------------------------------------+
+Date          : 31/05
+Libellé       : BAR DES VEDETTE DINAN      30/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,00
++--------------------------------------------------------------------+
+Date          : 31/05
+Libellé       : INTERMARCHE TADEN          30/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 7,11
++--------------------------------------------------------------------+
+Date          : 31/05
+Libellé       : SARL JMVI PINAULT TADEN    30/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 0,95
++--------------------------------------------------------------------+
+Date          : 31/05
+Libellé       : INTERMARCHE NFC TADEN      30/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 9,15
++--------------------------------------------------------------------+
+Date          : 31/05
+Libellé       : COIFF & CO TADEN           30/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 16,00
++--------------------------------------------------------------------+
+Date          : 30/05
+Libellé       : BAR DES VEDETTE DINAN      28/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 18,00
++--------------------------------------------------------------------+
+Date          : 30/05
+Libellé       : BAR DES VEDETTE DINAN      27/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 9,50
++--------------------------------------------------------------------+
+Date          : 30/05
+Libellé       : BAR DES VEDETTE DINAN      29/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 10,00
++--------------------------------------------------------------------+
+Date          : 30/05
+Libellé       : CAFE TERRASSES DINAN       29/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 10,80
++--------------------------------------------------------------------+
+Date          : 30/05
+Libellé       : LE 1 DE LA PLACE DINAN     28/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 25,50
++--------------------------------------------------------------------+
+Date          : 30/05
+Libellé       : RESTO CECCO DINAN          27/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 18,85
++--------------------------------------------------------------------+
+Date          : 30/05
+Libellé       : INTERMARCHE NFC TADEN      27/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 8,96
++--------------------------------------------------------------------+
+Date          : 30/05
+Libellé       : LE ZAG DINAN               29/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 17,80
++--------------------------------------------------------------------+
+Date          : 30/05
+Libellé       : CARREFOUR CITY DINAN       28/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 5,00
++--------------------------------------------------------------------+
+Date          : 30/05
+Libellé       : LE DUCLOS DINAN            28/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 13,70
++--------------------------------------------------------------------+
+Date          : 27/05
+Libellé       : APOLOGIC APOLOGIC 61461214400001
+                VIREMENT EN VOTRE FAVEUR
+                APOLOGIC           6146121440000129
+Crédit   (EUR): 1 859,08
++--------------------------------------------------------------------+
+Date          : 27/05
+Libellé       : BAR DES VEDETTE DINAN      26/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 24,80
++--------------------------------------------------------------------+
+Date          : 27/05
+Libellé       : INTERMARCHE NFC TADEN      26/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 5,70
++--------------------------------------------------------------------+
+Date          : 26/05
+Libellé       : INTERMARCHE NFC TADEN      25/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 10,76
++--------------------------------------------------------------------+
+Date          : 26/05
+Libellé       : SARL JMVI PINAULT TADEN    25/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,30
++--------------------------------------------------------------------+
+Date          : 26/05
+Libellé       : LE 40 BOULEVARD QUEVERT    25/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 7,20
++--------------------------------------------------------------------+
+Date          : 26/05
+Libellé       : LE 40 BOULEVARD QUEVERT    24/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 6,00
++--------------------------------------------------------------------+
+Date          : 26/05
+Libellé       : DINAN GARE       25/05 17H41
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 100,00
++--------------------------------------------------------------------+
+Date          : 25/05
+Libellé       : INTERMARCHE NFC TADEN      24/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 6,91
++--------------------------------------------------------------------+
+Date          : 25/05
+Libellé       : BOULANGERIE ARMORIQ DINAN  24/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 2,00
++--------------------------------------------------------------------+
+Date          : 25/05
+Libellé       : BOULANGERIE ARMORIQ DINAN  24/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,00
++--------------------------------------------------------------------+
+Date          : 25/05
+Libellé       : CAFE DU CHATEAU DINAN      24/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 15,40
++--------------------------------------------------------------------+
+Date          : 24/05
+Libellé       : BAR DES VEDETTE DINAN      23/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,00
++--------------------------------------------------------------------+
+Date          : 24/05
+Libellé       : INTERMARCHE NFC TADEN      23/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 16,70
++--------------------------------------------------------------------+
+Date          : 24/05
+Libellé       : INTERMARCHE TADEN          23/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 9,36
++--------------------------------------------------------------------+
+Date          : 24/05
+Libellé       : SARL JMVI PINAULT TADEN    23/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,80
++--------------------------------------------------------------------+
+Date          : 23/05
+Libellé       : LE CELTIC DINAN            21/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 23,50
++--------------------------------------------------------------------+
+Date          : 23/05
+Libellé       : BAR DES VEDETTE DINAN      22/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,20
++--------------------------------------------------------------------+
+Date          : 23/05
+Libellé       : BAR DES VEDETTE DINAN      22/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 34,80
++--------------------------------------------------------------------+
+Date          : 23/05
+Libellé       : CAFE DU CHATEAU DINAN      20/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 17,80
++--------------------------------------------------------------------+
+Date          : 23/05
+Libellé       : INTERMARCHE TADEN          20/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 5,25
++--------------------------------------------------------------------+
+Date          : 23/05
+Libellé       : INTERMARCHE TADEN          20/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 8,96
++--------------------------------------------------------------------+
+Date          : 23/05
+Libellé       : BAR DES VEDETTE DINAN      21/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,60
++--------------------------------------------------------------------+
+Date          : 23/05
+Libellé       : CARREFOUR CITY DINAN       21/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 1,34
++--------------------------------------------------------------------+
+Date          : 23/05
+Libellé       : LE DUCLOS DINAN            21/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,80
++--------------------------------------------------------------------+
+Date          : 20/05
+Libellé       : 5216296
+                CHEQUE EMIS
+Débit    (EUR): 4,60
++--------------------------------------------------------------------+
+Date          : 20/05
+Libellé       : BAR DES VEDETTE DINAN      19/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,40
++--------------------------------------------------------------------+
+Date          : 20/05
+Libellé       : INTERMARCHE NFC TADEN      19/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 9,74
++--------------------------------------------------------------------+
+Date          : 20/05
+Libellé       : SARL JMVI PINAULT TADEN    19/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,95
++--------------------------------------------------------------------+
+Date          : 20/05
+Libellé       : MUZIK ANAO DINAN           18/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 18,30
++--------------------------------------------------------------------+
+Date          : 19/05
+Libellé       : LES TERRASSES DINAN        18/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 22,20
++--------------------------------------------------------------------+
+Date          : 19/05
+Libellé       : LE 1 DE LA PLACE DINAN     18/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 25,50
++--------------------------------------------------------------------+
+Date          : 19/05
+Libellé       : CAFE DU CHATEAU DINAN      18/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 8,40
++--------------------------------------------------------------------+
+Date          : 17/05
+Libellé       : INTERMARCHE NFC TADEN      13/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 8,96
++--------------------------------------------------------------------+
+Date          : 17/05
+Libellé       : INTERMARCHE TADEN          13/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 5,67
++--------------------------------------------------------------------+
+Date          : 17/05
+Libellé       : ATELIER GOURMAND DINAN     15/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 19,50
++--------------------------------------------------------------------+
+Date          : 17/05
+Libellé       : INTERMARCHE TADEN          14/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 49,29
++--------------------------------------------------------------------+
+Date          : 17/05
+Libellé       : CARREFOUR CITY DINAN       16/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 9,79
++--------------------------------------------------------------------+
+Date          : 17/05
+Libellé       : DINAN CENTRE 1   13/05 07H06
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 60,00
++--------------------------------------------------------------------+
+Date          : 17/05
+Libellé       : SFR
+                PRELEVMNT
+                SFR mobile Prlvt SEPA 1N-UQK157-01
+                001088469799
+                FR44ZZZ332801
+                GP20131020447890367
+Débit    (EUR): 40,49
++--------------------------------------------------------------------+
+Date          : 13/05
+Libellé       : BAR DES VEDETTE DINAN      12/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 12,00
++--------------------------------------------------------------------+
+Date          : 13/05
+Libellé       : INTERMARCHE NFC TADEN      12/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 4,82
++--------------------------------------------------------------------+
+Date          : 13/05
+Libellé       : INTERMARCHE NFC TADEN      12/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 11,07
++--------------------------------------------------------------------+
+Date          : 13/05
+Libellé       : LE PAPILLON DINAN          12/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,20
++--------------------------------------------------------------------+
+Date          : 13/05
+Libellé       : SARL JMVI PINAULT TADEN    12/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,85
++--------------------------------------------------------------------+
+Date          : 13/05
+Libellé       : LE 40 BOULEVARD QUEVERT    11/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 7,20
++--------------------------------------------------------------------+
+Date          : 12/05
+Libellé       : INTERMARCHE NFC TADEN      11/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 6,91
++--------------------------------------------------------------------+
+Date          : 12/05
+Libellé       : SARL JMVI PINAULT TADEN    11/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,80
++--------------------------------------------------------------------+
+Date          : 11/05
+Libellé       : INTERMARCHE NFC TADEN      10/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 10,57
++--------------------------------------------------------------------+
+Date          : 11/05
+Libellé       : INTERMARCHE NFC TADEN      10/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 4,82
++--------------------------------------------------------------------+
+Date          : 11/05
+Libellé       : CAFE DU CHATEAU DINAN      10/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 22,30
++--------------------------------------------------------------------+
+Date          : 10/05
+Libellé       : 5216297
+                CHEQUE EMIS
+Débit    (EUR): 21,00
++--------------------------------------------------------------------+
+Date          : 10/05
+Libellé       : INTERMARCHE NFC TADEN      09/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 4,82
++--------------------------------------------------------------------+
+Date          : 10/05
+Libellé       : SARL JMVI PINAULT TADEN    09/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,80
++--------------------------------------------------------------------+
+Date          : 09/05
+Libellé       : PRVT ASS PACIFICA 6832735907
+                REGUL OPE CREDITRICES
+Débit    (EUR): 23,45
++--------------------------------------------------------------------+
+Date          : 09/05
+Libellé       : PRVT ASS PACIFICA 5973356907
+                REGUL OPE CREDITRICES
+Débit    (EUR): 49,01
++--------------------------------------------------------------------+
+Date          : 09/05
+Libellé       : PRVT ASS PACIFICA 4530293907
+                REGUL OPE CREDITRICES
+Débit    (EUR): 116,25
++--------------------------------------------------------------------+
+Date          : 09/05
+Libellé       : SOMOBA DAC TADEN           06/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 62,66
++--------------------------------------------------------------------+
+Date          : 09/05
+Libellé       : LA LUMACHELLE DINAN        08/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 10,70
++--------------------------------------------------------------------+
+Date          : 09/05
+Libellé       : BAR DES VEDETTE DINAN      08/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 9,80
++--------------------------------------------------------------------+
+Date          : 09/05
+Libellé       : INTERMARCHE TADEN          07/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 23,04
++--------------------------------------------------------------------+
+Date          : 09/05
+Libellé       : INTERMARCHE TADEN          06/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 62,22
++--------------------------------------------------------------------+
+Date          : 09/05
+Libellé       : PHIE CENTRALE DINAN        06/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 11,23
++--------------------------------------------------------------------+
+Date          : 09/05
+Libellé       : TERRES NEUVAS DINAN        08/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,95
++--------------------------------------------------------------------+
+Date          : 09/05
+Libellé       : PRET PERSONNEL           018506
+                PRELEVEMENT
+Débit    (EUR): 509,98
++--------------------------------------------------------------------+
+Date          : 06/05
+Libellé       : 5216294
+                CHEQUE EMIS
+Débit    (EUR): 71,40
++--------------------------------------------------------------------+
+Date          : 06/05
+Libellé       : INTERMARCHE NFC TADEN      04/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 8,45
++--------------------------------------------------------------------+
+Date          : 06/05
+Libellé       : INTERMARCHE NFC TADEN      04/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 7,51
++--------------------------------------------------------------------+
+Date          : 06/05
+Libellé       : BAR DES VEDETTE DINAN      05/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 27,20
++--------------------------------------------------------------------+
+Date          : 04/05
+Libellé       : CAFE TERRASSES DINAN       03/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,30
++--------------------------------------------------------------------+
+Date          : 04/05
+Libellé       : DAB 2 DINAN MERC 03/05 18H55
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 70,00
++--------------------------------------------------------------------+
+Date          : 03/05
+Libellé       : SFRONESHOTMOBSVI PUTEAUX   30/04
+                PAIEMENT PAR CARTE
+Débit    (EUR): 43,97
++--------------------------------------------------------------------+
+Date          : 03/05
+Libellé       : INTERMARCHE TADEN          02/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 9,30
++--------------------------------------------------------------------+
+Date          : 03/05
+Libellé       : COMPTE SERVICE OPTION 2
+                COTISATION
+Débit    (EUR): 6,40
++--------------------------------------------------------------------+
+Date          : 03/05
+Libellé       : RETROCESS CARTE 5137732945661570
+                REGUL OPE DEBITRICES
+Crédit   (EUR): 20,10
++--------------------------------------------------------------------+
+Date          : 02/05
+Libellé       : GRENIER STUDIO BREST       30/04
+                PAIEMENT PAR CARTE
+Débit    (EUR): 29,90
++--------------------------------------------------------------------+
+Date          : 02/05
+Libellé       : HOTEL VAUBAN BREST         01/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 21,00
++--------------------------------------------------------------------+
+Date          : 02/05
+Libellé       : HOTEL VAUBAN BREST         01/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 19,20
++--------------------------------------------------------------------+
+Date          : 02/05
+Libellé       : HOTEL VAUBAN BREST         01/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 20,50
++--------------------------------------------------------------------+
+Date          : 02/05
+Libellé       : DECATHLON 0032 GUIPAVAS    30/04
+                PAIEMENT PAR CARTE
+Débit    (EUR): 53,95
++--------------------------------------------------------------------+
+Date          : 02/05
+Libellé       : LE 54 CAFE BREST           01/05
+                PAIEMENT PAR CARTE
+Débit    (EUR): 22,70
++--------------------------------------------------------------------+
+Date          : 02/05
+Libellé       : PRESTATION CARTE
+                FRAIS
+Débit    (EUR): 17,50
++--------------------------------------------------------------------+
+Date          : 30/04
+Libellé       : DAB BREST ST-MARC    30/04 10H46
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 80,00
++--------------------------------------------------------------------+
+Date          : 29/04
+Libellé       : SUPPLETIS                018506
+                PRELEVEMENT
+Débit    (EUR): 10,00
++--------------------------------------------------------------------+
+Date          : 28/04
+Libellé       : SUPPLETIS
+                VIREMENT EN VOTRE FAVEUR
+Crédit   (EUR): 10,00
++--------------------------------------------------------------------+
+Date          : 28/04
+Libellé       : C.P.A.M. FINISTERE 161180003193
+                VIREMENT EN VOTRE FAVEUR
+                161180003193161180003193
+                161180003193
+Crédit   (EUR): 15,10
++--------------------------------------------------------------------+
+Date          : 28/04
+Libellé       : 5216295
+                CHEQUE EMIS
+Débit    (EUR): 125,00
++--------------------------------------------------------------------+
+Date          : 28/04
+Libellé       : 5216291
+                CHEQUE EMIS
+Débit    (EUR): 10,97
++--------------------------------------------------------------------+
+Date          : 27/04
+Libellé       : APOLOGIC APOLOGIC 61161148200001
+                VIREMENT EN VOTRE FAVEUR
+                APOLOGIC           6116114820000129
+Crédit   (EUR): 1 927,64
++--------------------------------------------------------------------+
+Date          : 26/04
+Libellé       : 5216290
+                CHEQUE EMIS
+Débit    (EUR): 8,98
++--------------------------------------------------------------------+
+Date          : 25/04
+Libellé       : 5216293/0000000/000000000
+                CHEQUE EMIS
+Débit    (EUR): 55,00
++--------------------------------------------------------------------+
+Date          : 25/04
+Libellé       : 5216292/0000000/000000000
+                CHEQUE EMIS
+Débit    (EUR): 100,00
++--------------------------------------------------------------------+
+Date          : 22/04
+Libellé       : 5216287
+                CHEQUE EMIS
+Débit    (EUR): 70,00
++--------------------------------------------------------------------+
+Date          : 12/04
+Libellé       : 5216289
+                CHEQUE EMIS
+Débit    (EUR): 13,72
++--------------------------------------------------------------------+
+Date          : 12/04
+Libellé       : BREST SAINT MARC  150818
+                RETRAIT MUR D'ARGENT
+Débit    (EUR): 200,00
++--------------------------------------------------------------------+
+Date          : 11/04
+Libellé       : 5216288
+                CHEQUE EMIS
+Débit    (EUR): 100,00
++--------------------------------------------------------------------+
+Date          : 08/04
+Libellé       : 5216286
+                CHEQUE EMIS
+Débit    (EUR): 7,35
++--------------------------------------------------------------------+
+Date          : 08/04
+Libellé       : 5216285
+                CHEQUE EMIS
+Débit    (EUR): 15,44
++--------------------------------------------------------------------+
+Date          : 08/04
+Libellé       : PRET PERSONNEL           018506
+                PRELEVEMENT
+Débit    (EUR): 509,98
++--------------------------------------------------------------------+
+Date          : 04/04
+Libellé       : COMPTE SERVICE OPTION 2
+                COTISATION
+Débit    (EUR): 6,40
++--------------------------------------------------------------------+
+Date          : 01/04
+Libellé       : INTERMARCHE LANVALL        31/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 10,49
++--------------------------------------------------------------------+
+Date          : 01/04
+Libellé       : INTERMARCHE LANVALL        31/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 11,50
++--------------------------------------------------------------------+
+Date          : 01/04
+Libellé       : PORT PLAISANCE DINAN       31/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 528,00
++--------------------------------------------------------------------+
+Date          : 01/04
+Libellé       : LE COCHON GRILL TADEN      31/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,84
++--------------------------------------------------------------------+
+Date          : 01/04
+Libellé       : LANVALLAY        31/03 18H50
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 100,00
++--------------------------------------------------------------------+
+Date          : 31/03
+Libellé       : DYN*DYN.COM/CHARGE 603-668 30/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 26,55
++--------------------------------------------------------------------+
+Date          : 31/03
+Libellé       : INTERMARCHE TADEN          30/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 12,12
++--------------------------------------------------------------------+
+Date          : 31/03
+Libellé       : OPERATION ETRANGER
+                FRAIS
+Débit    (EUR): 0,81
++--------------------------------------------------------------------+
+Date          : 30/03
+Libellé       : RYANAIR LSK0 DUBLIN        25/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 45,00
++--------------------------------------------------------------------+
+Date          : 30/03
+Libellé       : SFR CB ONE SHOT PUTEAUX    26/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 42,31
++--------------------------------------------------------------------+
+Date          : 30/03
+Libellé       : INTERMARCHE TADEN          29/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 8,97
++--------------------------------------------------------------------+
+Date          : 29/03
+Libellé       : APOLOGIC APOLOGIC 60831559090001
+                VIREMENT EN VOTRE FAVEUR
+                APOLOGIC           6083155909000130
+Crédit   (EUR): 1 787,77
++--------------------------------------------------------------------+
+Date          : 29/03
+Libellé       : DLR ISLAND GARDEN          25/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 6,20
++--------------------------------------------------------------------+
+Date          : 29/03
+Libellé       : EQUINOX S/MARKET 0207 9876 25/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 32,20
++--------------------------------------------------------------------+
+Date          : 29/03
+Libellé       : LUL TICKET MACHINE STRATFO 25/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 6,20
++--------------------------------------------------------------------+
+Date          : 29/03
+Libellé       : SUPERDRY LONDON            26/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 50,63
++--------------------------------------------------------------------+
+Date          : 29/03
+Libellé       : DLR ISLAND GARDEN          26/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 25,31
++--------------------------------------------------------------------+
+Date          : 29/03
+Libellé       : MURAKAMI LONDON WC2N       27/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 22,78
++--------------------------------------------------------------------+
+Date          : 29/03
+Libellé       : MONEYCORP STANSTED         25/03
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 253,15
++--------------------------------------------------------------------+
+Date          : 29/03
+Libellé       : Bermondsey UG2 London      27/03
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 68,19
++--------------------------------------------------------------------+
+Date          : 29/03
+Libellé       : SEARD PLEURTUIT            28/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 43,50
++--------------------------------------------------------------------+
+Date          : 29/03
+Libellé       : DINAN CENTRE 1   25/03 07H23
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 60,00
++--------------------------------------------------------------------+
+Date          : 25/03
+Libellé       : BP GIBERVILLE              24/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 4,25
++--------------------------------------------------------------------+
+Date          : 24/03
+Libellé       : INTERMARCHE TADEN          23/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 23,34
++--------------------------------------------------------------------+
+Date          : 24/03
+Libellé       : INTERMARCHE TADEN          23/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 5,73
++--------------------------------------------------------------------+
+Date          : 23/03
+Libellé       : LE HAVANE DINAN            22/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 70,00
++--------------------------------------------------------------------+
+Date          : 23/03
+Libellé       : INTERMARCHE TADEN          22/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 8,90
++--------------------------------------------------------------------+
+Date          : 23/03
+Libellé       : INTERMARCHE LANVALL        22/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 4,84
++--------------------------------------------------------------------+
+Date          : 23/03
+Libellé       : CARREFOUR CITY DINAN       22/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 5,10
++--------------------------------------------------------------------+
+Date          : 22/03
+Libellé       : INTERMARCHE TADEN          21/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 5,73
++--------------------------------------------------------------------+
+Date          : 21/03
+Libellé       : SOMOBA DAC TADEN           20/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 56,05
++--------------------------------------------------------------------+
+Date          : 21/03
+Libellé       : INTERMARCHE LANVALL        19/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 36,58
++--------------------------------------------------------------------+
+Date          : 21/03
+Libellé       : VIVECO DINAN               20/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 6,30
++--------------------------------------------------------------------+
+Date          : 21/03
+Libellé       : INTERMARCHE LANVALL        18/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 17,48
++--------------------------------------------------------------------+
+Date          : 21/03
+Libellé       : OSAKA BREST                20/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 19,20
++--------------------------------------------------------------------+
+Date          : 18/03
+Libellé       : INTERMARCHE TADEN          17/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 7,53
++--------------------------------------------------------------------+
+Date          : 16/03
+Libellé       : 5216284
+                CHEQUE EMIS
+Débit    (EUR): 994,00
++--------------------------------------------------------------------+
+Date          : 16/03
+Libellé       : GOURMET WOK TADEN          15/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 17,90
++--------------------------------------------------------------------+
+Date          : 15/03
+Libellé       : DINAN            13/03 15H36
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 80,00
++--------------------------------------------------------------------+
+Date          : 14/03
+Libellé       : INTERMARCHE LANVALL        12/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 72,15
++--------------------------------------------------------------------+
+Date          : 14/03
+Libellé       : INTERMARCHE LANVALL        11/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 16,17
++--------------------------------------------------------------------+
+Date          : 14/03
+Libellé       : LE 1 DE LA PLACE DINAN     11/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 27,50
++--------------------------------------------------------------------+
+Date          : 14/03
+Libellé       : CAFE DU CHATEAU DINAN      11/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 70,00
++--------------------------------------------------------------------+
+Date          : 11/03
+Libellé       : INTERMARCHE TADEN          10/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 11,61
++--------------------------------------------------------------------+
+Date          : 11/03
+Libellé       : RELAIS BRETON TADEN        10/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 12,00
++--------------------------------------------------------------------+
+Date          : 10/03
+Libellé       : INTERMARCHE LANVALL        09/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 12,97
++--------------------------------------------------------------------+
+Date          : 10/03
+Libellé       : DINAN INTERMARCH 09/03 12H10
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 60,00
++--------------------------------------------------------------------+
+Date          : 09/03
+Libellé       : INTERMARCHE TADEN          08/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 7,28
++--------------------------------------------------------------------+
+Date          : 09/03
+Libellé       : PRET PERSONNEL           018506
+                PRELEVEMENT
+Débit    (EUR): 509,98
++--------------------------------------------------------------------+
+Date          : 08/03
+Libellé       : INTERMARCHE TADEN          07/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 9,69
++--------------------------------------------------------------------+
+Date          : 08/03
+Libellé       : INTERMARCHE LANVALL        07/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 7,62
++--------------------------------------------------------------------+
+Date          : 07/03
+Libellé       : INTERMARCHE LANVALL        05/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 24,08
++--------------------------------------------------------------------+
+Date          : 07/03
+Libellé       : INTERMARCHE LANVALL        05/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 60,33
++--------------------------------------------------------------------+
+Date          : 07/03
+Libellé       : CARREFOUR CITY DINAN       04/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 16,47
++--------------------------------------------------------------------+
+Date          : 07/03
+Libellé       : BAR DES VEDETTE DINAN      05/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,50
++--------------------------------------------------------------------+
+Date          : 07/03
+Libellé       : SA STEREN BREST            05/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 16,15
++--------------------------------------------------------------------+
+Date          : 04/03
+Libellé       : APRIL MARSEILLE            03/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 56,80
++--------------------------------------------------------------------+
+Date          : 04/03
+Libellé       : INTERMARCHE TADEN          03/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 7,79
++--------------------------------------------------------------------+
+Date          : 04/03
+Libellé       : LA CARAVELLE DINAN         03/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 12,40
++--------------------------------------------------------------------+
+Date          : 03/03
+Libellé       : INTERMARCHE TADEN          02/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 13,24
++--------------------------------------------------------------------+
+Date          : 03/03
+Libellé       : LE 1 DE LA PLACE DINAN     01/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 27,50
++--------------------------------------------------------------------+
+Date          : 03/03
+Libellé       : BOIVIN THOURAULT LE MANS   02/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 119,00
++--------------------------------------------------------------------+
+Date          : 03/03
+Libellé       : COMPTE SERVICE OPTION 2
+                COTISATION
+Débit    (EUR): 6,40
++--------------------------------------------------------------------+
+Date          : 02/03
+Libellé       : BRAVONEXT SA PARIS         01/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 290,28
++--------------------------------------------------------------------+
+Date          : 02/03
+Libellé       : SFR CB ONE SHOT PUTEAUX    29/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 29,99
++--------------------------------------------------------------------+
+Date          : 02/03
+Libellé       : INTERMARCHE TADEN          01/03
+                PAIEMENT PAR CARTE
+Débit    (EUR): 13,06
++--------------------------------------------------------------------+
+Date          : 02/03
+Libellé       : DINAN INTERMARCH 01/03 17H48
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 60,00
++--------------------------------------------------------------------+
+Date          : 01/03
+Libellé       : MOUHOUN KHIDER DINAN       29/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 70,00
++--------------------------------------------------------------------+
+Date          : 01/03
+Libellé       : KARINE COIFFURE DINAN      29/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 17,00
++--------------------------------------------------------------------+
+Date          : 01/03
+Libellé       : GOURMET WOK TADEN          29/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 17,90
++--------------------------------------------------------------------+
+Date          : 01/03
+Libellé       : CARREFOUR CITY DINAN       29/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 15,42
++--------------------------------------------------------------------+
+Date          : 29/02
+Libellé       : APOLOGIC APOLOGIC 60561256100001
+                VIREMENT EN VOTRE FAVEUR
+                APOLOGIC           6056125610000131
+Crédit   (EUR): 1 942,11
++--------------------------------------------------------------------+
+Date          : 29/02
+Libellé       : DYN*DYN.COM/CHARGE 603-668 27/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 27,50
++--------------------------------------------------------------------+
+Date          : 29/02
+Libellé       : CARREFOUR CITY DINAN       26/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 20,70
++--------------------------------------------------------------------+
+Date          : 29/02
+Libellé       : RELAIS BRETON TADEN        26/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 15,00
++--------------------------------------------------------------------+
+Date          : 29/02
+Libellé       : HOTEL DE LA GARE BREST     27/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 57,44
++--------------------------------------------------------------------+
+Date          : 29/02
+Libellé       : TERRES NEUVAS DINAN        27/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 19,20
++--------------------------------------------------------------------+
+Date          : 29/02
+Libellé       : OPERATION ETRANGER
+                FRAIS
+Débit    (EUR): 0,83
++--------------------------------------------------------------------+
+Date          : 26/02
+Libellé       : DINAN TAXI TRELIVAN        25/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 11,90
++--------------------------------------------------------------------+
+Date          : 26/02
+Libellé       : DINAN            25/02 17H48
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 80,00
++--------------------------------------------------------------------+
+Date          : 25/02
+Libellé       : C.P.A.M. FINISTERE 160550004325
+                VIREMENT EN VOTRE FAVEUR
+                160550004325160550004325
+                160550004325
+Crédit   (EUR): 13,10
++--------------------------------------------------------------------+
+Date          : 25/02
+Libellé       : INTERMARCHE TADEN          24/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 7,87
++--------------------------------------------------------------------+
+Date          : 25/02
+Libellé       : GOURMET WOK TADEN          24/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 17,90
++--------------------------------------------------------------------+
+Date          : 23/02
+Libellé       : INTERMARCHE LANVALL        22/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 3,98
++--------------------------------------------------------------------+
+Date          : 23/02
+Libellé       : LA MARMITE DINAN           22/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 25,20
++--------------------------------------------------------------------+
+Date          : 23/02
+Libellé       : CARREFOUR CITY DINAN       22/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 24,52
++--------------------------------------------------------------------+
+Date          : 23/02
+Libellé       : DINAN GARE       22/02 17H56
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 60,00
++--------------------------------------------------------------------+
+Date          : 22/02
+Libellé       : BAR DES VEDETTE DINAN      21/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,30
++--------------------------------------------------------------------+
+Date          : 22/02
+Libellé       : INTERMARCHE TADEN          20/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 11,09
++--------------------------------------------------------------------+
+Date          : 22/02
+Libellé       : VIVECO DINAN               21/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 8,70
++--------------------------------------------------------------------+
+Date          : 22/02
+Libellé       : INTERMARCHE LANVALL        19/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 12,98
++--------------------------------------------------------------------+
+Date          : 22/02
+Libellé       : L'EXCEPTION PLERIN         19/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 17,80
++--------------------------------------------------------------------+
+Date          : 22/02
+Libellé       : GOURMET WOK TADEN          20/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 17,90
++--------------------------------------------------------------------+
+Date          : 22/02
+Libellé       : LA LUMACHELLE DINAN        21/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 10,50
++--------------------------------------------------------------------+
+Date          : 19/02
+Libellé       : CARREFOUR CITY DINAN       18/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 9,68
++--------------------------------------------------------------------+
+Date          : 19/02
+Libellé       : L'EXCEPTION PLERIN         18/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 17,40
++--------------------------------------------------------------------+
+Date          : 18/02
+Libellé       : INTERMARCHE LANVALL        17/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 8,53
++--------------------------------------------------------------------+
+Date          : 17/02
+Libellé       : INTERMARCHE LANVALL        16/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 9,48
++--------------------------------------------------------------------+
+Date          : 17/02
+Libellé       : ATYPIC DINAN               16/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 22,45
++--------------------------------------------------------------------+
+Date          : 16/02
+Libellé       : INTERMARCHE LANVALL        15/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 12,22
++--------------------------------------------------------------------+
+Date          : 16/02
+Libellé       : GOURMET WOK TADEN          15/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 17,90
++--------------------------------------------------------------------+
+Date          : 15/02
+Libellé       : INTERMARCHE TADEN          13/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 10,45
++--------------------------------------------------------------------+
+Date          : 15/02
+Libellé       : SFR CB ONE SHOT PUTEAUX    11/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 22,32
++--------------------------------------------------------------------+
+Date          : 15/02
+Libellé       : CARREFOUR CITY DINAN       12/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 11,22
++--------------------------------------------------------------------+
+Date          : 15/02
+Libellé       : CARREFOUR CITY DINAN       14/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 18,53
++--------------------------------------------------------------------+
+Date          : 15/02
+Libellé       : CAFE DU CHATEAU DINAN      13/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 70,00
++--------------------------------------------------------------------+
+Date          : 15/02
+Libellé       : LA LUMACHELLE DINAN        13/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 10,50
++--------------------------------------------------------------------+
+Date          : 15/02
+Libellé       : DINAN CENTRE 1   14/02 09H15
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 60,00
++--------------------------------------------------------------------+
+Date          : 12/02
+Libellé       : CARREFOUR CITY DINAN       11/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 11,10
++--------------------------------------------------------------------+
+Date          : 11/02
+Libellé       : INTERMARCHE TADEN          10/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 7,90
++--------------------------------------------------------------------+
+Date          : 10/02
+Libellé       : SOMOBA DAC TADEN           09/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 58,71
++--------------------------------------------------------------------+
+Date          : 10/02
+Libellé       : INTERMARCHE TADEN          09/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 26,25
++--------------------------------------------------------------------+
+Date          : 09/02
+Libellé       : INTERMARCHE LANVALL        08/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 15,07
++--------------------------------------------------------------------+
+Date          : 09/02
+Libellé       : GOURMET WOK TADEN          08/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 17,90
++--------------------------------------------------------------------+
+Date          : 09/02
+Libellé       : LE TELEGRAMME.F MORLAIX    08/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 0,89
++--------------------------------------------------------------------+
+Date          : 09/02
+Libellé       : PRET PERSONNEL           018506
+                PRELEVEMENT
+Débit    (EUR): 509,98
++--------------------------------------------------------------------+
+Date          : 08/02
+Libellé       : HOTEL DE LA GARE BREST     07/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 48,94
++--------------------------------------------------------------------+
+Date          : 08/02
+Libellé       : LE PAPILLON DINAN          06/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 12,50
++--------------------------------------------------------------------+
+Date          : 08/02
+Libellé       : INTERMARCHE LANVALL        06/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 12,37
++--------------------------------------------------------------------+
+Date          : 08/02
+Libellé       : INTERMARCHE TADEN          05/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 11,18
++--------------------------------------------------------------------+
+Date          : 08/02
+Libellé       : LESNEVEN 2       07/02 11H52
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 60,00
++--------------------------------------------------------------------+
+Date          : 05/02
+Libellé       : INTERMARCHE TADEN          04/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 7,72
++--------------------------------------------------------------------+
+Date          : 04/02
+Libellé       : INTERMARCHE LANVALL        03/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 12,09
++--------------------------------------------------------------------+
+Date          : 04/02
+Libellé       : DINAN            03/02 12H17
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 80,00
++--------------------------------------------------------------------+
+Date          : 03/02
+Libellé       : INTERMARCHE LANVALL        02/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 9,58
++--------------------------------------------------------------------+
+Date          : 03/02
+Libellé       : COMPTE SERVICE OPTION 2
+                COTISATION
+Débit    (EUR): 6,40
++--------------------------------------------------------------------+
+Date          : 02/02
+Libellé       : INTERMARCHE LANVALL        01/02
+                PAIEMENT PAR CARTE
+Débit    (EUR): 15,84
++--------------------------------------------------------------------+
+Date          : 01/02
+Libellé       : DYN*DYN.COM/CHARGE 603-668 29/01
+                PAIEMENT PAR CARTE
+Débit    (EUR): 27,47
++--------------------------------------------------------------------+
+Date          : 01/02
+Libellé       : CARREFOURMARKET QUEVERT    30/01
+                PAIEMENT PAR CARTE
+Débit    (EUR): 14,45
++--------------------------------------------------------------------+
+Date          : 01/02
+Libellé       : ATELIER GOURMAND DINAN     30/01
+                PAIEMENT PAR CARTE
+Débit    (EUR): 26,90
++--------------------------------------------------------------------+
+Date          : 01/02
+Libellé       : INTERMARCHE TADEN          30/01
+                PAIEMENT PAR CARTE
+Débit    (EUR): 22,29
++--------------------------------------------------------------------+
+Date          : 01/02
+Libellé       : CENTRE LECLERC LEHON       30/01
+                PAIEMENT PAR CARTE
+Débit    (EUR): 839,00
++--------------------------------------------------------------------+
+Date          : 01/02
+Libellé       : INTERMARCHE TADEN          29/01
+                PAIEMENT PAR CARTE
+Débit    (EUR): 18,96
++--------------------------------------------------------------------+
+Date          : 01/02
+Libellé       : GAB 1 DINAN LEHO 30/01 16H13
+                RETRAIT AU DISTRIBUTEUR
+Débit    (EUR): 60,00
++--------------------------------------------------------------------+
+Date          : 01/02
+Libellé       : OPERATION ETRANGER
+                FRAIS
+Débit    (EUR): 0,83
++--------------------------------------------------------------------+
+
+
+
+
+
+

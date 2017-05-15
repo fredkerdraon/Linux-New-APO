@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns4="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="bsgreeks" xml:lang="en">
+  <refnamediv>
+    <refname>bsgreeks</refname>
+    <refpurpose>Compute the Greeks for both a call and a put option in a Black and Scholes model. &quot;Delta&quot; is the derivative of the option price with respect to the price of the underlying asset. &quot;Gamma&quot; is the second derivative of the option price with respect to the price of the underlying asset. &quot;Theta&quot; is the derivative of the option price with respect to the time to maturity. &quot;Rho&quot; is the derivative of the option price with respect to the riskless interest rate. &quot;Vega&quot; is the derivative of the option price with respect to the volatility of the underlying (log-) return.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>SYNOPSIS</title>
+    <synopsis>[delta,gamma,theta,rho,vega]=bsgreeks(S,K,r,T,sigma);</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Description</title>
+    <para>Function which computes the Greeks of both call and put option in a Black and Scholes framework</para>
+  </refsection>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>S</term>
+        <listitem>
+          <para>current price of the underlying asset</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>K</term>
+        <listitem>
+          <para>strike price of the option</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>r</term>
+        <listitem>riskless interest rate (assumed to be constant until the maturity)</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>T</term>
+        <listitem>time to maturity; it must be in the same time unit of measure as the riskless interest rate (if the riskless interest rate is annual, then an option with maturity of 3 months must have T=3/12)</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>sigma</term>
+        <listitem>volatility of the underlying (log-) returns; it must be in the same time unit of measure as the riskless interest rate</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Output</title>
+    <variablelist>
+      <varlistentry>
+        <term>Delta</term>
+        <listitem>
+          <para>vector containing the first derivative of the call (first term) and put (second term) option prices with respect to the underlying asset price</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Gamma</term>
+        <listitem>second derivative of the call (or put) option price with respect to the underlying asset price</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Theta</term>
+        <listitem>vector containing the first derivative of the call (first term) and put (second term) option prices with respect to the time to maturity</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Rho</term>
+        <listitem>vector containing the first derivative of the call (first term) and put (second term) option prices with respect to the riskless interest rate</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Vega</term>
+        <listitem>first derivative of the call (or put) option price with respect to the standard deviation of the underlying (log-) returns</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Example</title>
+    <para>We compute the Greeks on both a call and put option with: underlying price 25 euros, strike price 25 euros, 0.001 (annual) riskless interest rate, 3 month time to maturity (i.e. T=3/12), and 0.2 (annual) volatility.</para>
+    <para>--&gt;[D,G,Th,R,V]=bsgreeks(25,25,0.01,3/12,0.2)</para>
+    <para> V = 4.9727729</para>
+    <para>R = 3.0550246 </para>
+    <para>- 3.1793699 </para>
+    <para>Th = 2.1113101 </para>
+    <para>1.8619344 </para>
+    <para>G = 4.9727729 </para>
+    <para>D = 0.5298926</para>
+    <para> - 0.4701074 </para>
+  </refsection>
+  <refsection>
+    <title>Authors</title>
+    <para>Francesco Menoncin - Brescia University - 2010</para>
+  </refsection>
+  <refsection>
+    <title>See Also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="bsoption">bsoption</link>
+      </member>
+      <member>
+        <link linkend="bsimpvol">bsimpvol</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

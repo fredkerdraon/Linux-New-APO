@@ -1,0 +1,1818 @@
+ID;PWXL;N;E
+P;PGeneral
+P;P0
+P;P0.00
+P;P#,##0
+P;P#,##0.00
+P;P#,##0\ _E;;\-#,##0\ _E
+P;P#,##0\ _E;;[Red]\-#,##0\ _E
+P;P#,##0.00\ _E;;\-#,##0.00\ _E
+P;P#,##0.00\ _E;;[Red]\-#,##0.00\ _E
+P;P#,##0\ "E";;\-#,##0\ "E"
+P;P#,##0\ "E";;[Red]\-#,##0\ "E"
+P;P#,##0.00\ "E";;\-#,##0.00\ "E"
+P;P#,##0.00\ "E";;[Red]\-#,##0.00\ "E"
+P;P0%
+P;P0.00%
+P;P0.00E+00
+P;P##0.0E+0
+P;P#" "?/?
+P;P#" "??/??
+P;Pdd/mm/yy
+P;Pdd\-mmm\-yy
+P;Pdd\-mmm
+P;Pmmm\-yy
+P;Ph:mm\ AM/PM
+P;Ph:mm:ss\ AM/PM
+P;Phh:mm
+P;Phh:mm:ss
+P;Pdd/mm/yy\ hh:mm
+P;Pmm:ss
+P;Pmm:ss.0
+P;P@
+P;P[h]:mm:ss
+P;P_-* #,##0\ "E"_-;;\-* #,##0\ "E"_-;;_-* "-"\ "E"_-;;_-@_-
+P;P_-* #,##0\ _E_-;;\-* #,##0\ _F_-;;_-* "-"\ _E_-;;_-@_-
+P;P_-* #,##0.00\ "E"_-;;\-* #,##0.00\ "E"_-;;_-* "-"??\ "E"_-;;_-@_-
+P;P_-* #,##0.00\ _E_-;;\-* #,##0.00\ _E_-;;_-* "-"??\ _E_-;;_-@_-
+P;FArial;M200;L9
+P;FArial;M200;L9
+P;FArial;M200;L9
+P;FArial;M200;L9
+P;EArial;M200;L9
+P;EArial;M200;L9
+P;EArial;M200;L9
+P;EArial;M200;L9
+P;EArial;M200;SB
+P;EArial;M400
+P;EArial;M400;SB
+P;EArial;M320
+P;EArial;M320;SB
+P;EArial;M240;SB
+P;EArial;M280;SB
+P;EArial;M240
+P;EArial;M200;L9
+P;EArial;M200;SBI;L17
+P;EArial;M160
+F;P0;DG0G10;SM0;M255
+B;Y3;X4;D0 0 141 3
+O;L;D;V0;K47;G100 0.001
+F;W1 1 11
+F;W2 2 58
+F;W3 3 17
+F;W4 4 15
+F;W5 256 11
+
+F;SDM11;M525;R1
+F;Y1;X1
+C;K"TNBelNBechargement du 12/10/2012"
+F;X2
+F;X3
+F;X4
+
+F;Y3;X1
+F;X2
+F;X3
+F;X4
+F;SDM13;M405;R4
+F;Y4;X1
+C;K"M. KERDRAON FREDERIC               "
+F;X2
+F;X3
+F;X4
+F;SDM13;M405;R5
+F;Y5;X1
+C;K"DAV CSCA   nN0 65070038001"
+F;X2
+F;X3
+F;X4
+F;M315;R6
+F;Y6;X1
+F;P0;FG0R;SDM14;X2
+C;K"Solde au 12/10/12"
+F;P4;FF2G;SDM14;X3
+C;K636.51
+F;SDM14;X4
+C;K"EUR"
+F;Y7;X1
+F;X2
+F;X3
+F;X4
+F;SDM14;M315;R8
+F;Y8;X1
+C;K"Liste des opérations du compte entre le 04/07/2012 et le 12/10/2012"
+F;X2
+F;X3
+F;X4
+F;SDM9;R9
+F;P0;FG0R;SLRTBM9;Y9;X1
+C;K"Date"
+F;P0;FG0C;SLRTBM9;X2
+C;K"Libellé"
+F;P0;FG0R;SLRTBM9;X3
+C;K"Débit Euros"
+F;P0;FG0R;SLRTBM9;X4
+C;K"Crédit Euros"
+
+
+F;M450;R10
+F;P21;FG0G;SLRTBM0;Y10;X1
+C;K"11-Oct"
+F;SLRTBM19;X2
+C;K"Ret Dab Lcl Marseille  10 10 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K40.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R11
+F;P21;FG0G;SLRTBM0;Y11;X1
+C;K"10-Oct"
+F;SLRTBM19;X2
+C;K"Ret Dab Marseille Cast 09 10 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K40.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R12
+F;P21;FG0G;SLRTBM0;Y12;X1
+C;K"10-Oct"
+F;SLRTBM19;X2
+C;K"Carte Linsolite        09/10/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K27.50
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R13
+F;P21;FG0G;SLRTBM0;Y13;X1
+C;K"10-Oct"
+F;SLRTBM19;X2
+C;K"Prlv Ech Pret A Consommer           :273002084773023644389         S    "
+F;P4;FF2G;SLRTBM0;X3
+C;K383.59
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R14
+F;P21;FG0G;SLRTBM0;Y14;X1
+C;K"10-Oct"
+F;SLRTBM19;X2
+C;K"Prlv Ech Pret A Consommer           :273018128673056379735         S    "
+F;P4;FF2G;SLRTBM0;X3
+C;K146.90
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R15
+F;P21;FG0G;SLRTBM0;Y15;X1
+C;K"09-Oct"
+F;SLRTBM19;X2
+C;K"Carte Sfr Espace       08/10/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K64.80
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R16
+F;P21;FG0G;SLRTBM0;Y16;X1
+C;K"09-Oct"
+F;SLRTBM19;X2
+C;K"Ret Dab Marignane Cede 06 10 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K40.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R17
+F;P21;FG0G;SLRTBM0;Y17;X1
+C;K"09-Oct"
+F;SLRTBM19;X2
+C;K"Ret Dab Brest          06 10 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K40.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R18
+F;P21;FG0G;SLRTBM0;Y18;X1
+C;K"09-Oct"
+F;SLRTBM19;X2
+C;K"Ret Dab Marseille      08 10 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K40.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R19
+F;P21;FG0G;SLRTBM0;Y19;X1
+C;K"09-Oct"
+F;SLRTBM19;X2
+C;K"Prlv 001007   Electricite De Fra    :*111540180216 14616 7   Edf Pra    "
+F;P4;FF2G;SLRTBM0;X3
+C;K65.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R20
+F;P21;FG0G;SLRTBM0;Y20;X1
+C;K"09-Oct"
+F;SLRTBM19;X2
+C;K"Prlv   Predica Garantie Deces       :*82900255460787*001tema3           "
+F;P4;FF2G;SLRTBM0;X3
+C;K4.87
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R21
+F;P21;FG0G;SLRTBM0;Y21;X1
+C;K"08-Oct"
+F;SLRTBM19;X2
+C;K"Carte Sarl Nissana     07/10/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K29.40
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R22
+F;P21;FG0G;SLRTBM0;Y22;X1
+C;K"08-Oct"
+F;SLRTBM19;X2
+C;K"Carte Marche Plus      06/10/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K14.93
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R23
+F;P21;FG0G;SLRTBM0;Y23;X1
+C;K"08-Oct"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 05/10/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K14.60
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R24
+F;P21;FG0G;SLRTBM0;Y24;X1
+C;K"08-Oct"
+F;SLRTBM19;X2
+C;K"Carte Casino 24 Porte  06/10/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K12.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R25
+F;P21;FG0G;SLRTBM0;Y25;X1
+C;K"08-Oct"
+F;SLRTBM19;X2
+C;K"Carte Vol24.Fr         05/10/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K10.78
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R26
+F;P21;FG0G;SLRTBM0;Y26;X1
+C;K"08-Oct"
+F;SLRTBM19;X2
+C;K"**cotisation Cs Option 2            :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K6.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R27
+F;P21;FG0G;SLRTBM0;Y27;X1
+C;K"05-Oct"
+F;SLRTBM19;X2
+C;K"Carte Ryanair          03/10/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K88.40
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R28
+F;P21;FG0G;SLRTBM0;Y28;X1
+C;K"05-Oct"
+F;SLRTBM19;X2
+C;K"Carte Vol24.Fr         03/10/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K19.73
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R29
+F;P21;FG0G;SLRTBM0;Y29;X1
+C;K"05-Oct"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 04/10/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K12.70
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R30
+F;P21;FG0G;SLRTBM0;Y30;X1
+C;K"04-Oct"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 03/10/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K9.10
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R31
+F;P21;FG0G;SLRTBM0;Y31;X1
+C;K"03-Oct"
+F;SLRTBM19;X2
+C;K"Ret Dab 06321 Le Relec 02 10 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K80.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R32
+F;P21;FG0G;SLRTBM0;Y32;X1
+C;K"03-Oct"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 02/10/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K15.20
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R33
+F;P21;FG0G;SLRTBM0;Y33;X1
+C;K"03-Oct"
+F;SLRTBM19;X2
+C;K"Carte Mc Donald's      02/10/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K11.30
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R34
+F;P21;FG0G;SLRTBM0;Y34;X1
+C;K"03-Oct"
+F;SLRTBM19;X2
+C;K"Carte Super U          02/10/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K51.90
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R35
+F;P21;FG0G;SLRTBM0;Y35;X1
+C;K"02-Oct"
+F;SLRTBM19;X2
+C;K"Carte Sncf             01/10/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K79.60
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R36
+F;P21;FG0G;SLRTBM0;Y36;X1
+C;K"02-Oct"
+F;SLRTBM19;X2
+C;K"Ret Dab Paris          01 10 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K40.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R37
+F;P21;FG0G;SLRTBM0;Y37;X1
+C;K"02-Oct"
+F;SLRTBM19;X2
+C;K"Carte Sushi Folies     01/10/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K13.50
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R38
+F;P21;FG0G;SLRTBM0;Y38;X1
+C;K"02-Oct"
+F;SLRTBM19;X2
+C;K"Carte Effia Csions     01/10/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K7.30
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R39
+F;P21;FG0G;SLRTBM0;Y39;X1
+C;K"02-Oct"
+F;SLRTBM19;X2
+C;K"** Cotis.Service Gael               :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K1.13
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R40
+F;P21;FG0G;SLRTBM0;Y40;X1
+C;K"01-Oct"
+F;SLRTBM19;X2
+C;K"Carte Sncf Internet    30/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K91.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R41
+F;P21;FG0G;SLRTBM0;Y41;X1
+C;K"01-Oct"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 28/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K35.20
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R42
+F;P21;FG0G;SLRTBM0;Y42;X1
+C;K"01-Oct"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 30/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K19.90
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R43
+F;P21;FG0G;SLRTBM0;Y43;X1
+C;K"01-Oct"
+F;SLRTBM19;X2
+C;K"Vir.Monfort Nicole                  :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K486.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R44
+F;P21;FG0G;SLRTBM0;Y44;X1
+C;K"28-Sep"
+F;SLRTBM19;X2
+C;K"Prlv   Ass Pacifica  05973356907    :5217186181551907021ass Pacifica    "
+F;P4;FF2G;SLRTBM0;X3
+C;K13.13
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R45
+F;P21;FG0G;SLRTBM0;Y45;X1
+C;K"27-Sep"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 26/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K43.90
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R46
+F;P21;FG0G;SLRTBM0;Y46;X1
+C;K"27-Sep"
+F;SLRTBM19;X2
+C;K"Vir    Capgemini Technology Ser     :Virement Salaire      S0000        "
+F;SLRTBM0;X3
+F;P4;FF2G;SLRTBM0;X4
+C;K2314.76
+
+
+F;M450;R47
+F;P21;FG0G;SLRTBM0;Y47;X1
+C;K"26-Sep"
+F;SLRTBM19;X2
+C;K"Ret Dab Sncf Montparna 25 09 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K60.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R48
+F;P21;FG0G;SLRTBM0;Y48;X1
+C;K"26-Sep"
+F;SLRTBM19;X2
+C;K"Carte Effia Csions     25/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K7.30
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R49
+F;P21;FG0G;SLRTBM0;Y49;X1
+C;K"25-Sep"
+F;SLRTBM19;X2
+C;K"Carte Sncf Internet    24/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K144.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R50
+F;P21;FG0G;SLRTBM0;Y50;X1
+C;K"24-Sep"
+F;SLRTBM19;X2
+C;K"Carte Bar Tab Le Pacha 21/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K62.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R51
+F;P21;FG0G;SLRTBM0;Y51;X1
+C;K"24-Sep"
+F;SLRTBM19;X2
+C;K"Ret Dab St Marc Brest  22 09 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K60.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R52
+F;P21;FG0G;SLRTBM0;Y52;X1
+C;K"24-Sep"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 21/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K14.60
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R53
+F;P21;FG0G;SLRTBM0;Y53;X1
+C;K"24-Sep"
+F;SLRTBM19;X2
+C;K"Carte Coup'hom         22/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K12.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R54
+F;P21;FG0G;SLRTBM0;Y54;X1
+C;K"24-Sep"
+F;SLRTBM19;X2
+C;K"Prlv 332801   Sfr Mobile            :8820014396epre120910ao             "
+F;P4;FF2G;SLRTBM0;X3
+C;K55.22
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R55
+F;P21;FG0G;SLRTBM0;Y55;X1
+C;K"21-Sep"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 20/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K14.60
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R56
+F;P21;FG0G;SLRTBM0;Y56;X1
+C;K"19-Sep"
+F;SLRTBM19;X2
+C;K"Ret Dab Brest          18 09 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K60.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R57
+F;P21;FG0G;SLRTBM0;Y57;X1
+C;K"19-Sep"
+F;SLRTBM19;X2
+C;K"Prlv   Suppletis                    :254002728070058216686         Ys   "
+F;P4;FF2G;SLRTBM0;X3
+C;K20.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R58
+F;P21;FG0G;SLRTBM0;Y58;X1
+C;K"18-Sep"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 17/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K14.60
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R59
+F;P21;FG0G;SLRTBM0;Y59;X1
+C;K"17-Sep"
+F;SLRTBM19;X2
+C;K"Carte Cupid.Com 448005 13/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K45.99
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R60
+F;P21;FG0G;SLRTBM0;Y60;X1
+C;K"17-Sep"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 14/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K14.60
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R61
+F;P21;FG0G;SLRTBM0;Y61;X1
+C;K"17-Sep"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 16/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K14.60
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R62
+F;P21;FG0G;SLRTBM0;Y62;X1
+C;K"17-Sep"
+F;SLRTBM19;X2
+C;K"Carte Casino 24 Porte  14/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K6.60
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R63
+F;P21;FG0G;SLRTBM0;Y63;X1
+C;K"17-Sep"
+F;SLRTBM19;X2
+C;K"Prlv   Ass Pacifica  06019130907    :6563186710982907021ass Pacifica    "
+F;P4;FF2G;SLRTBM0;X3
+C;K68.68
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R64
+F;P21;FG0G;SLRTBM0;Y64;X1
+C;K"14-Sep"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 13/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K14.60
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R65
+F;P21;FG0G;SLRTBM0;Y65;X1
+C;K"13-Sep"
+F;SLRTBM19;X2
+C;K"Ret Dab Brest          12 09 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K50.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R66
+F;P21;FG0G;SLRTBM0;Y66;X1
+C;K"13-Sep"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 12/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K23.30
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R67
+F;P21;FG0G;SLRTBM0;Y67;X1
+C;K"13-Sep"
+F;SLRTBM19;X2
+C;K"Vir Sepa Gras Savoye                :0000000039854527                   "
+F;SLRTBM0;X3
+F;P4;FF2G;SLRTBM0;X4
+C;K9.90
+
+
+F;M450;R68
+F;P21;FG0G;SLRTBM0;Y68;X1
+C;K"12-Sep"
+F;SLRTBM19;X2
+C;K"Carte Tabac Pr Didou   11/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K62.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R69
+F;P21;FG0G;SLRTBM0;Y69;X1
+C;K"12-Sep"
+F;SLRTBM19;X2
+C;K"Carte Casino 24 Porte  11/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K2.80
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R70
+F;P21;FG0G;SLRTBM0;Y70;X1
+C;K"12-Sep"
+F;SLRTBM19;X2
+C;K"** Frais Atd                        :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K6.44
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R71
+F;P21;FG0G;SLRTBM0;Y71;X1
+C;K"12-Sep"
+F;SLRTBM19;X2
+C;K"Tva /frais                          :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K1.26
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R72
+F;P21;FG0G;SLRTBM0;Y72;X1
+C;K"11-Sep"
+F;SLRTBM19;X2
+C;K"Atd N 71775                         :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K77.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R73
+F;P21;FG0G;SLRTBM0;Y73;X1
+C;K"11-Sep"
+F;SLRTBM19;X2
+C;K"Vir    C.P.A.M. Finistere           :122510004163                       "
+F;SLRTBM0;X3
+F;P4;FF2G;SLRTBM0;X4
+C;K20.10
+
+
+F;M450;R74
+F;P21;FG0G;SLRTBM0;Y74;X1
+C;K"10-Sep"
+F;SLRTBM19;X2
+C;K"Carte Centre Leclerc   08/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K121.13
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R75
+F;P21;FG0G;SLRTBM0;Y75;X1
+C;K"10-Sep"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 07/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K11.10
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R76
+F;P21;FG0G;SLRTBM0;Y76;X1
+C;K"10-Sep"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 07/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K9.10
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R77
+F;P21;FG0G;SLRTBM0;Y77;X1
+C;K"10-Sep"
+F;SLRTBM19;X2
+C;K"Prlv Ech Pret A Consommer           :243002220273023644389         S    "
+F;P4;FF2G;SLRTBM0;X3
+C;K383.59
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R78
+F;P21;FG0G;SLRTBM0;Y78;X1
+C;K"10-Sep"
+F;SLRTBM19;X2
+C;K"Prlv Ech Pret A Consommer           :243018600873056379735         S    "
+F;P4;FF2G;SLRTBM0;X3
+C;K146.90
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R79
+F;P21;FG0G;SLRTBM0;Y79;X1
+C;K"10-Sep"
+F;SLRTBM19;X2
+C;K"001007 Electricite De France        :*111540180216 14616 7   Edf Pr9    "
+F;P4;FF2G;SLRTBM0;X3
+C;K65.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R80
+F;P21;FG0G;SLRTBM0;Y80;X1
+C;K"10-Sep"
+F;SLRTBM19;X2
+C;K"**cotisation Cs Option 2            :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K6.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R81
+F;P21;FG0G;SLRTBM0;Y81;X1
+C;K"07-Sep"
+F;SLRTBM19;X2
+C;K"Prlv   Predica Garantie Deces       :*82900255460787*001tema3           "
+F;P4;FF2G;SLRTBM0;X3
+C;K4.87
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R82
+F;P21;FG0G;SLRTBM0;Y82;X1
+C;K"04-Sep"
+F;SLRTBM19;X2
+C;K"** Cotis.Service Gael               :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K1.13
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R83
+F;P21;FG0G;SLRTBM0;Y83;X1
+C;K"03-Sep"
+F;SLRTBM19;X2
+C;K"Ret Dab 06309 Brest St 01 09 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K60.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R84
+F;P21;FG0G;SLRTBM0;Y84;X1
+C;K"03-Sep"
+F;SLRTBM19;X2
+C;K"Carte Sm Les Jacobins  01/09/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K39.98
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R85
+F;P21;FG0G;SLRTBM0;Y85;X1
+C;K"03-Sep"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 31/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K12.80
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R86
+F;P21;FG0G;SLRTBM0;Y86;X1
+C;K"01-Sep"
+F;SLRTBM19;X2
+C;K"Vir.Monfort Nicole                  :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K486.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R87
+F;P21;FG0G;SLRTBM0;Y87;X1
+C;K"30-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 29/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K11.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R88
+F;P21;FG0G;SLRTBM0;Y88;X1
+C;K"30-Aoû"
+F;SLRTBM19;X2
+C;K"Vir    Capgemini Technology Ser     :Virement Salaire      S0000        "
+F;SLRTBM0;X3
+F;P4;FF2G;SLRTBM0;X4
+C;K2302.35
+
+
+F;M450;R89
+F;P21;FG0G;SLRTBM0;Y89;X1
+C;K"29-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Snc  La Presqu'  28/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K62.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R90
+F;P21;FG0G;SLRTBM0;Y90;X1
+C;K"29-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 28/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K11.90
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R91
+F;P21;FG0G;SLRTBM0;Y91;X1
+C;K"28-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Rel.Total 59934  27/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K84.79
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R92
+F;P21;FG0G;SLRTBM0;Y92;X1
+C;K"28-Aoû"
+F;SLRTBM19;X2
+C;K"Ret Dab Brest          25 08 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K60.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R93
+F;P21;FG0G;SLRTBM0;Y93;X1
+C;K"28-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 27/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K14.60
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R94
+F;P21;FG0G;SLRTBM0;Y94;X1
+C;K"28-Aoû"
+F;SLRTBM19;X2
+C;K"Prlv   Ass Pacifica  05973356907    :3316184929766907021ass Pacifica    "
+F;P4;FF2G;SLRTBM0;X3
+C;K12.37
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R95
+F;P21;FG0G;SLRTBM0;Y95;X1
+C;K"28-Aoû"
+F;SLRTBM19;X2
+C;K"**cotis Carte Double Actio          :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K77.65
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R96
+F;P21;FG0G;SLRTBM0;Y96;X1
+C;K"27-Aoû"
+F;SLRTBM19;X2
+C;K"Ret Dab Brest La Frega 24 08 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K60.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R97
+F;P21;FG0G;SLRTBM0;Y97;X1
+C;K"27-Aoû"
+F;SLRTBM19;X2
+C;K"Carte L Amiral Ne      25/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K36.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R98
+F;P21;FG0G;SLRTBM0;Y98;X1
+C;K"24-Aoû"
+F;SLRTBM19;X2
+C;K"332801 Sfr Mobile                   :8544463875epre120812an             "
+F;P4;FF2G;SLRTBM0;X3
+C;K55.20
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R99
+F;P21;FG0G;SLRTBM0;Y99;X1
+C;K"23-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Lavage Auto      22/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K10.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R100
+F;P21;FG0G;SLRTBM0;Y100;X1
+C;K"23-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 22/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K13.10
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R101
+F;P21;FG0G;SLRTBM0;Y101;X1
+C;K"21-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 20/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K42.50
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R102
+F;P21;FG0G;SLRTBM0;Y102;X1
+C;K"20-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Fender Tex Mex   19/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K28.15
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R103
+F;P21;FG0G;SLRTBM0;Y103;X1
+C;K"17-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Carrefour Brest  16/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K107.30
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R104
+F;P21;FG0G;SLRTBM0;Y104;X1
+C;K"16-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Cupid.Com 448005 14/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K45.99
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R105
+F;P21;FG0G;SLRTBM0;Y105;X1
+C;K"16-Aoû"
+F;SLRTBM19;X2
+C;K"Ret Dab Brest La Frega 15 08 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K40.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R106
+F;P21;FG0G;SLRTBM0;Y106;X1
+C;K"16-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Ikea             15/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K70.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R107
+F;P21;FG0G;SLRTBM0;Y107;X1
+C;K"16-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Le Penalty       14/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K62.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R108
+F;P21;FG0G;SLRTBM0;Y108;X1
+C;K"16-Aoû"
+F;SLRTBM19;X2
+C;K"Carte L'arena          14/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K4.60
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R109
+F;P21;FG0G;SLRTBM0;Y109;X1
+C;K"16-Aoû"
+F;SLRTBM19;X2
+C;K"Prlv   Ass Pacifica  06019130907    :0753184258269907021ass Pacifica    "
+F;P4;FF2G;SLRTBM0;X3
+C;K68.68
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R110
+F;P21;FG0G;SLRTBM0;Y110;X1
+C;K"14-Aoû"
+F;SLRTBM19;X2
+C;K"Ret Dab Spar Ouessant  12 08 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K50.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R111
+F;P21;FG0G;SLRTBM0;Y111;X1
+C;K"14-Aoû"
+F;SLRTBM19;X2
+C;K"Carte L'arena          13/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K10.60
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R112
+F;P21;FG0G;SLRTBM0;Y112;X1
+C;K"13-Aoû"
+F;SLRTBM19;X2
+C;K"Ret Dab Brest          10 08 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K50.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R113
+F;P21;FG0G;SLRTBM0;Y113;X1
+C;K"13-Aoû"
+F;SLRTBM19;X2
+C;K"Carte La Poste 290190  10/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K23.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R114
+F;P21;FG0G;SLRTBM0;Y114;X1
+C;K"13-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Decathlon 0032   10/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K117.90
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R115
+F;P21;FG0G;SLRTBM0;Y115;X1
+C;K"13-Aoû"
+F;SLRTBM19;X2
+C;K"Ret Dab Brest          10 08 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K40.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R116
+F;P21;FG0G;SLRTBM0;Y116;X1
+C;K"13-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 10/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K7.20
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R117
+F;P21;FG0G;SLRTBM0;Y117;X1
+C;K"10-Aoû"
+F;SLRTBM19;X2
+C;K"Prlv Ech Pret A Consommer           :214002338773023644389         S    "
+F;P4;FF2G;SLRTBM0;X3
+C;K383.59
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R118
+F;P21;FG0G;SLRTBM0;Y118;X1
+C;K"10-Aoû"
+F;SLRTBM19;X2
+C;K"Prlv Ech Pret A Consommer           :214019255473056379735         S    "
+F;P4;FF2G;SLRTBM0;X3
+C;K146.90
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R119
+F;P21;FG0G;SLRTBM0;Y119;X1
+C;K"09-Aoû"
+F;SLRTBM19;X2
+C;K"001007 Electricite De France        :*111540180216 14616 7   Edf Pr8    "
+F;P4;FF2G;SLRTBM0;X3
+C;K65.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R120
+F;P21;FG0G;SLRTBM0;Y120;X1
+C;K"08-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Tour Du Monde    07/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K36.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R121
+F;P21;FG0G;SLRTBM0;Y121;X1
+C;K"07-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Rel.Total 59934  06/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K78.60
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R122
+F;P21;FG0G;SLRTBM0;Y122;X1
+C;K"07-Aoû"
+F;SLRTBM19;X2
+C;K"Ret Dab Brest          06 08 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K40.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R123
+F;P21;FG0G;SLRTBM0;Y123;X1
+C;K"07-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Sarl Le Bars     06/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K16.60
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R124
+F;P21;FG0G;SLRTBM0;Y124;X1
+C;K"07-Aoû"
+F;SLRTBM19;X2
+C;K"Prlv   Predica Garantie Deces       :*82900255460787*001tema3           "
+F;P4;FF2G;SLRTBM0;X3
+C;K4.87
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R125
+F;P21;FG0G;SLRTBM0;Y125;X1
+C;K"07-Aoû"
+F;SLRTBM19;X2
+C;K"**cotisation Cs Option 2            :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K6.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R126
+F;P21;FG0G;SLRTBM0;Y126;X1
+C;K"06-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Scubaland        03/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K115.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R127
+F;P21;FG0G;SLRTBM0;Y127;X1
+C;K"06-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Leclerc Db Dis   04/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K29.47
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R128
+F;P21;FG0G;SLRTBM0;Y128;X1
+C;K"06-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Decathlon 0032   03/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K22.95
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R129
+F;P21;FG0G;SLRTBM0;Y129;X1
+C;K"06-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Fender Tex Mex   04/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K15.90
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R130
+F;P21;FG0G;SLRTBM0;Y130;X1
+C;K"06-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Aeroport Parkin  03/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K2.40
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R131
+F;P21;FG0G;SLRTBM0;Y131;X1
+C;K"06-Aoû"
+F;SLRTBM19;X2
+C;K"332801 Sfr                          :8716558945erep120721ad             "
+F;P4;FF2G;SLRTBM0;X3
+C;K50.55
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R132
+F;P21;FG0G;SLRTBM0;Y132;X1
+C;K"04-Aoû"
+F;SLRTBM19;X2
+C;K"Ret Dab Festival Du Bout Du         :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K60.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R133
+F;P21;FG0G;SLRTBM0;Y133;X1
+C;K"02-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Tabac Pr Didou   01/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K62.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R134
+F;P21;FG0G;SLRTBM0;Y134;X1
+C;K"02-Aoû"
+F;SLRTBM19;X2
+C;K"Ret Dab Brest La Frega 01 08 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K60.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R135
+F;P21;FG0G;SLRTBM0;Y135;X1
+C;K"02-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Casino 24 Porte  01/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K8.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R136
+F;P21;FG0G;SLRTBM0;Y136;X1
+C;K"02-Aoû"
+F;SLRTBM19;X2
+C;K"Carte Le Longchamp     01/08/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K7.70
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R137
+F;P21;FG0G;SLRTBM0;Y137;X1
+C;K"02-Aoû"
+F;SLRTBM19;X2
+C;K"** Cotis.Service Gael               :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K1.13
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R138
+F;P21;FG0G;SLRTBM0;Y138;X1
+C;K"01-Aoû"
+F;SLRTBM19;X2
+C;K"Vir.Monfort Nicole                  :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K486.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R139
+F;P21;FG0G;SLRTBM0;Y139;X1
+C;K"31-Jul"
+F;SLRTBM19;X2
+C;K"Ret Dab Brest          28 07 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K80.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R140
+F;P21;FG0G;SLRTBM0;Y140;X1
+C;K"30-Jul"
+F;SLRTBM19;X2
+C;K"Carte Decathlon 0032   28/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K59.95
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R141
+F;P21;FG0G;SLRTBM0;Y141;X1
+C;K"30-Jul"
+F;SLRTBM19;X2
+C;K"Vir    Capgemini Technology Ser     :Virement Salaire      S0000        "
+F;SLRTBM0;X3
+F;P4;FF2G;SLRTBM0;X4
+C;K2306.13
+
+
+F;M450;R142
+F;P21;FG0G;SLRTBM0;Y142;X1
+C;K"30-Jul"
+F;SLRTBM19;X2
+C;K"Prlv   Ass Pacifica  05973356907    :6919182394113907021ass Pacifica    "
+F;P4;FF2G;SLRTBM0;X3
+C;K12.37
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R143
+F;P21;FG0G;SLRTBM0;Y143;X1
+C;K"27-Jul"
+F;SLRTBM19;X2
+C;K"Carte Sodexho Siege    26/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K14.48
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R144
+F;P21;FG0G;SLRTBM0;Y144;X1
+C;K"27-Jul"
+F;SLRTBM19;X2
+C;K"Carte Creperie Ble Noi 25/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K19.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R145
+F;P21;FG0G;SLRTBM0;Y145;X1
+C;K"26-Jul"
+F;SLRTBM19;X2
+C;K"Carte Ticketnet Billet 25/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K108.60
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R146
+F;P21;FG0G;SLRTBM0;Y146;X1
+C;K"25-Jul"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 24/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K14.60
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R147
+F;P21;FG0G;SLRTBM0;Y147;X1
+C;K"24-Jul"
+F;SLRTBM19;X2
+C;K"Ret Dab Brest          21 07 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K60.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R148
+F;P21;FG0G;SLRTBM0;Y148;X1
+C;K"24-Jul"
+F;SLRTBM19;X2
+C;K"Carte Sa Steren        23/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K59.71
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R149
+F;P21;FG0G;SLRTBM0;Y149;X1
+C;K"24-Jul"
+F;SLRTBM19;X2
+C;K"Ret Dab Guipavas Aeroport           :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K40.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R150
+F;P21;FG0G;SLRTBM0;Y150;X1
+C;K"24-Jul"
+F;SLRTBM19;X2
+C;K"332801 Sfr Mobile                   :8268797789epre120712al             "
+F;P4;FF2G;SLRTBM0;X3
+C;K61.01
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R151
+F;P21;FG0G;SLRTBM0;Y151;X1
+C;K"20-Jul"
+F;SLRTBM19;X2
+C;K"Carte Uship            19/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K17.60
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R152
+F;P21;FG0G;SLRTBM0;Y152;X1
+C;K"19-Jul"
+F;SLRTBM19;X2
+C;K"Carte Subway           18/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K12.80
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R153
+F;P21;FG0G;SLRTBM0;Y153;X1
+C;K"18-Jul"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 17/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K14.60
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R154
+F;P21;FG0G;SLRTBM0;Y154;X1
+C;K"17-Jul"
+F;SLRTBM19;X2
+C;K"Ret Dab Brest          16 07 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K20.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R155
+F;P21;FG0G;SLRTBM0;Y155;X1
+C;K"17-Jul"
+F;SLRTBM19;X2
+C;K"Ret Dab Brest Centre 1 15 07 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K60.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R156
+F;P21;FG0G;SLRTBM0;Y156;X1
+C;K"17-Jul"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 16/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K23.60
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R157
+F;P21;FG0G;SLRTBM0;Y157;X1
+C;K"16-Jul"
+F;SLRTBM19;X2
+C;K"Carte Gts*livecpdfee.C 15/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K45.99
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R158
+F;P21;FG0G;SLRTBM0;Y158;X1
+C;K"16-Jul"
+F;SLRTBM19;X2
+C;K"Carte Le Longchamp     13/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K62.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R159
+F;P21;FG0G;SLRTBM0;Y159;X1
+C;K"16-Jul"
+F;SLRTBM19;X2
+C;K"Carte L'arena          13/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K26.70
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R160
+F;P21;FG0G;SLRTBM0;Y160;X1
+C;K"16-Jul"
+F;SLRTBM19;X2
+C;K"Carte Casino 24 Porte  12/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K7.60
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R161
+F;P21;FG0G;SLRTBM0;Y161;X1
+C;K"16-Jul"
+F;SLRTBM19;X2
+C;K"Prlv   Ass Pacifica  06019130907    :4650181827083907021ass Pacifica    "
+F;P4;FF2G;SLRTBM0;X3
+C;K68.68
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R162
+F;P21;FG0G;SLRTBM0;Y162;X1
+C;K"13-Jul"
+F;SLRTBM19;X2
+C;K"Carte Carrefour Brest  12/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K108.60
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R163
+F;P21;FG0G;SLRTBM0;Y163;X1
+C;K"13-Jul"
+F;SLRTBM19;X2
+C;K"Ret Dab Lcl Brest Iroi 12 07 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K40.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R164
+F;P21;FG0G;SLRTBM0;Y164;X1
+C;K"12-Jul"
+F;SLRTBM19;X2
+C;K"Carte Sarl Pasnat      12/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K40.50
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R165
+F;P21;FG0G;SLRTBM0;Y165;X1
+C;K"12-Jul"
+F;SLRTBM19;X2
+C;K"Carte Le Tara Inn      11/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K20.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R166
+F;P21;FG0G;SLRTBM0;Y166;X1
+C;K"11-Jul"
+F;SLRTBM19;X2
+C;K"Carte Centre E.Leclerc 10/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K76.61
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R167
+F;P21;FG0G;SLRTBM0;Y167;X1
+C;K"11-Jul"
+F;SLRTBM19;X2
+C;K"Carte Mc Donald's      10/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K11.30
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R168
+F;P21;FG0G;SLRTBM0;Y168;X1
+C;K"10-Jul"
+F;SLRTBM19;X2
+C;K"Prlv Ech Pret A Consommer           :181002590173023644389         S    "
+F;P4;FF2G;SLRTBM0;X3
+C;K383.59
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R169
+F;P21;FG0G;SLRTBM0;Y169;X1
+C;K"10-Jul"
+F;SLRTBM19;X2
+C;K"Prlv Ech Pret A Consommer           :181019850873056379735         S    "
+F;P4;FF2G;SLRTBM0;X3
+C;K146.90
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R170
+F;P21;FG0G;SLRTBM0;Y170;X1
+C;K"10-Jul"
+F;SLRTBM19;X2
+C;K"**interets Debiteurs Taeg:16.53     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K24.88
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R171
+F;P21;FG0G;SLRTBM0;Y171;X1
+C;K"09-Jul"
+F;SLRTBM19;X2
+C;K"Ret Dab Brest La Frega 08 07 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K60.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R172
+F;P21;FG0G;SLRTBM0;Y172;X1
+C;K"09-Jul"
+F;SLRTBM19;X2
+C;K"Carte Le Longchamp     06/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K10.80
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R173
+F;P21;FG0G;SLRTBM0;Y173;X1
+C;K"09-Jul"
+F;SLRTBM19;X2
+C;K"Carte Superette Recouv 06/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K9.80
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R174
+F;P21;FG0G;SLRTBM0;Y174;X1
+C;K"09-Jul"
+F;SLRTBM19;X2
+C;K"001007 Electricite De France        :*111540180216 14616 7   Edf Pr7    "
+F;P4;FF2G;SLRTBM0;X3
+C;K65.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R175
+F;P21;FG0G;SLRTBM0;Y175;X1
+C;K"09-Jul"
+F;SLRTBM19;X2
+C;K"Prlv   Predica Garantie Deces       :*82900255460787*001tema3           "
+F;P4;FF2G;SLRTBM0;X3
+C;K4.87
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R176
+F;P21;FG0G;SLRTBM0;Y176;X1
+C;K"09-Jul"
+F;SLRTBM19;X2
+C;K"**cotisation Cs Option 2            :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K6.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R177
+F;P21;FG0G;SLRTBM0;Y177;X1
+C;K"06-Jul"
+F;SLRTBM19;X2
+C;K"Carte Sodexho Siege    05/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K10.02
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R178
+F;P21;FG0G;SLRTBM0;Y178;X1
+C;K"05-Jul"
+F;SLRTBM19;X2
+C;K"Ret Dab Gmf Kerhuon Si 04 07 12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K60.00
+F;P4;FF2G;SLRTBM0;X4
+
+
+F;M450;R179
+F;P21;FG0G;SLRTBM0;Y179;X1
+C;K"04-Jul"
+F;SLRTBM19;X2
+C;K"Carte Le Longchamp     03/07/12     :.                                  "
+F;P4;FF2G;SLRTBM0;X3
+C;K10.80
+F;P4;FF2G;SLRTBM0;X4
+E
+
+

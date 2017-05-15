@@ -1,0 +1,453 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[8pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{bchart}
+\usepackage{longtable}
+\usepackage{pgfgantt}
+\usepackage{calendar} % Use the calendar.sty style
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{tkz-base}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{pgfplots}
+\usepackage{tkz-kiviat,numprint,fullpage} 
+\usepackage{pgfplotstable} 
+\usetikzlibrary{arrows}
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{dcolumn}
+\usepackage{booktabs}
+\usepackage{lscape}
+\usepackage{pgf-pie}
+\usepackage{verbatim}
+\usepackage{animate}
+\usepackage{sfmath}
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+\usepackage{textcomp}
+%\usepackage{hyperref}
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+%\includegraphics[width=.2\textwidth]{Logo.png}
+
+\title{Finance}
+\author{\copyright Frederic Kerdraon}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+{\footnotesize
+\input{period}
+}
+
+%\addtobeamertemplate{frametitle}{}{%
+%\begin{tikzpicture}[remember picture,overlay]
+%\node[anchor=north west,yshift=2pt] at (current page.north west) {\includegraphics[height=0.8cm]{Logo1}};
+%\end{tikzpicture}}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Introduction}
+
+%This document summurizes all the important informations necessary to facilitate things and remove a lot of stress. It's been put together thanks to \LaTeX. This is designed to help make optimal decisions for a not so short lifetime.
+
+{\footnotesize
+%Ce n'est pas parceque les choses sont difficiles que nous n'osons pas, c'est parceque nous n'osons pas qu'elles sont difficiles.
+}
+%\makebox[2\width]{hello}
+
+\newcounter{a}
+\newcounter{b}
+%----------------------------------------------------------
+\newcommand{\slice}[4]{
+  \pgfmathparse{0.5*#1+0.5*#2}
+  \let\midangle\pgfmathresult
+
+   slice
+  \draw[thick,fill=black!10] (0,0) -- (#1:1) arc (#1:#2:1) -- cycle;
+
+   outer label
+  \node[label=\midangle:#4] at (\midangle:1) {};
+
+   inner label
+  \pgfmathparse{min((#2-#1-10)/110*(-0.3),0)}
+  \let\temp\pgfmathresult
+  \pgfmathparse{max(\temp,-0.5) + 0.9}
+  \let\innerpos\pgfmathresult
+  \node at (\midangle:\innerpos) {#3};
+}
+
+\section{Management summary}
+
+
+\subsection{PnL Projections}
+
+%Le nombre de simulations est egal au nombre d'arrangements des targets\\
+%Pour 8 target, il devrait y avoir un 8! scenarios\\
+%Les scenarios sont ordonnes par facilite de mise en oeuvre min(complexity, cost,etc)\\
+
+\subsubsection{Latex Graph of the scenarios}
+
+Initial parameters for the simulations.\\
+
+%\begin{itemize}
+%	\item {\$TotalDrift}
+%	\item {\$TotalScenTox}
+%	\item {\$TotalScenDebt}
+%	\item {\$TotalScenCash}
+%	\item {\$TotalScenToxDebt}
+%	\item {\$TotalScen = 0}
+ù\end{itemize}
+
+We apply the scenarios below to see what we get after a few iterations\\
+
+%\begin{itemize}
+%	\item {\$Scen}
+%	\item {\$Scenario reduction of Toxics by 231}
+%	\item {\$Scenario reduction of the Debt by 529*0.4}
+%	\item {\$Scenario reduction of the Cash by 755*.5}
+%	\item {\$Scenario reduction of the Toxics and Debt by 231+529*.4}
+%\end{itemize}
+
+my @Scen = (231,529*.4,755*.5,231+529*.4,1000,700,800,950,750);\\
+
+\begin{itemize}
+	\item{The first simulation apply a reduction of the Toxics by 231 euros each month}
+	\item{The second scenario apply a reduction of the debt by 40 percent of the 529}
+	\item{The third one divide the amount of cash spent by 50 percent}
+	\item{The fourth one cumulate the reduction of the toxics by 231 euros with the amount of cash spent reduced by 50 percent}
+	\item{The fifth one is a reduction of 1000 euros each month}
+	\item{The fifth one is a reduction of 700 euros each month}
+	\item{The fifth one is a reduction of 800 euros each month}
+	\item{The fifth one is a reduction of 950 euros each month}
+	\item{The fifth one is a reduction of 750 euros each month}
+\end{itemize}
+
+On the graph we can notice that all the scenarios are positive, as they were built to show how to maximize profit
+just by managing the charge, and especially useless charges.\\
+
+%my $Drift = $row->{Drift};
+%$NewDrift = $Drift + $NewDrift;
+%my $KDrift = $Drift/$Unit;
+%$TotalDrift = $TotalDrift + $Drift;
+%$TotalScenTox = $TotalDrift + $ScenToxics*$Count;
+%$TotalScenDebt = $TotalDrift + $ScenDebt*$Count;
+%$TotalScenCash = $TotalDrift + $ScenCash*$Count;
+%$TotalScenToxDebt = $TotalDrift + $ScenToxDebt*$Count;
+
+%\input{PnLGraph}
+\input{BarPlotPnl}
+{\footnotesize
+BarPlotPnl
+}
+\subsubsection{PnL}
+%\input{BarPlotPnL}
+\input{BarPlotPnl}
+\subsubsection{Kapital}
+%\input{BarPlotPnL}
+\input{BarPlotKapital}
+\subsubsection{Plot of an example}
+%\includegraphics[scale=0.3]{Finance.png}}
+
+%tableae.dat\\
+%file.dat\\
+%immigration.dat\\
+%finance.dat\\
+%charges.dat\\
+%article_contourtmp0.dat\\
+%Surface4_contourtmp0.dat\\
+%pgfplots_scatterdata4.dat\\
+%assets.dat\\
+%chargesKiviat.dat\\
+%resourcesKiviat.dat\\
+
+%\subsubsection{Latex example}
+%\input{parabola-plot}
+
+%\subsubsection{Latex example}
+%\input{tikzdevice-demo}
+
+%\subsubsection{Latex example}
+%\input{TimeTable}
+
+%\subsubsection{Latex example}
+%\input{Torn Paper}
+
+%\subsubsection{Latex example}
+%\input{Weather Table}
+
+%\subsubsection{Latex example}
+%\input{Transparent}
+
+\subsubsection{Graph}
+\includegraphics[scale=0.6]{Vector.png}
+
+This where science enter the game as here can call scilab and there is no limit at what we could calculate... fascinating!
+How do we populate Scilab with Negative numbers where there are Debits and Positive numbers for the Credit
+\subsubsection{Graph}
+\includegraphics[scale=0.6]{Scilab-cashBalance.png}
+
+%\includepdf[pages={1}]{stockchart.pdf}
+%\includepdf[pages={1}]{friedberg.pdf}
+\subsubsection{Surface}
+%\input{PnLSurface}
+
+\subsubsection{Gaussian Curve}
+%\includepdf[pages={1}]{GaussianCurve.pdf}
+%\input{GaussianCurve}
+%Was removed because very uncomplete...
+
+\subsubsection{Parabola}
+This I beleive should be the logo for the finance document, so that every doc has it's logo now :-)\\
+%\includepdf[pages={1}]{parabola-plotpdf}
+%\input{parabola-plot}
+
+\subsubsection{Weather}
+%\includepdf[pages={1}]{WeatherTable.pdf}
+%\input{WeatherTable2}
+
+\subsubsection{Map Of The Charges}
+%\includepdf[pages={1}]{MapOfTheCharges.pdf}
+\input{MapOfTheCharges}
+
+\subsubsection{Table}
+\input{PnL}
+All the figures need to be checked carefully by someone who knows what it's doing.
+}
+
+\subsection{History and extrapolations}
+
+\subsubsection{Kapital curve}
+Kapital trend,Assets trend,Liabilities trend,Leverage trend\\
+\input{kapitalCurve}
+
+\subsubsection{PnL curve}
+%\input{pnlCurve}
+\input{kapitalCurve}
+
+\subsubsection{Cash curve}
+
+Funny cashflow/kapital superior to percent\\
+
+\input{cashCurve}
+%Checklists.tex:%\includegraphics[scale=0.5]{stockchart.pdf}}
+
+\subsubsection{Cash curve from Scilab man!}
+\includegraphics[scale=0.6]{Scilab-cashBalance.png}
+
+\section{Cash Balance Management}
+
+\subsection{Monthly drift}
+
+\subsubsection{Table}
+%\input{almGraph}
+\input{cashCurve}
+
+\subsubsection{Table}
+\input{drift}
+To be able to have data for the drift, you need to build a C++ insert like for the kapital
+go through the dates in the cashflows, and calculate a drift based on this (modulo the salary) 
+\subsubsection{Graph}
+%\includegraphics[width=.8\textwidth]{PnL.png}
+%\input{driftGraph}
+%\input{Plot}
+\input{cashCurve}
+\subsection{Incomes}
+%\input{period}
+
+\subsubsection{Table}
+\input{incomes}
+\subsubsection{Graph}
+\input{incomesGraph}
+\subsubsection{Chart}
+\input{incomeCurve}
+%\includegraphics[width=.8\textwidth]{Income.png}
+
+\subsection{Charges}
+\input{chargesCurve}
+
+\subsubsection{Charges plot}
+Removed to preserve my eyes from the colors....!!!!\\
+%\includegraphics[scale=0.3]{Charges2.png}
+
+\subsubsection{Charges kiviat}
+%One note :-) This should be random!
+\input{chargesKiviat}
+
+\subsubsection{Table}
+\input{charges}
+
+\subsubsection{Graph}
+\input{chargesGraph}
+
+\subsubsection{Chart}
+
+\subsubsection{Cheese}
+\input{chargesCheese}
+
+\section{Asset Liability Management}
+
+\subsection{Kapital}
+
+\subsubsection{Table}
+History of the Kapital is available in the database (select * from kapital)
+
+%$\lim_{x \to \infty} \exp(-x) = 0$
+%$\lim_{x \to \infty} \exp(-x) = 0$
+%K: Kapital\\
+%A: Assets\\
+%L: Liabilities\\
+%K = A-L\\
+%L = K/L\\
+
+\subsubsection{Graph}
+A graph of the kapital and not income and charges cumulated should be easy to build.
+Say a readKapital which would select the cash balance + all the other stuff like assets - liabilities
+Better do it with Latex than with the C++ 
+
+\subsubsection{History}
+{\footnotesize
+Historical graph of the kapital, liab and assets, yearly ALM management\\
+%\includegraphics[width=.8\textwidth]{Assets.png}
+}
+
+\subsubsection{Definitions}
+{\footnotesize
+Vp: value weight (basically the value of the asset against the total value - to be replaced by InitPrice)\\
+Rp: return weight (the return compared to the total returns)\\
+Cp: cost weight (the maintenance cost compared to the total maintenance\\
+Vd: historical deprecation of value (the Value compared to the InitPrice\\
+R/V: monthly rentability (the return minus the maintenance)\\}
+
+\subsubsection{Ratios}
+{\footnotesize
+Vp = value/Totalvalue\\
+Rp = return/Totalreturn\\
+Cp = cost/Totalmaintenance\\
+Vd = value/Initprice\\
+R/V = return/Value\\}
+
+\subsubsection{Formulas}
+
+{\footnotesize
+$\lim_{x \to \infty} \exp(-x) = 0$\\
+}
+
+\subsection{Assets}
+
+\subsubsection{Data}
+The top 5 assets are listed sorted by value, but the totals are given for all the assets as of today\\
+%I KNOW THERE ARE SOME FUNNY NUMBERS!!!\\
+
+\input{assets}
+
+\subsubsection{Graph}
+\input{assetsGraph};
+
+\subsubsection{Cheese}
+\input{assetsCheese}
+
+\subsubsection{Kiviat}
+\input{assetsKiviat}
+Seems like the assets Cheese 
+
+\subsection{Liabilities}
+The top 4 liabilities are listed but the totals are given for all the liabilities\\
+
+\subsubsection{Table}
+\input{liabilities}
+\subsubsection{Graph}
+\input{liabilitiesGraph}
+\subsubsection{Chart}
+%\includegraphics[width=.8\textwidth]{Liabilities.png}
+\subsubsection{Cheese}
+\input{liabilitiesCheese}
+
+\section{Cashflows}
+
+%\subsection{Management summary}
+
+All cashflows from history are being used here\\
+
+\subsubsection{Table}
+\input{cashflows}
+\subsubsection{Graph}
+%\input{cashflowsGraph}
+
+\section{Currencies}
+
+%\subsection{Management summary}
+
+All stocks and the evolution of their stock price are shown here\\
+\includegraphics[scale=0.6]{Scilab-currencies.png}
+This is the graph of the EUR/GBP 
+
+\section{Cash balance}
+\includegraphics[scale=0.6]{Scilab-cashBalance.png}
+This is the graph of my EUR cashbalance 
+
+\section{Stocks}
+\includegraphics[scale=0.6]{Scilab-stocks.png}
+This is the graph of HSBC stock 
+
+\subsubsection{Table}
+Stocks table is available in the database ;-)
+select * from stocks
+%\input{cashflows}
+\subsubsection{Graph}
+The graph is also available and produced by C++ under "legends"
+%\input{cashflowsGraph}
+%\includepdf[pages={1}]{stockchart.pdf}
+
+\end{document}
+

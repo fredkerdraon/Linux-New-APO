@@ -1,0 +1,108 @@
+####################################################################################################
+#
+#                      Reads the test table and generate a Latex table 
+#
+###################################################################################################
+#! /usr/bin/perl
+use strict;use warnings;
+use DBI;
+
+my $Unit = 1000;
+
+my $dbh = DBI->connect("dbi:mysql:dbname=managementoverview","root","fred1301",{ RaiseError => 1 },) or die $DBI::errstr;
+
+########################################################################################################
+
+# query to grab the max between debit and credit to set the scale of the graph
+my $sth2 = $dbh->prepare("select sum(Credit)/$Unit from cashflows group by Category order by sum(Credit) desc limit 1");
+$sth2->execute();
+my $max = $sth2->fetchrow();
+$sth2->finish();
+
+# query to grab the max between debit and credit to set the scale of the graph
+my $sth3 = $dbh->prepare("select sum(Debit) from cashflows;");
+$sth3->execute();
+my $sumDebit = $sth3->fetchrow();
+$sth3->finish();
+
+# query to grab the max between debit and credit to set the scale of the graph
+my $sth4 = $dbh->prepare("select sum(Credit) from cashflows;");
+$sth4->execute();
+my $sumCredit = $sth4->fetchrow();
+$sth4->finish();
+
+# Consolidated variables
+my $Step = $max/5;
+my $Diff = $sumCredit - $sumDebit;
+
+print "#################################### READ INCOMES #################################\n";
+
+########################################################################################################
+
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+my $sth = $dbh->prepare("select Category Category, sum(Debit) Debit, sum(Credit) Credit from cashflows where Credit > 0 group by Category order by Credit desc");
+$sth->execute();
+
+#print "===>>> Creation du fichier d'output .tex\n";
+open(OUT,"> ../Latex/incomes.tex");
+open(OUT2,"> ../Latex/incomesGraph.tex");
+
+printf OUT2 "\\begin{bchart}[min=0,max=%u,step=%u,unit=k\\texteuro]\n",$max,$Step;
+
+print OUT "\\begin{longtable}{|c|c|c|c|c|}\n";
+print OUT "\\hline\n";
+print OUT "\\multicolumn{5}{|c|}{Cashflows} \\\\\n";
+print OUT "\\hline\n";
+
+print OUT "Category & Debit & Credit & PnL \\\\\n";
+print OUT "\\hline\n";
+
+while (my $row = $sth->fetchrow_hashref()) 
+{
+	my $Category = $row->{Category};
+	my $Debit = $row->{Debit};
+	my $Credit = $row->{Credit};
+	my $PnL = ($Credit - $Debit);
+	print OUT "$Category & $Debit & $Credit & $PnL\\\\\n";
+	print OUT "\\hline\n";
+#	if ($Debit > 0)
+#	{
+#		print OUT2 "\\bcbar[label=$Category]{$Debit}\\\\\n";
+#		print OUT2 "\\smallskip\n";
+#	}
+#	else
+#	{
+#		print OUT2 "\\bcbar[label=$Category]{$Credit}\\\\\n";
+#		print OUT2 "\\smallskip\n";
+#	}
+	my $Ratio = $Credit/$Unit;
+	printf OUT2 "\\bcbar[label=$Category]{%u}\\\\\n",$Ratio;
+	print OUT2 "\\smallskip\n";
+}
+	print OUT " ... & ... & ...\\\\\n";
+	print OUT "\\hline\n";
+	print OUT " Total & $sumDebit & $sumCredit & $Diff \\\\\n";
+	print OUT "\\hline\n";
+
+#\begin{bchart}[min=0,max=10000,step=$Step,unit=\texteuro]
+#  \bcbar[label=Guitar]{400}
+#  \smallskip
+#  \bcbar[label=Tv]{700}
+#  \smallskip
+#  \bcbar[label=Car]{10000}
+#  \smallskip
+#  \bcbar[label=Boat]{10000}
+#  \smallskip
+#  %\medskip
+#  %\bigskip
+#\end{bchart}
+
+print OUT "\\end{longtable}\n";
+close(OUT);
+print OUT2 "\\end{bchart}\n";
+close(OUT2);
+
+$sth->finish();
+
+$dbh->disconnect();
+

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns4="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="duration" xml:lang="en">
+  <refnamediv>
+    <refname>duration</refname>
+    <refpurpose>given a set of cash flows (either positive of negative) from an investment and the dates at which they are available, the function computes: the duration of the cash flows, the convexity of the cash flows, and the yield-to-maturity &quot;ytm&quot; (both duration and convexity are computed by taking ytm as the discount rate)</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>SYNOPSIS</title>
+    <synopsis>[dur,con,ytm]=duration(t,c);</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Description</title>
+    <para>On cash flows available at given dates, duration, convexity and yield to maturity are computed</para>
+  </refsection>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>t</term>
+        <listitem>column vector of dates at which cash flows are available: the first element must be zero; time unit of measure is generally the year</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>c</term>
+        <listitem>column vector containing the cash flows; the first element must be the cost of the investment (and it must be a negative number)</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Output</title>
+    <variablelist>
+      <varlistentry>
+        <term>dur</term>
+        <listitem>duration (weighted time to maturity) of the cash flows; this output has the same time unit of measure of the input &quot;t&quot;</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>con</term>
+        <listitem>convexity (weighted square time to maturity) of the cash flows; this output has the same time unit of measure of the input &quot;t&quot;</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>ytm</term>
+        <listitem>yield to maturity (i.e. internal rate of return) of the cash flows; this output has the same time unit of measure of the input &quot;t&quot;; this value is computed with the fsolve function; if the convergence of the algorithm is not good, a message is shown</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Example</title>
+    <para>A bond, whose value on the market is 101.5, pays a cash flow of 2.5 euros any six month (i.e. 1/2 year) and for the next 2 years. At maturity it pays also its face value of 100 euros. Let us compute duration, convexity, and yield-to-maturity.</para>
+    <para>At first we define the vector of dates and cash flows</para>
+    <para>--&gt;t=[0 0.5 1 1.5 2]&apos;;</para>
+    <para>--&gt;c=[-101.5 2.5 2.5 2.5 102.5]&apos;;</para>
+    <para>--&gt;[D,C,Y]=duration(t,c)</para>
+    <para>Y = 0.0425443</para>
+    <para>C = 3.7981714</para>
+    <para>D = 1.9286213 </para>
+  </refsection>
+  <refsection>
+    <title>Authors</title>
+    <para>Francesco Menoncin - Brescia University - 2010</para>
+  </refsection>
+  <refsection>
+    <title>See Also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="fsolve">fsolve</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

@@ -1,0 +1,136 @@
+ID	task	Project	weight	status
+230	Payer les impots	Finance	500000	Pending
+267	Reduire l'alcool	Health	156240	Pending
+266	Reduire la cigarette	Health	78120	Pending
+285	Appeler Fortuneo	Work	50000	Pending
+289	Vendre Plijadur	Finance	27000	Pending
+290	Vendre voiture	Finance	8000	Pending
+249	Bouffe Etienne	Friends	4000	Pending
+250	Bouffe Zaz	Friends	3800	Pending
+252	Bouffe Armelle	Friends	3200	Pending
+255	Bouffe Christophe	Friends	1200	Pending
+286	Rencontrer mecs tyfab	Work	500	Pending
+256	Bouffe Jab	Friends	400	Pending
+107	revision moteur	Boat	100	Pending
+75	Carenner le Boat	Boat	90	Pending
+231	Faire le virement HSBC	Finance	80	Pending
+108	genois - crowd funding?	Boat	50	Pending
+131	acheter masques	Boat	40	Pending
+79	Installer le GPS	Boat	20	Pending
+80	Changer les lampes	Boat	10	Pending
+81	Nettoyer la glaciere	Boat	10	Pending
+93	Installer le son	Boat	1	Pending
+220	Essence a briquet	Day to day	1	Pending
+235	Contacter EDF	Finance	1	Pending
+91	Verifier le mouillage	Boat	1	Pending
+86	Installer une ligne sur l	Boat	1	Pending
+103	Enlever le poste du Boat	Boat	1	Pending
+99	Vernis bois clair	Boat	1	Pending
+96	Changer le mode du rechau	Boat	1	Pending
+88	Graisser la barre	Boat	1	Pending
+89	Nettoyer les banettes	Boat	1	Pending
+90	Nettoyer les inox	Boat	1	Pending
+94	Ameliorer la connexion ba	Boat	1	Pending
+95	Fixer le 12v sur le table	Boat	1	Pending
+247	Appeler phil	Friends	1	Pending
+87	Nettoyer le pont	Boat	1	Pending
+233	Faire opposition au prel 	Finance	1	Pending
+140	Reparer le razoir braun	Day to day	1	Pending
+201	recup outils zaz	Day to day	0	Pending
+200	recuperer guitare	Day to day	0	Pending
+217	appeler christine	Day to day	0	Pending
+199	ajouter consommation a To	Day to day	0	Pending
+197	recuperer les lunettes	Day to day	0	Pending
+193	scanners les docs	Day to day	0	Pending
+192	recuperer affaire Jess	Day to day	0	Pending
+211	contacter thesar	Day to day	0	Pending
+202	creer liste bouquins 	Day to day	0	Pending
+195	photos matos	Day to day	0	Pending
+206	tatouage ben harper	Day to day	0	Pending
+209	contacter francisco	Day to day	0	Pending
+208	creer une equipe	Day to day	0	Pending
+207	contact Ekland	Day to day	0	Pending
+210	conacter kerdoncuff	Day to day	0	Pending
+205	retrouver equipiers plija	Day to day	0	Pending
+204	reconstituer journal plij	Day to day	0	Pending
+203	installer svn	Day to day	0	Pending
+224	vendre guitare	Finance	0	Pending
+227	calculer projet australie	Finance	0	Pending
+271	multiplex son	IT	0	Pending
+273	scanner photos	IT	0	Pending
+274	scanner photo petit plage	IT	0	Pending
+275	trouver coque N95	IT	0	Pending
+277	faire plastifier les cart	Plijadur	0	Pending
+278	Telecharger Ben	Plijadur	0	Pending
+280	contacter mazurier	Work	0	Pending
+284	Appeler FredP	Work	0	Pending
+287	Contacter cityfront	Work	0	Pending
+270	scanner	IT	0	Pending
+34	Link to the vendor - http	Boat	0	Pending
+229	rdv impots	Finance	0	Pending
+241	Get a lawyer	Finance	0	Pending
+243	Mettre a jour LinkedIn	Finance	0	Pending
+279	prof de guitare	Plijadur	0	Pending
+261	creer son football club	Health	0	Pending
+262	trouver un spot pour le b	Health	0	Pending
+263	faire du cheval	Health	0	Pending
+264	contacter laurent le bras	Health	0	Pending
+265	contacter jean mich	Health	0	Pending
+291	Check references	Admin	0	Pending
+6	Relancer Tom (Solutions..	Admin	0	Pending
+35	Complete description	Boat	0	Pending
+36	Prices index	Guitar	0	Pending
+37	Clean the Startocaster	Guitar	0	Pending
+38	Change the strings	Guitar	0	Pending
+40	fabriquer des housses Pli	Boat	0	Pending
+41	visiter les terrains et p	Climate camp	0	Pending
+44	contacter psy CMB	Admin	0	Pending
+45	ajouter St Meen au calend	Admin	0	Pending
+46	payer huissier port du ch	Admin	0	Pending
+51	Payer 2 eme amende	Admin	0	Pending
+52	faire une liste des acces	Admin	0	Pending
+54	rempoter plantes e Plou	Climate camp	0	Pending
+33	Pourcentage Broker	Boat	0	Pending
+32	Nettoyage sociÃ©tÃ© exter	Boat	0	Pending
+7	Appeler Apside	Admin	0	Pending
+8	Envoyer mail Alten	Admin	0	Pending
+9	Voir pour le stockage et 	Day to day	0	Pending
+10	Faire lustrer tes lunette	Day to day	0	Pending
+11	Faire le tour des sociÃ©t	Day to day	0	Pending
+12	Check SFR	Day to day	0	Pending
+13	dnssd://EPSON49DB23%20(Ep	Day to day	0	Pending
+14	Add Linux & News & Sports	Day to day	0	Pending
+16	Check the size of the pic	Day to day	0	Pending
+28	Annonce Plijadur	Boat	0	Pending
+29	Photo Facebook + Photos B	Boat	0	Pending
+30	Descriptif Jeanneau	Boat	0	Pending
+72	regrouper les contacts pa	Admin	0	Pending
+1	Get the desk up to preser	InformationTechnology	0	Pending
+106	Faire reparer le genois	Boat	0	Pending
+127	voile plij lorient	Boat	0	Pending
+128	Reparer panneau electriqu	Boat	0	Pending
+132	Faire reparer la clim de 	Car	0	Pending
+133	nettoyer voiture	Car	0	Pending
+134	videange alfa	Car	0	Pending
+144	Acheter cadre	Day to day	0	Pending
+150	Recuperer glaciere	Day to day	0	Pending
+151	Installer porte manteau	Day to day	0	Pending
+152	Installer engin de muscu	Day to day	0	Pending
+159	Acheter gants noirs	Day to day	0	Pending
+160	Recuperer outils chez Zaz	Day to day	0	Pending
+173	guitare titi	Day to day	0	Pending
+125	cartes	Boat	0	Pending
+124	VHF	Boat	0	Pending
+109	tableau	Boat	0	Pending
+110	gps	Boat	0	Pending
+111	enrouleur	Boat	0	Pending
+112	carenage	Boat	0	Pending
+113	batterie	Boat	0	Pending
+114	barre 	Boat	0	Pending
+116	nettoyage interieur	Boat	0	Pending
+117	nettoyage coussins (houss	Boat	0	Pending
+118	vente genois	Boat	0	Pending
+121	verif dispo/prix ponton r	Boat	0	Pending
+122	verif derive	Boat	0	Pending
+123	location - Jab	Boat	0	Pending
+187	remonter la barre de musc	Day to day	0	Pending

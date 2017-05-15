@@ -1,0 +1,38 @@
+function [rxy,sxy,slope,intercept]=linreg(x,y)
+n=length(x);m=length(y);
+if m<>n then
+   error('linreg - Vectors x and y are not of the same length.');
+   abort;
+end;
+Sxx       = sum(x^2)-sum(x)^2/n;
+Syy       = sum(y^2)-sum(y)^2/n;
+Sxy       = sum(x.*y)-sum(x)*sum(y)/n;
+sx        = sqrt(Sxx/(n-1));
+sy        = sqrt(Syy/(n-1));
+sxy       = Sxy/(n-1);
+rxy       = Sxy/sqrt(Sxx*Syy);
+xbar      = mean(x);
+ybar      = mean(y);
+slope     = Sxy/Sxx;
+intercept = ybar - slope*xbar;
+se        = sqrt((n-1)*sy^2*(1-rxy^2)/(n-2));
+xmin   = min(x);
+xmax   = max(x);
+xrange = xmax-xmin;
+xmin   = xmin - xrange/10;
+xmax   = xmax + xrange/10;
+xx     = [xmin:(xmax-xmin)/100:xmax];
+deff('[y]=yhat(x)','y=slope*x+intercept');
+yy     = yhat(xx);
+ymin   = min(y);
+ymax   = max(y);
+yrange = ymax - ymin;
+ymin   = ymin - yrange/10;
+ymax   = ymax + yrange/10;
+rect   = [xmin ymin xmax ymax];
+plot2d(xx,yy,1,'011',' ',rect);
+xset('mark',-9,1);
+plot2d( x, y,-9,'011',' ',rect);
+xtitle('Linear regression','x','y');
+x=[4.5,5.6,7.2,11.2,15,20];y=[113,114,109,96.5,91.9,82.5];
+[rxy,sxy,slope,intercept] = linreg(x,y);

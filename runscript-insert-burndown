@@ -1,0 +1,6 @@
+mysql -u root -pfred1301 -D managementoverview << EOQ
+insert into burndown (Date, Status, Project, Weight, Velocity, Target)
+select now(), "toto", Project, sum(Weight), sum(Complexity), sum(Duration) from tasks
+where Status <> 'Done'
+group by Project;
+EOQ

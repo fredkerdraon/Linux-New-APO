@@ -1,0 +1,856 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[8pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{bchart}
+\usepackage{longtable}
+\usepackage{pgfgantt}
+\usepackage{calendar} % Use the calendar.sty style
+
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+\usepackage{textcomp}
+%\usepackage{hyperref}
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{Management overview}
+\author{\copyright Frederic Kerdraon}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+\tableofcontents
+\section{Introduction}
+
+This document summurizes all the important informations necessary to facilitate things and remove a lot of stress. It's been put together thanks to \LaTeX. This is designed to help make optimal decisions for a not so short lifetime.
+
+Ce n'est pas parceque les choses sont difficiles que nous n'osons pas, c'est parceque nous n'osons pas qu'elles sont difficiles.
+%\makebox[2\width]{hello}
+\texteuro
+
+\section{Objectives}
+\subsection{Objective 1}
+\subsection{External aggregation}
+plan/tasks/mgt summ/risks/charge?\\
+Projects.csv
+
+\section{Reminder of current administration}
+\subsection{Official documents for my company}
+\subsection{Cepadues}
+\subsection{Get a lawyer}
+\subsection{Douarnenez}
+\subsection{EDF}
+\subsection{Passport}
+\subsection{Visite medecin}
+\subsection{Compte hsbc overdrafted}
+\subsection{Google planing}
+\subsection{Phone numbers}
+\subsection{Bill}
+\subsection{Quitance de loyer}
+\subsection{Contrat GMS and mistakes}
+
+
+\section{Options}
+rating/cost/roi/decision comitte?\\
+
+Options.csv
+
+\section{Associated Projects}
+
+\subsection{ROI}
+
+return(euro)/total risk()\\
+bests returns\\
+
+
+\subsection{Deliverables}
+
+Steps.csv\\
+
+\subsection{Budget}
+
+%\includegraphics[width=200pts]{007.jpg}
+
+\subsection{Maths}
+VaR explained by the elasticity - ok\\
+Linear correlation - ok?\\
+Monte carlo simulation - nok\\
+Black and Scholes - ok\\
+Monte carlo markov chains\\
+
+
+\subsection{Resources}
+Diagramme en etoile\\
+
+\subsection{Tasks}
+List\\
+Priorities\\
+Cost \\
+Dependances\\
+
+\subsection{Gantt}
+
+\begin{figure}[ftbp]
+\begin{center}
+
+\begin{ganttchart}[y unit title=0.4cm,
+y unit chart=0.5cm,
+vgrid,hgrid, 
+title label anchor/.style={below=-1.6ex},
+title left shift=.05,
+title right shift=-.05,
+title height=1,
+bar/.style={fill=gray!50},
+incomplete/.style={fill=white},
+progress label text={},
+bar height=0.7,
+group right shift=0,
+group top shift=.6,
+group height=.3,
+group peaks={}{}{.2}]{24}
+%labels
+\gantttitle{Week}{24} \\
+\gantttitle{January}{4} 
+\gantttitle{February}{4} 
+\gantttitle{March}{4} 
+\gantttitle{April}{4} 
+\gantttitle{May}{4} 
+\gantttitle{June}{4} \\
+%tasks
+\ganttbar{Aie}{1}{2} \\
+\ganttbar{Bill}{3}{8} \\
+\ganttbar{}{9}{10} \\
+\ganttbar{task 4}{11}{15} \\
+\ganttbar[progress=33]{task 5}{20}{22} \\
+\ganttbar{task 6}{18}{19} \\
+\ganttbar{task 7}{16}{18} \\
+\ganttbar[progress=0]{task 8}{21}{24}
+
+%relations 
+\ganttlink{elem0}{elem1} 
+\ganttlink{elem0}{elem3} 
+\ganttlink{elem1}{elem2} 
+\ganttlink{elem3}{elem4} 
+\ganttlink{elem1}{elem5} 
+\ganttlink{elem3}{elem5} 
+\ganttlink{elem2}{elem6} 
+\ganttlink{elem3}{elem6} 
+\ganttlink{elem5}{elem7} 
+\end{ganttchart}
+\end{center}
+\caption{Gantt Chart}
+\end{figure}
+%#####################################################################################
+
+\subsection{Tools}
+
+CF Tools.csv
+
+\subsection{Rate}
+
+\begin{bchart}[min=0,max=10000,step=5000,unit=\texteuro]
+  \bcbar[label=Daily]{400}
+  \smallskip
+  \bcbar[label=Weekly]{1900}
+  \smallskip
+  \bcbar[label=Monthly]{7600}
+  \smallskip
+  \bcbar[label=3 Months]{10000}
+  \smallskip
+  %\medskip
+  %\bigskip
+\end{bchart}
+
+\subsection{Burn down}
+Graphique\\
+Calcul de vitesse\\
+Projection lineaire\\
+Specialist tasks\\
+Theoretical end\\
+
+\includegraphics[width=200pts]{Geometric.jpg}
+
+\subsection{Risks}
+Risk factors\\
+
+\subsection{Meetings}
+Team meeting - Daily\\
+Steering comittee - Bi weekly\\
+Council - Monthly\\
+
+\subsection{Sponsors}
+CA\\
+HSBC\\
+
+%\subsection{Mummy weekly call}
+%\subsection{Daddy weekly call}
+%\subsection{Flo weekly webcam}
+%\subsection{Nico weekly webcam}
+%\subsection{Elise weekly webcam}
+
+\section{Finance}
+
+\subsection{Transactions}
+%{\footnotesize
+%\input{Transactions_20121108}
+%}
+%\subsection{Transactions20130110}
+%{\footnotesize
+%\input{Transactions_20130110}
+%}
+
+\subsection{Liabilities}
+
+Regular transactions happening 3 month in a row\\
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multicolumn{5}{|c|}{Liabilities} \\
+\hline
+Boat mortgage & 21000 & EUR & Monthly & 3Y \\
+\hline
+Car mortgage & 10000 & EUR & Monthly & 5Y \\
+\hline
+Mene & Muh! & & &\\
+\hline
+\end{tabular}
+
+Rent : 456 EUR\\
+SFR : 60 EUR\\
+Food : 600\\
+Bank agios : 20 EUR\\
+Health : 250 EUR\\
+Furnitures : 0 EUR\\
+Energy (Oil+Elec) : 100 EUR\\
+Transport : 450 EUR\\
+
+Total : 2020 EUR
+
+\subsection{Income}
+
+Salary : 3700 EUR\\
+%\includegraphics[width=200pts]{007.jpg}
+
+\subsection{Monthly drift}
+Monthly drift : +280 EUR
+%\usepackage{calc}
+%\usepackage{ifthen}
+%\usepackage{tkz-base}
+%\newcommand{\slice}[4]{
+%  \pgfmathparse{0.5*#1+0.5*#2}
+%  \let\midangle\pgfmathresult
+
+  %% slice
+ % \draw[thick,fill=black!10] (0,0) -- (#1:1) arc (#1:#2:1) -- cycle;
+
+  %% outer label
+  %\node[label=\midangle:#4] at (\midangle:1) {};
+
+  % inner label
+  %\pgfmathparse{min((#2-#1-10)/110*(-0.3),0)}
+  %\let\temp\pgfmathresult
+  %\pgfmathparse{max(\temp,-0.5) + 0.8}
+  %\let\innerpos\pgfmathresult
+  %\node at (\midangle:\innerpos) {#3};
+%}
+
+%\begin{tikzpicture}[scale=3]
+
+%\newcounter{a}
+%\newcounter{b}
+%\foreach \p/\t in {20/type A, 4/type B, 11/type C,
+   %                49/type D, 16/other}
+  %{
+    %\setcounter{a}{\value{b}}
+    %\addtocounter{b}{\p}
+    %\slice{\thea/100*360}
+   %       {\theb/100*360}
+  %        {\p\%}{\t}
+ % }
+
+%\end{tikzpicture}
+
+\subsection{Assets}
+
+Return on investment?\\
+
+Assets.csv
+
+\subsection{Kapital}
+To be calculated : Kapital = Assets - Liabilities\\
+Leverage?\\
+
+\section{Calendars}
+
+%\subsection{Lifetime calendar}
+
+%Milestones\\
+
+\subsection{Yearly calendar}
+
+\begin{figure}[ftbp]
+\begin{center}
+
+\begin{ganttchart}[y unit title=0.4cm,
+y unit chart=0.5cm,
+vgrid,hgrid, 
+title label anchor/.style={below=-1.6ex},
+title left shift=.05,
+title right shift=-.05,
+title height=1,
+bar/.style={fill=gray!50},
+incomplete/.style={fill=white},
+progress label text={},
+bar height=0.7,
+group right shift=0,
+group top shift=.6,
+group height=.3,
+group peaks={}{}{.2}]{24}
+%labels
+\gantttitle{Week}{24} \\
+\gantttitle{January}{4} 
+\gantttitle{February}{4} 
+\gantttitle{March}{4} 
+\gantttitle{April}{4} 
+\gantttitle{May}{4} 
+\gantttitle{June}{4} \\
+%tasks
+\ganttbar{Elise holidays}{1}{2} \\
+\ganttbar{Week-end trip}{3}{8} \\
+\ganttbar{Two weeks trip}{6}{10} \\
+\ganttbar{Full relocation}{11}{15} \\
+\ganttbar[progress=33]{Project 1}{20}{22} \\
+\ganttbar{Project 2}{18}{19} \\
+\ganttbar{Project 3}{16}{18} \\
+\ganttbar[progress=0]{Project 4}{21}{24}
+
+%relations 
+\ganttlink{elem0}{elem1} 
+\ganttlink{elem0}{elem3} 
+\ganttlink{elem1}{elem2} 
+\ganttlink{elem3}{elem4} 
+\ganttlink{elem1}{elem5} 
+\ganttlink{elem3}{elem5} 
+\ganttlink{elem2}{elem6} 
+\ganttlink{elem3}{elem6} 
+\ganttlink{elem5}{elem7} 
+\end{ganttchart}
+\end{center}
+\caption{Gantt Chart}
+\end{figure}
+
+\subsection{Monthly calendar}
+
+\begin{calendar}{\hsize}
+ 
+%----------------------------------------------------------------------------------------
+%	BLANK DAYS BEFORE THE BEGINNING OF THE CALENDAR
+%----------------------------------------------------------------------------------------
+
+% This part is very finicky. It defines the number of blank days at the beginning of the calendar before the first of the month starts. If you need this to be more than 4 (i.e. the first starts on a Friday or Saturday in a 31 day month), then you have two options: 
+% 1) You can uncomment another one or two \BlankDay's below which will make a new week (6 total) which makes the calendar too big for one page, remedy this by decreasing the size of each day by replacing 2.5cm below with a smaller number. 
+% 2) Make the spill-over days start at the top left of the calendar (i.e. the calendar starts with 31 then a few days blank then 1, 2, 3, etc). The second option can be configured by uncommenting the below:
+
+%\setcounter{calendardate}{31} % Begin the count with 31 so the top left day is 31; this can be changed to 29 or 30 as required
+%\day{}{\vspace{2.5cm}} % 31 - add another line identical to this if starting at 30 or earlier
+
+% You will need to comment out the 31 in the NUMBERED DAYS AND CALENDAR CONTENT section below for this as well as commenting out one of the \BlankDay's below. Play around with it and you will get it.
+
+\BlankDay
+\BlankDay
+%\BlankDay
+%\BlankDay
+%\BlankDay
+%\BlankDay
+
+%----------------------------------------------------------------------------------------
+%	NUMBERED DAYS AND CALENDAR CONTENT
+%----------------------------------------------------------------------------------------
+
+% These are the numbered days in the template - if there are less than 31 days simply comment out the bottom lines.
+
+% \vspace{2.5cm} is only there to provide an even look to the calendar where each day is 2.5cm tall, it can be changed or removed to automatically adjust to the day in the week with the most content
+
+\setcounter{calendardate}{1} % Start the date counter at 1
+
+%\day{Work}{10am Meeting with Boss \\[6pt] 12pm Meeting with Group} % 1 - Example of content
+\day{}{\vspace{2.5cm}} % 2 
+\day{}{\vspace{2.5cm}} % 3
+\day{}{\vspace{2.5cm}} % 4
+\day{}{\vspace{2.5cm}} % 5
+\day{}{\vspace{2.5cm}} % 6
+\day{}{\vspace{2.5cm}} % 7
+\day{}{\vspace{2.5cm}} % 8
+\day{}{\vspace{2.5cm}} % 9
+\day{Work}{Delivery one \\[6pt] 12pm Meeting with Group} % 1 - Example of content
+\day{}{\vspace{2.5cm}} % 10
+\day{}{\vspace{2.5cm}} % 11
+\day{}{\vspace{2.5cm}} % 12
+\day{Work}{Delivery two \\[6pt] 12pm Meeting with Group} % 1 - Example of content
+\day{}{\vspace{2.5cm}} % 13
+\day{}{\vspace{2.5cm}} % 14
+\day{}{\vspace{2.5cm}} % 15
+\day{}{\vspace{2.5cm}} % 16
+\day{}{\vspace{2.5cm}} % 17
+\day{}{\vspace{2.5cm}} % 18
+\day{}{\vspace{2.5cm}} % 19
+\day{}{\vspace{2.5cm}} % 20 
+\day{}{\vspace{2.5cm}} % 21
+\day{}{\vspace{2.5cm}} % 22
+\day{}{\vspace{2.5cm}} % 23
+\day{}{\vspace{2.5cm}} % 24
+\day{}{\vspace{2.5cm}} % 25
+\day{}{\vspace{2.5cm}} % 26
+\day{}{\vspace{2.5cm}} % 27
+\day{}{\vspace{2.5cm}} % 28
+\day{}{\vspace{2.5cm}} % 29 
+\day{}{\vspace{2.5cm}} % 30 
+\day{}{\vspace{2.5cm}} % 31
+
+% Un-comment the \BlankDay below if the bottom line of the calendar is missing
+%\BlankDay
+
+% Un-comment to start counting again after 31
+%\setcounter{calendardate}{1}
+%\day{}{\vspace{2.5cm}} % 1
+%\day{}{\vspace{2.5cm}} % 2
+%\day{}{\vspace{2.5cm}} % 3
+
+%----------------------------------------------------------------------------------------
+
+\finishCalendar
+\end{calendar}
+
+\subsection{Weekly calendar}
+
+\begin{calendar}{\hsize}
+
+%----------------------------------------------------------------------------------------
+%	FIRST DAY
+%----------------------------------------------------------------------------------------
+
+\day{}{\textbf{12am-2pm} \daysep Weekly Mummy - Fanch}
+\day{}{\textbf{5pm-6pm} \daysep Weekly Nico}
+\day{}{\textbf{6pm-7pm} \daysep Weekly Flo}
+\day{}{\textbf{7pm-8pm} \daysep Weekly Elise}
+\day{}{\textbf{8pm-9pm} \daysep Fill in the statistics} % By default all daily events are centered in the box, in order to bring them up use \vspace{2cm} after the event text; you may need to change the 2cm
+
+%----------------------------------------------------------------------------------------
+%	SECOND DAY
+%----------------------------------------------------------------------------------------
+
+\day{}{
+\textbf{4am-11am} \daysep Get back from Brest \\[3pt]
+\textbf{11am-1pm} \daysep Manage my weekly \\[3pt]
+\textbf{1.30pm-6pm} \daysep Do the urgent work \\[3pt]
+%\textbf{9am-10am} \daysep BIOSCI101 - BLT100 \\[3pt]
+%\textbf{10am-11am} \daysep BIOSCI 104 - LLT \\[3pt]
+%\textbf{11am-12pm} \daysep No Lecture \\[3pt]
+%\textbf{12pm-1pm} \daysep No Lecture \\[3pt]
+\textbf{6pm-7pm} \daysep Send a summary to Karima \\[3pt]
+%\textbf{12pm-1pm} \daysep BIOSCI105 - BLT204 \\[3pt]
+%\textbf{1pm-2pm} \daysep No Lecture \\[3pt]
+\textbf{8pm-9pm} \daysep Fill in the statistics \\[3pt]
+%\textbf{3pm-4pm} \daysep BIOSCI101 Laboratory \\[3pt]
+%\textbf{4pm-5pm} \daysep BIOSCI101 Laboratory
+} 
+
+%----------------------------------------------------------------------------------------
+%	THIRD DAY
+%----------------------------------------------------------------------------------------
+
+\day{}{ % Tuesday
+\textbf{10pm-11pm} \daysep Fill in the statistics \\[3pt]
+%\textbf{3pm-4pm} \daysep No Lecture \\[3pt]
+%\textbf{4pm-5pm} \daysep No Lecture
+} 
+
+%----------------------------------------------------------------------------------------
+%	FOURTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{}{ % Wednesday
+%\textbf{9am-10am} \daysep No Lecture \\[3pt]
+%\textbf{10am-11am} \daysep BIOSCI 104 - LLT \\[3pt]
+%\textbf{11am-12pm} \daysep No Lecture \\[3pt]
+%\textbf{12pm-1pm} \daysep BIOSCI105 - BLT204 \\[3pt]
+%\textbf{1pm-2pm} \daysep No Lecture \\[3pt]
+%\textbf{2pm-3pm} \daysep GEO101 - HSB1 \\[3pt]
+\textbf{7pm-10pm} \daysep Football \\[3pt]
+\textbf{8pm-9pm} \daysep Fill in the statistics \\[3pt]
+%\textbf{3pm-4pm} \daysep No Lecture \\[3pt]
+%\textbf{4pm-5pm} \daysep No Lecture
+} 
+
+%----------------------------------------------------------------------------------------
+%	FIFTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{}{ % Thursday
+%\textbf{9am-10am} \daysep No Lecture \\[3pt]
+%\textbf{10am-11am} \daysep BIOSCI 104 - LLT \\[3pt]
+%\textbf{11am-12pm} \daysep No Lecture \\[3pt]
+%\textbf{12pm-1pm} \daysep No Lecture \\[3pt]
+%\textbf{1pm-2pm} \daysep No Lecture \\[3pt]
+%\textbf{2pm-3pm} \daysep GEO101 - HSB1 \\[3pt]
+\textbf{8pm-9pm} \daysep Fill in the statistics \\[3pt]
+%\textbf{3pm-4pm} \daysep No Lecture \\[3pt]
+%\textbf{4pm-5pm} \daysep No Lecture
+} 
+
+%----------------------------------------------------------------------------------------
+%	SIXTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{}{ % Friday
+%\textbf{9am-10am} \daysep BIOSCI101 - BLT100 \\[3pt]
+%\textbf{10am-11am} \daysep BIOSCI 104 - LLT \\[3pt]
+%\textbf{11am-12pm} \daysep No Lecture \\[3pt]
+%\textbf{12pm-1pm} \daysep BIOSCI105 - BLT204 \\[3pt]
+%\textbf{1pm-2pm} \daysep No Lecture \\[3pt]
+%\textbf{2pm-3pm} \daysep No Lecture \\[3pt]
+%\textbf{3pm-4pm} \daysep GEO101 Tutorial \\ Room A \\[3pt]
+\textbf{7pm-11pm} \daysep Get away from Paris \\[3pt]
+\textbf{8pm-9pm} \daysep Fill in the statistics \\[3pt]
+%\textbf{4pm-5pm} \daysep No Lecture
+} 
+
+%----------------------------------------------------------------------------------------
+%	SEVENTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{}{ % Saturday
+\textbf{4pm-9pm} \daysep Get back energy \\[3pt]
+\textbf{9pm-9pm} \daysep Fill in the statistics \\[3pt]
+}
+%----------------------------------------------------------------------------------------
+ 
+\finishCalendar
+\end{calendar}
+
+
+%\section{Crew}
+
+%CheckSailing.csv
+
+%\section{Receipes}
+
+
+
+%\section{References}
+%\subsection{Books}
+%\subsection{Links}
+
+%Time referenced?\\
+%Refrences.csv\\
+
+%http://en.wikibooks.org/wiki/LaTeX/Mathematics
+%\url{http://www.wikibooks.org}
+%\href{http://www.wikibooks.org}{Wikibooks home}
+
+%PERT Diagram : http://fr.wikipedia.org/wiki/R%C3%A9seau_PERT
+%Burn down chart : http://en.wikipedia.org/wiki/Scrum_%28development%29
+%Theory of constraints : http://en.wikipedia.org/wiki/Theory_of_constraints
+%Leverage points : http://en.wikipedia.org/wiki/Twelve_leverage_points
+%Linear programing : http://en.wikipedia.org/wiki/Linear_programming
+%Markov chains :(Information theory) http://en.wikipedia.org/wiki/Markov_chain
+%Information : http://en.wikipedia.org/wiki/Information_entropy
+%http://makerplane.org/?page_id=168
+%http://en.wikipedia.org/wiki/Wikispeed
+
+%http://en.wikipedia.org/wiki/Three_stratum_theory
+%http://en.wikipedia.org/wiki/M%C3%B6bius_transformation
+%http://en.wikipedia.org/wiki/Hypergeometric_function
+%http://en.wikipedia.org/wiki/Laguerre_polynomial#Generalized_Laguerre_polynomials
+%http://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation
+%http://en.wikipedia.org/wiki/Langevin_equation
+%http://en.wikipedia.org/wiki/Brownian_motion
+%http://en.wikipedia.org/wiki/General_relativity
+
+\section{Tasks}
+
+Cf Task.csv\\
+
+%\section{Investments}
+
+%CF Investments.csv\\
+
+%\section{Skills}
+
+%CF Skills.csv\\
+
+
+%\section{Health}
+
+%\subsection{Statistics}
+%Include the stats from the csv file
+
+%\section{Losses}
+
+%Cf Losses.csv
+
+\section{Checklists}
+CheckList.csv\\
+
+\subsection{2 weeks trip}			
+\begin{calendar}{\hsize}
+
+\setcounter{calendardate}{4} % Date on which the calendar starts - note that you have to account for blank days
+
+%----------------------------------------------------------------------------------------
+%	FIRST DAY
+%----------------------------------------------------------------------------------------
+
+\BlankDay 
+
+%----------------------------------------------------------------------------------------
+%	SECOND DAY
+%----------------------------------------------------------------------------------------
+
+\BlankDay 
+
+%----------------------------------------------------------------------------------------
+%	THIRD DAY
+%----------------------------------------------------------------------------------------
+
+\BlankDay 
+
+%----------------------------------------------------------------------------------------
+%	FOURTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{In Transit}{
+\textbf{Depart} (PHL) @ 18:10 EDT\\
+US Airways \# 740\\
+US Airways record locator: EPYTWQ\\
+Airline ticket number(s): 0377186181588-589
+}
+
+%----------------------------------------------------------------------------------------
+%	FIFTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{Madrid}{
+\textbf{Arrive} (MAD) @ 07:45 CEST\\\daysep
+Hotel Senator Gran V\'ia\\
+Calle Gran V\'ia, 21\\
+28013 (Centro) MADRID\\
++34 915 31 41 51\\
+Reservation code: 080131-98638\\
+Cancellation code: 9860291\\\daysep
+Palacio Real\\
+Plaza Mayor\\
+Reina Sof\'ia National Museum
+}
+
+%----------------------------------------------------------------------------------------
+%	SIXTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{Toledo (Day Trip)}{
+Cathedral\\
+Sinagoga del Transito\\
+Palace Alcazar\\
+Sinagoga del Santa Maria la Blanca
+}
+
+%----------------------------------------------------------------------------------------
+%	SEVENTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{Madrid}{
+Real Academic de Bellas Artes\\Templo de Debod\\Museo del Prado\\\daysep
+\textbf{Depart} Madrid @ 22:45 on SNCF 332
+}
+
+%----------------------------------------------------------------------------------------
+%	EIGHTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{Lisbon}{
+\textbf{Arrive} in Lisbon @ 08:00\\\daysep
+%Hotel Real Pal\'acio\\
+%Rua Tom\'as Ribeiro 115\\\ \\
+%Elevador de Santa Justa\\
+%Solar do Vinho do Porto\\
+%Castelo de S\~ao Jorge\\Mosteiro do Geron\'imos\\Torre de Bel\'em
+}
+
+%----------------------------------------------------------------------------------------
+%	NINTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{Estoril}{
+\textbf{Arrive} in Estoril\\\daysep
+%Hotel Alvorada\\
+%Rua de Lisboa, 3\\\daysep
+%OptMAS Workshop?\\
+}
+
+%----------------------------------------------------------------------------------------
+%	TENTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{Estoril}{
+DCR Workshop
+}
+
+%----------------------------------------------------------------------------------------
+%	ELEVENTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{Estoril}{
+FIPA Meeting 11:10--12:10\\
+Poster Session w/``Drinks and Snacks'' 15:00--16:00
+}
+
+%----------------------------------------------------------------------------------------
+%	TWELFTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{Estoril}{ 
+AAMAS Demos\\
+Conference Banquet @ 18:30
+}
+
+%----------------------------------------------------------------------------------------
+%	THIRTEENTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{Estoril}{
+\textbf{Depart} (LIS) @ 10:35 WEST\\
+US Airways \#739\\
+\textbf{Arrive} (PHL) @ 13:25 EST
+}
+
+%----------------------------------------------------------------------------------------
+%	FOURTEENTH DAY
+%----------------------------------------------------------------------------------------
+
+\BlankDay
+
+%----------------------------------------------------------------------------------------
+% More days can be added to give the calendar a third or fourth week
+%----------------------------------------------------------------------------------------
+
+\finishCalendar
+\end{calendar}
+			
+%\subsection{Sailing trip}			
+
+%\subsection{Complete relocation}			
+
+%CheckCompleteRelocation.csv
+
+\subsection{Two weeks trip}
+
+Cf Check-2weeks.csv\\
+
+\subsection{Week-end trip}
+
+CheckWE.csv\\
+
+%\subsection{Sailing trip}
+
+%ChekSailing.csv\\
+
+
+%\section{Friends origins}
+
+%Friends.csv
+
+%\section{Acheivments}
+
+
+%\section{Mis behaviour}
+ 
+%\section{Plijadur Credits}
+
+%PlijadurCredits.csv
+
+%\section{Curriculum vitae}
+
+%Curriculum.pdf
+
+%\section{Climate camp}
+
+%Climate.csv
+			
+%\section{Cultures}
+
+%Cultures.csv
+
+
+
+%\section{Sports}
+
+%\subsection{Sailing}
+
+%Crew, date, current, tide, miles, observations
+%See checklist\\
+
+%Brest - Le Fret (secteur ouest force 3-4)\\
+
+%Brest - Le Fret - Le Tinduff - Le Fret - Brest (force 6-7 secteur ouest nord ouest) \\
+%Brest- Camaret - Brest(potes de ja)\\
+%Brest - Brest\\
+
+%Brest - Douarnenez\\
+%Fred, Etienne, Zaz
+%Brest - Ouessant\\
+%Jab, Nico, Elise, Etienne, Fred. 
+%Brest - Camaret - Brest\\
+%Fred, Zaz
+
+%\subsection{Piloting}
+%4 lessons with Tim\\
+
+\end{document}

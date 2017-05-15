@@ -1,0 +1,258 @@
+####################################################################################################
+#
+#                      Reads the test table and generate a Latex table 
+#
+###################################################################################################
+#! /usr/bin/perl
+use strict;use warnings;
+use DBI;
+#my $variable = cashBalance;
+my $dbh = DBI->connect("dbi:mysql:dbname=managementoverview","root","fred1301",{ RaiseError => 1 },) or die $DBI::errstr;
+
+my $size = 250;
+my $selectCount = 0;
+# Pour la date YYYY/MM/DD
+#my $MaxDate = '2015-08-05';
+my $MaxDate = $ENV{'END_DATE'};
+my $Unit = 1000;
+
+########################################################################################################
+
+# query to grab the max between debit and credit to set the scale of the graph
+my $sth2 = $dbh->prepare("select max(Income) from kapital group by MONTH(Date) order by Date");
+$sth2->execute();
+my $max = $sth2->fetchrow();
+$sth2->finish();
+$size = $max;
+
+# query to grab the size of the dataset 
+my $sth5 = $dbh->prepare("select count(distinct(MONTH(Date))) from kapital;");
+$sth5->execute();
+my $countRecords = $sth5->fetchrow(); 
+print "Number of records: $countRecords\n";
+
+print "Max income per month: $max\n";
+# query to grab the max between debit and credit to set the scale of the graph
+my $sth3 = $dbh->prepare("select min(Kapital) from kapital order by Date");
+$sth3->execute();
+my $yMin = $sth3->fetchrow();
+$sth3->finish();
+$yMin=$yMin/$Unit;
+print "Min Kapital : $yMin\n";
+
+#x query to grab the max between debit and credit to set the scale of the graph
+my $sth4 = $dbh->prepare("select max(Kapital) from kapital order by Date");
+$sth4->execute();
+my $yMax = $sth4->fetchrow();
+$sth4->finish();
+$yMax=$yMax/$Unit;
+print "Max Kapital : $yMax\n";
+
+# Consolidated variables
+$max = $max;
+my $Step = $max/3;
+
+########################################################################################################
+
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+my $sth = $dbh->prepare("select count(*) count, DATE_FORMAT(Date,'%b') Month, DATE_FORMAT(Date,'%y') Year, sum(Assets) sumAssets, sum(Liabilities) sumLiabilities, sum(Charges) sumCharges, sum(Income) sumIncome, sum(CashBalance) sumCashBalance, sum(Kapital) sumKapital from kapital group by MONTH(Date) order by Date");
+$sth->execute();
+
+#print "===>>> Creation du fichier d'output .tex\n";
+open(OUT4,"> ../Latex/BarPlotPnl.tex");
+#open(OUT5,"> ../Latex/finance2.dat");
+
+print OUT4 "\\begin{tikzpicture}[thick, scale=1]\n";
+print OUT4 "\\begin{axis}[\n";
+print OUT4 "title={Kapital over time},\n";
+print OUT4 "ybar, axis on top,\n";
+print OUT4 "title={PnL over the months},\n";
+print OUT4 "height=8cm, width=15.5cm,\n";
+print OUT4 "bar width=0.4cm,\n";
+print OUT4 "ymajorgrids, tick align=inside,\n";
+print OUT4 "major grid style={draw=white},\n";
+print OUT4 "enlarge y limits={value=.1,upper},\n";
+print OUT4 "axis x line*=bottom,\n";
+print OUT4 "axis y line*=right,\n";
+print OUT4 "y axis line style={opacity=0},\n";
+print OUT4 "tickwidth=0pt,\n";
+print OUT4 "enlarge x limits=true,\n";
+print OUT4 "legend style={\n";
+print OUT4 "at={(0.5,-0.2)},\n";
+print OUT4 "anchor=north,\n";
+print OUT4 "legend columns=-1,\n";
+print OUT4 "/tikz/every even column/.append style={column sep=0.5cm}\n";
+print OUT4 "},\n";
+print OUT4 "ylabel={Percentage (\\%)},\n";
+print OUT4 "symbolic x coords={\n";
+
+
+print OUT4 "xlabel={Time [Days]},\n";
+print OUT4 "ylabel={Kapital [euro]},\n";
+#print OUT4 "xmin=0,xmax=$max,\n";
+print OUT4 "ymin=$yMin,ymax=$yMax,\n";
+
+
+#print OUT4 "xtick={";
+
+#$max = $max - 1;
+#my $count = 0;
+#while (my $row = $sth5->fetchrow_hashref())
+
+#	if ($row == $max)
+#	{
+#		print OUT4 "$count";
+#	}
+#	else {
+#		print OUT4 "$count,";
+#	}
+#	$count = $count + 1;
+#}
+#print OUT4 "},\n";
+
+my $xtick1 = $max/4;
+my $xtick2 = $max/2;
+my $xtick3 = $max/3*2;
+
+#print OUT4 "xtick={0,$xtick1,$xtick2,$xtick3,$max},\n";
+
+my $tick1 = $yMin/2;
+my $tick2 = $yMax/2;
+
+#print OUT4 "ytick={$yMin,$tick1,0,$tick2,$yMax},\n";
+
+#print OUT4 "legend pos=north west,\n";
+#print OUT4 "ymajorgrids=true,\n";
+#print OUT4 "grid style=dashed,\n";
+#print OUT4 "]\n";
+#print OUT4 "\\addplot[\n";
+#print OUT4 "color=black,\n";
+#print OUT4 "mark=square,\n";
+#print OUT4 "]\n";
+#print OUT4 "coordinates {\n";
+
+my $countLine = 0;
+
+while (my $row = $sth->fetchrow_hashref()) 
+{
+	$countLine = $countLine + 1;
+        my $Year = $row->{Year};
+        my $Month = $row->{Month};
+
+	if ($countLine != $countRecords)
+	{
+		print OUT4 "$Month-$Year,";	
+	}
+	else
+	{
+		print OUT4 "$Month-$Year},";	
+	}		
+}
+print OUT4 "xtick=data,\n";
+print OUT4 "nodes near coords={\n";
+print OUT4 "\\pgfmathprintnumber[precision=0]{\\pgfplotspointmeta}\n";
+print OUT4 "}\n";
+print OUT4 "]\n";
+
+$sth->execute();
+print OUT4 "\\addplot [draw=none, fill=black!50] coordinates {\n";
+
+while (my $row = $sth->fetchrow_hashref()) 
+{
+	my $Year = $row->{Year};
+	my $Month = $row->{Month};
+	#my @DateSplit =split(/ /,$Date);
+	#print "Premier Split: $DateSplit[0]\n";
+	#my @DateSplit2 =split(/-/,$DateSplit[0]);
+	#print "Deuxieme Split: $DateSplit2[0]\n";
+	my $Income = $row->{sumIncome};
+	my $Charges = $row->{sumCharges};
+	my $Kapital = $row->{sumKapital};
+	my $CashBalance = $row->{sumCashBalance};
+	my $Liabilities = $row->{sumLiabilities};
+	my $Assets = $row->{sumAssets};
+	my $tick = $selectCount*10;
+	my $kapital = $Kapital/$Unit;
+	$CashBalance = $CashBalance/$Unit;
+	#$CashBalance = 100 - $CashBalance;
+	$Charges = $Charges/$Unit;
+	$Kapital = $Kapital/$Unit;
+	$Income = $Income/$Unit;
+	print OUT4 "($Month-$Year,$Income)\n";
+	#print OUT4 "($selectCount,$Kapital)";
+	$selectCount = $selectCount + 1;
+}
+
+print OUT4 "};\n";
+$sth->execute();
+print OUT4 "\\addplot [draw=none, fill=black!100] coordinates {\n";
+
+while (my $row = $sth->fetchrow_hashref())
+{
+        my $Year = $row->{Year};
+        my $Month = $row->{Month};
+        #my @DateSplit =split(/ /,$Date);
+        #print "Premier Split: $DateSplit[0]\n";
+        #my @DateSplit2 =split(/-/,$DateSplit[0]);
+        #print "Deuxieme Split: $DateSplit2[0]\n";
+        my $Income = $row->{sumIncome};
+        my $Charges = $row->{sumCharges};
+        my $Kapital = $row->{sumKapital};
+        my $CashBalance = $row->{sumCashBalance};
+        my $Liabilities = $row->{sumLiabilities};
+        my $Assets = $row->{sumAssets};
+        my $tick = $selectCount*10;
+        my $kapital = $Kapital/$Unit;
+        $CashBalance = $CashBalance/$Unit;
+        #$CashBalance = 100 - $CashBalance;
+        $Charges = $Charges/$Unit;
+        $Kapital = $Kapital/$Unit;
+	print OUT4 "($Month-$Year,$Charges)\n";
+        #print OUT4 "($selectCount,$Kapital)";
+        $selectCount = $selectCount + 1;
+}
+
+print OUT4 "};\n";
+$sth->execute();
+print OUT4 "\\addplot [draw=none, fill=red!100] coordinates {\n";
+
+while (my $row = $sth->fetchrow_hashref())
+{
+        my $Year = $row->{Year};
+        my $Month = $row->{Month};
+        #my @DateSplit =split(/ /,$Date);
+        #print "Premier Split: $DateSplit[0]\n";
+        #my @DateSplit2 =split(/-/,$DateSplit[0]);
+        #print "Deuxieme Split: $DateSplit2[0]\n";
+        my $Income = $row->{sumIncome};
+        my $Charges = $row->{sumCharges};
+        my $Kapital = $row->{sumKapital};
+        my $CashBalance = $row->{sumCashBalance};
+        my $Liabilities = $row->{sumLiabilities};
+        my $Assets = $row->{sumAssets};
+        my $tick = $selectCount*10;
+        my $kapital = $Kapital/$Unit;
+        $CashBalance = $CashBalance/$Unit;
+        #$CashBalance = 100 - $CashBalance;
+        $Charges = $Charges/$Unit;
+        $Kapital = $Kapital/$Unit;
+	print OUT4 "($Month-$Year,$CashBalance)\n";
+        #print OUT4 "($selectCount,$Kapital)";
+        $selectCount = $selectCount + 1;
+}
+print OUT4 "};\n";
+
+print OUT4 "\n";
+	
+print OUT4 "\\legend{Income,Charges,CashBalance}\n";
+print OUT4 "\\end{axis}\n";
+print OUT4 "\\end{tikzpicture}\n";
+ 
+close(OUT4);
+#close(OUT5);
+
+$sth->finish();
+$sth5->finish();
+
+$dbh->disconnect();
+

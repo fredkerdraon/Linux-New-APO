@@ -1,0 +1,46 @@
+#!/usr/bin/perl -w
+
+    use strict;
+    use Net::POP3;
+
+    my $try = $ENV{'FETCHMAIL_TRYS'};
+
+    while ($try != 0) {
+
+        #chomp;
+
+        #my ( $server, $login, $pass ) = split /\s/;
+
+ 
+
+        my $fail;
+
+        my $pop = Net::POP3->new('imap.live.com')
+
+          or $fail++;
+
+ 
+
+       if($fail) {
+
+           warn "ne peut se connecter a hotmail\n";
+
+           next;
+
+       }
+
+ 
+
+        my $num = $pop->login( 'fredkerdraon@hotmail.com' , 'Dinan2015' );
+
+        print "$num nouveau(x) message(s) pour fredkerdraon sur le serveur hotmail\n";
+
+        #  if $num > 0;
+
+                              
+
+                               $try = $try - 1;
+
+        $pop->quit();
+
+    }

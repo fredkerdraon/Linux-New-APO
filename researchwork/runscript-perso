@@ -1,0 +1,31 @@
+#!/bin/tcsh
+set user1 = "root"
+#echo $user1
+#echo $PATH
+#echo $shell
+set RESEARCH = `pwd`
+set dropfile = ~/Documents/researchwork/Sql/Mysql-drop.sql
+#echo "Current directory :" $RESEARCH
+set SQLDIR = $RESEARCH/Sql/
+echo "STEP - Truncate the tables"
+mysql -u root -pfred1301 << EOF
+use managementoverview;
+truncate events;
+commit;
+EOF
+echo "STEP - Import Events..........."
+mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="," managementoverview $RESEARCH/Datavalidated/events.csv
+
+echo "STEP - Update complexity..........."
+#mysql -u root -pfred1301 managementoverview < $RESEARCH/Sql/MysqlUpdateComplexity.sql
+echo "STEP - Mise a jour des donnees"
+
+echo  "STEP - Generation des tableaux, graphs et camembers"
+cd ./Perl
+perl -w readEvents
+echo "STEP - Compilation du fichier latex"
+cd ../Latex
+#pdflatex -interaction batchmode Perso.tex
+pdflatex  -interaction batchmode Perso.tex
+#pdflatex Project.tex
+#cp -p Project.pdf ../../pdfs/RiskManagement/Project.pdf

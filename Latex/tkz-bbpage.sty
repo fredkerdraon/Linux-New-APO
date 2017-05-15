@@ -1,0 +1,131 @@
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %                                                               %
+    %        tkz-bbpage.sty    encodage : utf8                      %
+    %                                                               %
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %                                                               %
+    %           Créé par Alain Matthes le 03/03/2007.               %
+    %                                                               %
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Objet :  Création d'une page de présentation pour les examens.
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+
+%% \CharacterTable
+%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%%   Digits        \0\1\2\3\4\5\6\7\8\9
+%%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%%   Dollar        \$     Percent       \%     Ampersand     \&
+%%   Acute accent  \'     Left paren    \(     Right paren   \)
+%%   Asterisk      \*     Plus          \+     Comma         \,
+%%   Minus         \-     Point         \.     Solidus       \/
+%%   Colon         \:     Semicolon     \;     Less than     \<
+%%   Equals        \=     Greater than  \>     Question mark \?
+%%   Commercial at \@     Left bracket  \[     Backslash     \\
+%%   Right bracket \]     Circumflex    \^     Underscore    \_
+%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%%   Right brace   \}     Tilde         \~}
+
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{tkz-bbpage}[2007/04/20 v1.1]
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\RequirePackage{tikz,xkeyval,lastpage}
+
+%<–––––––––––––––––––––––<  bbpage page de type bac >––––––––––––––––––––––––>
+
+
+\newcommand\redaction{Aucun raisonnement vague ou insuffisant ne sera pris en compte par le correcteur. Toute question o\`u les notations de l'\'enonc\'e ne  seraient pas respect\'ees se verra attribuer la note z\'ero. Enfin, il sera tenu compte de la pr\'esentation et de la r\'edaction dans l'\'evaluation de la copie.}
+\newcommand*\stopcalc{Les \textbf{calculatrices}\ sont \textbf{INTERDITES} pour cette  \'epreuve.}%
+\newcommand*\withcalc{Les \textbf{calculatrices}\ sont \textbf{AUTORIS\'EES} pour cette  \'epreuve.}
+\newcommand*\ppmilli{Du papier millim\'etr\'e est mis \'a la disposition des candidats.}
+\makeatletter
+\newcommand*{\@bbtitle}{Baccalaur\'eat}
+\newcommand*{\@bbcoefficient}{7}
+\newcommand*{\@bbsession}{2005 / 2006}
+\newcommand*{\@bbserie}{ES}
+\newcommand*{\@bbchoix}{Obligatoire}
+\newcommand*{\@bbniv}{Terminales}
+\newcommand*{\@bbtime}{3 heures}
+\newcommand*{\@bbnbexo}{4}
+
+\InputIfFileExists{bbpage.cfg}{\typeout{Local file bbpage.cfg used}}{bbpage defaults used}
+
+\makeatletter
+
+\define@cmdkey[BB] {bbpage}{title}       {}
+\define@cmdkey[BB] {bbpage}{coeff}       {}
+\define@cmdkey[BB] {bbpage}{session}     {}
+\define@cmdkey[BB] {bbpage}{serie}       {}
+\define@cmdkey[BB] {bbpage}{choix}       {}
+\define@cmdkey[BB] {bbpage}{niv}         {}
+\define@cmdkey[BB] {bbpage}{time}        {}
+\define@cmdkey[BB] {bbpage}{nbexo}       {}
+\define@boolkey[BB]{bbpage}{avert}       {}
+\define@boolkey[BB]{bbpage}{calc}        {}
+\define@boolkey[BB]{bbpage}{milli}[true] {}
+
+\presetkeys[BB]{bbpage}{title      = \@bbtitle,%
+                        coeff      = \@bbcoefficient,%
+                        session    = \@bbsession,%
+                        serie      = \@bbserie,%
+                        choix      = \@bbchoix,%
+                        niv        = \@bbniv,%
+                        time       = \@bbtime,%
+                        nbexo      = \@bbnbexo,%
+                        milli      = false,%
+                        avert      = true,%
+                        calc       = true}{}
+
+\newcommand*{\makebbpage}[1][]{\BB@makebbpage[#1]}%
+\def\BB@makebbpage[#1]{%
+\setkeys[BB]{bbpage}{#1}%
+\thispagestyle{empty}
+\null\vfill
+\begin{center}
+ \begin{tikzpicture}
+ \draw (0,8) node[color=black,draw,fill=black!20]%
+ {\fontsize{40}{40}\selectfont{\upshape \cmdBB@bbpage@title }};
+  \node[name    = s,%
+        shape   = rectangle,%
+        rotate  = 36,%
+        color   = black!60]%
+  {\fontsize{100}{100}\selectfont{\upshape  \cmdBB@bbpage@choix}};
+          
+\draw (0,6)    node[color=black] {\Huge\cmdBB@bbpage@niv};%
+\draw (0,4)    node[color=black] {\Huge  S\'ERIE \cmdBB@bbpage@serie};
+\draw (0,-3.5) node[color=black] {\Large SESSION \cmdBB@bbpage@session};
+\draw (0,-5.5) node[color = black,%
+                    draw,%
+                    fill = black!20,%
+                    text centered]%
+                   {\textbf%
+                    {\large%
+                       {Dur\'ee de l'\'epreuve :~%
+                        \cmdBB@bbpage@time~--~Coefficient :~%
+                        \cmdBB@bbpage@coeff}%
+                    }%
+                   };%
+ \draw (0,-10) node[text width = 12cm, text justified]{%
+      \ifBB@bbpage@avert \redaction \fi \par\bigskip %
+      \ifBB@bbpage@calc  \withcalc \else \nocalc \fi  \par\medskip%
+      Le devoir comporte \textbf{\cmdBB@bbpage@nbexo}\ exercices ind\'ependants.};%
+                    
+\draw (0,-7)  node[text centered]%
+                  {\textbf%
+                   {Ce sujet comporte \pageref{LastPage}\ %
+                    pages num\'erot\'ees de 2 \`a \pageref{LastPage}}
+                  };
+
+  \end{tikzpicture} 
+\end{center} 
+\vfill
+\newpage
+}%fin de  makebbpage
+\makeatother
+
+%<––––––––––––––––––––––––––––––– fin –––––––––––––––––––––––––––––––––––––––>
+\endinput
+

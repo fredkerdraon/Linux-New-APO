@@ -1,0 +1,152 @@
+####################################################################################################
+#
+#                      Reads the test table and generate a Latex table 
+#
+###################################################################################################
+#! /usr/bin/perl
+use strict;use warnings;
+use DBI;
+
+my $dbh = DBI->connect("dbi:mysql:dbname=managementoverview","root","fred1301",{ RaiseError => 1 },) or die $DBI::errstr;
+
+my $size = 15;
+my $selectCount = 0;
+# Pour la date YYYY/MM/DD
+#my $MaxDate = '2015-08-05';
+my $MaxDate = $ENV{'END_DATE'};
+my $Unit = 1000;
+
+########################################################################################################
+
+# query to grab the max between debit and credit to set the scale of the graph
+my $sth2 = $dbh->prepare("select max(Income) from balance");
+$sth2->execute();
+my $max = $sth2->fetchrow();
+$sth2->finish();
+
+print "$max\n";
+# query to grab the max between debit and credit to set the scale of the graph
+my $sth3 = $dbh->prepare("select Charges from balance where MaxDate = '$MaxDate'");
+$sth3->execute();
+my $sumDebit = $sth3->fetchrow();
+$sth3->finish();
+
+# query to grab the max between debit and credit to set the scale of the graph
+my $sth4 = $dbh->prepare("select Income from balance where MaxDate  = '$MaxDate'");
+$sth4->execute();
+my $sumCredit = $sth4->fetchrow();
+$sth4->finish();
+
+# Consolidated variables
+$max = $max/$Unit;
+my $Step = $max/3;
+my $Diff = $sumCredit - $sumDebit;
+
+########################################################################################################
+
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+my $sth = $dbh->prepare("select MinDate MinDate, MaxDate MaxDate, Income Income, Charges Charges, Drift Drift, NumDays NumDays from balance order by MaxDate desc limit $size");
+$sth->execute();
+
+#print "===>>> Creation du fichier d'output .tex\n";
+open(OUT,"> ../Latex/drift.tex");
+open(OUT2,"> ../Latex/driftGraph.tex");
+open(OUT3,"> ../Latex/driftCheese.tex");
+
+print OUT3 "\\begin{tikzpicture}[scale=2]\n";
+
+#print OUT3 "\\newcounter{a}\n";
+#print OUT3 "\\newcounter{b}\n";
+print OUT3 "\\foreach \\p\/\\t in {\n";
+
+printf OUT2 "\\begin{bchart}[min=0,max=%u,step=%u,unit=k\\texteuro]\n",$max,$Step;
+
+print OUT "\\begin{longtable}{|c|c|c|c|c|c|}\n";
+print OUT "\\hline\n";
+print OUT "\\multicolumn{6}{|c|}{Cashflows} \\\\\n";
+print OUT "\\hline\n";
+
+print OUT "MinDate & MaxDate & Income & Charges & PnL & NumDays\\\\\n";
+print OUT "\\hline\n";
+
+while (my $row = $sth->fetchrow_hashref()) 
+{
+	$selectCount = $selectCount + 1;
+	my $MinDate = $row->{MinDate};
+	my @MinDateSplit =split(/ /,$MinDate);
+	my $MaxDate = $row->{MaxDate};
+	my @MaxDateSplit =split(/ /,$MaxDate);
+	my $Income = $row->{Income};
+	my $KIncome = $Income/$Unit;
+	my $Charges = $row->{Charges};
+	my $KCharges = $Charges/$Unit;
+	my $Drift = $row->{Drift};
+	my $KDrift = $Drift/$Unit;
+	my $NumDays = $row->{NumDays};
+	#my $vp = $Debit/$sumDebit*100;
+	#print "Debit: $Debit , sumDebit: $sumDebit , vp: $vp\n";
+	print OUT "$MinDateSplit[0] & $MaxDateSplit[0] & $Income & $Charges & $Drift & $NumDays\\\\\n";
+	print OUT "\\hline\n";
+#	if ($Debit > 0)
+#	{
+#		print OUT2 "\\bcbar[label=$Category]{$Debit}\\\\\n";
+#		print OUT2 "\\smallskip\n";
+#	}
+#	else
+#	{
+#		print OUT2 "\\bcbar[label=$Category]{$Credit}\\\\\n";
+#		print OUT2 "\\smallskip\n";
+#	}
+	if( $selectCount < $size ) 
+	{
+	#	printf OUT3 "%u / $Category-${Debit}\\texteuro ,\n", $vp;
+	}
+	else
+	{
+	#	printf OUT3 "%u / $Category-${Debit}\\texteuro \n", $vp;
+	}
+	printf OUT2 "\\bcbar[label=Income]{%u}\\\\\n",$KIncome;
+	print OUT2 "\\smallskip\n";
+	printf OUT2 "\\bcbar[label=Charges]{%u}\\\\\n",$KCharges;
+	print OUT2 "\\smallskip\n";
+	if ($KDrift < 0)
+	{	
+		$KDrift = $KDrift*-1;
+		printf OUT2 "\\bcbar[label=Drift]{%u}\\\\\n",$KDrift;
+		print OUT2 "\\smallskip\n";
+	}
+	else
+	{
+		printf OUT2 "\\bcbar[label=Drift]{%u}\\\\\n",$KDrift;
+		print OUT2 "\\smallskip\n";
+	}
+}
+
+
+	
+	print OUT " ... & ... & ... & ... & ... & ...\\\\\n";
+	print OUT "\\hline\n";
+	print OUT " Total &  &  &  &  & \\\\\n";
+	print OUT "\\hline\n";
+
+
+print OUT "\\end{longtable}\n";
+close(OUT);
+print OUT2 "\\end{bchart}\n";
+close(OUT2);
+
+#print OUT3 "}\n";
+#print OUT3 "  {\n";
+#print OUT3 "\\setcounter{a}{\\value{b}}\n";
+#print OUT3 "\\addtocounter{b}{\\p}\n";
+#print OUT3 "\\slice{\\thea/100*360}\n";
+#print OUT3 "          {\\theb/100*360}\n";
+#print OUT3 "          {\\p\\%}{\\t}\n";
+#print OUT3 "  }\n";
+#print OUT3 "\\end{tikzpicture}\n";
+close(OUT3);
+
+$sth->finish();
+
+$dbh->disconnect();
+

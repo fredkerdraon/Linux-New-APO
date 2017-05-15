@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns4="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="movav" xml:lang="en">
+  <refnamediv>
+    <refname>movav</refname>
+    <refpurpose>Compute and draw the moving average of a given time series</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>SYNOPSIS</title>
+    <synopsis>M=movav(x [,m1 [,m2 [,...]]]);</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Description</title>
+    <para>On the data &quot;x&quot; the function compute the moving averages of length m1, m2, and so on. Finally it draws the data &quot;x&quot; and all the moving averages.</para>
+  </refsection>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>x</term>
+        <listitem>data the moving averages are computed on</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>m1, m2, ...</term>
+        <listitem>lengths of the moving averages</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Output</title>
+    <variablelist>
+      <varlistentry>
+        <term>M</term>
+        <listitem>matrix containing, in any column, the moving average of the historical data (each column has a different length)</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Example</title>
+    <para>
+      <para>First we generate 1000 log-normally distributed daily asset prices with 0.1/250 mean and 0.2/sqrt(250) variance. The first price of the asset is 25 euros.</para>
+      <para>--&gt;M=grand(1000,1,&apos;nor&apos;,0.1/250,0.2/sqrt(250));</para>
+      <para>--&gt;price=exp(cumsum(M,1))*25;</para>
+    </para>
+    <para>Now we can use the function for computing the moving averages at 10 days and 30 days</para>
+    <para>--&gt;M=movav(price,10,30);</para>
+    <para>The graph shows the historical data and both moving averages.</para>
+  </refsection>
+  <refsection>
+    <title>Authors</title>
+    <para>Francesco Menoncin - Brescia University - 2010</para>
+  </refsection>
+</refentry>

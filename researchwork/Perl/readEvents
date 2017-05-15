@@ -1,0 +1,151 @@
+####################################################################################################
+#
+#                      Reads the test table and generate a Latex table 
+#
+###################################################################################################
+#! /usr/bin/perl
+use strict;use warnings;
+use DBI;
+
+########################################################################################################
+# Database connexion... Doesnt hurt
+
+my $dbh = DBI->connect("dbi:mysql:dbname=managementoverview:host=127.0.0.1","root","fred1301",{ RaiseError => 1 },) or die $DBI::errstr;
+
+########################################################################################################
+
+my $Type = "Asset";
+my $Unit = 1;
+my $TotalValue = 1000;
+my $size = 8;
+my $selectCount = 0;
+
+########################################################################################################
+
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+#my $sth4 = $dbh->prepare("select sum(t.Value) from assets as t");
+
+#$sth4->execute();
+
+#my $number = $sth4->fetchrow();
+#$sth4->finish();
+
+########################################################################################################
+#
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+#my $sth0 = $dbh->prepare("select count(*) from contacts order by Rating desc limit $size");
+#$sth0->execute();
+#my $count = $sth0->fetchrow();
+#$sth0->finish();
+
+########################################################################################################
+
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+#my $sth3 = $dbh->prepare("select sum(t.Value) from assets as t where ALFlag like '%$Type%'");
+#my $sth3 = $dbh->prepare("select sum(t.Rating) totalRating from contacts as t");
+#$sth3->execute();
+#my $row2 = $sth3->fetchrow_hashref();
+
+#my $totalRating = $row2->{totalRating};
+#my $totalExperience = $row2->{totalExperience};
+
+#$sth3->finish();
+
+########################################################################################################
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+#my $sth2 = $dbh->prepare("select max(t.Rating)/$Unit from contacts as t");
+#$sth2->execute();
+#my $max = $sth2->fetchrow();
+#$sth2->finish();
+#my $step = $max/5;
+
+#print "max: $max \n";
+#print "step: $step \n";
+
+########################################################################################################
+#
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+my $sth = $dbh->prepare("select DATE_FORMAT(MyDate, '%W %M %Y') MyDate, Type Type, Name Name, Template Template from events");
+#my $sth = $dbh->prepare("select MyDate MyDate, Type Type, Name Name, Template Template from events where (TO_DAYS(MyDate) - TO_DAYS(NOW()) <= 3) and (TO_DAYS(MyDate) - TO_DAYS(NOW()) > 0) group by MyDate");
+$sth->execute();
+
+print "===>>> Creation du fichier d'output .tex\n";
+open(OUT,"> ../Latex/events.tex");
+open(OUT2,"> ../Latex/eventsContacts.tex");
+
+print OUT "\\begin{longtable}{|c|c|c|c|}\n";
+print OUT "\\hline\n";
+print OUT "\\multicolumn{4}{|c|}{Events} \\\\\n";
+print OUT "\\hline\n";
+
+print OUT "Date & Type & Name & Template\\\\\n";
+print OUT "\\hline\n";
+
+print OUT2 "\\begin{longtable}{|c|c|c|}\n";
+print OUT2 "\\hline\n";
+print OUT2 "\\multicolumn{3}{|c|}{Contacts} \\\\\n";
+print OUT2 "\\hline\n";
+
+print OUT2 "Name & Email & Telephone\\\\\n";
+print OUT2 "\\hline\n";
+
+while (my $row = $sth->fetchrow_hashref()) 
+{
+	$selectCount = $selectCount + 1;
+	my $MyDate = $row->{MyDate};
+	my $Type = $row->{Type};
+	$Type =~ s/"//g;
+	my $Name = $row->{Name};
+	$Name =~ s/"//g;
+	my $Template = $row->{Template};
+	$Template =~ s/"//g;
+	#my $KEuro = $Rating/$Unit;
+	#my $vp = $Rating/$totalRating*100;
+	#print "$Rating : $totalRating : $vp\n";
+	print OUT "$MyDate & $Type & $Name & $Template\\\\\n";
+	print OUT "\\hline\n";
+}
+	print OUT " ... & ... & ... & ... \\\\\n";
+	print OUT "\\hline\n";
+	print OUT "\\hline\n";
+
+print OUT "\\end{longtable}\n";
+close(OUT);
+
+$sth->finish();
+
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+my $sth10 = $dbh->prepare("select distinct(Task) Task from events where (TO_DAYS(MyDate) - TO_DAYS(NOW()) <= 3) and (TO_DAYS(MyDate) - TO_DAYS(NOW()) > 0) group by MyDate");
+#my $sth = $dbh->prepare("select MyDate MyDate, Type Type, Name Name, Template Template from events where (TO_DAYS(MyDate) - TO_DAYS(NOW()) <= 3) and (TO_DAYS(MyDate) - TO_DAYS(NOW()) > 0) group by MyDate");
+$sth10->execute();
+
+while (my $row = $sth10->fetchrow_hashref()) 
+{
+	my $Task = $row->{Task};
+	print "Task: $Task\n";
+	my $sth11 = $dbh->prepare("select Resource Resource from tasks where ID = $Task");
+	$sth11->execute();
+	my $Resource = $sth11->fetchrow();
+	print "Resource: $Resource\n";
+	my $sth12 = $dbh->prepare("select Name Name, Email Email, Telephone Telephone from contacts where ID = $Resource");
+	#my $sth = $dbh->prepare("select MyDate MyDate, Type Type, Name Name, Template Template from events where (TO_DAYS(MyDate) - TO_DAYS(NOW()) <= 3) and (TO_DAYS(MyDate) - TO_DAYS(NOW()) > 0) group by MyDate");
+	$sth12->execute();
+	while (my $row =  $sth12->fetchrow_hashref())
+	{
+		my $Name = $row->{Name};
+		my $Email = $row->{Email};
+		my $Telephone = $row->{Telephone};
+		print "$Name,$Telephone,$Email\n";
+		print OUT2 "$Name & $Email & $Telephone\\\\\n";
+		print OUT2 "\\hline\n";
+	}
+	$sth11->finish();
+	$sth12->finish();
+
+}
+$sth10->finish();
+print OUT2 "\\end{longtable}\n";
+close(OUT2);
+
+$dbh->disconnect();
+

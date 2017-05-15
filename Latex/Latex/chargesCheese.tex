@@ -1,0 +1,24 @@
+\begin{tikzpicture}[scale=3]
+\foreach \p/\t in {
+12 / Cmb-7.201k\texteuro ,
+35 / Debt-19.965k\texteuro ,
+15 / Bank-8.527k\texteuro ,
+14 / Other-8.205k\texteuro ,
+7 / Cash-4.33k\texteuro ,
+4 / Food-2.487k\texteuro ,
+4 / Toxics-2.395k\texteuro ,
+1 / Rent-1.066k\texteuro ,
+1 / Telephone-0.669k\texteuro ,
+0 / Energy-0.448k\texteuro 
+0 / Home-0.272k\texteuro 
+0 / Health-0.232k\texteuro 
+0 / Transport-0.002k\texteuro 
+}
+  {
+\setcounter{a}{\value{b}}
+\addtocounter{b}{\p}
+\slice{\thea/100*360}
+          {\theb/100*360}
+          {\p\%}{\t}
+  }
+\end{tikzpicture}

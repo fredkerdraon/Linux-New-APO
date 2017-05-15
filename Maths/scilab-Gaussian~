@@ -1,0 +1,51 @@
+st_dev:0.0933442
+mean:0.7448602
+
+// tracé de Gaussienne 2D
+// www.mon-club-elec.fr
+// par X. HINAULT
+// Mai 2011
+
+// definition de la fonction
+function [z]=ma_fonction(x,y)
+
+  // y=exp(-x^2./(2*sigma^2))/sqrt(2*%pi*sigma^2); // Gaussienne 1D
+  z=exp(-(x^2+y^2)./(2*sigma^2))/(2*%pi*sigma^2);// Gaussienne 2D - fonction de x et y
+
+endfunction
+
+
+//x=[-%pi:0.1:+%pi]; // définition d'une série de valeurs régulièrement espacées
+x=[-3:0.1:+3]; // définition d'une série de valeurs régulièrement espacées
+y=x; // y = x - base carrée du graphique 3D
+
+sigma=0.0933442; // paramètre sigma de la Gaussienne
+
+z=feval(x,y,ma_fonction); // calcul de z en se basant sur la fonction définie - feval obligatoire pour courbe 3D
+
+//plot3d(x,y,z); // tracé de la courbe 3D - alpha=45 et theta=35 par défaut
+//plot3d(x,y,z,alpha=15,theta=50); // trace la courbe 3D
+
+//--- utiliser plot3d1 pour pouvoir utiliser les dégradés de couleurs
+plot3d1(x,y,z); // tracé de la courbe 3D - alpha=45 et theta=35 par défaut
+
+// paramètres couleur basiques du graphique 3D  
+//  a=gca();//"axes" courant
+//  p=a.children;//Plot3d
+//  p.foreground=1;//grille noir
+//  p.color_mode=3;//dessus vert
+//  p.hiddencolor=5;//dessous rouge
+
+  // paramètres couleurs gradués du graphique 3D
+
+  // -- choix du modèle de couleur à utiliser --
+  // différents modèles de couleurs sont disponibles
+  //cmap=hotcolormap(64); // modele de couleur jaune-orange - 64 niveaux
+  //cmap=jetcolormap(64); // modele de couleur rouge_jaune_bleu - 64 niveaux
+  //cmap=coolcolormap(64); // modele de couleur bleu-rose - 64 niveaux
+  //cmap=oceancolormap(64); // modele de couleur bleu foncé - blanc - 64 niveaux
+  cmap=rainbowcolormap(64); // modele de couleur jaune - vert - bleu - rouge - 64 niveaux
+
+  //--- application du modele de couleur --  
+  f=gcf();//figure courante
+  f.color_map=cmap;// application du modele de couleurs à la figure

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+name=$1
+
+
+email="fredkerdraon@hotmail.com"
+file=/home/frederickerdraon/Documents/researchwork/Latex/
+subject=$2
+file="$file$1"
+
+echo "Sending file: $file"
+echo "To: $email"
+echo "Topics: $subject"
+
+
+
+#df -h | mail -s “DiskSpaceReport” fredkerdraon@hotmail.com
+
+mpack -s $subject $file $email

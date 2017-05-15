@@ -1,0 +1,25 @@
+####################################################################################################
+#
+#                       RATE STRESS
+#
+###################################################################################################
+print "===>>> Process du fichier tout kaka de cacib\n";
+open(OUT,"> NouveauFichier.txt");
+open(IN,"< $RateFileName");
+while(!eof(IN)){
+        my $TheLine=<IN>;
+        chop($TheLine);
+        my @Line=split(/\t/,$TheLine);
+        my $Pillar=substr($Line[0],28,5);
+        my $Curve=$Line[4];
+        my $Curency=$Line[5];
+	print OUT "|"."6"."|".$Curve."|".$Curency."||".$Pillar."|"."Std"."|"."1.0"."|\n";
+#Translate + 100 bp and -100 bp
+#       print OUT "|"."6"."|".$Curve."|".$Curency."||".$Pillar."|"."Std"."|"."1.0"."|\n";
+#       print OUT "|"."7"."|".$Curve."|".$Curency."||".$Pillar."|"."Std"."|"."-1.0"."|\n";
+#Split of combined stress
+#       CRISIS(8,$Curve,$Curency,$Pillar);
+#       REVIVAL(9,$Curve,$Curency,$Pillar);
+}
+close(IN);
+close(OUT);

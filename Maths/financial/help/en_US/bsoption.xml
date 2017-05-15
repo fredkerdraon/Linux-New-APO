@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns4="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="bsoption" xml:lang="en">
+  <refnamediv>
+    <refname>bsoption</refname>
+    <refpurpose>Compute the value of both a call and a put option in a Black and Scholes framework (with both constant riskless interest rate and volatility)</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>SYNOPSIS</title>
+    <synopsis>[C,P]=bsoption(S,K,r,T,sigma);</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Description</title>
+    <para>Compute the Black and Scholes value of both a call and a put option</para>
+  </refsection>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>S</term>
+        <listitem>
+          <para>current price of the underlying asset</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>K</term>
+        <listitem>
+          <para>strike price of the option</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>r</term>
+        <listitem>riskless interest rate (assumed to be constant until the maturity)</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>T</term>
+        <listitem>time to maturity; it must be in the same time unit of measure as the riskless interest rate (if the riskless interest rate is annual, then an option with maturity of 3 months must have T=3/12)</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>sigma</term>
+        <listitem>the volatility of the underlying (log-) returns; it must have the same time unit of measure as the riskless interest rate</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Output</title>
+    <variablelist>
+      <varlistentry>
+        <term>C</term>
+        <listitem>value of a call option</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>P</term>
+        <listitem>value of a put option</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Example</title>
+    <para>We assume that an option (either call or put) is written on an asset whose value is 25 euros, with a strike price of 25 euros. If the (annual) riskless interest rate is 0.001, the time to maturity is 3 months, and the (annual) volatility of the underlying (log-) returns is 0.22, then the value of the call and the put options are computed as follows.</para>
+    <para>--&gt;[C,P]=bsoption(25,25,0.001,3/12,0.22)</para>
+    <para> P = 1.0932796</para>
+    <para> C = 1.0995288</para>
+  </refsection>
+  <refsection>
+    <title>Authors</title>
+    <para>Francesco Menoncin - Brescia University - 2010</para>
+  </refsection>
+  <refsection>
+    <title>See Also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="bsgreeks">bsgreeks</link>
+      </member>
+      <member>
+        <link linkend="bsimpvol">bsimpvol</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

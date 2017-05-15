@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns4="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="cfr" xml:lang="en">
+  <refnamediv>
+    <refname>cfr</refname>
+    <refpurpose>compare two or more time series of data and eliminate the elements which do not have the same date</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>SYNOPSIS</title>
+    <synopsis>[S]=cfr(S1,S2[,S3,S4,...]);</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Description</title>
+    <para>Compare time series and make them homogeneous with respect to the dates (by eliminating the elements which do not have the same date)</para>
+  </refsection>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>S1</term>
+        <listitem>
+          <para>two column matrix: the first column must be a list of dates, while the second column must contain data</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>S2</term>
+        <listitem>
+          <para>two column matrix: the first column must be a list of dates, while the second column must contain data</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>S3, S4,...</term>
+        <listitem>any other two-column matrix as the previous ones</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Output</title>
+    <variablelist>
+      <varlistentry>
+        <term>S</term>
+        <listitem>a matrix whose first column contains the dates, while the other columns contain the series of data</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Example</title>
+    <para>First we create two time series with the following commands</para>
+    <para>--&gt;S1=[datenum(2010*ones(10,1),ones(10,1),[1:10]&apos;) [1:10]&apos;] </para>
+    <para>S1 = 734139. 1. </para>
+    <para>734140. 2. </para>
+    <para>734141. 3. </para>
+    <para>734142. 4. </para>
+    <para>734143. 5. </para>
+    <para>734144. 6. </para>
+    <para>734145. 7. </para>
+    <para>734146. 8. </para>
+    <para>734147. 9. </para>
+    <para>734148. 10. </para>
+    <para>--&gt;S2=[datenum(2010*ones(5,1),ones(5,1),[1:2:10]&apos;) [1:2:10]&apos;*5+4] </para>
+    <para>S2 = 734139. 9. </para>
+    <para>734141. 19. </para>
+    <para>734143. 29. </para>
+    <para>734145. 39. </para>
+    <para>734147. 49. </para>
+    <para>Then we use the function for selecting, from these time series, only the data which compare in both of them</para>
+    <para>--&gt;S=cfr(S1,S2)</para>
+    <para>S = 734139. 1. 9. </para>
+    <para>734141. 3. 19. </para>
+    <para>734143. 5. 29. </para>
+    <para>734145. 7. 39. </para>
+    <para>734147. 9. 49. </para>
+  </refsection>
+  <refsection>
+    <title>Authors</title>
+    <para>Francesco Menoncin - Brescia University - 2010</para>
+  </refsection>
+  <refsection>
+    <title>See Also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="datenum">datenum</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

@@ -1,0 +1,136 @@
+####################################################################################################
+#
+#                      PARSE CREDIT AGRICOLE 
+#
+###################################################################################################
+#use utf8
+#print "===>>> Process du fichier tout kaka de cacib\n";
+open(OUT,"> ../Datavalidated/cashflows.csv");
+#open(IN,"< ../Data/CA_test2.txt");
+#open(IN,"< ../Data/CA20121108_2009.txt");
+#open(IN,"< ../Data/CA20130127_1910.txt");
+#open(IN,"< ../Data/CA20121108_2009.txt");
+#open(IN,"< ../Data/CA20131029_1236.txt");
+#open(IN,"< ../Data/CA20130110_2134.txt");
+#open(IN,"< ../Data/CA20150719_1114.txt");
+open(IN,$ARGV[0]);
+$Check=0;
+$Total=10;
+$initDate=$ARGV[1];
+
+print OUT "Date;Category;Label;Debit;Credit\n";
+
+while(!eof(IN))
+{
+        my $TheLine=<IN>;
+        chop($TheLine);
+	#print "New line, My check: $Check\n";
+	#print "Line: $TheLine\n";
+        my @Line=split(/:/,$TheLine);
+	my @LineMerde=split(/-/,$TheLine);
+	if(index($LineMerde[0],"+")==0)
+	{
+		print "Ligne de merde\n";
+	}
+	if (index($Line[0],"Debit")<=0 && index($Line[0],"Credit")<=0 && $Check==7)
+	{
+	}
+	if (index($Line[0],"Libelle")<=0 && index($Line[0],"Debit")<=0 && index($Line[0],"Date")<=0 && index($Line[0],"Credit")<=0 && $Check==3)
+	{
+		#print "La ligne: $TheLine\n";
+		$Check=$Check+3;
+		$Libelle=$Line[0];
+		$Libelle =~ s/^\s+//;
+		$Libelle =~ s/\s+//;
+		$Libelle =~ s/\s+$//;
+		$Libelle =~ s/'\s+//;
+		$Libelle =~ s/ \s+//;
+		$Libelle =~ s/\s+//;
+		#$chaine =~ s/^\s+//; supprime les espaces en début de chaine
+		#$chaine =~ s/\s+$//; en fin de chaine
+		#$chaine =~ s/\s+/ /; remplace des séries d'espaces par un seul
+		#$chaine =~ s/\s+//; vire tous les espaces
+		#chomp(Libelle);
+		#my @LibelleSplit=split(/\//,$Libelle);	
+		#$Libelle = $LibelleSplit[0];
+		print "Libelle2: $Libelle toto\n";
+	}
+	if(index($Line[0],"Libelle")>=0)
+	{
+		$Check=$Check+2;
+		#my $Pillar=substr($Line[0],28,5);
+		#my $Curve=$Line[0];
+        	#my $Curency=$Line[1];
+		$Libelle1=$Line[1];
+		$Libelle1 =~ s/^\s+//;
+		$Libelle1 =~ s/\s+//;
+		$Libelle1 =~ s/'\s+//;
+		$Libelle1 =~ s/\\t\s+//;
+		#$Libelle1 =~ s/\s+//;
+		#my @Libelle1Split=split(/'     '/,$Libelle1);
+		#print "Libelle1: $Libelle1Split[0] toto\n";
+		print "Libelle1: $Libelle1 toto\n";
+	}
+	if(index($Line[0],"Date")>=0)
+	{
+		#my $Pillar=substr($Line[0],28,5);
+		#my $Curve=$Line[0];
+        	#my $Curency=$Line[1];
+		$Date=$Line[1];
+		$Date =~ s/^\s+//;
+		$Date =~ s/\s+//;
+		my @DateSplit=split(/\//,$Date);
+		#print "Line Date: $Line[1] toto\n";
+		#print "Morceau1: $DateSplit[0] toto\n";
+		#print "Morceaux2: $DateSplit[1] toto\n";
+		
+		$Date = "$initDate-$DateSplit[1]-$DateSplit[0]";
+		#print "Date: 2015-$DateSplit[1]-$DateSplit[0]\n";
+		print "Date: $Date toto\n";
+		$Check=$Check+1;
+	}
+	if (index($Line[0],"Debit")>=0)
+	{
+		chomp($Line[1]);
+		$Debit = $Line[1];
+		$Debit =~ s/^\s+//;
+		$Debit =~ s/\s+//;
+		#$Debit =~ s/^M\s+//;
+		#$Debit =~ s/\s//g
+		#$Debit =~ s/\n\r//g;
+		#print "Line Debit: $Line[1] toto\n";
+		#my @DebitSplit=split(/\//,$Debit);
+		#$Debit =~ s/ //;
+		#chomp($Debit);
+		#print "Debit: $DebitSplit[0] toto\n";
+		print "Debit: $Debit toto\n";
+		$Check=$Check+4;
+		$Credit = "0";
+		print "Check : $Check\n";
+	}
+	if (index($Line[0],"Credit")>=0)
+	{
+		$Credit=$Line[1];
+		$Credit =~ s/^\s+//;
+		#$Credit =~ s/ //;
+		print "Credit: $Credit toto\n";
+		$Check=$Check+5;
+		$Debit = "0";
+		print "Check : $Check\n";
+	}
+	if($Check >= $Total)
+	{
+		#print "Je suis content\n";
+		#print "Je suis content, Date $Date, Libelle $Libelle, Libelle1 $Libelle1, Debit $Debit, Credit $Credit\n";
+		#print OUT $Date.";".$Libelle.";".$Debit."\n";
+		#print "Output: ".$Date.";".$Libelle1.";".$Libelle.";".$Debit.";".$Credit."\n";
+		#print OUT $Date . ";" . $Libelle1 . ";" . $Libelle . ";" . $Debit . ";" . $Credit . "\n";
+		print "Resultat:$Date;$Libelle1;$Libelle;$Debit;$Credit\n";
+		print OUT "$Date;$Libelle;$Libelle1;$Debit;$Credit\n";
+		print "#########################################################################\n";
+		#print OUT "$Date;$Libelle1;$Libelle;$Debit;$Credit\n";
+		$Check=0;
+	}
+}
+close(IN);
+close(OUT);

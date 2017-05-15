@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns4="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="esvarlin" xml:lang="en">
+  <refnamediv>
+    <refname>esvarlin</refname>
+    <refpurpose>Compute three risk measures on historical prices of a set of assets, and at a given confidence level. The three risk measures are: Expected Shortfall (ES), Value at Risk (VaR) and a Linear Spectral risk measure (lin).</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>SYNOPSIS</title>
+    <synopsis>[ES,VaR,L]=esvarlin(prices,alpha);</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Description</title>
+    <para>On historical prices of some assets compute three risk measures at a given confidence level. The three measures are: Expected Shortfall (the mean of the losses exceeding a given quantile), Value at Risk (coinciding with a quantile), and a Linear Spectral risk measure whose spectrum linearly decreases for losses exceeding a given quantile (the same used for the previous risk measures)</para>
+  </refsection>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>prices</term>
+        <listitem>any column of this matrix contains the historical prices of an asset</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>alpha</term>
+        <listitem>confidence level at which all the risk measures must be computed; this value must strictly stay between 0 and 1 (and cannot be neither 0 nor 1)</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Output</title>
+    <variablelist>
+      <varlistentry>
+        <term>ES</term>
+        <listitem>expected shortfall (as a percentage of the last price), i.e. the mean of the losses exceeding the alpha-quantile</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>VaR</term>
+        <listitem>value at risk (as percentage of the last price), i.e. the loss coinciding with the alpha-quantile</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>L</term>
+        <listitem>the wighted mean of the losses exceeding the alpha-quantile (the weights linearly decrease); as a percentage of last price</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Example</title>
+    <para>
+      <para>First we generate 1000 log-normally distributed prices for three different assets whose initial values are 25 euros, 50 euros, and 110 euros. First step is the creation of a 1000x3 matrix of normal random variables (with mean 0.1/250 and standard deviation 0.2/sqrt(250))</para>
+      <para>--&gt;M=grand(1000,3,&apos;nor&apos;,0.1/250,0.2/sqrt(250));</para>
+      <para>Then we create the prices</para>
+      <para>--&gt;prices=exp(cumsum(M,1))*diag([25 50 110]);</para>
+    </para>
+    <para>Now the three risk measures are computed</para>
+    <para>--&gt;[ES,VaR,L]=esvarlin(prices,0.01) </para>
+    <para>L = 0.0365767 0.0327525 0.0351212 </para>
+    <para>VaR = 0.0274819 0.0281535 0.0281464 </para>
+    <para>ES = 0.0331532 0.0309606 0.0323584 </para>
+  </refsection>
+  <refsection>
+    <title>Authors</title>
+    <para>Francesco Menoncin - Brescia University - 2010</para>
+  </refsection>
+  <refsection>
+    <title>See Also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="esvaroptim">esvaroptim</link>
+      </member>
+      <member>
+        <link linkend="backtest">backtest</link>
+      </member>
+      <member>
+        <link linkend="esvarevt">esvarevt</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

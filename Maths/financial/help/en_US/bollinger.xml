@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns4="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="bollinger" xml:lang="en">
+  <refnamediv>
+    <refname>bollinger</refname>
+    <refpurpose>Given a moving average on the historical prices of an asset, the function creates two figures: in the first both the historical prices and the Bollinger bands (i.e. the moving average +/- &quot;a&quot; times the price standard deviation) are shown, in the second the so-called b-percentage is shown </refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>SYNOPSIS</title>
+    <synopsis>bollinger (prices, m, a)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Description</title>
+    <para>Function which creates two graphs: one with the Bollinger bands and one with the b-percentage index</para>
+  </refsection>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>prices</term>
+        <listitem>
+          <para>column vector containing the historical prices of an asset</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>m</term>
+        <listitem>
+          <para>the lenght (in days if &quot;prices&quot; contains daily values) of the moving average which the bands are based on</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>a</term>
+        <listitem>factor which multiplies the standard deviation of historical prices for creating the bands around the mean</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection><title>Example</title><para>First we generate 1000 log-normally distributed prices for an asset whose initial values is 25 euros. First step is the creation of 1000 normal random variables (with mean 0.1/250 and standard deviation 0.2/sqrt(250))</para>--&gt;M=grand(1000,1,&apos;nor&apos;,0.1/250,0.2/sqrt(250));<para>Then we create the prices</para><para>--&gt;prices=exp(cumsum(M,1))*25</para><para>and apply the function with m=100 days and a=2.5 times:</para><para>--&gt;bollinger(prices,100,2.5)</para></refsection>
+  <refsection>
+    <title>Authors</title>
+    <para>Francesco Menoncin - Brescia University - 2010</para>
+  </refsection>
+  <refsection>
+    <title>See Also</title>
+    <simplelist type="inline">
+      <member>
+        <link linkend="movav">movav</link>
+      </member>
+    </simplelist>
+  </refsection>
+</refentry>

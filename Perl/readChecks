@@ -1,0 +1,44 @@
+####################################################################################################
+#
+#                      Reads the test table and generate a Latex table 
+#
+###################################################################################################
+#! /usr/bin/perl
+use strict;use warnings;
+use DBI;
+
+my $dbh = DBI->connect("dbi:mysql:dbname=managementoverview","root","fred1301",{ RaiseError => 1 },) or die $DBI::errstr;
+#my $Name
+#my $ID
+#my $Checklist
+########################################################################################################
+
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+my $sth = $dbh->prepare("select ID ID, Name Name, Checklist Checklist from checks where Checklist = 'Week-end' order by Checklist desc");
+$sth->execute();
+
+#print "===>>> Creation du fichier d'output .tex\n";
+open(OUT,"> ../Latex/checks.tex");
+
+print OUT "\\begin{longtable}{|c|c|c|}\n";
+print OUT "\\hline\n";
+print OUT "\\multicolumn{3}{|c|}{Mandatory Checks} \\\\\n";
+print OUT "\\hline\n";
+
+print OUT "ID & Name & Checklist\\\\\n";
+print OUT "\\hline\n";
+
+while (my $row = $sth->fetchrow_hashref()) 
+{
+	my $ID = $row->{ID};
+	my $Name = $row->{Name};
+	my $Checklist = $row->{Checklist};
+	print OUT "$ID & $Name & $Checklist\\\\\n";
+	print OUT "\\hline\n";
+}
+print OUT "\\end{longtable}\n";
+close(OUT);
+
+$sth->finish();
+
+$dbh->disconnect();

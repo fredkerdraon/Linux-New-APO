@@ -1,0 +1,19 @@
+\begin{tikzpicture}[scale=3]
+\foreach \p/\t in {
+22 / Football-1000K\texteuro ,
+18 / Project-management-850K\texteuro ,
+15 / Finance-700K\texteuro ,
+12 / Risk-management-550K\texteuro ,
+8 / Organisation-400K\texteuro ,
+5 / Career-development-250K\texteuro ,
+2 / Information-technology-100K\texteuro ,
+1 / Sports-90K\texteuro 
+}
+  {
+\setcounter{a}{\value{b}}
+\addtocounter{b}{\p}
+\slice{\thea/100*360}
+          {\theb/100*360}
+          {\p\%}{\t}
+  }
+\end{tikzpicture}

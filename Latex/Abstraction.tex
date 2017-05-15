@@ -1,0 +1,150 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+
+\usepackage{amsfonts,amssymb,verbatim}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+\usepackage{graphicx}
+
+\usepackage{colortbl,hhline}
+
+\usepackage{fullpage}
+
+\usepackage{calc}
+
+\usepackage[francais]{babel}
+
+\usepackage{fancyhdr}
+
+\usepackage{dsfont}
+
+\usepackage[latin1]{inputenc}
+
+\usepackage{xcolor}
+
+\usepackage{xcolor,rotating,epic,eepic}
+
+\usepackage{tikz-qtree}
+
+\usetikzlibrary{matrix}
+
+ 
+
+\usepackage{fancyhdr}
+
+\usepackage{xcolor,rotating,epic,eepic}
+
+\usepackage{tikz}
+
+\usepackage[babel=true,kerning=true]{microtype}
+
+ 
+
+\usetikzlibrary{%
+
+  arrows,%
+
+  calc,%
+
+  shapes.geometric,%
+
+  shapes.misc,%
+
+  shapes.symbols,%
+
+  shapes.arrows,%
+
+  automata,%
+
+  through,%
+
+  positioning,%
+
+  scopes,%
+
+  decorations.shapes,%
+
+  decorations.text,%
+
+  decorations.pathmorphing,%
+
+  shadows}
+
+ 
+
+\begin{document}
+
+ 
+
+\begin{figure}[h]
+
+   \centering
+
+\begin{tikzpicture}[>=stealth,sloped]
+
+ 
+
+    \matrix (tree) [%
+
+      matrix of nodes,
+
+      minimum size=0.25cm,
+
+      column sep=0.25cm,
+
+      row sep=1.5cm,
+
+    ]
+
+    {                                                                                                    
+
+                                                                                           
+
+          &   &   &\fbox{\begin{minipage}[t]{0.1\textwidth}\begin{center}Computer\end{center} \end{minipage}}&   &   &  \\
+
+          & \fbox{\begin{minipage}[t]{0.1\textwidth}\begin{center}Desktop\end{center} \end{minipage}} &   &  
+
+ &   & \fbox{\begin{minipage}[t]{0.1\textwidth}\begin{center}Laptop\end{center} \end{minipage}}  &  \\
+
+        \fbox{\begin{minipage}[t]{0.1\textwidth}\begin{center}HP\end{center} \end{minipage}} & 
+
+  & \fbox{\begin{minipage}[t]{0.1\textwidth}\begin{center}IBM\end{center} \end{minipage}} &  
+
+ & \fbox{\begin{minipage}[t]{0.1\textwidth}\begin{center}DELL\end{center} \end{minipage}} & 
+
+   &\fbox{\begin{minipage}[t]{0.1\textwidth}\begin{center}HP\end{center} \end{minipage}}\\
+
+    };
+
+   
+
+    \draw[->] (tree-1-4) -- (tree-2-2) node [midway,above]{}; %{$P$};
+
+    \draw[->] (tree-1-4) -- (tree-2-6) node [midway,below]{}; %{$(1-p)$};
+
+    
+
+    \draw[->] (tree-2-2) -- (tree-3-1) node [midway,above]{}; %{$P^2$};
+
+    \draw[->] (tree-2-2) -- (tree-3-3) node [midway,below]{}; %{$(1-p)p$};
+
+    
+
+    \draw[->] (tree-2-6) -- (tree-3-7) node [midway,above]{}; %{$(1-p)p$};
+
+    \draw[->] (tree-2-6) -- (tree-3-5) node [midway,below]{}; %{$(1-p)^2$}; 
+
+    
+
+\end{tikzpicture}
+
+\caption{\textbf{\label {}The multilevel of the abstraction}} 
+
+\end{figure}
+
+\end{document}
+

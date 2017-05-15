@@ -1,0 +1,5 @@
+mysql -u root -pfred1301 -D managementoverview << EOQ | sed -e 's/        /,/g' | tee cashflows.csv
+select * 
+from cashflows
+order by MyDate desc 
+EOQ

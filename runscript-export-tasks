@@ -1,0 +1,33 @@
+mysql -u root -pfred1301 -D managementoverview << EOQ | sed -e 's/        /,/g' | tee tasks-finance.csv
+select ID, task, Project, weight, status 
+from tasks
+where status = 'Pending' and (Project = 'Admin' or Project = 'Finance')
+order by weight desc 
+EOQ
+
+mysql -u root -pfred1301 -D managementoverview << EOQ | sed -e 's/        /,/g' | tee tasks-health.csv
+select ID, task, Project, weight, status 
+from tasks
+where status = 'pending' and Project = 'Health'
+order by weight desc 
+EOQ
+
+mysql -u root -pfred1301 -D managementoverview << EOQ | sed -e 's/        /,/g' | tee tasks-daily.csv
+select ID, task, Project, weight, status 
+from tasks
+where status = 'pending' and Project = 'Day to day'
+order by weight desc 
+EOQ
+
+mysql -u root -pfred1301 -D managementoverview << EOQ | sed -e 's/        /,/g' | tee tasks-boat.csv
+select ID, task, Project, weight, status 
+from tasks
+where status = 'pending' and Project = 'Boat'
+order by weight desc 
+EOQ
+
+mysql -u root -pfred1301 -D managementoverview << EOQ | sed -e 's/        /,/g' | tee cashflows.csv
+select GroupLib, sum(Debit), sum(Credit), Category   
+from cashflows
+group by Category 
+EOQ

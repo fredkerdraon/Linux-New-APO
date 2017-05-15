@@ -1,0 +1,37 @@
+####################################################################################################
+#
+#                      Reads the test table and generate a Latex table 
+#
+###################################################################################################
+#! /usr/bin/perl
+use strict;use warnings;
+use DBI;
+
+my $dbh = DBI->connect("dbi:mysql:dbname=managementoverview","root","fred1301",{ RaiseError => 1 },) or die $DBI::errstr;
+#my $Name
+#my $ID
+#my $Checklist
+########################################################################################################
+
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+my $sth = $dbh->prepare("select Open Open, High High, Low Low, Close Close from stocks order by Date desc");
+$sth->execute();
+
+#print "===>>> Creation du fichier d'output .tex\n";
+open(OUT,"> ../Latex/stocks.data");
+my $count = 0;
+
+while (my $row = $sth->fetchrow_hashref()) 
+{
+	$count = $count + 1;
+	my $Open = $row->{Open};
+	my $High = $row->{High};
+	my $Low = $row->{Low};
+	my $Close = $row->{Close};
+	print OUT "{ $count, $Open, $High, $Low, $Close },\n";
+}
+close(OUT);
+
+$sth->finish();
+
+$dbh->disconnect();

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns4="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="hedge" xml:lang="en">
+  <refnamediv>
+    <refname>hedge</refname>
+    <refpurpose>Compute the hedge ratio between an asset &quot;S&quot; and a derivative on it &quot;F&quot;</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <title>SYNOPSIS</title>
+    <synopsis>h=hedge(S,F);</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Description</title>
+    <para>Given the historical prices of both an asset &quot;S&quot; and a derivative written on it &quot;F&quot;, the function computes the so-called hedge ration &quot;h&quot;. If one multiplies the wealth invested in &quot;S&quot; by &quot;h&quot;, one obtains the wealth that must be invested in &quot;F&quot; in order to hedged the position on &quot;S&quot;. The hedge ratio is the opposite of the inverse of the elasticity of the derivative with respect to the underlying asset.</para>
+  </refsection>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>S</term>
+        <listitem>column vector containing the historical prices of the underlying asset</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>F</term>
+        <listitem>column vector containing the historical prices of the derivative</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Output</title>
+    <variablelist>
+      <varlistentry>
+        <term>h</term>
+        <listitem>hedge ratio (as the opposite of the inverse of the estimated elasticity of &quot;S&quot; with respect to &quot;F&quot;)</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+  <refsection>
+    <title>Example</title>
+    <para>First we generate 100 log-normally distributed daily prices for an asset whose initial values is 25 euros. First step is the creation of 100 normal random variables (with mean 0.1/250 and standard deviation 0.2/sqrt(250))</para>
+    <para>--&gt;M=grand(100,1,&apos;nor&apos;,0.1/250,0.2/sqrt(250));</para>
+    <para>Then we create the prices</para>
+    <para>--&gt;S=exp(cumsum(M,1))*25;</para>
+    <para>Now we create the prices of a derivative whose returns are more or less 5 times the returns on the underlying</para>
+    <para>--&gt;F=(S/S(1)).^grand(100,1,&apos;unf&apos;,4.9,5.1);</para>
+    <para>and so we are ready for using the function</para>
+    <para>--&gt;h=hedge(S,F)</para>
+    <para>!N. observations 99 ! </para>
+    <para>!N. variables 2 !</para>
+    <para>!R-square 0.9705684 !</para>
+    <para>!R-square corrected 0.9702650 !</para>
+    <para>!Coefficients t-statistics !</para>
+    <para>!-0.0001464 -0.1427691 !</para>
+    <para>!5.0436713 56.557729 !</para>
+    <para>h = - 0.1982683 </para>
+    <para>The statistics show that the regression is good and the hedge ratio is reliable.</para>
+  </refsection>
+  <refsection>
+    <title>Authors</title>
+    <para>Francesco Menoncin - Brescia University - 2010</para>
+  </refsection>
+</refentry>

@@ -1,0 +1,33 @@
+####################################################################################################
+#
+#                       RATE STRESS
+#
+###################################################################################################
+print "===>>> Process du fichier tout kaka de cacib\n";
+print "toto\n";
+open(OUT,"> NouveauFichier.txt");
+open(IN,"< CA20121108_2009.txt");
+print "toto\n";
+while(!eof(IN)){
+	print "toto\n";
+        my $TheLine=<IN>;
+        chop($TheLine);
+	print "toto\n";
+	print "My line $TheLine\n";
+        my @Line=split(/:/,$TheLine);
+        my $Pillar=substr($Line[0],28,5);
+        my $Curve=$Line[4];
+        my $Curency=$Line[5];
+	print OUT "|"."6"."|".$Curve."|".$Curency."||".$Pillar."|"."Std"."|"."1.0"."|\n";
+print "toto\n";
+#Translate + 100 bp and -100 bp
+#       print OUT "|"."6"."|".$Curve."|".$Curency."||".$Pillar."|"."Std"."|"."1.0"."|\n";
+#       print OUT "|"."7"."|".$Curve."|".$Curency."||".$Pillar."|"."Std"."|"."-1.0"."|\n";
+#Split of combined stress
+#       CRISIS(8,$Curve,$Curency,$Pillar);
+#       REVIVAL(9,$Curve,$Curency,$Pillar);
+}
+close(IN);
+print "toto\n";
+close(OUT);
+print "toto\n";

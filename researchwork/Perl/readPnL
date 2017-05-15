@@ -1,0 +1,215 @@
+####################################################################################################
+#
+#                      Reads the test table and generate a Latex table 
+#
+###################################################################################################
+#! /usr/bin/perl
+use strict;use warnings;
+use DBI;
+
+my $dbh = DBI->connect("dbi:mysql:dbname=managementoverview:host=127.0.0.1","root","fred1301",{ RaiseError => 1 },) or die $DBI::errstr;
+
+my $size = 12;
+my $selectCount = 0;
+# Pour la date YYYY/MM/DD
+my $MaxDate = '2015-08-05';
+my $Unit = 1000;
+my $Space = 0.8;
+
+########################################################################################################
+
+# query to grab the max between debit and credit to set the scale of the graph
+my $sth2 = $dbh->prepare("select max(Drift) from balance");
+$sth2->execute();
+my $max = $sth2->fetchrow();
+$sth2->finish();
+
+print "$max\n";
+# query to grab the max between debit and credit to set the scale of the graph
+my $sth3 = $dbh->prepare("select Charges from balance where MaxDate = '$MaxDate'");
+$sth3->execute();
+my $sumDebit = $sth3->fetchrow();
+$sth3->finish();
+
+# query to grab the max between debit and credit to set the scale of the graph
+my $sth4 = $dbh->prepare("select Income from balance where MaxDate  = '$MaxDate'");
+$sth4->execute();
+my $sumCredit = $sth4->fetchrow();
+$sth4->finish();
+
+# Consolidated variables
+$max = $max/$Unit;
+my $Step = $max/3;
+
+########################################################################################################
+
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+my $sth = $dbh->prepare("select distinct(MaxDate) MaxDate, Drift/10 Drift, Charges NumDays from balance order by MaxDate limit 10");
+$sth->execute();
+
+# query to grab ALL entries from `olin2`.`lobby`, ordered by datemy
+my $sth10 = $dbh->prepare("delete from balance where NumDays = 365");
+$sth10->execute();
+$sth10->finish();
+
+#print "===>>> Creation du fichier d'output .tex\n";
+open(OUT2,"> ../Latex/PnLGraph.tex");
+#open(OUT,"> ../Data validated/Simulations.csv");
+open(OUT3,"> ../Latex/PnL.tex");
+
+print OUT3 "The scenarios given in the table are only examples, the real scenarios are provided in the graph below\n";
+
+print OUT3 "\\begin{longtable}{|c|c|c|c|c|c|}\n";
+print OUT3 "\\hline\n";
+print OUT3 "\\multicolumn{6}{|c|}{Scenarios} \\\\\n";
+print OUT3 "\\hline\n";
+
+printf OUT2 "\\setlength{\\unitlength}{1cm}\n";
+printf OUT2 "\\begin{picture}(12,11)(0,0)\n";
+
+printf OUT2 "\\put(0,0){\\vector(1,0){12.1}}\n";
+printf OUT2 "\\put(12,-.35){\$Month\$}\n";
+
+printf OUT2 "\\put(0,-6){\\vector(0,1){12}}\n";
+printf OUT2 "\\put(0,6.5){\\makebox(0,0){\$PnL\$)}}\n";
+
+#The scale...
+#printf OUT2 "\\put(0,-6){\\makebox(0,0){\$-6\$)}}\n"
+print OUT2 "\\put( -0.5,1){\$1\$}\n";
+print OUT2 "\\put( -0.5,2){\$2\$}\n";
+print OUT2 "\\put( -0.5,3){\$3\$}\n";
+print OUT2 "\\put( -0.5,4){\$4\$}\n";
+print OUT2 "\\put( -0.5,5){\$5\$}\n";
+print OUT2 "\\put( -0.5,6){\$6\$}\n";
+
+print OUT2 "\\put( -0.5,-1){\$-1\$}\n";
+print OUT2 "\\put( -0.5,-2){\$-2\$}\n";
+print OUT2 "\\put( -0.5,-3){\$-3\$}\n";
+print OUT2 "\\put( -0.5,-4){\$-4\$}\n";
+print OUT2 "\\put( -0.5,-5){\$-5\$}\n";
+print OUT2 "\\put( -0.5,-6){\$-6\$}\n";
+
+printf OUT2 "\\qbezier(0.0,0.0)(1.2384,0.0)(2.0,2.7622)\n";
+printf OUT2 "\\linethickness{.090mm}\n";
+#printf OUT2 "\\put( 2,3){\\line(1,0){1}}\n";
+
+my $TotalDrift = 0.01;
+my $TotalScenTox = 0;
+my $TotalScenDebt = 0;
+my $TotalScenCash = 0;
+my $TotalScenToxDebt = 0;
+my $TotalScen = 0;
+
+my $Scen = 135;
+my $ScenToxics = 231;
+my $ScenDebt = 529*.4;
+my $ScenCash = 755*.5;
+my $ScenToxDebt = 231+529*.4;
+
+my @Scen = (231,529*.4,755*.5,231+529*.4,1000,700,800,950,750);
+
+print OUT3 "PnL; CumPnL; Tox; Debt(40\%); Cash(50\%); Tox-Debt(40\%)\n";
+print OUT3 "PnL & CumPnL & Tox & Debt(40\\%) & Cash(50\\%) & Tox-Debt(40\\%)\n";
+#print OUT3 "MaxDate & Drift & CumPnL & CumPnLTox & CumPnLDebt & CumPnLCash & CumPnLToxDebt\\\\\n";
+print OUT3 "\\hline\n";
+my $Count = 0;
+	
+my $NewDrift = 0.01;
+
+while (my $row = $sth->fetchrow_hashref()) 
+{
+	$Count = $Count + 1;
+	my $MaxDate = $row->{MaxDate};
+	my @MaxDateSplit =split(/ /,$MaxDate);
+	my $Drift = $row->{Drift};
+	$NewDrift = $Drift + $NewDrift;
+	my $KDrift = $Drift/$Unit;
+	$TotalDrift = $TotalDrift + $Drift;
+	$TotalScenTox = $TotalDrift + $ScenToxics*$Count;
+	$TotalScenDebt = $TotalDrift + $ScenDebt*$Count;
+	$TotalScenCash = $TotalDrift + $ScenCash*$Count;
+	$TotalScenToxDebt = $TotalDrift + $ScenToxDebt*$Count;
+	printf OUT3 "%i;%i;%i;%i;%i;%i\n",$Drift,$TotalDrift,$TotalScenTox,$TotalScenDebt,$TotalScenCash,$TotalScenToxDebt;
+	printf OUT3 "%i & %i & %i & %i & %i & %i\\\\\n",$Drift,$TotalDrift,$TotalScenTox,$TotalScenDebt,$TotalScenCash,$TotalScenToxDebt;
+	print OUT3 "\\hline\n";
+	
+	#print OUT "$MinDateSplit[0] & $MaxDateSplit[0] & $Income & $Charges & $Drift & $NumDays\\\\\n";
+	#print OUT "\\hline\n";
+	my $toto = $selectCount + .2;
+	my $toto2 = $selectCount + .5;
+
+	my $KTotalDrift = $TotalDrift/$Unit;
+
+	my $Month = $selectCount + 1;
+	printf OUT2 "\\put( $selectCount,6){\$$Month\$}\n";
+
+	if ($KTotalDrift < 0)
+	{	
+		my $KDriftPos = $KTotalDrift*-1;
+		printf OUT2 "\\put( $selectCount,%f){\\line(2,0){.2}}\n",$KTotalDrift;
+		printf OUT2 "\\put( $selectCount,%f){\\line(0,1){%f}}\n",$KTotalDrift,$KDriftPos;
+		printf OUT2 "\\put( $toto,%f){\\line(0,1){%f}}\n",$KTotalDrift,$KDriftPos;
+		printf OUT2 "\\put( $selectCount,%f){\$Scen0\$}\n",$KTotalDrift-0.3;
+
+		#printf OUT2 "\\put( $selectCount,$toto){\\line(2,0){.8}}\n",$KTotalDrift;
+		#printf OUT2 "\\put( $selectCount,0){\\line(%i,0){%i}}\n",$KTotalDrift,$KTotalDrift;
+	}
+	else
+	{
+		printf OUT2 "\\put( $selectCount,%f){\\line(2,0){.2}}\n",$KTotalDrift;
+		printf OUT2 "\\put( $selectCount,0){\\line(0,1){%f}}\n",$KTotalDrift,$KTotalDrift;
+		printf OUT2 "\\put( $toto,0){\\line(0,1){%f}}\n",$KTotalDrift,$KTotalDrift;
+		printf OUT2 "\\put( $selectCount,%f){\$Scen0\$}\n",$KTotalDrift+0.1;
+
+		#printf OUT2 "\\put( $selectCount,%f){\\line(2,0){.8}}\n",$KTotalDrift;
+		#printf OUT2 "\\put( $selectCount,0){\\line(%i,0){%i}}\n",$KTotalDrift,$KTotalDrift;
+	}
+	my $Count2 = 0;
+	my $KTotalScenPrevious = 0;
+	foreach $Scen (@Scen)
+	{
+		$Count2 = $Count2 + 1;
+		$TotalScen = $TotalDrift + $Scen*$Count;
+		my $KTotalScen = $TotalScen/$Unit;
+		my $KTotalScenPos = $KTotalScen*-1;
+		if ($KTotalScen < 0)
+		{	
+			printf OUT2 "\\put( $selectCount,%f){\\line(2,0){.5}}\n",$KTotalScen;
+			printf OUT2 "\\put( $selectCount,%f){\\line(0,1){%f}}\n",$KTotalScen,$KTotalScenPos;
+			printf OUT2 "\\put( $toto2,%f){\\line(0,1){%f}}\n",$KTotalScen,$KTotalScenPos;
+			my $Diff = $KTotalScenPrevious - $KTotalScen;
+			$Diff = abs($Diff);
+			if ( abs($Diff) > $Space)
+			{
+				printf OUT2 "\\put( $selectCount,%f){\$Scen $Count2\$}\n",$KTotalScen-0.3;
+			}
+		}
+		else
+		{
+			printf OUT2 "\\put( $selectCount,%f){\\line(2,0){.5}}\n",$KTotalScen;
+			printf OUT2 "\\put( $selectCount,0){\\line(0,1){%f}}\n",$KTotalScen,$KTotalScen;
+			printf OUT2 "\\put( $toto2,0){\\line(0,1){%f}}\n",$KTotalScen,$KTotalScen;
+			my $Diff = $KTotalScenPrevious - $KTotalScen;
+			$Diff = abs($Diff);
+			print "$KTotalScenPrevious, $KTotalScen, $Diff\n";		
+			if ( abs($Diff) > $Space)
+			{
+				printf OUT2 "\\put( $selectCount,%f){\$Scen $Count2\$}\n",$KTotalScen+0.1;
+			}
+		}
+		$KTotalScenPrevious = $KTotalScen;
+	}
+	
+	$selectCount = $selectCount + 1;
+}
+	
+print OUT2 "\\end{picture}\n";
+close(OUT2);
+
+print OUT3 "\\end{longtable}\n";
+close(OUT3);
+
+$sth->finish();
+
+$dbh->disconnect();
+

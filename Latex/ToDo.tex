@@ -1,0 +1,50 @@
+
+
+% Todo notes
+% Author: Henrik Skov Midtiby
+% Source: http://midtiby.blogspot.com/2007/09/todo-notes-in-latex.html
+%         http://midtiby.blogspot.com/2008/05/updated-todonotes-package.html
+%         http://midtiby.blogspot.com/2008/07/todonotes-version-2008-07-28.html  
+% PDFTeX required. Remember to compile the document twice.
+% Uses the remember picture feature
+
+\documentclass[a4paper]{article}
+
+\usepackage[colorlinks]{hyperref}
+\usepackage[colorinlistoftodos]{todonotes}
+\begin{document}
+
+\listoftodos
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla
+\todo{Plain todonotes.}%
+Totototototttttttttttttttttttttttttttttttttt
+\todo[color=blue!40]{Todonote with a different color.}%
+HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+
+Morbi dui. Morbi convallis mi sed sem. Nulla convallis lacus vitae
+risus. Phasellus adipiscing. Nullam tortor. Sed laoreet aliquam
+ante. Vestibulum diam. Pellentesque nec leo. Pellentesque velit.
+\todo[nolist]{ToTOTOGROTOTOGRO
+the list of todos.}%
+Praesent congue mi eu ipsum cursus fringilla. Etiam leo erat,
+tristique et, pharetra eget, mollis vitae, velit. In hac habitasse
+\todo[size=\small, color=green!40]{A note with a small fontsize.}%
+KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKilisis
+
+\todo[inline]{testing testing}
+
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffxxxx
+\todo[noline]{A note with no line back to the text.}%
+uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+tortor. Donec eleifend condimentum sapien. Etiam sed orci. Aliquam
+\todo[inline, color=red!50]{Inline todonotes.}%
+YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYyy
+sagittis metus. Donec tempus metus id lacus. Praesent vel diam.
+Morbi nec ante. Vestibulum varius felis ac lacus. Nulla vitae neque
+\todo[inline, color=green!40]{A note with no line back to the text.}%
+KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKk
+nisl ac lacus. Aliquam posuere. Aenean venenatis tortor in felis.
+
+\end{document}
+

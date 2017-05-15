@@ -1,0 +1,2 @@
+cd /home/frederickerdraon/Documents/researchwork/Latex/
+pdflatex -interaction batchmode /home/frederickerdraon/Documents/researchwork/Latex/Checklists.tex

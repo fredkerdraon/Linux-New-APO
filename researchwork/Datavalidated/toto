@@ -1,0 +1,65 @@
+Mettre à jour la liste des taches, et shooter dans tous les sens........!!!!!!!
+Ensuite voir le burn down manuel
+Tout ce que tu fait, il faut le faire par amour et sinon quoi, amour de toi même surtout!!! non de dieu!!????
+Cf le gène égoiste, ou pas :-)
+Surtout la théorie des jeux
+
+Remove tools
+Remove perso, project, etc from follow us on...
+Splitter les pages perso, des pages pros (IT ok, PM ok, RM ok, etc) 
+Mettre en place les crons (integration continue + testing + run)
+Rendre les contacts available (just a check?)
+
+Creer l'interface pour mettre à jour les données
+1 - Tasks (A dessiner à la main d'abord)
+2 - Cashflows
+3 - Assets
+4 - Stats!!!!!
+Contacts
+Events
+Create a launcher to update balance, burndown, critical tasks, etc then print report at the management level
+then at the priority project level based on ROI (hence focusing on one project a week)
+	- secure help from parents
+	- sell plijadur
+	- get a job
+
+Personal
+Personal (Add physical, psychological, food, social advices from clips based on available stats)
+3. Calendar (remove)
+Communication (move to the end of the section)
+skills graph (update units)
+creer un raccourci d'edition de tous les unixscript, perl, sql, ... (per project, perso, finance)
+add them under github (and make sure thesvny are editable and runnable everywhere easily)
+receipes (add web page)
+references (add web page)
+stats (create table, add web page also)
+pour la table des contacts, comparer avec la référence qui est la somme des contacts sur Linux (Mac, Samsung,etc)
+mettre à jour l'experience sur les skills
+faire correspondre les tools de la page web et ceux de la table, puis mettre à jour les données CA (automatiser au max cette procédure!!!)
+mettre à jour le blog (Private book writing)
+mettre mon cv sur svn
+Add acheivements just for fun
+
+Finance
+enlever la table assets hk (what's that anyway?)
+pour la table des stocks, tenter de les copier manuellement pour tester la VaR des scripts scilabs (later)
+
+Project
+Create a management summary like the example (en libre office first)
+include work life balance example (Do it on libre office first, then move it to Latex)
+checklist (add web page, add them in the doc, en mode 2 pages par feuille & 2 colonnes par page avec une case a cocher checked)
+vérifier pourquoi les données sont tronquées dans la table des taches, mettre à jour les accents foireux
+load events (personal and project)
+load programs (ie projects.csv)
+professionalize the stuff (see drawing from Antoine)
+j'ai besoin d'un weekly calendar par mois (seasonality included - ie there is no cfc in the summer)
+pour le tasks aggregated graph, prendre exemple sur les jeux videos
+sinon, euh, juste mettre à jour le gantt prop quoi!!
+implement work life balance (and add it to the document)
+simplifier le gantt
+
+Paramétrer Svn
+Ajouter la crontab
+Ajouter un producteur de doc auto Qt!!!!!!
+Ajouter un outil de test auto pour Qt
+

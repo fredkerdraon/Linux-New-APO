@@ -1,0 +1,50 @@
+####################################################################################################
+#
+#                      Reads the test table and generate a Latex table 
+#
+###################################################################################################
+#! /usr/bin/perl
+use strict;
+use warnings;
+use DBI;
+
+my $dbh = DBI->connect("dbi:mysql:dbname=managementoverview:host=127.0.0.1","root","fred1301",{ RaiseError => 1 },) or die $DBI::errstr;
+
+my $size = 1;
+my $selectCount = 0;
+# Pour la date YYYY/MM/DD
+my $MaxDate = '2018/01/01';
+my $Unit = 1000;
+
+########################################################################################################
+
+# query to grab the max between debit and credit to set the scale of the graph
+my $sth = $dbh->prepare("select distinct(MyDate) from cashflows");
+$sth->execute();
+
+# query to grab the max between debit and credit to set the scale of the graph
+my $sth3 = $dbh->prepare("select max(MyDate) from cashflows");
+$sth3->execute();
+my $maxDate = $sth3->fetchrow();
+$sth3->finish();
+
+# query to grab the max between debit and credit to set the scale of the graph
+my $sth4 = $dbh->prepare("select min(MyDate) from cashflows");
+$sth4->execute();
+my $minDate = $sth4->fetchrow();
+$sth4->finish();
+
+# Consolidated variables
+
+while (my $row = $sth->fetchrow_hashref()) 
+{
+	my $date = $row->{MyDate};
+	#execute readCharges $date;
+	system($^X, "readCharges", $date);
+	#system( "bash", "", "--help" );
+}
+
+$sth->finish();
+
+$dbh->disconnect();
+
