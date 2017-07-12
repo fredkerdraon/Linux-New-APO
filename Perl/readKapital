@@ -9,6 +9,8 @@ use DBI;
 #my $variable = cashBalance;
 my $dbh = DBI->connect("dbi:mysql:dbname=managementoverview","root","fred1301",{ RaiseError => 1 },) or die $DBI::errstr;
 
+#toto
+
 my $size = 250;
 my $selectCount = 0;
 # Pour la date YYYY/MM/DD
