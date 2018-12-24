@@ -3,10 +3,10 @@ set user1 = "root"
 #echo $user1
 #echo $PATH
 #echo $shell
-set RESEARCH = /home/frederickerdraon/Documents/researchwork/
-set dropfile = ~/Documents/researchwork/Sql/Mysql-drop.sql
+set RESEARCH = /home/fred/Workspaces/MyFirstWindow
+set dropfile = $HOME/Workspaces/MyFirstWindow/Sql/Mysql-drop.sql
 #now=$(date +"%Y-%m-%d")
-#echo "Current directory :" $RESEARCH
+#echo "Current diretory :" $RESEARCH
 set SQLDIR = $RESEARCH/Sql/
 #echo "Sql directory :" $SQLDIR
 echo "STEP - Database construction..."
