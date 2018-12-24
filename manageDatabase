@@ -3,8 +3,8 @@ set user1 = "root"
 #echo $user1
 #echo $PATH
 #echo $shell
-set RESEARCH = /home/fred/Workspaces/MyFirstWindow
-set dropfile = $HOME/Workspaces/MyFirstWindow/Sql/Mysql-drop.sql
+set RESEARCH = $RES 
+set dropfile = $RES/Sql/Mysql-drop.sql
 #now=$(date +"%Y-%m-%d")
 #echo "Current diretory :" $RESEARCH
 set SQLDIR = $RESEARCH/Sql/
