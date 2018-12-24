@@ -3,8 +3,8 @@ set user1 = "root"
 #echo $user1
 #echo $PATH
 #echo $shell
-set RESEARCH = /home/frederickerdraon/Documents/researchwork/
-set dropfile = ~/Documents/researchwork/Sql/Mysql-drop.sql
+set RESEARCH = $RES 
+set dropfile = $RES/Sql/Mysql-drop.sql
 #now=$(date +"%Y-%m-%d")
 #echo "Current directory :" $RESEARCH
 set SQLDIR = $RESEARCH/Sql/
