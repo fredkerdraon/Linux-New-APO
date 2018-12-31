@@ -29,14 +29,15 @@ int main( int argc, char* argv[])
 {
 	setenv("START","/usr/share/scilab/etc/scilab.start",1);
 	setenv("SCI","/usr/share/scilab",1);
-	float favNum = 3.1415926535;
 	cout << "Parameter:" << argv[1] << endl;
-	
+	DisableInteractiveMode(); 	
 	/****** INITIALIZATION **********/
 	#ifdef _MSC_VER
 	if ( StartScilab(NULL,NULL,NULL) == FALSE )
 	#else
-	if ( StartScilab(getenv("SCI"),getenv("START"),NULL) == FALSE )
+	//if ( StartScilab(getenv("SCI"),getenv("START"),NULL) == FALSE )
+	//if ( StartScilab(scilabEnv(),scilabEnv(),NULL) == FALSE )
+	if ( StartScilab(getenv("SCI"),NULL,0) == FALSE )
 	#endif
   	{
  		fprintf(stderr,"Error while calling StartScilab\n");
@@ -125,14 +126,16 @@ int main( int argc, char* argv[])
         */
 
         printf("Display from Scilab of Vector:\n");
-  	SendScilabJob("plot(Vector)");
-  	SendScilabJob("plot(Vector)");
-	SendScilabJob("plot(x,5000)");
-	SendScilabJob("legend(['Histogramme des cashflows']");
-	SendScilabJob("xtitle('Spot EUR/GBP')");
-	SendScilabJob("f=get('current_figure')");
-	SendScilabJob("f.figure_size=[700,400]");
-	SendScilabJob("xs2png(0,'Vector.png');");
+	char* p = (char*)"plot(Vector)";
+  	SendScilabJob(p);
+	//char* p2 = (char*)"plot(Vector)";
+  	SendScilabJob((char*)"plot(Vector)");
+	SendScilabJob((char*)"plot(x,5000)");
+	SendScilabJob((char*)"legend(['Histogramme des cashflows']");
+	SendScilabJob((char*)"xtitle('Spot EUR/GBP')");
+	SendScilabJob((char*)"f=get('current_figure')");
+	SendScilabJob((char*)"f.figure_size=[700,400]");
+	SendScilabJob((char*)"xs2png(0,'Vector.png');");
 	/****** TERMINATION **********/
     	}
 	
