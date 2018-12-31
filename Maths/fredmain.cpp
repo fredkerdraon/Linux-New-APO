@@ -30,12 +30,6 @@ int main( int argc, char* argv[])
 	setenv("START","/usr/share/scilab/etc/scilab.start",1);
 	setenv("SCI","/usr/share/scilab",1);
 	float favNum = 3.1415926535;
-	double doublefavNum = 3.1415926535;
-	cout << "Double favorite Num: " << doublefavNum << endl;
-	cout << "Favorite Num: " << favNum << endl;
-
-	cout << "Size of double: " << sizeof(doublefavNum) << endl;
-	cout << "Size of float: " << sizeof(favNum) << endl;
 	cout << "Parameter:" << argv[1] << endl;
 	
 	/****** INITIALIZATION **********/
