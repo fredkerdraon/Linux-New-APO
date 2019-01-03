@@ -22,15 +22,15 @@ set SQLDIR = $RESEARCH/Sql/
 echo "STEP - Download HSBC..........."
 #/usr/bin/wget 'http://real-chart.finance.yahoo.com/table.csv?s=HSBC&d=2&e=31&f=2016&g=d&a=6&b=16&c=1999&ignore=.csv'
 echo "STEP - Import Assets..........."
-mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="," managementoverview $RESEARCH/Datavalidated/assets.csv
+#mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="," managementoverview $RESEARCH/Datavalidated/assets.csv
 echo "STEP - Import the CASH .........."
-$RESEARCH/loadAllCash
+#$RESEARCH/loadAllCash
 echo "STEP - Import Stocks..........."
-mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="," managementoverview $RESEARCH/Datavalidated/stocks.csv
+#mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="," managementoverview $RESEARCH/Datavalidated/stocks.csv
 echo "STEP - Import Currencies..........."
-mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="," managementoverview $RESEARCH/Datavalidated/currencies.csv
+#mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="," managementoverview $RESEARCH/Datavalidated/currencies.csv
 echo "STEP - Mise a jour des categories"
-mysql -u root -pfred1301 -D managementoverview < $RESEARCH/Sql/MysqlUpdateCategories.sql
+#mysql -u root -pfred1301 -D managementoverview < $RESEARCH/Sql/MysqlUpdateCategories.sql
 
 echo  "STEP - Generation des tableaux, graphs et camembers"
 cd $RESEARCH/Perl

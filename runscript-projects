@@ -18,13 +18,13 @@ commit;
 EOF
 #truncate tasks;
 echo "STEP - Import Tools..........."
-mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="\t" managementoverview $RESEARCH/Datavalidated/tools.csv
+#mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="\t" managementoverview $RESEARCH/Datavalidated/tools.csv
 echo "STEP - Import Contacts..........."
-mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by=";" managementoverview $RESEARCH/Datavalidated/contacts.csv
+#mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by=";" managementoverview $RESEARCH/Datavalidated/contacts.csv
 echo "STEP - Import Skills..........."
-mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="\t" managementoverview $RESEARCH/Datavalidated/skills.csv
+#mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="\t" managementoverview $RESEARCH/Datavalidated/skills.csv
 echo "STEP - Import Checks..........."
-mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="," managementoverview $RESEARCH/Datavalidated/checks.csv
+#mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="," managementoverview $RESEARCH/Datavalidated/checks.csv
 echo "STEP - Import Deliverables..........."
 #mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --fields-terminated-by="\t" managementoverview $RESEARCH\Datavalidated\Deliverables.csv
 echo "STEP - Import Tasks..........."
@@ -37,7 +37,7 @@ echo "STEP - Import Tasks other..........."
 #mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="," managementoverview $RESEARCH/Datavalidated/tasks1.csv
 
 echo "STEP - Update complexity..........."
-mysql -u root -pfred1301 managementoverview < $RESEARCH/Sql/MysqlUpdateComplexity.sql
+#mysql -u root -pfred1301 managementoverview < $RESEARCH/Sql/MysqlUpdateComplexity.sql
 echo "STEP - Mise a jour des donnees"
 
 echo  "STEP - Generation des tableaux, graphs et camembers"
