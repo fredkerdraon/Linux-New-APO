@@ -76,9 +76,9 @@ create table cashflows(
 	Yearly bool 
 );
 
-ALTER IGNORE TABLE cashflows 
+ALTER TABLE cashflows 
 ADD UNIQUE INDEX idx_cashflows_debit (MyDate, Libelle, Debit);
-ALTER IGNORE TABLE cashflows 
+ALTER TABLE cashflows 
 ADD UNIQUE INDEX idx_cashflows_credit (MyDate, Libelle, Credit);
 
 create table balance(
@@ -118,6 +118,11 @@ create table stats(
 );
 
 #ADD UNIQUE INDEX idx_stats (Date, Cigies);
+
+#--ALTER TABLE cashflows 
+#--ADD UNIQUE INDEX idx_cashflows_debit (MyDate, Libelle, Debit);
+#--ALTER TABLE cashflows 
+#--ADD UNIQUE INDEX idx_cashflows_credit (MyDate, Libelle, Credit);
 
 #select GroupLib, sum(Debit), sum(Credit) from cashflows group by GroupLib;
 
