@@ -3,8 +3,8 @@ set user1 = "root"
 #echo $user1
 #echo $PATH
 #echo $shell
-set RESEARCH = /home/frederickerdraon/Documents/researchwork/
-set dropfile = ~/Documents/researchwork/Sql/Mysql-drop.sql
+set RESEARCH = $RES 
+set dropfile = $RES/Sql/Mysql-drop.sql
 #now=$(date +"%Y-%m-%d")
 #echo "Current directory :" $RESEARCH
 set SQLDIR = $RESEARCH/Sql/
@@ -12,16 +12,17 @@ set SQLDIR = $RESEARCH/Sql/
 echo "STEP - Database construction..."
 #pwd
 echo "STEP - We drop everything"
-mysql -u root -pfred1301 -D managementoverview < $RESEARCH/Sql/Mysql-drop.sql
-echo "STEP - We rebuild it"
-mysql -u root -pfred1301 -D managementoverview < $RESEARCH/Sql/Mysql-create.sql
+mysql --defaults-extra-file=$RES_HOME/MyData/config.cnf -D managementoverview < $RES/Sql/Mysql-drop.sql
 echo "STEP - We build also the tasks"
-#mysql -u root -pfred1301 -D managementoverview < $RESEARCH/Sql/createTasks.sql
+mysql --defaults-extra-file=$RES_HOME/MyData/config.cnf -D managementoverview < $RES/Sql/createTasks.sql
 echo "STEP - We build also the burndown"
-#mysql -u root -pfred1301 -D managementoverview < $RESEARCH/Sql/createBurndown.sql
+mysql --defaults-extra-file=$RES_HOME/MyData/config.cnf -D managementoverview < $RES/Sql/createBurndown.sql
 echo "STEP - We build also the kapital"
-mysql -u root -pfred1301 -D managementoverview < $RESEARCH/Sql/createKapital.sql
-mysql -u root -pfred1301 << EOF
+mysql --defaults-extra-file=$RES_HOME/MyData/config.cnf -D managementoverview < $RES/Sql/createKapital.sql
+echo "STEP - We rebuild it"
+mysql --defaults-extra-file=$RES_HOME/MyData/config.cnf -D managementoverview < $RES/Sql/Mysql-create.sql
+echo "STEP - We check that everything is ok"
+mysql --defaults-extra-file=$RES_HOME/MyData/config.cnf << EOF
 use managementoverview;
 show tables;
 EOF

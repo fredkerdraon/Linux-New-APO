@@ -3,8 +3,8 @@ set user1 = "root"
 #echo $user1
 #echo $PATH
 #echo $shell
-set RESEARCH = /home/frederickerdraon/Documents/researchwork/
-set dropfile = ~/Documents/researchwork/Sql/Mysql-drop.sql
+set RESEARCH = $RES 
+set dropfile = $RES/Sql/Mysql-drop.sql
 #now=$(date +"%Y-%m-%d")
 #echo "Current directory :" $RESEARCH
 set SQLDIR = $RESEARCH/Sql/
@@ -12,9 +12,9 @@ set SQLDIR = $RESEARCH/Sql/
 #echo "STEP - Database construction..."
 #pwd
 #echo "STEP - We drop everything"
-#mysql -u root -pfred1301 -D managementoverview < $RESEARCH/Sql/Mysql-drop.sql
+#mysql --defaults-extra-file=$RES_HOME/MyData/config.cnf -D managementoverview < $RESEARCH/Sql/Mysql-drop.sql
 #echo "STEP - We rebuild it"
-#mysql -u root -pfred1301 -D managementoverview < $RESEARCH/Sql/Mysql-create.sql
+#mysql --defaults-extra-file=$RES_HOME/MyData/config.cnf -D managementoverview < $RESEARCH/Sql/Mysql-create.sql
 #mysql -u root -pfred1301 << EOF
 #use managementoverview;
 #show tables;
@@ -22,15 +22,15 @@ set SQLDIR = $RESEARCH/Sql/
 echo "STEP - Download HSBC..........."
 #/usr/bin/wget 'http://real-chart.finance.yahoo.com/table.csv?s=HSBC&d=2&e=31&f=2016&g=d&a=6&b=16&c=1999&ignore=.csv'
 echo "STEP - Import Assets..........."
-mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="," managementoverview $RESEARCH/Datavalidated/assets.csv
+mysqlimport --defaults-extra-file=$RES_HOME/MyData/config.cnf -l -r --ignore-lines=1 --local --fields-terminated-by="," managementoverview $RESEARCH/Datavalidated/assets.csv
 echo "STEP - Import the CASH .........."
 $RESEARCH/loadAllCash
 echo "STEP - Import Stocks..........."
-mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="," managementoverview $RESEARCH/Datavalidated/stocks.csv
+mysqlimport --defaults-extra-file=$RES_HOME/MyData/config.cnf -l -r --ignore-lines=1 --local --fields-terminated-by="," managementoverview $RESEARCH/Datavalidated/stocks.csv
 echo "STEP - Import Currencies..........."
-mysqlimport -u root -pfred1301 -l -r --ignore-lines=1 --local --fields-terminated-by="," managementoverview $RESEARCH/Datavalidated/currencies.csv
+mysqlimport --defaults-extra-file=$RES_HOME/MyData/config.cnf -l -r --ignore-lines=1 --local --fields-terminated-by="," managementoverview $RESEARCH/Datavalidated/currencies.csv
 echo "STEP - Mise a jour des categories"
-mysql -u root -pfred1301 -D managementoverview < $RESEARCH/Sql/MysqlUpdateCategories.sql
+mysql --defaults-extra-file=$RES_HOME/MyData/config.cnf -D managementoverview < $RESEARCH/Sql/MysqlUpdateCategories.sql
 
 echo  "STEP - Generation des tableaux, graphs et camembers"
 cd $RESEARCH/Perl
