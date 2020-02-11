@@ -6,7 +6,7 @@ set user1 = "root"
 set RESEARCH = $RES 
 set dropfile = $RES/Sql/Mysql-drop.sql
 #now=$(date +"%Y-%m-%d")
-#echo "Current directory :" $RESEARCH
+#echo "Current diretory :" $RESEARCH
 set SQLDIR = $RESEARCH/Sql/
 #echo "Sql directory :" $SQLDIR
 echo "STEP - Database construction..."
